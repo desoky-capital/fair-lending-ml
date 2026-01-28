@@ -1,0 +1,1887 @@
+transaction_id,account_id,transaction_date,transaction_time,amount,transaction_type,merchant_category,merchant_name,channel
+TXN-0000000001,ACC-00000001,2025-02-13,19:24:14,-64.31,purchase,utilities,Mcguire-Davis,online
+TXN-0000000004,ACC-00000001,2024-12-17,03:16:10,72.44,transfer,,,mobile
+TXN-0000000008,ACC-00000001,2025-06-03,22:02:10,-14.37,purchase,healthcare,Nelson-King,branch
+TXN-0000000012,ACC-00000002,2023-11-30,02:35:48,76.09,payment,,,atm
+TXN-0000000015,ACC-00000002,2021-04-20,14:09:35,-10.21,purchase,travel,"Lawrence, Wolf and Carlson",online
+TXN-0000000016,ACC-00000002,2021-09-26,19:38:52,124.91,payment,,,mobile
+TXN-0000000018,ACC-00000002,2025-08-15,21:28:39,-28.18,fee,,,online
+TXN-0000000020,ACC-00000003,2025-12-18,19:54:45,-21.76,purchase,fuel,"Raymond, Little and Mullins",online
+TXN-0000000021,ACC-00000003,2023-11-11,12:08:53,-36.78,purchase,entertainment,Andrews Group,mobile
+TXN-0000000023,ACC-00000003,2022-05-13,00:33:46,-15.67,purchase,retail,Lopez-Williams,mobile
+TXN-0000000024,ACC-00000003,2023-12-26,15:37:43,19.71,payment,,,online
+TXN-0000000025,ACC-00000004,2025-12-14,19:05:18,35.62,deposit,,,phone
+TXN-0000000027,ACC-00000004,2026-01-10,19:59:09,-0.68,purchase,entertainment,Vasquez-Ray,mobile
+TXN-0000000028,ACC-00000004,2025-12-07,11:03:28,-7.43,withdrawal,,,mobile
+TXN-0000000030,ACC-00000004,2025-08-21,23:31:50,-16.4,purchase,retail,Mcknight Inc,mobile
+TXN-0000000031,ACC-00000004,2025-04-27,11:37:09,-18.45,purchase,utilities,Obrien-Gibbs,online
+TXN-0000000032,ACC-00000004,2025-11-09,23:13:12,-125.02,withdrawal,,,online
+TXN-0000000034,ACC-00000005,2024-01-30,11:00:09,-7.11,purchase,retail,Torres-Oliver,online
+TXN-0000000037,ACC-00000005,2023-11-13,16:12:16,-1.46,purchase,restaurant,Baker Inc,branch
+TXN-0000000039,ACC-00000006,2024-11-08,03:49:16,-9.72,withdrawal,,,online
+TXN-0000000040,ACC-00000006,2022-03-10,20:12:03,21.8,transfer,,,online
+TXN-0000000044,ACC-00000006,2025-10-19,07:11:34,-90.64,purchase,travel,Bradshaw Ltd,online
+TXN-0000000046,ACC-00000006,2022-08-27,07:28:39,-81.58,purchase,retail,"Hernandez, Baker and Thomas",mobile
+TXN-0000000048,ACC-00000006,2021-04-29,10:55:26,-6.9,purchase,retail,Larson-Holloway,online
+TXN-0000000054,ACC-00000007,2024-11-13,13:20:12,-80.73,withdrawal,,,online
+TXN-0000000056,ACC-00000007,2022-06-28,08:18:43,31.5,transfer,,,atm
+TXN-0000000058,ACC-00000008,2025-03-16,18:38:35,-118.34,purchase,travel,Johnson-Perez,phone
+TXN-0000000059,ACC-00000008,2023-05-23,12:51:31,-129.19,purchase,entertainment,"Matthews, Smith and Hubbard",branch
+TXN-0000000060,ACC-00000008,2023-12-01,17:35:19,-7.0,interest,,,atm
+TXN-0000000064,ACC-00000009,2025-05-23,13:07:43,-25.53,purchase,restaurant,"Olsen, Costa and Harrison",atm
+TXN-0000000065,ACC-00000009,2025-07-21,10:12:15,27.67,transfer,,,mobile
+TXN-0000000066,ACC-00000009,2025-10-05,22:42:38,-76.87,withdrawal,,,mobile
+TXN-0000000067,ACC-00000009,2025-10-05,22:47:07,-79.6,purchase,entertainment,"Garcia, Martin and Jenkins",mobile
+TXN-0000000068,ACC-00000009,2025-11-17,16:36:47,-6.37,withdrawal,,,atm
+TXN-0000000069,ACC-00000009,2025-05-18,18:13:28,-3.5,purchase,grocery,"Landry, Cervantes and Pierce",atm
+TXN-0000000070,ACC-00000009,2026-01-14,17:42:42,136.14,deposit,,,online
+TXN-0000000085,ACC-00000011,2025-08-23,14:12:29,-12.24,purchase,retail,"Carter, Thornton and Perry",online
+TXN-0000000088,ACC-00000011,2025-01-21,03:59:40,-33.35,purchase,restaurant,"Romero, Suarez and Shields",mobile
+TXN-0000000089,ACC-00000011,2025-08-24,22:40:14,-4.58,withdrawal,,,atm
+TXN-0000000092,ACC-00000011,2025-03-24,20:49:44,401.41,deposit,,,mobile
+TXN-0000000094,ACC-00000012,2025-12-15,11:49:45,-4.38,purchase,travel,"Duarte, Burns and Hernandez",mobile
+TXN-0000000095,ACC-00000013,2024-03-19,08:53:29,52.67,payment,,,online
+TXN-0000000096,ACC-00000013,2025-10-08,14:33:47,-38.94,purchase,fuel,Cook-Hines,branch
+TXN-0000000097,ACC-00000013,2025-04-22,10:01:19,-3.9,purchase,healthcare,Cantu-Kane,mobile
+TXN-0000000098,ACC-00000013,2024-03-28,13:03:20,190.97,payment,,,atm
+TXN-0000000100,ACC-00000013,2025-05-11,01:48:26,-61.78,purchase,entertainment,"Kennedy, Mcintyre and James",online
+TXN-0000000101,ACC-00000013,2026-01-26,01:13:36,-9.28,interest,,,phone
+TXN-0000000102,ACC-00000013,2024-05-07,12:20:28,-74.19,purchase,grocery,"Pollard, Simpson and Johnson",mobile
+TXN-0000000111,ACC-00000015,2025-04-30,07:14:00,-5.57,purchase,retail,"Davis, Good and Hodges",online
+TXN-0000000114,ACC-00000015,2025-03-04,16:41:49,-17.93,purchase,utilities,Nguyen Inc,online
+TXN-0000000115,ACC-00000016,2024-01-26,05:03:09,-606.18,purchase,healthcare,Brooks-Thomas,mobile
+TXN-0000000116,ACC-00000016,2025-08-20,23:11:47,-10.95,purchase,travel,Knight-Sparks,mobile
+TXN-0000000119,ACC-00000016,2023-01-04,22:38:21,-34.49,purchase,entertainment,"Allen, Durham and Thomas",mobile
+TXN-0000000120,ACC-00000016,2023-01-21,06:19:28,-2.2,purchase,fuel,"King, Scott and Smith",online
+TXN-0000000127,ACC-00000017,2021-10-19,14:27:28,-38.35,purchase,entertainment,Bryant-Turner,mobile
+TXN-0000000128,ACC-00000017,2023-02-26,23:28:40,-7.75,purchase,entertainment,Rodriguez-James,phone
+TXN-0000000130,ACC-00000017,2020-10-16,19:19:26,-2.49,withdrawal,,,mobile
+TXN-0000000146,ACC-00000019,2024-04-08,09:14:26,-40.98,withdrawal,,,mobile
+TXN-0000000149,ACC-00000019,2023-10-20,21:10:07,425.02,transfer,,,mobile
+TXN-0000000150,ACC-00000020,2022-03-15,16:53:51,-3.48,purchase,travel,"Walter, Diaz and Shaw",online
+TXN-0000000151,ACC-00000020,2021-09-18,09:07:34,-4.08,purchase,utilities,Scott Group,atm
+TXN-0000000153,ACC-00000020,2021-10-15,10:33:07,-118.67,withdrawal,,,mobile
+TXN-0000000154,ACC-00000020,2022-04-26,13:49:08,15.96,deposit,,,mobile
+TXN-0000000156,ACC-00000020,2023-06-04,01:55:37,-13.57,purchase,restaurant,"Craig, Sanders and Singleton",online
+TXN-0000000157,ACC-00000020,2021-03-23,09:19:09,34.05,transfer,,,online
+TXN-0000000185,ACC-00000023,2024-09-15,03:50:15,30.22,transfer,,,mobile
+TXN-0000000186,ACC-00000023,2025-01-09,18:32:00,-15.99,withdrawal,,,online
+TXN-0000000187,ACC-00000023,2025-06-09,07:06:38,-5.77,purchase,healthcare,"Howard, Sanders and Lopez",mobile
+TXN-0000000193,ACC-00000025,2024-10-26,09:24:19,-6.37,purchase,utilities,"Clark, Robinson and Kane",mobile
+TXN-0000000195,ACC-00000025,2025-08-02,16:53:13,-3.98,withdrawal,,,online
+TXN-0000000198,ACC-00000025,2025-02-08,18:27:36,-33.54,purchase,utilities,"King, Thompson and Guerrero",phone
+TXN-0000000231,ACC-00000031,2025-10-16,09:29:07,469.57,deposit,,,mobile
+TXN-0000000239,ACC-00000031,2025-12-16,01:16:48,-24.44,purchase,fuel,"Olson, Boone and Bell",online
+TXN-0000000243,ACC-00000032,2024-06-03,08:59:01,-32.44,purchase,travel,"Villegas, Cardenas and Austin",online
+TXN-0000000254,ACC-00000034,2024-08-24,10:17:21,-2.43,purchase,restaurant,"Moreno, Bennett and Chavez",online
+TXN-0000000255,ACC-00000034,2024-07-21,14:44:39,-17.91,purchase,fuel,Collins-Nguyen,phone
+TXN-0000000256,ACC-00000034,2025-04-07,10:49:58,-12.76,purchase,retail,"Miller, Williams and Moore",mobile
+TXN-0000000286,ACC-00000037,2019-11-25,15:25:29,-1.97,purchase,retail,Harrison Ltd,phone
+TXN-0000000288,ACC-00000037,2025-03-27,00:27:11,-92.22,purchase,fuel,Vargas-Bell,online
+TXN-0000000289,ACC-00000037,2022-07-18,00:32:42,-43.62,purchase,entertainment,Murray-Johnson,online
+TXN-0000000292,ACC-00000037,2022-07-17,22:24:54,19.26,deposit,,,branch
+TXN-0000000293,ACC-00000037,2022-02-25,05:44:09,-156.81,fee,,,online
+TXN-0000000307,ACC-00000039,2025-12-31,02:31:49,-152.42,purchase,grocery,"Cook, Rivera and Grant",mobile
+TXN-0000000309,ACC-00000039,2025-12-30,05:02:17,-112.06,purchase,retail,Cummings-Douglas,mobile
+TXN-0000000310,ACC-00000039,2025-12-22,04:02:28,-6.26,purchase,retail,Cook PLC,online
+TXN-0000000311,ACC-00000039,2026-01-22,07:52:57,-5.35,purchase,utilities,Rangel LLC,mobile
+TXN-0000000313,ACC-00000039,2025-12-26,16:47:19,-52.16,purchase,travel,"Myers, Larson and Hurley",online
+TXN-0000000342,ACC-00000042,2023-02-25,19:31:38,193.86,deposit,,,online
+TXN-0000000343,ACC-00000042,2023-02-17,02:01:14,-25.16,withdrawal,,,phone
+TXN-0000000348,ACC-00000042,2022-11-16,23:12:45,-21.08,withdrawal,,,mobile
+TXN-0000000350,ACC-00000042,2024-11-04,21:11:12,93.0,transfer,,,mobile
+TXN-0000000355,ACC-00000043,2022-12-31,06:28:00,-37.3,purchase,travel,Potts and Sons,mobile
+TXN-0000000357,ACC-00000043,2022-12-07,23:37:06,-2.77,fee,,,mobile
+TXN-0000000368,ACC-00000046,2021-04-18,00:34:09,8.06,transfer,,,mobile
+TXN-0000000380,ACC-00000047,2025-07-21,04:12:09,328.07,deposit,,,online
+TXN-0000000381,ACC-00000047,2025-07-17,06:57:55,-16.65,withdrawal,,,online
+TXN-0000000383,ACC-00000047,2025-09-19,06:40:51,-26.77,purchase,restaurant,"Miller, Villegas and Jones",branch
+TXN-0000000385,ACC-00000047,2025-09-06,16:45:35,-25.42,withdrawal,,,mobile
+TXN-0000000387,ACC-00000048,2023-05-29,16:52:12,-115.96,purchase,entertainment,Zavala-King,atm
+TXN-0000000388,ACC-00000048,2022-04-13,14:47:29,-10.82,withdrawal,,,mobile
+TXN-0000000389,ACC-00000048,2022-10-25,18:30:52,38.19,transfer,,,mobile
+TXN-0000000390,ACC-00000048,2024-08-22,10:02:28,-3.12,purchase,retail,Cooper Ltd,mobile
+TXN-0000000391,ACC-00000048,2025-11-15,21:55:27,-10.03,purchase,healthcare,"Garcia, Perkins and Sherman",phone
+TXN-0000000394,ACC-00000049,2022-07-10,08:56:09,-71.54,purchase,restaurant,Welch-Cain,mobile
+TXN-0000000403,ACC-00000051,2025-10-10,06:59:50,-69.67,purchase,retail,Atkins-Williams,online
+TXN-0000000404,ACC-00000051,2024-08-27,11:39:02,-80.17,purchase,travel,Nelson-Lloyd,mobile
+TXN-0000000405,ACC-00000051,2025-04-15,02:35:23,-23.19,purchase,healthcare,Paul-Kline,phone
+TXN-0000000406,ACC-00000051,2025-03-26,00:15:45,-8.25,purchase,fuel,Beltran-Crawford,online
+TXN-0000000422,ACC-00000053,2025-09-14,17:07:33,-300.0,purchase,travel,"Diaz, Reyes and Bradley",online
+TXN-0000000423,ACC-00000053,2023-09-06,17:25:50,9.82,payment,,,online
+TXN-0000000424,ACC-00000053,2022-03-28,04:17:40,-45.26,fee,,,atm
+TXN-0000000425,ACC-00000053,2023-03-29,13:37:09,-2.98,purchase,retail,Rush-Watson,mobile
+TXN-0000000426,ACC-00000053,2022-02-27,14:10:14,-7.8,purchase,restaurant,Berry PLC,mobile
+TXN-0000000427,ACC-00000053,2025-10-10,18:44:11,-14.28,purchase,grocery,Edwards-Ramirez,online
+TXN-0000000429,ACC-00000053,2024-06-08,20:19:14,-12.17,purchase,grocery,Mcintyre-Wilson,atm
+TXN-0000000430,ACC-00000053,2025-06-25,12:53:39,129.32,payment,,,mobile
+TXN-0000000432,ACC-00000053,2022-02-20,11:01:54,-8.19,fee,,,online
+TXN-0000000449,ACC-00000056,2025-05-17,02:15:53,-3.51,purchase,entertainment,Martin Ltd,mobile
+TXN-0000000452,ACC-00000056,2024-12-13,16:02:31,-3.73,purchase,utilities,Martinez-Turner,branch
+TXN-0000000453,ACC-00000056,2023-05-13,11:29:14,-25.3,purchase,fuel,Shaw and Sons,mobile
+TXN-0000000455,ACC-00000056,2021-11-15,12:27:46,149.54,payment,,,mobile
+TXN-0000000463,ACC-00000058,2023-12-26,03:31:08,-2.77,purchase,travel,Evans-Jones,online
+TXN-0000000465,ACC-00000058,2022-04-23,00:28:05,35.09,transfer,,,online
+TXN-0000000466,ACC-00000058,2021-04-17,12:46:15,-4.93,withdrawal,,,online
+TXN-0000000468,ACC-00000058,2023-09-29,22:00:00,-1.26,purchase,retail,Anderson-Wood,online
+TXN-0000000469,ACC-00000058,2022-07-11,07:09:59,-2.53,purchase,healthcare,Flores Group,atm
+TXN-0000000472,ACC-00000058,2021-06-22,08:33:34,-13.39,purchase,restaurant,Lin-Barnes,mobile
+TXN-0000000473,ACC-00000058,2024-08-02,08:27:05,-32.05,purchase,restaurant,Peck-Griffith,mobile
+TXN-0000000487,ACC-00000060,2025-04-29,23:18:11,-48.28,purchase,grocery,Boone Group,online
+TXN-0000000489,ACC-00000060,2025-08-15,12:08:30,147.18,deposit,,,online
+TXN-0000000493,ACC-00000061,2025-09-18,08:08:30,277.22,deposit,,,online
+TXN-0000000495,ACC-00000061,2025-06-24,08:49:03,141.51,deposit,,,mobile
+TXN-0000000497,ACC-00000061,2024-08-27,21:28:41,-1.18,purchase,utilities,Hester Group,mobile
+TXN-0000000499,ACC-00000061,2024-12-29,18:49:55,-3.33,purchase,utilities,Grant-Diaz,online
+TXN-0000000503,ACC-00000063,2023-12-15,16:18:50,-8.14,purchase,utilities,Taylor LLC,online
+TXN-0000000504,ACC-00000063,2022-11-08,23:08:59,-5.55,purchase,restaurant,Stone-Hernandez,online
+TXN-0000000505,ACC-00000063,2025-04-27,02:33:52,-5.37,purchase,retail,Murphy PLC,mobile
+TXN-0000000507,ACC-00000063,2023-02-04,12:14:10,-27.71,purchase,healthcare,Ewing-Stevenson,online
+TXN-0000000511,ACC-00000064,2019-10-30,10:45:23,2.08,deposit,,,online
+TXN-0000000512,ACC-00000064,2023-08-08,19:04:21,-9.08,purchase,restaurant,"Wiggins, Soto and Carlson",online
+TXN-0000000514,ACC-00000064,2022-09-07,10:32:53,-4.64,withdrawal,,,mobile
+TXN-0000000515,ACC-00000064,2019-09-22,13:11:37,185.81,deposit,,,online
+TXN-0000000518,ACC-00000065,2025-02-10,07:28:02,-25.19,withdrawal,,,mobile
+TXN-0000000524,ACC-00000065,2024-01-05,00:58:59,234.49,transfer,,,online
+TXN-0000000525,ACC-00000065,2025-09-02,00:14:07,-53.89,purchase,healthcare,"Knapp, Salas and Fitzgerald",online
+TXN-0000000536,ACC-00000067,2026-01-26,15:22:14,32.85,transfer,,,mobile
+TXN-0000000551,ACC-00000069,2024-11-29,18:50:56,-5.39,purchase,grocery,Maldonado and Sons,online
+TXN-0000000552,ACC-00000069,2024-11-07,02:05:21,1.48,deposit,,,mobile
+TXN-0000000555,ACC-00000069,2024-06-23,12:07:12,680.89,transfer,,,online
+TXN-0000000557,ACC-00000069,2025-10-23,13:23:44,2.99,deposit,,,phone
+TXN-0000000560,ACC-00000070,2025-08-19,20:44:38,-77.06,fee,,,mobile
+TXN-0000000562,ACC-00000070,2025-11-22,06:12:31,-77.65,purchase,travel,"Sharp, Zuniga and Gentry",atm
+TXN-0000000565,ACC-00000070,2022-12-30,05:33:42,-19.65,interest,,,online
+TXN-0000000567,ACC-00000070,2023-10-24,20:49:34,117.15,payment,,,mobile
+TXN-0000000580,ACC-00000072,2025-03-13,22:15:05,-6.97,purchase,retail,"Murphy, Morales and Davis",online
+TXN-0000000581,ACC-00000072,2023-07-23,04:27:55,-345.18,withdrawal,,,branch
+TXN-0000000582,ACC-00000072,2021-03-26,19:02:17,-16.67,purchase,fuel,Boyle-Smith,branch
+TXN-0000000583,ACC-00000072,2025-05-12,21:53:58,-41.47,withdrawal,,,phone
+TXN-0000000584,ACC-00000072,2022-07-22,16:07:08,-98.67,withdrawal,,,atm
+TXN-0000000586,ACC-00000072,2021-02-16,22:39:05,-22.68,withdrawal,,,online
+TXN-0000000596,ACC-00000074,2021-02-27,01:10:23,-10.9,purchase,grocery,"Petersen, Gill and Becker",online
+TXN-0000000597,ACC-00000074,2020-06-25,04:50:51,-24.6,purchase,retail,Fox PLC,online
+TXN-0000000599,ACC-00000074,2022-10-24,14:14:08,-3.59,purchase,restaurant,"Leach, Harris and Herrera",mobile
+TXN-0000000600,ACC-00000075,2022-05-02,19:55:05,-62.92,purchase,grocery,Bond-Ramos,atm
+TXN-0000000601,ACC-00000075,2020-09-08,08:48:03,-28.55,purchase,entertainment,Love Group,online
+TXN-0000000604,ACC-00000076,2025-07-21,01:19:14,-4.04,purchase,utilities,Cummings-Foster,mobile
+TXN-0000000605,ACC-00000076,2025-12-01,03:48:38,-0.27,purchase,grocery,Reese PLC,mobile
+TXN-0000000607,ACC-00000076,2025-09-03,09:26:29,-78.57,purchase,grocery,"Mcknight, Michael and Jones",atm
+TXN-0000000608,ACC-00000076,2025-11-20,21:42:09,-198.24,purchase,retail,Mitchell and Sons,branch
+TXN-0000000609,ACC-00000076,2025-09-20,10:54:41,-54.29,purchase,utilities,Cannon Ltd,atm
+TXN-0000000610,ACC-00000076,2025-03-05,10:49:16,-22.5,purchase,retail,Brooks-Vance,mobile
+TXN-0000000611,ACC-00000076,2025-03-19,17:20:42,22.35,payment,,,mobile
+TXN-0000000612,ACC-00000076,2025-10-23,17:17:31,67.54,payment,,,online
+TXN-0000000643,ACC-00000080,2022-09-03,21:26:27,-6.78,purchase,grocery,Faulkner-Grant,online
+TXN-0000000644,ACC-00000080,2021-04-08,23:04:14,-18.42,purchase,restaurant,Sanchez-Harris,atm
+TXN-0000000645,ACC-00000080,2023-09-09,07:20:57,-38.58,fee,,,online
+TXN-0000000646,ACC-00000080,2022-07-22,12:17:21,34.53,deposit,,,online
+TXN-0000000648,ACC-00000080,2023-11-28,14:19:48,-5.22,purchase,restaurant,Adams Ltd,mobile
+TXN-0000000649,ACC-00000080,2020-06-07,17:00:42,-110.47,withdrawal,,,branch
+TXN-0000000650,ACC-00000080,2025-07-27,23:02:07,13.89,transfer,,,branch
+TXN-0000000651,ACC-00000080,2021-03-02,01:32:46,-8.94,withdrawal,,,mobile
+TXN-0000000652,ACC-00000080,2023-11-19,19:46:32,-76.89,withdrawal,,,online
+TXN-0000000653,ACC-00000080,2021-02-25,16:47:20,-7.82,fee,,,mobile
+TXN-0000000694,ACC-00000086,2024-10-08,20:58:40,5.59,deposit,,,mobile
+TXN-0000000696,ACC-00000086,2024-11-11,20:13:35,-66.86,withdrawal,,,atm
+TXN-0000000697,ACC-00000086,2025-09-09,04:19:10,-14.09,purchase,retail,Smith-Li,atm
+TXN-0000000699,ACC-00000086,2025-03-24,09:45:48,-4.12,fee,,,mobile
+TXN-0000000701,ACC-00000086,2025-05-27,20:48:42,134.45,transfer,,,mobile
+TXN-0000000705,ACC-00000086,2025-08-05,00:49:03,1423.06,transfer,,,mobile
+TXN-0000000708,ACC-00000087,2023-01-27,16:32:45,-466.9,purchase,utilities,Evans Inc,mobile
+TXN-0000000710,ACC-00000087,2023-09-04,14:24:46,-8.32,purchase,grocery,Davis Group,mobile
+TXN-0000000711,ACC-00000087,2025-03-09,04:11:34,-11.33,purchase,retail,"Alvarez, Walsh and Warner",online
+TXN-0000000712,ACC-00000087,2026-01-03,18:37:19,-192.23,purchase,utilities,Bruce-Newman,mobile
+TXN-0000000713,ACC-00000087,2024-02-02,15:06:48,-28.12,purchase,grocery,"Madden, Dickson and Jacobson",online
+TXN-0000000715,ACC-00000087,2025-09-16,11:54:40,-8.27,purchase,travel,Valenzuela Ltd,online
+TXN-0000000726,ACC-00000090,2023-09-03,04:33:29,-5.2,purchase,fuel,"Davenport, Price and Mosley",atm
+TXN-0000000728,ACC-00000090,2022-01-20,18:28:54,35.05,deposit,,,online
+TXN-0000000729,ACC-00000090,2022-06-05,11:11:05,50.29,deposit,,,phone
+TXN-0000000730,ACC-00000090,2023-01-18,04:23:47,-5.03,purchase,retail,Gibbs Ltd,mobile
+TXN-0000000736,ACC-00000090,2024-09-19,02:34:57,37.48,transfer,,,online
+TXN-0000000765,ACC-00000093,2022-09-29,04:34:45,9.27,payment,,,online
+TXN-0000000769,ACC-00000093,2025-03-08,01:22:11,-31.6,purchase,healthcare,Diaz-Frederick,online
+TXN-0000000772,ACC-00000093,2023-08-24,13:56:55,-57.0,purchase,restaurant,Hahn-Clark,mobile
+TXN-0000000773,ACC-00000093,2024-07-11,03:47:17,-21.59,purchase,utilities,Guerra-Jones,branch
+TXN-0000000775,ACC-00000093,2024-07-15,07:07:32,-6.8,purchase,healthcare,King and Sons,mobile
+TXN-0000000777,ACC-00000093,2022-12-15,10:37:52,82.01,payment,,,mobile
+TXN-0000000778,ACC-00000093,2025-07-23,12:24:37,-114.54,purchase,utilities,"Morales, Hunter and Knapp",online
+TXN-0000000779,ACC-00000093,2023-05-14,03:41:41,-17.06,purchase,healthcare,Stephens-Gibbs,mobile
+TXN-0000000780,ACC-00000093,2026-01-14,05:41:59,-21.15,purchase,fuel,"Woodard, Herrera and Little",atm
+TXN-0000000785,ACC-00000094,2025-01-09,00:44:04,-10.77,withdrawal,,,online
+TXN-0000000807,ACC-00000097,2022-11-06,05:56:29,321.01,transfer,,,online
+TXN-0000000808,ACC-00000097,2019-08-21,06:56:40,99.97,deposit,,,atm
+TXN-0000000809,ACC-00000097,2023-01-02,14:15:05,-247.19,withdrawal,,,mobile
+TXN-0000000810,ACC-00000097,2020-08-30,13:34:51,105.91,deposit,,,online
+TXN-0000000812,ACC-00000097,2025-10-07,10:46:13,-2.25,purchase,utilities,"Stokes, Brown and Garcia",atm
+TXN-0000000814,ACC-00000097,2023-02-11,08:47:12,96.4,deposit,,,mobile
+TXN-0000000816,ACC-00000097,2025-06-13,16:50:04,183.9,transfer,,,mobile
+TXN-0000000817,ACC-00000097,2025-12-07,18:58:13,-69.75,withdrawal,,,mobile
+TXN-0000000820,ACC-00000098,2025-09-01,04:28:39,-20.11,purchase,retail,Matthews-Bailey,online
+TXN-0000000822,ACC-00000098,2025-01-20,08:29:12,-74.3,purchase,fuel,Cervantes Ltd,branch
+TXN-0000000823,ACC-00000098,2025-05-07,00:45:05,249.68,transfer,,,mobile
+TXN-0000000829,ACC-00000098,2025-09-02,05:51:33,77.61,transfer,,,atm
+TXN-0000000830,ACC-00000098,2025-07-14,22:23:50,-28.35,purchase,travel,Andrews Group,mobile
+TXN-0000000839,ACC-00000100,2024-07-27,16:37:03,-48.57,purchase,grocery,Perry-Larsen,online
+TXN-0000000840,ACC-00000100,2025-12-02,02:35:32,162.8,deposit,,,online
+TXN-0000000841,ACC-00000100,2021-02-23,22:25:04,-140.29,purchase,grocery,Cunningham and Sons,online
+TXN-0000000844,ACC-00000100,2021-01-10,09:40:05,-4.76,withdrawal,,,mobile
+TXN-0000000847,ACC-00000101,2025-11-13,21:14:35,10.1,deposit,,,atm
+TXN-0000000848,ACC-00000101,2024-06-11,14:55:14,10.59,deposit,,,online
+TXN-0000000850,ACC-00000101,2023-10-15,12:55:53,107.68,transfer,,,online
+TXN-0000000851,ACC-00000101,2023-10-02,23:27:17,-60.84,fee,,,mobile
+TXN-0000000884,ACC-00000107,2023-09-16,05:41:09,-93.11,purchase,travel,Murphy-Smith,online
+TXN-0000000885,ACC-00000107,2023-01-03,22:54:24,62.32,deposit,,,mobile
+TXN-0000000912,ACC-00000111,2022-09-08,13:57:46,11.83,deposit,,,mobile
+TXN-0000000915,ACC-00000112,2025-06-20,05:32:55,-15.99,withdrawal,,,mobile
+TXN-0000000917,ACC-00000112,2025-08-02,10:43:59,30.51,deposit,,,online
+TXN-0000000920,ACC-00000112,2025-07-03,08:48:35,-8.16,purchase,travel,Edwards LLC,branch
+TXN-0000000921,ACC-00000112,2025-11-18,08:49:04,-10.99,purchase,retail,Ayala-Mullins,online
+TXN-0000000926,ACC-00000112,2025-04-25,01:46:38,-111.83,purchase,travel,Heath-Miller,online
+TXN-0000000934,ACC-00000114,2026-01-21,11:02:21,-13.67,purchase,fuel,"Myers, Lucas and Bowers",atm
+TXN-0000000935,ACC-00000114,2025-09-28,02:52:03,-3.0,purchase,restaurant,Simpson Inc,online
+TXN-0000000938,ACC-00000114,2025-09-18,04:54:39,30.88,payment,,,online
+TXN-0000000939,ACC-00000114,2025-12-05,03:28:11,-18.94,purchase,healthcare,Rice Inc,online
+TXN-0000000940,ACC-00000114,2025-11-12,23:17:31,46.02,payment,,,online
+TXN-0000000943,ACC-00000115,2025-12-09,18:10:53,7.95,deposit,,,phone
+TXN-0000000944,ACC-00000115,2025-12-06,05:19:46,-183.79,purchase,fuel,"Thompson, Ruiz and Archer",branch
+TXN-0000000945,ACC-00000115,2025-10-08,15:36:39,-63.32,purchase,retail,Matthews Inc,online
+TXN-0000001001,ACC-00000121,2023-05-07,15:42:35,-163.66,fee,,,online
+TXN-0000001002,ACC-00000121,2021-09-11,13:23:31,-11.03,purchase,utilities,Vargas Inc,online
+TXN-0000001003,ACC-00000121,2021-09-17,14:08:02,-19.47,purchase,retail,"Brandt, Young and Green",online
+TXN-0000001005,ACC-00000121,2022-04-01,10:47:31,-49.19,purchase,grocery,Nelson-Jones,online
+TXN-0000001006,ACC-00000121,2024-08-09,12:49:37,-3.65,purchase,healthcare,Chan PLC,phone
+TXN-0000001009,ACC-00000123,2025-02-15,22:10:57,-6.82,withdrawal,,,mobile
+TXN-0000001010,ACC-00000123,2026-01-02,22:16:06,13.65,transfer,,,atm
+TXN-0000001035,ACC-00000126,2024-07-10,16:50:24,-11.72,purchase,restaurant,Griffin-Hernandez,atm
+TXN-0000001042,ACC-00000126,2026-01-26,10:05:13,-18.86,purchase,restaurant,"Wright, Mcknight and Stephens",online
+TXN-0000001043,ACC-00000126,2025-02-01,00:59:31,-121.86,fee,,,online
+TXN-0000001044,ACC-00000126,2025-04-26,14:55:27,55.32,deposit,,,online
+TXN-0000001045,ACC-00000127,2025-10-11,08:01:56,-1.77,purchase,fuel,"Howard, Stephens and Washington",mobile
+TXN-0000001046,ACC-00000127,2026-01-12,09:46:45,-7.05,purchase,travel,"Morris, Nelson and Johnson",branch
+TXN-0000001048,ACC-00000127,2025-05-16,07:01:50,-8.83,purchase,utilities,Huang LLC,online
+TXN-0000001050,ACC-00000127,2025-04-26,21:14:49,-56.1,purchase,grocery,Garcia Ltd,mobile
+TXN-0000001094,ACC-00000132,2023-09-03,12:53:54,-101.88,purchase,restaurant,Cruz Ltd,online
+TXN-0000001095,ACC-00000132,2023-10-26,08:44:43,-21.39,withdrawal,,,mobile
+TXN-0000001098,ACC-00000132,2024-06-13,00:29:25,77.69,deposit,,,atm
+TXN-0000001099,ACC-00000132,2023-11-22,18:28:47,27.98,deposit,,,mobile
+TXN-0000001100,ACC-00000132,2022-10-17,01:21:49,-42.25,purchase,fuel,"Curtis, Mcdaniel and Martin",atm
+TXN-0000001101,ACC-00000132,2024-03-30,08:44:39,-23.99,purchase,fuel,Phillips LLC,online
+TXN-0000001124,ACC-00000135,2021-11-20,03:57:52,-14.75,purchase,entertainment,Wells Inc,mobile
+TXN-0000001125,ACC-00000135,2024-02-22,17:16:57,-63.74,purchase,restaurant,Ruiz-Jacobson,mobile
+TXN-0000001127,ACC-00000135,2023-10-06,12:40:40,-160.27,purchase,retail,"Stephens, Lopez and Mcclure",mobile
+TXN-0000001129,ACC-00000135,2022-05-12,10:12:05,-8.24,purchase,restaurant,Baker-Hood,mobile
+TXN-0000001130,ACC-00000135,2025-12-26,00:26:49,-22.73,purchase,travel,Hernandez Ltd,mobile
+TXN-0000001132,ACC-00000135,2025-07-17,18:54:51,24.53,payment,,,mobile
+TXN-0000001160,ACC-00000140,2024-03-20,20:06:13,-323.4,purchase,grocery,Stark-Smith,mobile
+TXN-0000001161,ACC-00000140,2025-07-08,04:31:49,-234.85,fee,,,mobile
+TXN-0000001162,ACC-00000140,2024-04-28,12:35:17,-101.3,purchase,healthcare,"Mills, Barnes and Perry",atm
+TXN-0000001169,ACC-00000140,2025-05-13,07:54:58,-886.32,purchase,restaurant,"Becker, Morales and Foster",atm
+TXN-0000001170,ACC-00000140,2025-07-09,01:31:45,-2.47,purchase,utilities,"Young, Reese and Mccall",atm
+TXN-0000001171,ACC-00000140,2024-12-19,16:29:00,-0.38,purchase,travel,Morgan LLC,mobile
+TXN-0000001172,ACC-00000140,2024-11-11,01:17:28,70.44,payment,,,mobile
+TXN-0000001175,ACC-00000141,2024-01-16,08:25:57,121.9,payment,,,mobile
+TXN-0000001176,ACC-00000141,2025-07-18,09:47:03,-546.35,purchase,healthcare,Schroeder-Flores,mobile
+TXN-0000001177,ACC-00000141,2025-09-19,22:13:03,-1.74,purchase,grocery,Jacobs-Davis,mobile
+TXN-0000001192,ACC-00000144,2025-06-21,00:48:16,1240.33,deposit,,,online
+TXN-0000001195,ACC-00000144,2024-10-10,11:21:15,208.75,deposit,,,mobile
+TXN-0000001196,ACC-00000144,2024-08-12,16:53:01,65.53,deposit,,,mobile
+TXN-0000001197,ACC-00000144,2025-03-08,13:13:37,-53.25,purchase,utilities,Johnson-Williams,mobile
+TXN-0000001198,ACC-00000144,2025-08-06,04:33:38,-2.46,purchase,healthcare,Vincent Ltd,branch
+TXN-0000001199,ACC-00000144,2025-07-25,04:57:36,9.51,deposit,,,branch
+TXN-0000001202,ACC-00000144,2025-03-08,13:15:57,3.11,deposit,,,atm
+TXN-0000001206,ACC-00000144,2025-12-13,18:36:06,-32.19,withdrawal,,,atm
+TXN-0000001263,ACC-00000152,2024-03-22,12:46:01,2118.12,deposit,,,online
+TXN-0000001268,ACC-00000153,2021-01-05,08:30:21,-7.92,withdrawal,,,mobile
+TXN-0000001269,ACC-00000153,2021-12-11,05:22:35,-3.92,purchase,retail,Ferrell-Henry,online
+TXN-0000001272,ACC-00000153,2023-08-18,13:45:50,123.81,deposit,,,phone
+TXN-0000001274,ACC-00000153,2024-10-25,21:28:36,-6.6,withdrawal,,,atm
+TXN-0000001276,ACC-00000153,2023-11-05,20:55:00,-52.61,purchase,grocery,Mcdowell-Scott,branch
+TXN-0000001277,ACC-00000153,2021-08-03,02:22:38,-33.16,withdrawal,,,online
+TXN-0000001290,ACC-00000155,2021-02-13,09:20:56,-3.18,purchase,fuel,Glover Group,mobile
+TXN-0000001291,ACC-00000155,2025-07-31,14:44:35,-1.98,purchase,retail,"Gonzalez, Baker and Mills",online
+TXN-0000001294,ACC-00000155,2023-09-08,15:50:32,54.75,payment,,,branch
+TXN-0000001295,ACC-00000155,2022-03-11,18:36:27,-58.21,purchase,healthcare,Smith Inc,atm
+TXN-0000001296,ACC-00000155,2019-10-25,12:07:51,-16.27,purchase,healthcare,"Caldwell, Hernandez and Davis",online
+TXN-0000001298,ACC-00000155,2021-05-17,16:14:02,-21.47,purchase,fuel,"Hall, Hinton and Phillips",online
+TXN-0000001327,ACC-00000159,2022-12-09,09:57:04,-2.77,purchase,fuel,"Haynes, Davis and Stanley",mobile
+TXN-0000001328,ACC-00000159,2022-10-23,10:14:56,-14.04,withdrawal,,,mobile
+TXN-0000001329,ACC-00000159,2024-04-27,19:49:58,-1.17,purchase,healthcare,Alvarado-Davidson,mobile
+TXN-0000001330,ACC-00000159,2022-03-28,10:49:28,-51.65,purchase,fuel,"Mcclain, Salazar and Smith",online
+TXN-0000001342,ACC-00000162,2024-05-09,23:20:42,-606.84,purchase,retail,"Dunn, Petersen and Conner",mobile
+TXN-0000001343,ACC-00000162,2024-04-15,14:03:55,-271.56,purchase,travel,"Torres, Romero and Clark",mobile
+TXN-0000001345,ACC-00000162,2024-07-29,23:26:57,105.73,transfer,,,atm
+TXN-0000001346,ACC-00000162,2025-11-04,15:56:19,-30.01,purchase,healthcare,Bryan-Velasquez,online
+TXN-0000001349,ACC-00000162,2025-04-04,23:30:29,27.52,deposit,,,online
+TXN-0000001350,ACC-00000162,2025-08-12,23:59:36,-177.8,purchase,fuel,Baldwin-Wilson,online
+TXN-0000001357,ACC-00000163,2025-05-16,01:10:32,-40.0,purchase,utilities,Love Inc,online
+TXN-0000001358,ACC-00000163,2025-07-04,04:11:01,-12.91,purchase,restaurant,Williams-Schultz,atm
+TXN-0000001359,ACC-00000163,2024-09-12,23:30:30,-2.58,withdrawal,,,online
+TXN-0000001362,ACC-00000163,2025-04-08,06:39:15,984.09,transfer,,,branch
+TXN-0000001364,ACC-00000163,2024-03-19,06:05:58,-123.95,purchase,retail,Tran Group,mobile
+TXN-0000001365,ACC-00000164,2023-06-10,09:22:18,-152.58,purchase,restaurant,Glass-Norman,mobile
+TXN-0000001367,ACC-00000164,2022-06-26,19:02:08,-96.81,purchase,grocery,"Thompson, Ochoa and Garcia",mobile
+TXN-0000001369,ACC-00000164,2024-04-23,04:59:01,941.53,transfer,,,mobile
+TXN-0000001370,ACC-00000164,2024-07-19,11:17:00,102.79,deposit,,,mobile
+TXN-0000001374,ACC-00000164,2023-11-11,22:47:01,76.27,deposit,,,phone
+TXN-0000001375,ACC-00000165,2025-05-06,07:04:51,-14.15,purchase,retail,"Hunt, Cameron and Kelley",online
+TXN-0000001382,ACC-00000165,2023-01-27,19:35:35,-6.1,withdrawal,,,mobile
+TXN-0000001383,ACC-00000165,2022-11-22,07:38:27,472.93,deposit,,,online
+TXN-0000001389,ACC-00000166,2024-03-02,09:04:14,-15.91,fee,,,atm
+TXN-0000001390,ACC-00000166,2024-07-28,05:25:44,-9.55,interest,,,online
+TXN-0000001392,ACC-00000166,2023-03-13,22:03:56,-23.58,purchase,restaurant,"Rodriguez, James and Brown",mobile
+TXN-0000001393,ACC-00000166,2025-12-20,14:26:13,16.27,payment,,,phone
+TXN-0000001394,ACC-00000166,2024-03-17,20:50:06,-43.3,purchase,fuel,Christensen-Martin,mobile
+TXN-0000001395,ACC-00000166,2025-10-11,18:12:20,-15.28,purchase,fuel,"King, Franco and Vaughn",atm
+TXN-0000001397,ACC-00000167,2025-09-06,06:57:38,-4.25,purchase,restaurant,"Johnson, Cervantes and Garcia",online
+TXN-0000001398,ACC-00000167,2026-01-19,19:55:48,-307.94,purchase,entertainment,"Hoffman, Walker and Holland",atm
+TXN-0000001401,ACC-00000168,2025-01-18,11:09:26,139.98,transfer,,,online
+TXN-0000001402,ACC-00000168,2025-04-23,00:24:52,-243.95,purchase,travel,Church-Brown,branch
+TXN-0000001403,ACC-00000168,2025-10-27,09:52:57,-80.59,purchase,healthcare,Harris-Melton,atm
+TXN-0000001405,ACC-00000168,2024-08-25,23:45:59,6722.08,transfer,,,online
+TXN-0000001406,ACC-00000168,2025-08-30,06:21:05,-5.96,purchase,utilities,Fischer-Payne,mobile
+TXN-0000001423,ACC-00000170,2026-01-20,11:05:06,28.53,deposit,,,branch
+TXN-0000001424,ACC-00000170,2024-12-20,12:50:51,-533.04,purchase,travel,"Stewart, Robinson and White",mobile
+TXN-0000001425,ACC-00000170,2023-05-04,10:58:42,-97.92,purchase,utilities,"Moore, Daniels and Powell",online
+TXN-0000001426,ACC-00000170,2024-10-17,00:13:43,-65.53,purchase,fuel,Ware Ltd,online
+TXN-0000001427,ACC-00000170,2022-06-07,16:52:49,-27.64,withdrawal,,,atm
+TXN-0000001428,ACC-00000170,2021-05-17,10:44:44,-19.78,purchase,travel,Carter-Clements,branch
+TXN-0000001430,ACC-00000170,2022-11-30,02:52:01,-10.32,purchase,entertainment,Wilson LLC,mobile
+TXN-0000001432,ACC-00000171,2024-08-18,22:23:02,-4.2,purchase,healthcare,Haley Ltd,mobile
+TXN-0000001433,ACC-00000171,2023-12-04,23:57:46,-48.54,purchase,grocery,Moon-Landry,online
+TXN-0000001435,ACC-00000171,2025-05-12,15:09:21,-24.92,withdrawal,,,online
+TXN-0000001436,ACC-00000171,2023-11-04,14:19:13,-151.15,purchase,retail,Robertson-Hicks,mobile
+TXN-0000001437,ACC-00000172,2023-03-27,22:32:07,-7.7,withdrawal,,,online
+TXN-0000001451,ACC-00000174,2025-07-14,06:11:47,-24.64,purchase,retail,Thompson LLC,branch
+TXN-0000001473,ACC-00000177,2025-09-08,21:25:46,-47.38,purchase,utilities,"Long, Kelley and Miller",online
+TXN-0000001474,ACC-00000177,2024-05-02,17:08:55,-273.23,purchase,entertainment,"Figueroa, Swanson and Lewis",online
+TXN-0000001476,ACC-00000177,2024-09-27,17:47:15,15.29,deposit,,,online
+TXN-0000001479,ACC-00000177,2024-11-11,19:53:10,-15.36,purchase,fuel,White PLC,mobile
+TXN-0000001480,ACC-00000177,2024-01-04,05:53:35,22.44,deposit,,,online
+TXN-0000001510,ACC-00000182,2022-04-05,10:50:15,64.64,transfer,,,branch
+TXN-0000001511,ACC-00000182,2025-06-24,19:45:37,-175.28,withdrawal,,,atm
+TXN-0000001513,ACC-00000182,2024-04-03,03:34:04,-0.86,withdrawal,,,mobile
+TXN-0000001518,ACC-00000182,2026-01-06,09:52:18,-46.31,purchase,retail,"Webb, Howard and Robinson",online
+TXN-0000001520,ACC-00000183,2024-10-07,00:13:36,66.94,payment,,,online
+TXN-0000001522,ACC-00000183,2022-04-10,04:04:52,-41.2,purchase,grocery,Keith-Williams,atm
+TXN-0000001526,ACC-00000183,2023-09-04,12:00:48,-5.57,purchase,retail,Bennett Group,mobile
+TXN-0000001527,ACC-00000183,2023-02-20,16:51:41,-19.76,purchase,retail,"Valdez, Houston and Black",online
+TXN-0000001542,ACC-00000185,2025-10-04,22:55:30,-6.06,purchase,retail,Garza Ltd,online
+TXN-0000001548,ACC-00000185,2023-02-11,01:52:37,-32.81,purchase,restaurant,"Williams, Armstrong and Brown",mobile
+TXN-0000001569,ACC-00000188,2021-09-28,00:37:17,469.79,transfer,,,online
+TXN-0000001571,ACC-00000188,2022-01-14,15:56:44,-37.44,purchase,utilities,"Banks, Boyd and Wood",atm
+TXN-0000001572,ACC-00000188,2020-03-11,00:08:40,-44.42,withdrawal,,,mobile
+TXN-0000001574,ACC-00000188,2021-04-27,16:25:48,8.7,transfer,,,online
+TXN-0000001576,ACC-00000188,2024-09-10,18:16:19,92.24,deposit,,,atm
+TXN-0000001577,ACC-00000188,2023-12-27,13:27:26,5.53,deposit,,,mobile
+TXN-0000001578,ACC-00000188,2020-04-07,18:24:25,30.43,transfer,,,online
+TXN-0000001580,ACC-00000188,2019-06-27,23:15:14,-26.02,purchase,healthcare,Campbell PLC,online
+TXN-0000001581,ACC-00000188,2023-02-05,04:51:12,-41.71,purchase,travel,Lopez-Fletcher,online
+TXN-0000001583,ACC-00000188,2019-10-04,22:45:37,-13.43,fee,,,atm
+TXN-0000001590,ACC-00000190,2025-11-15,10:55:07,-59.11,purchase,travel,Rodriguez-Simmons,online
+TXN-0000001593,ACC-00000190,2025-08-31,19:13:43,-68.92,purchase,healthcare,Gutierrez PLC,online
+TXN-0000001594,ACC-00000190,2025-06-03,22:10:39,-9.65,purchase,fuel,Wood PLC,mobile
+TXN-0000001595,ACC-00000190,2025-10-01,16:15:33,26.9,deposit,,,mobile
+TXN-0000001596,ACC-00000190,2025-11-06,21:41:25,-21.94,withdrawal,,,mobile
+TXN-0000001597,ACC-00000190,2025-11-01,13:32:31,-17.89,purchase,fuel,"Cooper, Thornton and Fitzgerald",mobile
+TXN-0000001599,ACC-00000191,2025-04-14,00:32:33,-25.41,withdrawal,,,mobile
+TXN-0000001600,ACC-00000191,2022-08-17,23:55:16,209.01,transfer,,,online
+TXN-0000001603,ACC-00000191,2025-08-28,11:31:12,-22.94,withdrawal,,,atm
+TXN-0000001605,ACC-00000191,2021-11-30,10:31:38,23.21,transfer,,,online
+TXN-0000001606,ACC-00000191,2022-08-29,09:15:46,48.44,deposit,,,online
+TXN-0000001607,ACC-00000192,2025-08-05,10:56:19,-18.46,purchase,entertainment,"Morales, Morgan and Pierce",atm
+TXN-0000001608,ACC-00000192,2025-09-01,11:59:10,-79.13,purchase,healthcare,"Mann, Martin and Oconnell",online
+TXN-0000001609,ACC-00000192,2024-03-03,04:21:09,-4.45,purchase,utilities,Morrow Group,online
+TXN-0000001610,ACC-00000192,2024-11-25,08:45:34,-24.29,interest,,,online
+TXN-0000001612,ACC-00000192,2024-03-30,09:33:50,179.58,payment,,,mobile
+TXN-0000001613,ACC-00000192,2025-11-18,04:44:18,-24.47,purchase,restaurant,"Johnson, Cruz and Joyce",online
+TXN-0000001626,ACC-00000194,2024-08-13,22:54:10,7.28,deposit,,,phone
+TXN-0000001627,ACC-00000194,2021-12-01,05:51:36,-1.96,purchase,entertainment,Richmond-Hill,mobile
+TXN-0000001628,ACC-00000194,2020-12-05,22:47:56,-81.95,withdrawal,,,online
+TXN-0000001650,ACC-00000197,2025-10-10,12:15:43,291.03,payment,,,mobile
+TXN-0000001724,ACC-00000206,2020-11-14,12:56:18,135.66,deposit,,,online
+TXN-0000001725,ACC-00000206,2025-11-29,09:07:46,440.18,transfer,,,atm
+TXN-0000001727,ACC-00000206,2021-10-16,08:47:32,-9.76,withdrawal,,,online
+TXN-0000001729,ACC-00000206,2023-05-28,00:39:35,-15.32,purchase,travel,Harrison-Smith,branch
+TXN-0000001730,ACC-00000206,2025-01-25,09:01:13,-48.06,withdrawal,,,online
+TXN-0000001736,ACC-00000207,2025-06-16,02:10:18,-10.64,purchase,retail,Garrett-Black,online
+TXN-0000001737,ACC-00000207,2024-12-21,13:43:15,1104.0,deposit,,,mobile
+TXN-0000001739,ACC-00000207,2025-05-12,18:07:13,-11.4,purchase,retail,Gutierrez-Castaneda,mobile
+TXN-0000001741,ACC-00000208,2025-09-23,17:56:56,-12.58,fee,,,mobile
+TXN-0000001742,ACC-00000208,2026-01-11,14:10:35,39.63,deposit,,,branch
+TXN-0000001746,ACC-00000208,2026-01-22,23:42:55,-99.61,purchase,travel,"Gonzales, Smith and Davis",mobile
+TXN-0000001747,ACC-00000208,2025-12-05,23:40:20,916.55,deposit,,,branch
+TXN-0000001751,ACC-00000209,2024-01-13,19:55:45,1.89,deposit,,,mobile
+TXN-0000001755,ACC-00000209,2024-10-04,02:37:16,-1.15,withdrawal,,,mobile
+TXN-0000001756,ACC-00000209,2024-10-18,18:12:46,-166.67,purchase,entertainment,White-Huang,mobile
+TXN-0000001758,ACC-00000209,2026-01-11,03:47:19,-60.96,withdrawal,,,branch
+TXN-0000001814,ACC-00000216,2023-03-03,01:32:30,-118.58,withdrawal,,,online
+TXN-0000001817,ACC-00000216,2025-12-18,12:44:58,12.14,transfer,,,mobile
+TXN-0000001821,ACC-00000216,2025-05-24,01:38:03,-74.18,purchase,restaurant,"Ellis, Ortega and Andrade",mobile
+TXN-0000001823,ACC-00000216,2023-07-12,01:29:47,-5.77,purchase,utilities,"Moore, Murillo and Ramos",online
+TXN-0000001824,ACC-00000217,2025-12-27,05:16:33,-27.27,withdrawal,,,branch
+TXN-0000001825,ACC-00000217,2025-12-07,08:17:59,-64.2,withdrawal,,,mobile
+TXN-0000001827,ACC-00000217,2025-11-26,12:56:26,-2.92,purchase,entertainment,Gutierrez-Schultz,branch
+TXN-0000001828,ACC-00000217,2025-12-05,09:59:19,-12.22,fee,,,branch
+TXN-0000001830,ACC-00000217,2026-01-02,05:50:16,-8.01,purchase,grocery,Hart and Sons,phone
+TXN-0000001833,ACC-00000218,2024-04-21,17:44:56,-10.69,purchase,utilities,"King, Nixon and West",mobile
+TXN-0000001836,ACC-00000218,2023-12-26,04:47:18,-27.59,purchase,retail,Bird PLC,mobile
+TXN-0000001838,ACC-00000218,2022-09-20,06:27:36,-16.77,purchase,travel,Holder LLC,online
+TXN-0000001840,ACC-00000218,2025-03-05,09:22:23,376.83,payment,,,phone
+TXN-0000001841,ACC-00000218,2022-11-07,00:50:32,-27.04,purchase,healthcare,"Short, Ellison and Dixon",branch
+TXN-0000001845,ACC-00000219,2024-06-07,08:37:48,-33.97,fee,,,online
+TXN-0000001846,ACC-00000219,2024-05-12,10:23:14,-8.68,purchase,travel,Davis-Ross,atm
+TXN-0000001848,ACC-00000219,2022-08-12,12:21:07,-5.72,purchase,restaurant,Cummings Group,phone
+TXN-0000001849,ACC-00000219,2025-12-05,08:03:02,-284.2,purchase,travel,Petersen-Norris,phone
+TXN-0000001850,ACC-00000219,2021-01-24,03:53:45,-59.97,withdrawal,,,online
+TXN-0000001852,ACC-00000219,2025-07-31,13:14:24,-4.79,withdrawal,,,atm
+TXN-0000001856,ACC-00000220,2025-04-11,04:52:26,-18.66,purchase,retail,Adkins PLC,branch
+TXN-0000001860,ACC-00000220,2025-06-27,22:38:55,27.42,payment,,,branch
+TXN-0000001941,ACC-00000232,2025-01-02,14:57:50,-10.12,withdrawal,,,branch
+TXN-0000001946,ACC-00000232,2025-09-30,16:34:45,8.55,transfer,,,mobile
+TXN-0000001978,ACC-00000237,2025-10-20,16:17:59,-268.0,fee,,,mobile
+TXN-0000001979,ACC-00000237,2022-11-14,13:40:52,96.25,transfer,,,online
+TXN-0000001980,ACC-00000237,2025-10-21,05:22:40,31.46,transfer,,,mobile
+TXN-0000001990,ACC-00000240,2024-09-03,14:51:09,-10.11,fee,,,online
+TXN-0000001992,ACC-00000240,2025-10-15,08:50:32,-10.1,purchase,travel,Khan LLC,mobile
+TXN-0000001997,ACC-00000240,2024-10-15,12:29:33,-13.04,purchase,retail,"Evans, Knapp and Williams",online
+TXN-0000001999,ACC-00000240,2024-07-06,18:42:49,-89.68,purchase,travel,"Holt, Larson and Cobb",online
+TXN-0000002002,ACC-00000241,2024-12-22,00:47:39,-26.18,purchase,healthcare,Wilkins-Chang,online
+TXN-0000002003,ACC-00000241,2025-12-31,21:41:34,-23.99,purchase,utilities,Carter and Sons,atm
+TXN-0000002005,ACC-00000241,2025-09-09,08:20:55,-0.48,purchase,fuel,"Clark, Brown and Duncan",atm
+TXN-0000002018,ACC-00000243,2025-02-06,13:57:37,-18.69,purchase,travel,"Lewis, Davidson and Vaughn",branch
+TXN-0000002019,ACC-00000243,2024-06-06,03:57:51,-41.68,purchase,grocery,Parker PLC,online
+TXN-0000002020,ACC-00000243,2025-08-11,04:05:39,-27.0,interest,,,phone
+TXN-0000002025,ACC-00000243,2024-11-23,17:17:59,-5.88,purchase,utilities,Olson Ltd,online
+TXN-0000002027,ACC-00000244,2026-01-05,04:41:43,-14.03,fee,,,branch
+TXN-0000002029,ACC-00000244,2025-06-16,03:40:31,26.67,transfer,,,mobile
+TXN-0000002031,ACC-00000245,2025-06-03,08:17:09,-26.8,purchase,utilities,Reilly-Brown,atm
+TXN-0000002041,ACC-00000246,2025-11-07,09:01:51,-8.63,interest,,,mobile
+TXN-0000002042,ACC-00000246,2025-12-18,08:53:47,-4.86,purchase,entertainment,"Hodge, Mckinney and Nelson",atm
+TXN-0000002043,ACC-00000246,2025-09-20,08:31:09,38.7,payment,,,online
+TXN-0000002044,ACC-00000246,2025-10-07,04:27:35,-42.44,purchase,grocery,Watson LLC,atm
+TXN-0000002047,ACC-00000246,2025-10-25,18:10:14,11.48,payment,,,mobile
+TXN-0000002048,ACC-00000246,2024-12-10,21:08:36,14.84,payment,,,online
+TXN-0000002049,ACC-00000246,2025-03-20,15:02:22,-30.3,purchase,utilities,Stein-Moore,mobile
+TXN-0000002050,ACC-00000246,2025-11-22,18:14:52,36.64,payment,,,online
+TXN-0000002062,ACC-00000248,2025-10-16,12:15:54,-84.38,purchase,restaurant,Mitchell PLC,online
+TXN-0000002065,ACC-00000248,2025-08-01,00:52:47,-159.92,purchase,fuel,"Garcia, Daniels and Dunn",mobile
+TXN-0000002066,ACC-00000248,2025-02-24,09:56:06,19.68,payment,,,mobile
+TXN-0000002068,ACC-00000248,2025-07-02,14:48:38,-39.33,purchase,restaurant,"Mcclain, Fernandez and Williams",atm
+TXN-0000002069,ACC-00000248,2025-05-22,10:05:57,-1.25,purchase,utilities,Berger-Williams,phone
+TXN-0000002070,ACC-00000248,2025-12-14,15:30:53,-28.34,purchase,travel,Miller Group,atm
+TXN-0000002073,ACC-00000248,2025-06-25,06:08:55,-10.07,purchase,grocery,Marquez Ltd,branch
+TXN-0000002074,ACC-00000248,2025-04-15,11:30:40,-19.26,purchase,fuel,"Miller, Livingston and Duran",atm
+TXN-0000002089,ACC-00000250,2022-08-13,12:51:52,84.13,payment,,,mobile
+TXN-0000002091,ACC-00000250,2023-08-28,11:41:26,-0.84,purchase,travel,"Gutierrez, Oliver and Kelley",phone
+TXN-0000002092,ACC-00000250,2022-11-23,22:49:57,-130.17,purchase,healthcare,Jones-Clark,branch
+TXN-0000002096,ACC-00000250,2024-02-04,18:33:32,-3.26,purchase,restaurant,Bradley-Peterson,phone
+TXN-0000002097,ACC-00000251,2025-07-10,01:49:19,-10.46,purchase,healthcare,Thompson Ltd,online
+TXN-0000002098,ACC-00000251,2025-03-28,07:04:01,-2.19,purchase,healthcare,"Galvan, Andrews and Tucker",mobile
+TXN-0000002100,ACC-00000251,2024-12-08,20:42:06,-8.96,purchase,travel,Blanchard-Jones,branch
+TXN-0000002101,ACC-00000251,2025-06-20,09:51:12,-10.82,withdrawal,,,mobile
+TXN-0000002104,ACC-00000251,2024-11-07,01:32:29,-31.6,purchase,grocery,Davis and Sons,online
+TXN-0000002117,ACC-00000253,2025-06-13,23:03:27,-31.98,purchase,healthcare,Santana-Faulkner,mobile
+TXN-0000002118,ACC-00000253,2023-12-31,08:22:12,-4.89,purchase,grocery,"Castro, Irwin and Rodriguez",atm
+TXN-0000002124,ACC-00000253,2023-12-28,08:01:34,203.33,payment,,,online
+TXN-0000002125,ACC-00000253,2023-06-11,11:37:07,-3.77,purchase,retail,Bright-Santiago,online
+TXN-0000002129,ACC-00000254,2023-11-11,15:41:04,-70.22,purchase,grocery,Taylor Group,online
+TXN-0000002130,ACC-00000254,2024-04-17,22:08:15,-164.76,withdrawal,,,online
+TXN-0000002133,ACC-00000254,2023-06-12,16:13:40,-5.49,purchase,restaurant,Hanson-Gibson,mobile
+TXN-0000002137,ACC-00000254,2023-09-02,17:44:33,14.78,deposit,,,mobile
+TXN-0000002138,ACC-00000254,2023-02-04,12:53:25,-19.47,purchase,grocery,Bradford-Young,atm
+TXN-0000002164,ACC-00000258,2023-09-24,21:00:11,-4.31,purchase,utilities,"Peck, Moore and Crawford",branch
+TXN-0000002165,ACC-00000258,2025-11-18,14:17:11,-4.7,withdrawal,,,phone
+TXN-0000002167,ACC-00000258,2025-11-07,20:21:11,28.11,deposit,,,mobile
+TXN-0000002169,ACC-00000259,2021-05-20,11:40:09,-18.13,withdrawal,,,atm
+TXN-0000002172,ACC-00000259,2022-09-09,14:00:30,-6.58,purchase,entertainment,"Hall, Vega and Price",online
+TXN-0000002173,ACC-00000259,2021-09-17,20:34:40,-3.53,purchase,restaurant,Moreno Group,phone
+TXN-0000002179,ACC-00000259,2024-11-28,00:04:37,15.84,deposit,,,mobile
+TXN-0000002202,ACC-00000262,2024-03-26,06:04:38,2.76,payment,,,online
+TXN-0000002203,ACC-00000262,2021-01-14,01:45:28,-31.31,purchase,utilities,Martin-Jones,online
+TXN-0000002204,ACC-00000262,2023-09-08,18:22:49,-90.73,purchase,grocery,Reyes LLC,online
+TXN-0000002205,ACC-00000262,2020-12-23,13:07:39,-43.95,purchase,travel,Sosa-Baker,phone
+TXN-0000002206,ACC-00000262,2023-09-03,03:15:26,-8.89,purchase,healthcare,Vasquez and Sons,atm
+TXN-0000002207,ACC-00000262,2025-11-18,23:20:49,-1.18,purchase,utilities,White-Vasquez,mobile
+TXN-0000002218,ACC-00000264,2025-01-11,05:17:59,-5.38,purchase,restaurant,Powell-Luna,mobile
+TXN-0000002221,ACC-00000264,2024-04-14,16:32:12,9.22,transfer,,,atm
+TXN-0000002224,ACC-00000264,2025-10-10,02:55:25,-122.09,purchase,grocery,Brown-Shea,online
+TXN-0000002242,ACC-00000266,2024-07-20,21:46:45,-15.59,purchase,restaurant,"Smith, Meadows and Montgomery",mobile
+TXN-0000002243,ACC-00000266,2024-03-04,21:51:37,-18.21,purchase,utilities,"Banks, Smith and Chen",phone
+TXN-0000002244,ACC-00000266,2025-01-03,14:00:57,-114.93,fee,,,online
+TXN-0000002246,ACC-00000266,2024-01-09,22:50:00,-32.94,purchase,fuel,Meyers Inc,mobile
+TXN-0000002247,ACC-00000266,2025-10-29,14:38:51,-3.22,purchase,travel,Larson-Gilbert,mobile
+TXN-0000002248,ACC-00000266,2024-09-02,16:04:16,-13.02,purchase,fuel,Simmons Ltd,mobile
+TXN-0000002251,ACC-00000266,2025-08-24,23:41:27,-22.06,purchase,grocery,Morris and Sons,online
+TXN-0000002252,ACC-00000266,2025-09-04,09:19:42,-19.52,purchase,travel,Watkins LLC,online
+TXN-0000002259,ACC-00000267,2025-09-11,22:54:04,-22.39,purchase,grocery,Schwartz-Harris,mobile
+TXN-0000002260,ACC-00000267,2022-09-09,10:29:43,-22.24,purchase,travel,Mills-Jenkins,mobile
+TXN-0000002262,ACC-00000267,2023-03-10,18:41:06,-10.27,withdrawal,,,phone
+TXN-0000002264,ACC-00000267,2023-01-25,05:38:26,-118.44,purchase,entertainment,Lee PLC,mobile
+TXN-0000002268,ACC-00000267,2021-03-09,21:12:23,-21.22,fee,,,atm
+TXN-0000002282,ACC-00000269,2023-06-03,12:51:16,-23.25,withdrawal,,,online
+TXN-0000002285,ACC-00000269,2020-01-25,14:10:59,-75.42,purchase,utilities,Bennett and Sons,phone
+TXN-0000002286,ACC-00000269,2019-09-09,12:37:54,-14.36,withdrawal,,,mobile
+TXN-0000002287,ACC-00000269,2025-04-13,13:07:34,-2.35,fee,,,online
+TXN-0000002288,ACC-00000269,2024-11-18,00:27:30,-2.38,withdrawal,,,online
+TXN-0000002292,ACC-00000269,2020-03-29,19:32:29,-14.36,withdrawal,,,mobile
+TXN-0000002293,ACC-00000269,2021-09-17,13:16:30,-5.75,withdrawal,,,online
+TXN-0000002296,ACC-00000269,2024-01-15,17:55:16,87.08,transfer,,,atm
+TXN-0000002352,ACC-00000276,2024-12-27,06:52:37,-6.06,purchase,retail,Mullen-Jones,branch
+TXN-0000002353,ACC-00000276,2025-08-13,15:35:40,-4.84,purchase,utilities,Rodriguez-Hernandez,mobile
+TXN-0000002355,ACC-00000276,2023-01-08,13:23:31,-23.17,purchase,utilities,Butler-Fleming,atm
+TXN-0000002358,ACC-00000276,2024-03-17,09:50:48,-50.04,purchase,retail,Conley PLC,branch
+TXN-0000002363,ACC-00000276,2023-10-01,08:34:44,-288.53,purchase,retail,Torres-Anderson,mobile
+TXN-0000002365,ACC-00000276,2022-05-11,22:16:11,-204.8,purchase,grocery,Mccormick and Sons,online
+TXN-0000002367,ACC-00000276,2025-01-04,20:49:19,-23.6,purchase,utilities,Carrillo-Williams,mobile
+TXN-0000002390,ACC-00000279,2021-06-25,16:19:28,-8.59,purchase,restaurant,Howard-Nguyen,mobile
+TXN-0000002391,ACC-00000279,2022-12-17,06:03:55,-4.51,purchase,restaurant,"Lee, Fox and Harrington",mobile
+TXN-0000002394,ACC-00000279,2024-10-27,12:02:38,348.33,payment,,,branch
+TXN-0000002396,ACC-00000280,2023-03-10,21:55:06,-5.95,fee,,,mobile
+TXN-0000002397,ACC-00000280,2026-01-26,07:35:09,-10.83,purchase,retail,"Jacobs, Harding and Kerr",online
+TXN-0000002399,ACC-00000280,2024-07-25,23:26:30,-1.49,purchase,entertainment,Watson-Mitchell,mobile
+TXN-0000002400,ACC-00000280,2023-01-10,06:37:13,-0.82,purchase,travel,Madden-Sawyer,mobile
+TXN-0000002401,ACC-00000280,2025-07-28,18:29:13,-49.27,purchase,fuel,Luna Group,atm
+TXN-0000002402,ACC-00000280,2022-08-17,02:32:05,-33.03,purchase,retail,Lara-Roberts,mobile
+TXN-0000002408,ACC-00000280,2025-01-16,15:00:54,-5.27,purchase,retail,Davis-Ortiz,atm
+TXN-0000002412,ACC-00000281,2024-09-21,19:59:22,-12.31,fee,,,mobile
+TXN-0000002415,ACC-00000281,2025-03-25,11:42:34,-334.57,purchase,travel,"Kennedy, Valdez and Stafford",branch
+TXN-0000002419,ACC-00000281,2025-01-25,10:54:37,-26.77,purchase,fuel,Hubbard Group,online
+TXN-0000002420,ACC-00000281,2025-11-15,10:13:20,-60.51,purchase,grocery,"Reese, Perkins and Cunningham",branch
+TXN-0000002421,ACC-00000281,2025-06-10,23:47:42,-153.91,purchase,entertainment,"Jennings, Mccann and Cardenas",online
+TXN-0000002422,ACC-00000281,2024-11-13,02:25:23,-75.93,purchase,retail,"Quinn, Smith and Green",atm
+TXN-0000002424,ACC-00000281,2025-08-30,19:20:33,-21.5,purchase,retail,Flores Ltd,online
+TXN-0000002426,ACC-00000282,2023-08-08,01:31:41,-5.83,withdrawal,,,mobile
+TXN-0000002429,ACC-00000282,2025-03-02,02:26:53,-11.71,purchase,utilities,Roberts PLC,mobile
+TXN-0000002431,ACC-00000282,2025-10-09,01:02:30,-376.75,purchase,travel,George and Sons,mobile
+TXN-0000002450,ACC-00000284,2024-06-12,08:39:07,-2.8,purchase,travel,"Olsen, Walker and Vincent",mobile
+TXN-0000002452,ACC-00000284,2023-10-07,02:54:54,-7.98,purchase,travel,Vazquez-Bowers,mobile
+TXN-0000002455,ACC-00000284,2025-10-23,11:22:13,-491.9,purchase,retail,Mcguire PLC,online
+TXN-0000002456,ACC-00000284,2025-06-03,18:25:19,-54.78,purchase,retail,Harrison LLC,mobile
+TXN-0000002457,ACC-00000284,2025-03-09,14:05:28,-26.58,fee,,,online
+TXN-0000002461,ACC-00000284,2023-10-03,05:01:30,-19.05,purchase,retail,"Bell, Davis and Singleton",online
+TXN-0000002463,ACC-00000284,2024-09-21,12:34:43,107.45,transfer,,,branch
+TXN-0000002476,ACC-00000286,2025-11-29,13:43:41,-19.53,purchase,grocery,Wolfe-Lopez,mobile
+TXN-0000002480,ACC-00000286,2025-09-20,18:40:16,-52.53,fee,,,mobile
+TXN-0000002481,ACC-00000286,2025-06-15,21:22:36,-4.69,withdrawal,,,atm
+TXN-0000002482,ACC-00000286,2025-05-24,11:27:36,-4.38,purchase,utilities,Rodriguez-Rollins,mobile
+TXN-0000002483,ACC-00000286,2025-03-03,01:11:12,-3.14,withdrawal,,,branch
+TXN-0000002556,ACC-00000293,2026-01-24,16:48:21,-63.58,purchase,retail,Weber Inc,atm
+TXN-0000002558,ACC-00000293,2025-12-07,00:50:53,-12.24,purchase,retail,"Alvarez, Clark and Flynn",mobile
+TXN-0000002559,ACC-00000293,2026-01-17,07:20:07,-59.98,purchase,retail,Wagner-Evans,mobile
+TXN-0000002578,ACC-00000296,2020-03-01,08:12:50,-8.07,withdrawal,,,online
+TXN-0000002581,ACC-00000296,2023-12-04,07:48:12,-227.45,purchase,retail,Moore and Sons,online
+TXN-0000002583,ACC-00000296,2024-09-23,03:16:30,-32.0,withdrawal,,,mobile
+TXN-0000002584,ACC-00000296,2021-06-16,20:01:42,-15.96,purchase,fuel,"Phelps, Stuart and Tucker",branch
+TXN-0000002586,ACC-00000296,2024-03-05,20:13:33,-4.1,withdrawal,,,online
+TXN-0000002587,ACC-00000297,2021-06-19,05:02:27,-24.67,purchase,retail,Camacho-Lester,branch
+TXN-0000002589,ACC-00000297,2021-11-12,17:52:10,-34.01,purchase,entertainment,"Cameron, Young and Duncan",atm
+TXN-0000002593,ACC-00000298,2026-01-15,06:37:59,-10.33,purchase,fuel,Murphy-Silva,online
+TXN-0000002594,ACC-00000298,2024-09-26,07:14:37,-16.5,withdrawal,,,mobile
+TXN-0000002597,ACC-00000298,2025-11-09,01:07:31,-160.46,purchase,grocery,Walls and Sons,mobile
+TXN-0000002598,ACC-00000298,2024-11-24,21:02:28,35.64,deposit,,,branch
+TXN-0000002599,ACC-00000298,2025-03-20,05:17:50,-15.87,purchase,retail,Lewis LLC,online
+TXN-0000002600,ACC-00000298,2024-10-01,22:17:13,-18.39,purchase,utilities,King-Lawrence,mobile
+TXN-0000002602,ACC-00000298,2025-05-05,05:13:03,-9.14,purchase,entertainment,Vega-Richmond,mobile
+TXN-0000002605,ACC-00000298,2025-02-12,19:15:12,-14.65,purchase,restaurant,Baldwin-Underwood,mobile
+TXN-0000002614,ACC-00000299,2023-12-27,14:10:20,-92.51,purchase,utilities,"Stewart, Burnett and Newman",online
+TXN-0000002615,ACC-00000299,2023-11-28,16:36:06,-17.39,purchase,healthcare,Hill Inc,online
+TXN-0000002625,ACC-00000301,2024-01-05,20:50:37,-31.27,withdrawal,,,phone
+TXN-0000002626,ACC-00000301,2023-06-27,14:10:25,-39.95,purchase,travel,Mccoy Ltd,atm
+TXN-0000002627,ACC-00000301,2025-09-06,10:47:20,-16.05,fee,,,online
+TXN-0000002628,ACC-00000301,2025-07-13,12:06:10,-2.06,withdrawal,,,online
+TXN-0000002631,ACC-00000301,2025-09-09,08:25:04,-20.82,purchase,healthcare,"Booker, Rivas and Hines",mobile
+TXN-0000002632,ACC-00000301,2023-03-31,19:14:54,-160.84,purchase,entertainment,"Jenkins, Ayers and Hayes",online
+TXN-0000002634,ACC-00000301,2023-05-25,08:45:01,-96.85,purchase,travel,Marsh-Gonzalez,mobile
+TXN-0000002636,ACC-00000301,2024-01-13,15:47:35,-2.59,withdrawal,,,atm
+TXN-0000002637,ACC-00000301,2025-02-03,08:41:28,160.44,deposit,,,online
+TXN-0000002638,ACC-00000301,2025-05-29,22:11:35,35.67,deposit,,,mobile
+TXN-0000002639,ACC-00000301,2024-12-14,15:11:25,-18.47,purchase,grocery,"Holland, Sims and Meadows",atm
+TXN-0000002640,ACC-00000301,2025-06-23,08:41:42,-15.04,purchase,entertainment,Green and Sons,mobile
+TXN-0000002669,ACC-00000305,2024-01-03,16:37:20,22.56,payment,,,mobile
+TXN-0000002670,ACC-00000305,2019-09-15,21:04:04,-11.71,purchase,restaurant,Conrad-Humphrey,online
+TXN-0000002673,ACC-00000305,2025-01-29,06:18:56,6.72,payment,,,mobile
+TXN-0000002677,ACC-00000305,2025-11-12,06:07:56,-20.32,purchase,travel,"Gallegos, Mcintosh and Black",online
+TXN-0000002680,ACC-00000306,2025-11-11,05:09:23,-261.1,purchase,travel,Brown-Hernandez,mobile
+TXN-0000002682,ACC-00000306,2025-02-03,19:15:05,-64.19,purchase,utilities,Harrison and Sons,branch
+TXN-0000002683,ACC-00000306,2024-10-05,01:46:40,-12.33,purchase,entertainment,Graham-Carney,mobile
+TXN-0000002684,ACC-00000306,2026-01-07,02:45:15,-26.67,purchase,healthcare,Alexander Ltd,online
+TXN-0000002686,ACC-00000307,2026-01-17,21:28:44,-8.17,purchase,restaurant,Vasquez-Singleton,online
+TXN-0000002687,ACC-00000307,2024-11-06,10:37:35,-110.31,withdrawal,,,mobile
+TXN-0000002688,ACC-00000307,2025-01-05,04:52:54,-4.15,purchase,retail,Davis-Oneill,branch
+TXN-0000002689,ACC-00000307,2025-09-02,14:09:10,-11.4,purchase,entertainment,Brady LLC,atm
+TXN-0000002692,ACC-00000307,2024-08-27,15:39:37,22.68,deposit,,,online
+TXN-0000002696,ACC-00000308,2025-09-19,09:10:19,-68.46,purchase,grocery,Brooks-Hickman,mobile
+TXN-0000002698,ACC-00000308,2024-12-09,22:31:55,-14.31,fee,,,mobile
+TXN-0000002699,ACC-00000308,2025-10-10,00:38:48,-9.82,purchase,healthcare,Gibson-Moses,mobile
+TXN-0000002731,ACC-00000313,2024-07-02,15:05:54,-4.97,withdrawal,,,mobile
+TXN-0000002733,ACC-00000313,2023-03-19,22:02:50,-39.42,withdrawal,,,mobile
+TXN-0000002734,ACC-00000313,2025-07-05,19:03:12,-37.3,fee,,,mobile
+TXN-0000002735,ACC-00000313,2024-03-15,12:54:12,50.98,deposit,,,atm
+TXN-0000002736,ACC-00000313,2025-09-23,19:23:01,-10.4,withdrawal,,,mobile
+TXN-0000002739,ACC-00000314,2025-11-13,09:35:07,-41.18,purchase,fuel,Matthews-Gibson,mobile
+TXN-0000002755,ACC-00000316,2024-11-02,12:59:48,-11.72,withdrawal,,,online
+TXN-0000002756,ACC-00000316,2023-07-23,16:15:03,-39.83,purchase,travel,Miller Group,branch
+TXN-0000002759,ACC-00000316,2021-07-31,12:08:21,98.13,deposit,,,atm
+TXN-0000002762,ACC-00000317,2022-04-23,21:42:32,-166.48,fee,,,atm
+TXN-0000002764,ACC-00000317,2021-11-12,16:15:53,-51.82,purchase,travel,Phillips Group,mobile
+TXN-0000002770,ACC-00000317,2025-03-19,17:40:12,-781.63,purchase,retail,Hall-Brown,online
+TXN-0000002774,ACC-00000318,2020-11-18,05:52:28,-75.11,withdrawal,,,mobile
+TXN-0000002790,ACC-00000321,2025-05-15,23:25:51,28.98,deposit,,,branch
+TXN-0000002791,ACC-00000321,2025-01-19,04:44:24,-12.41,fee,,,mobile
+TXN-0000002792,ACC-00000321,2021-10-01,12:17:32,70.12,transfer,,,mobile
+TXN-0000002806,ACC-00000323,2023-02-03,04:53:41,-3.81,withdrawal,,,mobile
+TXN-0000002807,ACC-00000323,2024-08-08,19:29:39,-72.95,purchase,travel,Glover-Hammond,online
+TXN-0000002808,ACC-00000323,2021-10-19,20:46:35,93.26,deposit,,,branch
+TXN-0000002810,ACC-00000323,2021-05-24,13:24:45,-134.06,withdrawal,,,atm
+TXN-0000002811,ACC-00000323,2024-12-22,05:55:04,-15.39,purchase,restaurant,"Russo, Munoz and Garcia",phone
+TXN-0000002812,ACC-00000323,2021-01-16,05:48:14,-3.33,fee,,,mobile
+TXN-0000002815,ACC-00000323,2023-07-27,21:33:59,-30.71,purchase,fuel,Romero and Sons,atm
+TXN-0000002816,ACC-00000324,2025-11-24,01:33:41,-37.29,purchase,grocery,Pitts LLC,mobile
+TXN-0000002818,ACC-00000324,2024-09-20,13:48:40,-4.46,purchase,travel,Erickson-Gill,mobile
+TXN-0000002819,ACC-00000324,2024-10-05,08:26:25,-5.81,purchase,entertainment,"Harrell, Moore and Cox",mobile
+TXN-0000002821,ACC-00000324,2021-08-20,18:29:43,95.46,transfer,,,mobile
+TXN-0000002822,ACC-00000324,2021-12-07,00:16:31,25.43,transfer,,,online
+TXN-0000002828,ACC-00000325,2024-10-09,07:36:34,-59.83,purchase,entertainment,"Fischer, Ward and Ortega",online
+TXN-0000002837,ACC-00000327,2023-07-16,00:16:39,-46.91,purchase,fuel,Levine Ltd,online
+TXN-0000002838,ACC-00000327,2024-10-22,03:10:04,-35.41,purchase,healthcare,"Liu, Kaufman and Barnes",online
+TXN-0000002839,ACC-00000327,2023-06-16,05:45:12,129.9,transfer,,,online
+TXN-0000002841,ACC-00000327,2023-12-03,23:45:19,368.47,deposit,,,online
+TXN-0000002843,ACC-00000327,2022-06-05,08:02:06,-47.31,purchase,healthcare,"Edwards, Cooper and Wilcox",online
+TXN-0000002844,ACC-00000327,2025-02-14,14:56:29,-7.11,purchase,grocery,"Knapp, Graves and Griffin",branch
+TXN-0000002849,ACC-00000328,2024-12-29,19:31:45,-43.16,purchase,retail,Rowe-Ibarra,online
+TXN-0000002851,ACC-00000328,2022-11-06,23:34:00,-174.19,withdrawal,,,atm
+TXN-0000002852,ACC-00000328,2025-03-06,20:48:10,-34.08,withdrawal,,,phone
+TXN-0000002853,ACC-00000328,2024-03-05,08:12:28,-1.6,fee,,,mobile
+TXN-0000002855,ACC-00000328,2024-04-13,20:56:42,-10.7,withdrawal,,,online
+TXN-0000002856,ACC-00000328,2023-12-04,02:20:32,18.77,deposit,,,atm
+TXN-0000002857,ACC-00000328,2023-12-16,01:34:00,-13.76,purchase,restaurant,Meyer PLC,mobile
+TXN-0000002858,ACC-00000328,2025-02-28,01:49:19,-7.0,purchase,fuel,Davis PLC,mobile
+TXN-0000002859,ACC-00000329,2026-01-16,13:38:01,-6.05,purchase,retail,"Peterson, Reid and Johnson",atm
+TXN-0000002863,ACC-00000329,2025-12-06,01:09:37,-52.29,withdrawal,,,mobile
+TXN-0000002864,ACC-00000329,2025-12-19,11:35:25,-74.08,purchase,retail,"Brown, Watson and Sims",mobile
+TXN-0000002865,ACC-00000329,2025-12-11,09:20:34,21.14,deposit,,,online
+TXN-0000002866,ACC-00000329,2025-12-06,09:45:54,-2.83,withdrawal,,,online
+TXN-0000002867,ACC-00000329,2025-12-03,09:35:01,-7.65,withdrawal,,,atm
+TXN-0000002869,ACC-00000330,2024-01-30,00:48:32,-4.28,fee,,,online
+TXN-0000002875,ACC-00000330,2024-04-12,16:19:51,-49.37,purchase,fuel,Stone-Wright,online
+TXN-0000002877,ACC-00000330,2025-04-17,14:25:06,-23.5,withdrawal,,,mobile
+TXN-0000002898,ACC-00000333,2024-08-02,20:12:13,74.41,deposit,,,mobile
+TXN-0000002899,ACC-00000333,2026-01-26,14:08:11,-40.12,purchase,fuel,Kelley Inc,branch
+TXN-0000002900,ACC-00000333,2025-02-01,21:16:48,-9.27,withdrawal,,,mobile
+TXN-0000002903,ACC-00000333,2025-03-10,13:02:33,-42.13,purchase,travel,Knight-Mccullough,mobile
+TXN-0000002909,ACC-00000336,2021-12-29,10:12:51,-1.2,purchase,healthcare,"Cole, Cline and Nguyen",online
+TXN-0000002910,ACC-00000336,2024-05-06,18:04:35,-0.56,withdrawal,,,atm
+TXN-0000002911,ACC-00000336,2025-05-31,07:04:12,2.72,deposit,,,online
+TXN-0000002915,ACC-00000337,2025-06-14,05:04:52,-4.02,purchase,entertainment,Rubio Group,atm
+TXN-0000002916,ACC-00000337,2025-06-18,04:41:20,84.03,payment,,,online
+TXN-0000002920,ACC-00000337,2025-09-04,15:02:57,6.97,payment,,,atm
+TXN-0000002921,ACC-00000337,2025-07-31,11:02:09,-276.33,purchase,utilities,Bernard PLC,online
+TXN-0000002929,ACC-00000339,2024-05-16,13:59:48,-5.03,purchase,travel,Perry PLC,mobile
+TXN-0000002933,ACC-00000339,2024-06-07,21:46:40,-57.86,purchase,fuel,Moore Group,online
+TXN-0000002965,ACC-00000344,2025-11-07,12:57:10,209.16,transfer,,,phone
+TXN-0000002967,ACC-00000344,2024-09-13,11:48:05,-24.27,withdrawal,,,online
+TXN-0000003010,ACC-00000349,2024-07-20,02:31:16,-313.62,purchase,fuel,"Brown, Green and Hudson",mobile
+TXN-0000003011,ACC-00000349,2023-10-16,05:20:50,6.98,transfer,,,mobile
+TXN-0000003012,ACC-00000349,2025-02-06,21:06:24,33.77,deposit,,,atm
+TXN-0000003013,ACC-00000350,2022-04-23,23:55:00,-24.5,fee,,,mobile
+TXN-0000003014,ACC-00000350,2025-01-24,11:00:43,24.26,deposit,,,atm
+TXN-0000003017,ACC-00000350,2026-01-26,14:10:52,151.03,transfer,,,mobile
+TXN-0000003018,ACC-00000350,2024-04-15,23:42:32,-33.46,withdrawal,,,mobile
+TXN-0000003019,ACC-00000350,2024-09-30,04:34:05,-4.8,purchase,retail,"Nunez, Santos and Nash",atm
+TXN-0000003021,ACC-00000350,2025-11-26,07:41:11,-77.61,purchase,travel,"Holmes, Simpson and Holmes",branch
+TXN-0000003023,ACC-00000350,2023-04-04,05:41:00,21.94,deposit,,,mobile
+TXN-0000003025,ACC-00000350,2024-06-30,16:55:58,-15.35,withdrawal,,,mobile
+TXN-0000003039,ACC-00000352,2025-12-03,23:25:59,-12.18,interest,,,online
+TXN-0000003044,ACC-00000352,2025-12-11,23:47:13,30.27,payment,,,mobile
+TXN-0000003045,ACC-00000353,2023-08-25,22:01:38,-14.95,withdrawal,,,phone
+TXN-0000003048,ACC-00000353,2024-07-30,12:23:14,-59.66,purchase,travel,Byrd PLC,branch
+TXN-0000003049,ACC-00000353,2023-05-14,04:42:14,22.43,transfer,,,online
+TXN-0000003052,ACC-00000353,2025-04-29,00:42:46,-108.57,purchase,retail,Williamson Group,online
+TXN-0000003054,ACC-00000353,2024-09-13,05:07:09,-76.56,purchase,utilities,Hobbs-Harvey,phone
+TXN-0000003078,ACC-00000356,2026-01-04,19:14:07,91.41,transfer,,,online
+TXN-0000003083,ACC-00000357,2025-04-23,09:12:27,-1.27,withdrawal,,,atm
+TXN-0000003127,ACC-00000362,2025-11-13,14:42:26,-4.91,purchase,fuel,Stone-Hall,mobile
+TXN-0000003131,ACC-00000362,2023-06-29,21:24:26,-54.19,purchase,utilities,Reyes-White,atm
+TXN-0000003132,ACC-00000362,2025-12-13,12:33:34,-297.27,purchase,grocery,Brewer-Howard,mobile
+TXN-0000003133,ACC-00000362,2025-09-24,06:43:23,-2.69,withdrawal,,,mobile
+TXN-0000003135,ACC-00000362,2023-04-29,13:09:18,-13.81,purchase,grocery,"Payne, Miller and Hill",branch
+TXN-0000003136,ACC-00000362,2025-12-15,23:19:22,421.06,deposit,,,atm
+TXN-0000003138,ACC-00000363,2021-07-04,08:04:50,-73.07,purchase,grocery,Cook Ltd,online
+TXN-0000003141,ACC-00000363,2023-05-21,14:09:07,-6.79,purchase,fuel,Thornton and Sons,mobile
+TXN-0000003142,ACC-00000363,2023-03-29,11:17:25,-38.91,purchase,entertainment,"Singh, Gaines and Smith",online
+TXN-0000003145,ACC-00000363,2024-05-13,04:21:43,-44.87,purchase,grocery,Logan-Powell,online
+TXN-0000003146,ACC-00000363,2021-01-30,17:56:37,-14.12,purchase,grocery,"Todd, Smith and Valdez",mobile
+TXN-0000003147,ACC-00000363,2022-12-21,09:40:06,-139.46,withdrawal,,,online
+TXN-0000003150,ACC-00000363,2022-06-22,05:26:29,35.2,deposit,,,online
+TXN-0000003153,ACC-00000364,2024-01-29,22:49:57,-25.6,purchase,utilities,"Olsen, Peterson and Miller",mobile
+TXN-0000003154,ACC-00000364,2022-11-24,16:58:10,59.52,deposit,,,atm
+TXN-0000003155,ACC-00000364,2024-08-26,17:04:26,-30.24,withdrawal,,,mobile
+TXN-0000003156,ACC-00000364,2025-01-26,10:11:00,-198.24,withdrawal,,,online
+TXN-0000003159,ACC-00000364,2022-08-18,15:15:17,-49.13,purchase,grocery,Harding-Smith,atm
+TXN-0000003160,ACC-00000364,2020-08-30,17:26:49,-18.6,purchase,restaurant,"Flowers, Morgan and Barnes",mobile
+TXN-0000003186,ACC-00000368,2025-01-27,11:10:53,-17.95,purchase,entertainment,"Andrews, Collins and Harris",mobile
+TXN-0000003189,ACC-00000368,2025-06-30,15:23:58,-18.02,purchase,fuel,Jacobs-Wright,phone
+TXN-0000003191,ACC-00000368,2024-04-12,11:02:25,-23.73,purchase,utilities,Stevens-Johnston,mobile
+TXN-0000003194,ACC-00000368,2024-04-16,02:31:29,-16.11,purchase,travel,"Ibarra, Bryant and Graves",branch
+TXN-0000003208,ACC-00000370,2024-12-02,01:47:43,139.29,transfer,,,atm
+TXN-0000003209,ACC-00000370,2025-08-12,09:54:51,-4.04,purchase,grocery,King PLC,online
+TXN-0000003211,ACC-00000370,2025-07-03,16:15:32,-22.42,purchase,travel,Jones Ltd,online
+TXN-0000003215,ACC-00000370,2025-12-21,18:23:21,-105.6,purchase,utilities,Smith Inc,atm
+TXN-0000003239,ACC-00000375,2023-05-31,17:28:06,-118.41,purchase,fuel,Williams Group,atm
+TXN-0000003241,ACC-00000375,2019-08-22,13:20:32,-8.48,purchase,travel,Davis Group,mobile
+TXN-0000003242,ACC-00000375,2022-10-03,21:21:20,-58.84,fee,,,mobile
+TXN-0000003243,ACC-00000375,2025-06-25,01:54:29,-4.95,withdrawal,,,mobile
+TXN-0000003244,ACC-00000375,2021-08-31,05:50:42,-25.38,purchase,restaurant,Frazier Inc,online
+TXN-0000003248,ACC-00000375,2024-04-04,03:29:12,16.28,deposit,,,atm
+TXN-0000003251,ACC-00000375,2020-03-22,00:32:26,-9.79,withdrawal,,,mobile
+TXN-0000003252,ACC-00000375,2020-08-24,18:03:59,-7.9,purchase,restaurant,Hall Inc,branch
+TXN-0000003260,ACC-00000377,2024-05-11,10:30:20,43.35,payment,,,mobile
+TXN-0000003261,ACC-00000377,2023-12-20,20:50:22,-23.74,purchase,retail,"Porter, Mooney and Marquez",branch
+TXN-0000003263,ACC-00000377,2024-01-02,00:17:49,16.5,payment,,,online
+TXN-0000003267,ACC-00000377,2023-08-21,02:02:58,-63.53,purchase,healthcare,"Stewart, York and Olson",mobile
+TXN-0000003272,ACC-00000377,2025-02-12,08:41:09,-81.06,purchase,grocery,Young-Patterson,mobile
+TXN-0000003273,ACC-00000378,2024-05-26,00:43:29,-30.03,purchase,entertainment,"Miller, Taylor and Jimenez",mobile
+TXN-0000003276,ACC-00000378,2023-08-25,05:23:33,-14.33,purchase,fuel,"Hinton, Wallace and Wiley",branch
+TXN-0000003278,ACC-00000379,2023-11-11,08:45:42,-21.27,fee,,,mobile
+TXN-0000003280,ACC-00000379,2024-07-05,05:33:06,132.21,payment,,,online
+TXN-0000003281,ACC-00000379,2024-02-27,15:50:56,-4.52,purchase,utilities,"Hess, Christensen and Perez",mobile
+TXN-0000003285,ACC-00000379,2023-08-05,11:37:46,-62.81,purchase,fuel,Brown Group,mobile
+TXN-0000003286,ACC-00000379,2024-07-15,21:59:01,-0.69,purchase,entertainment,Williams and Sons,atm
+TXN-0000003289,ACC-00000380,2025-04-10,12:28:52,-97.57,purchase,utilities,Watkins and Sons,mobile
+TXN-0000003293,ACC-00000380,2025-12-10,00:25:18,834.99,transfer,,,online
+TXN-0000003294,ACC-00000380,2021-09-12,20:22:48,-26.8,withdrawal,,,atm
+TXN-0000003297,ACC-00000381,2025-11-08,00:08:36,-55.05,purchase,restaurant,"Lynch, Hamilton and Moore",mobile
+TXN-0000003300,ACC-00000381,2025-05-19,07:05:51,42.42,transfer,,,mobile
+TXN-0000003302,ACC-00000381,2021-04-12,02:53:58,-46.69,withdrawal,,,atm
+TXN-0000003306,ACC-00000381,2022-01-04,13:54:30,30.66,deposit,,,phone
+TXN-0000003309,ACC-00000381,2021-10-20,01:42:40,-9.63,purchase,entertainment,"Brooks, Sullivan and Perry",atm
+TXN-0000003328,ACC-00000383,2025-07-07,14:00:56,-50.84,purchase,fuel,Smith Inc,online
+TXN-0000003377,ACC-00000388,2025-03-18,02:30:47,-37.64,withdrawal,,,mobile
+TXN-0000003379,ACC-00000388,2025-10-13,09:55:48,-9.12,withdrawal,,,online
+TXN-0000003380,ACC-00000388,2025-07-19,20:22:56,-30.62,purchase,fuel,Kane PLC,online
+TXN-0000003384,ACC-00000388,2024-11-01,00:16:13,-17.42,withdrawal,,,phone
+TXN-0000003385,ACC-00000389,2025-05-05,23:51:48,441.81,payment,,,online
+TXN-0000003386,ACC-00000389,2021-02-24,02:06:06,16.0,payment,,,online
+TXN-0000003387,ACC-00000389,2021-09-16,15:08:40,524.45,payment,,,online
+TXN-0000003388,ACC-00000389,2025-04-10,10:51:48,-13.85,purchase,restaurant,Collier-Davies,online
+TXN-0000003389,ACC-00000389,2022-10-13,23:25:36,104.16,payment,,,online
+TXN-0000003391,ACC-00000390,2023-03-09,04:37:40,-14.72,purchase,entertainment,Sanchez and Sons,atm
+TXN-0000003435,ACC-00000395,2024-07-25,15:44:49,-805.71,purchase,travel,"Gonzalez, Curtis and Cox",atm
+TXN-0000003437,ACC-00000395,2025-07-19,03:03:12,-2.24,purchase,retail,Shelton-Jackson,mobile
+TXN-0000003439,ACC-00000395,2024-05-19,04:50:23,-34.48,purchase,fuel,Mccann-White,online
+TXN-0000003445,ACC-00000395,2025-11-05,08:33:23,-0.52,purchase,travel,Watts-Blevins,mobile
+TXN-0000003452,ACC-00000397,2025-04-10,20:49:29,-74.42,purchase,grocery,Burns Ltd,online
+TXN-0000003453,ACC-00000397,2024-06-12,18:58:45,144.21,payment,,,atm
+TXN-0000003457,ACC-00000397,2025-06-01,19:26:14,39.0,payment,,,mobile
+TXN-0000003461,ACC-00000397,2025-05-23,10:05:15,-11.72,purchase,utilities,"Martinez, Nguyen and Reeves",atm
+TXN-0000003464,ACC-00000398,2025-06-17,11:09:26,21.99,deposit,,,mobile
+TXN-0000003467,ACC-00000398,2025-06-25,10:22:24,-24.09,withdrawal,,,mobile
+TXN-0000003471,ACC-00000398,2022-11-11,20:55:09,6.62,transfer,,,branch
+TXN-0000003490,ACC-00000401,2025-01-31,07:31:09,-21.16,purchase,grocery,Johnson and Sons,phone
+TXN-0000003491,ACC-00000401,2024-12-20,03:31:05,-380.56,withdrawal,,,atm
+TXN-0000003492,ACC-00000401,2024-03-05,20:23:41,-1.67,purchase,entertainment,Guzman and Sons,atm
+TXN-0000003495,ACC-00000401,2025-02-02,12:42:41,-7.95,purchase,entertainment,"Scott, James and Mckee",mobile
+TXN-0000003497,ACC-00000401,2024-09-22,23:11:47,-2.38,purchase,entertainment,Duffy Ltd,online
+TXN-0000003498,ACC-00000401,2023-12-28,23:10:12,-16.5,purchase,retail,"Thomas, Harris and Soto",branch
+TXN-0000003500,ACC-00000401,2024-06-10,10:30:58,-3.27,purchase,fuel,"Brewer, Klein and Elliott",branch
+TXN-0000003501,ACC-00000401,2023-12-31,11:29:58,-48.94,purchase,retail,"Jacobs, Barnes and Hernandez",online
+TXN-0000003502,ACC-00000401,2025-10-26,20:39:31,-127.59,withdrawal,,,branch
+TXN-0000003504,ACC-00000402,2025-03-05,18:43:27,-19.89,purchase,fuel,Martinez-Rodriguez,atm
+TXN-0000003505,ACC-00000402,2025-12-06,22:14:57,-27.38,purchase,retail,Jones-Bowman,online
+TXN-0000003506,ACC-00000402,2025-07-28,19:37:25,-22.96,purchase,entertainment,Strickland-Thomas,mobile
+TXN-0000003512,ACC-00000402,2024-06-25,01:34:56,-146.75,purchase,grocery,Rice Ltd,branch
+TXN-0000003516,ACC-00000403,2025-12-07,00:44:56,97.69,deposit,,,mobile
+TXN-0000003519,ACC-00000403,2025-03-15,01:27:36,-4.7,purchase,restaurant,Woods-Anderson,mobile
+TXN-0000003520,ACC-00000403,2024-07-05,23:39:32,23.38,transfer,,,phone
+TXN-0000003521,ACC-00000403,2023-10-20,17:42:14,87.91,transfer,,,online
+TXN-0000003522,ACC-00000403,2025-04-27,05:53:35,3.05,deposit,,,mobile
+TXN-0000003523,ACC-00000403,2025-11-24,03:23:54,-10.28,purchase,restaurant,Sandoval and Sons,mobile
+TXN-0000003524,ACC-00000403,2026-01-13,03:29:27,-2.4,purchase,fuel,"Moss, Brown and Swanson",phone
+TXN-0000003556,ACC-00000406,2024-01-21,14:17:46,24.16,payment,,,mobile
+TXN-0000003558,ACC-00000406,2022-01-09,03:47:10,-17.44,purchase,travel,"Charles, Brown and Smith",online
+TXN-0000003561,ACC-00000406,2022-01-22,18:20:22,-4.04,purchase,fuel,Morales Inc,online
+TXN-0000003566,ACC-00000407,2025-09-14,00:04:58,-8.61,purchase,fuel,Mcclain-Herrera,online
+TXN-0000003577,ACC-00000409,2025-04-14,09:34:57,-55.0,purchase,utilities,"Bird, Wilson and Burns",mobile
+TXN-0000003578,ACC-00000409,2021-11-05,23:20:31,-50.52,purchase,retail,"Klein, Nguyen and Duran",mobile
+TXN-0000003579,ACC-00000409,2025-03-21,09:41:40,-30.91,purchase,grocery,"Barber, Harmon and Petersen",mobile
+TXN-0000003598,ACC-00000412,2024-02-02,06:16:15,-8.98,purchase,utilities,"Cross, Carr and Lopez",mobile
+TXN-0000003599,ACC-00000412,2025-08-03,14:10:44,216.69,payment,,,mobile
+TXN-0000003600,ACC-00000412,2022-05-20,20:49:37,-110.83,purchase,restaurant,"Hernandez, Martinez and Morales",online
+TXN-0000003603,ACC-00000412,2022-07-08,19:38:06,378.64,payment,,,mobile
+TXN-0000003604,ACC-00000412,2025-11-10,12:03:28,-348.16,purchase,retail,Jensen Inc,mobile
+TXN-0000003608,ACC-00000412,2023-08-31,17:37:18,-234.2,purchase,grocery,"Simmons, Williams and Rodriguez",online
+TXN-0000003676,ACC-00000419,2025-08-25,16:43:39,-9.87,purchase,retail,"Phillips, Galloway and Garrett",online
+TXN-0000003677,ACC-00000419,2025-12-02,18:40:37,-20.71,purchase,healthcare,Robinson-Sanford,branch
+TXN-0000003682,ACC-00000419,2025-10-16,02:38:08,-37.68,purchase,retail,"Scott, Sims and Munoz",mobile
+TXN-0000003684,ACC-00000419,2025-12-23,07:58:13,-0.63,purchase,entertainment,Walker-Adams,branch
+TXN-0000003698,ACC-00000421,2022-02-12,07:09:58,-759.29,purchase,retail,Gibson Ltd,online
+TXN-0000003700,ACC-00000421,2025-05-08,22:36:05,-5.48,purchase,entertainment,"Rose, Acosta and Morton",online
+TXN-0000003701,ACC-00000421,2021-12-06,19:13:44,-37.41,fee,,,mobile
+TXN-0000003703,ACC-00000421,2023-06-12,13:07:45,-184.21,purchase,utilities,Smith-Serrano,branch
+TXN-0000003704,ACC-00000421,2019-05-10,15:18:34,-91.53,purchase,fuel,"Michael, Anderson and Carrillo",branch
+TXN-0000003706,ACC-00000421,2020-03-08,05:16:01,126.32,payment,,,online
+TXN-0000003707,ACC-00000421,2024-10-11,13:01:53,371.43,payment,,,online
+TXN-0000003709,ACC-00000422,2025-08-26,01:39:07,-34.8,interest,,,mobile
+TXN-0000003711,ACC-00000422,2023-09-13,18:54:03,-794.37,purchase,retail,Castillo PLC,mobile
+TXN-0000003713,ACC-00000422,2026-01-12,23:27:08,-6.45,interest,,,phone
+TXN-0000003714,ACC-00000422,2025-03-15,19:02:17,-226.4,purchase,entertainment,Rivera-Moore,online
+TXN-0000003716,ACC-00000422,2025-11-24,10:56:11,-17.45,purchase,grocery,Stephens Inc,online
+TXN-0000003720,ACC-00000422,2025-04-08,04:12:32,130.99,payment,,,atm
+TXN-0000003770,ACC-00000431,2022-08-09,02:58:34,-25.0,withdrawal,,,atm
+TXN-0000003771,ACC-00000431,2023-10-29,21:40:27,54.42,deposit,,,phone
+TXN-0000003772,ACC-00000431,2024-08-07,05:35:22,-2.27,purchase,entertainment,Hernandez-White,mobile
+TXN-0000003773,ACC-00000431,2022-04-16,12:18:06,29.73,deposit,,,atm
+TXN-0000003774,ACC-00000431,2021-12-09,07:16:58,-17.5,withdrawal,,,online
+TXN-0000003799,ACC-00000435,2025-09-07,06:17:19,-24.22,purchase,healthcare,"Williams, Downs and Webb",mobile
+TXN-0000003800,ACC-00000435,2024-03-11,22:27:12,-0.64,withdrawal,,,online
+TXN-0000003802,ACC-00000435,2025-03-03,09:58:13,13.49,transfer,,,online
+TXN-0000003803,ACC-00000435,2024-10-13,17:45:20,5.06,deposit,,,branch
+TXN-0000003805,ACC-00000435,2022-07-11,06:06:59,-31.33,purchase,restaurant,Benjamin-Porter,mobile
+TXN-0000003807,ACC-00000435,2024-04-16,10:34:07,-29.03,purchase,fuel,"Davis, Russell and Figueroa",branch
+TXN-0000003810,ACC-00000436,2022-12-03,11:56:12,-109.8,purchase,entertainment,"Melton, Johnson and Martin",branch
+TXN-0000003811,ACC-00000436,2025-11-10,11:42:01,-5.83,purchase,entertainment,Miller-Garrett,atm
+TXN-0000003816,ACC-00000436,2024-02-12,12:37:32,-30.43,purchase,fuel,Hanson-Bentley,mobile
+TXN-0000003818,ACC-00000436,2024-06-16,00:15:40,-134.89,fee,,,online
+TXN-0000003820,ACC-00000436,2025-01-01,22:04:49,-24.96,purchase,utilities,Davis-Smith,branch
+TXN-0000003821,ACC-00000436,2022-07-16,17:10:46,75.48,payment,,,online
+TXN-0000003822,ACC-00000437,2024-08-12,12:45:23,-25.8,purchase,entertainment,"Dillon, Salinas and Jacobson",atm
+TXN-0000003826,ACC-00000437,2020-11-29,16:27:01,-4.51,purchase,travel,Jones Ltd,online
+TXN-0000003827,ACC-00000437,2021-04-07,13:38:12,-10.12,purchase,fuel,Scott-Kennedy,mobile
+TXN-0000003828,ACC-00000437,2023-12-11,02:32:18,68.96,deposit,,,atm
+TXN-0000003830,ACC-00000437,2022-05-21,17:50:16,-39.97,purchase,retail,"Glass, Case and Bonilla",online
+TXN-0000003831,ACC-00000437,2023-10-19,01:55:55,-36.38,withdrawal,,,online
+TXN-0000003871,ACC-00000442,2026-01-05,07:09:39,-2.67,purchase,healthcare,"Lane, Thomas and Beck",online
+TXN-0000003872,ACC-00000442,2025-12-27,12:46:00,-40.97,interest,,,mobile
+TXN-0000003873,ACC-00000442,2024-12-20,00:47:18,-458.98,purchase,retail,"Bryan, Quinn and Smith",branch
+TXN-0000003874,ACC-00000442,2025-03-11,17:08:30,-149.33,purchase,healthcare,Porter LLC,online
+TXN-0000003879,ACC-00000442,2026-01-03,17:07:19,-232.37,purchase,retail,"Payne, Martin and Gray",mobile
+TXN-0000003880,ACC-00000442,2025-10-09,16:32:58,321.25,payment,,,mobile
+TXN-0000003914,ACC-00000446,2022-09-20,19:06:15,-38.81,purchase,utilities,"Wilkins, Greene and Rogers",mobile
+TXN-0000003918,ACC-00000446,2024-02-19,08:09:02,-16.95,purchase,retail,Anderson-Fields,phone
+TXN-0000003920,ACC-00000447,2025-05-12,16:12:43,-22.65,purchase,utilities,Strong-Holmes,mobile
+TXN-0000003921,ACC-00000447,2025-06-10,09:02:46,-38.2,purchase,travel,Garcia and Sons,online
+TXN-0000003922,ACC-00000447,2025-03-29,21:13:46,-190.53,purchase,fuel,Welch Group,mobile
+TXN-0000003924,ACC-00000447,2024-11-04,03:48:59,-128.72,purchase,grocery,Davis Inc,atm
+TXN-0000003925,ACC-00000447,2025-11-25,01:03:20,-12.96,purchase,utilities,Fuller PLC,atm
+TXN-0000003927,ACC-00000447,2025-05-07,22:47:54,41.14,payment,,,online
+TXN-0000003928,ACC-00000447,2025-11-28,13:59:49,-14.9,purchase,restaurant,"Stephens, Compton and Armstrong",atm
+TXN-0000003929,ACC-00000448,2026-01-01,02:21:18,-0.75,purchase,utilities,"Gross, Lucero and Walters",mobile
+TXN-0000003930,ACC-00000448,2025-12-14,03:42:34,-8.49,fee,,,mobile
+TXN-0000003931,ACC-00000448,2025-12-19,20:29:50,176.29,payment,,,online
+TXN-0000003933,ACC-00000448,2025-12-15,19:57:32,-33.07,purchase,restaurant,"Hurst, Phillips and Nichols",branch
+TXN-0000003946,ACC-00000450,2022-12-06,23:56:57,-4.32,purchase,restaurant,Clark Group,branch
+TXN-0000003948,ACC-00000450,2022-06-28,00:55:05,-14.39,purchase,grocery,"Odonnell, Stokes and White",online
+TXN-0000003950,ACC-00000450,2021-10-11,14:23:58,-6.65,purchase,retail,"Bradley, Obrien and Johnson",phone
+TXN-0000003954,ACC-00000450,2022-10-28,14:48:16,-1093.36,purchase,grocery,Obrien PLC,mobile
+TXN-0000003955,ACC-00000450,2023-03-28,20:00:30,-11.29,withdrawal,,,branch
+TXN-0000003958,ACC-00000450,2025-06-27,01:58:50,-30.61,purchase,restaurant,Robinson LLC,atm
+TXN-0000003978,ACC-00000453,2025-03-15,20:13:11,-19.36,withdrawal,,,atm
+TXN-0000003981,ACC-00000453,2023-07-02,19:26:23,-10.41,purchase,utilities,Sanders-Wilson,mobile
+TXN-0000003982,ACC-00000453,2022-06-10,06:48:43,-132.15,fee,,,mobile
+TXN-0000004005,ACC-00000456,2023-01-10,14:59:42,-6.87,withdrawal,,,online
+TXN-0000004030,ACC-00000459,2024-01-14,03:36:28,29.4,deposit,,,mobile
+TXN-0000004033,ACC-00000459,2025-09-08,11:36:30,-12.18,purchase,entertainment,Hansen-Salas,mobile
+TXN-0000004048,ACC-00000461,2022-11-21,09:58:06,-19.94,withdrawal,,,atm
+TXN-0000004049,ACC-00000461,2022-01-01,05:13:53,-1.84,purchase,restaurant,Hester-Parrish,mobile
+TXN-0000004051,ACC-00000461,2021-10-18,02:55:15,-3.12,purchase,retail,Lopez-Ramirez,mobile
+TXN-0000004053,ACC-00000461,2023-01-13,01:50:31,10.39,deposit,,,mobile
+TXN-0000004054,ACC-00000461,2022-07-05,19:24:51,254.43,deposit,,,online
+TXN-0000004055,ACC-00000461,2022-09-16,17:19:08,-35.14,withdrawal,,,branch
+TXN-0000004056,ACC-00000461,2022-06-13,15:36:12,-20.28,purchase,fuel,Allen Group,online
+TXN-0000004058,ACC-00000461,2022-10-17,22:25:25,-9.15,withdrawal,,,online
+TXN-0000004059,ACC-00000461,2022-04-30,23:52:59,154.65,deposit,,,branch
+TXN-0000004066,ACC-00000463,2025-01-25,19:07:35,-30.56,purchase,grocery,"Hill, Lawson and Stone",online
+TXN-0000004070,ACC-00000463,2021-11-18,13:58:55,-268.06,purchase,restaurant,Allen-Patel,online
+TXN-0000004072,ACC-00000463,2025-12-30,18:56:29,-93.42,purchase,travel,Myers-Garcia,atm
+TXN-0000004075,ACC-00000463,2023-04-16,20:03:06,-0.45,purchase,entertainment,Gordon Ltd,online
+TXN-0000004076,ACC-00000463,2023-12-07,17:45:44,-5.75,purchase,entertainment,Stevenson-Phelps,phone
+TXN-0000004077,ACC-00000463,2023-01-16,22:04:12,-35.39,fee,,,phone
+TXN-0000004097,ACC-00000466,2023-04-26,07:45:04,-54.71,withdrawal,,,online
+TXN-0000004098,ACC-00000466,2023-10-27,04:18:16,-10.08,withdrawal,,,online
+TXN-0000004102,ACC-00000466,2021-04-12,23:19:23,-5.23,purchase,fuel,"Mcpherson, Howard and Garner",mobile
+TXN-0000004115,ACC-00000468,2025-01-17,20:42:23,-19.65,purchase,restaurant,Owens and Sons,online
+TXN-0000004116,ACC-00000468,2025-06-21,03:39:18,-2.92,purchase,healthcare,Hanson-Beck,branch
+TXN-0000004117,ACC-00000468,2024-06-13,02:18:23,-78.25,fee,,,online
+TXN-0000004125,ACC-00000470,2024-01-06,15:03:55,-14.86,purchase,retail,"Ortega, Mack and Moore",atm
+TXN-0000004126,ACC-00000470,2024-03-09,20:12:38,-36.97,purchase,utilities,"Nelson, Ferrell and Gonzalez",atm
+TXN-0000004128,ACC-00000470,2025-09-02,22:10:00,40.83,payment,,,online
+TXN-0000004131,ACC-00000470,2025-11-22,06:00:34,-6.01,purchase,fuel,"Walsh, Henderson and Rasmussen",mobile
+TXN-0000004133,ACC-00000470,2024-02-07,05:55:58,-38.21,purchase,restaurant,"Graham, Liu and Brock",atm
+TXN-0000004136,ACC-00000471,2023-07-09,04:12:38,463.75,deposit,,,online
+TXN-0000004139,ACC-00000471,2023-06-04,18:41:39,-24.08,purchase,utilities,Taylor Group,mobile
+TXN-0000004140,ACC-00000471,2025-01-04,04:14:49,-14.75,purchase,travel,Gordon-Jennings,atm
+TXN-0000004142,ACC-00000471,2025-03-31,03:56:36,-31.2,purchase,travel,Johnson-Hansen,mobile
+TXN-0000004190,ACC-00000478,2021-09-01,16:50:37,8.42,transfer,,,mobile
+TXN-0000004191,ACC-00000478,2021-07-23,10:57:39,-115.25,purchase,restaurant,"Ball, Morgan and Espinoza",atm
+TXN-0000004192,ACC-00000478,2022-05-10,16:41:44,-28.8,withdrawal,,,mobile
+TXN-0000004194,ACC-00000478,2025-01-15,08:54:49,-9.6,withdrawal,,,mobile
+TXN-0000004205,ACC-00000480,2023-03-30,19:26:11,-2.07,purchase,fuel,Nielsen-Brown,mobile
+TXN-0000004206,ACC-00000480,2022-12-23,06:16:25,-35.76,withdrawal,,,online
+TXN-0000004207,ACC-00000480,2019-07-29,05:58:45,-6.17,purchase,grocery,Bradford Inc,branch
+TXN-0000004209,ACC-00000480,2022-09-11,19:50:09,307.88,deposit,,,phone
+TXN-0000004247,ACC-00000484,2025-12-01,05:03:27,169.85,transfer,,,online
+TXN-0000004248,ACC-00000484,2025-01-02,16:56:12,-14.77,purchase,fuel,Reed Inc,online
+TXN-0000004249,ACC-00000484,2025-08-12,22:18:43,-85.37,purchase,restaurant,"Stevenson, Noble and Clay",online
+TXN-0000004250,ACC-00000484,2025-05-04,20:37:46,-38.52,withdrawal,,,mobile
+TXN-0000004252,ACC-00000484,2024-09-06,11:01:05,-6.72,fee,,,mobile
+TXN-0000004254,ACC-00000484,2024-11-14,11:53:56,-5.97,withdrawal,,,online
+TXN-0000004255,ACC-00000484,2025-05-11,21:13:52,-46.58,purchase,utilities,"Bell, Woods and Harrington",branch
+TXN-0000004256,ACC-00000485,2022-11-26,23:24:04,-0.89,withdrawal,,,atm
+TXN-0000004257,ACC-00000485,2024-03-14,06:16:35,-13.1,purchase,utilities,Johnson and Sons,branch
+TXN-0000004261,ACC-00000485,2021-11-04,17:09:24,-8.58,withdrawal,,,mobile
+TXN-0000004264,ACC-00000485,2024-12-24,18:51:10,-35.62,purchase,entertainment,Hall PLC,atm
+TXN-0000004363,ACC-00000495,2020-03-29,16:58:44,-77.26,withdrawal,,,online
+TXN-0000004398,ACC-00000499,2021-03-16,01:20:08,-16.68,purchase,utilities,"Romero, Reilly and Mitchell",online
+TXN-0000004400,ACC-00000499,2019-05-17,19:10:36,14.46,payment,,,mobile
+TXN-0000004404,ACC-00000499,2025-08-21,09:08:02,-17.73,purchase,travel,"Edwards, Reed and Martin",mobile
+TXN-0000004405,ACC-00000499,2024-07-18,12:59:29,52.33,payment,,,online
+TXN-0000004407,ACC-00000499,2021-06-29,03:26:00,-15.73,purchase,restaurant,Walker-Jackson,mobile
+TXN-0000004410,ACC-00000500,2025-05-08,14:42:58,-1164.48,interest,,,mobile
+TXN-0000004446,ACC-00000504,2024-07-15,00:57:39,-0.83,purchase,travel,Moreno-Best,mobile
+TXN-0000004447,ACC-00000504,2023-06-16,17:45:50,-33.75,fee,,,online
+TXN-0000004448,ACC-00000504,2024-01-27,13:55:57,68.81,payment,,,atm
+TXN-0000004449,ACC-00000504,2023-11-07,11:04:29,-78.21,purchase,fuel,"Washington, Robles and Myers",mobile
+TXN-0000004451,ACC-00000504,2022-11-05,15:50:23,-48.01,purchase,travel,Phillips-Robinson,branch
+TXN-0000004452,ACC-00000504,2025-02-23,01:37:02,-470.23,purchase,retail,Barnes-West,branch
+TXN-0000004459,ACC-00000505,2024-12-29,07:01:45,-105.84,purchase,healthcare,Adams-Lewis,online
+TXN-0000004461,ACC-00000506,2020-11-17,22:38:59,9.51,deposit,,,branch
+TXN-0000004463,ACC-00000506,2022-11-11,05:35:28,-63.06,purchase,entertainment,Myers-Ramos,mobile
+TXN-0000004464,ACC-00000506,2019-12-01,04:22:38,-168.9,purchase,healthcare,Gaines-Adams,mobile
+TXN-0000004467,ACC-00000506,2021-06-23,22:06:31,2539.82,deposit,,,branch
+TXN-0000004468,ACC-00000506,2020-06-08,16:35:08,22.11,transfer,,,branch
+TXN-0000004469,ACC-00000506,2020-05-07,21:49:41,-16.52,purchase,utilities,"Hutchinson, Herrera and Chan",mobile
+TXN-0000004470,ACC-00000506,2020-05-17,18:04:14,-13.87,withdrawal,,,branch
+TXN-0000004471,ACC-00000506,2019-09-26,07:24:07,18.74,deposit,,,mobile
+TXN-0000004472,ACC-00000506,2019-07-06,02:12:49,-20.28,purchase,retail,Anderson-Fernandez,atm
+TXN-0000004473,ACC-00000507,2025-12-19,18:43:58,-71.14,purchase,travel,Lang Inc,branch
+TXN-0000004474,ACC-00000507,2024-01-27,10:12:51,-46.05,purchase,retail,"Cook, Gomez and Miranda",atm
+TXN-0000004475,ACC-00000507,2024-05-22,09:54:29,10.69,payment,,,mobile
+TXN-0000004480,ACC-00000507,2023-04-24,01:06:31,-25.27,purchase,travel,Tran and Sons,mobile
+TXN-0000004482,ACC-00000508,2026-01-18,23:44:11,-16.25,purchase,healthcare,"Sanders, Washington and Moore",online
+TXN-0000004484,ACC-00000508,2022-11-05,21:24:40,-9.43,purchase,travel,Welch Ltd,mobile
+TXN-0000004485,ACC-00000508,2023-10-22,02:54:39,-41.56,purchase,travel,Nelson Inc,online
+TXN-0000004489,ACC-00000508,2026-01-13,23:24:49,-50.01,interest,,,mobile
+TXN-0000004520,ACC-00000512,2022-01-14,07:05:03,-31.32,purchase,utilities,"George, Savage and Adams",mobile
+TXN-0000004522,ACC-00000512,2023-05-30,18:17:47,-511.63,purchase,fuel,"Norton, Gardner and Edwards",branch
+TXN-0000004523,ACC-00000512,2022-10-17,07:59:31,-7.1,withdrawal,,,online
+TXN-0000004524,ACC-00000512,2021-11-06,07:49:04,-1.31,withdrawal,,,mobile
+TXN-0000004525,ACC-00000512,2025-09-12,11:08:05,-33.6,withdrawal,,,atm
+TXN-0000004526,ACC-00000512,2024-01-28,12:52:53,-40.42,purchase,healthcare,"Webb, Peters and Singh",atm
+TXN-0000004530,ACC-00000512,2020-12-20,08:07:13,-38.68,withdrawal,,,online
+TXN-0000004531,ACC-00000512,2025-06-29,03:34:10,-29.7,purchase,fuel,Martin Group,mobile
+TXN-0000004534,ACC-00000512,2025-08-22,02:36:27,38.11,deposit,,,mobile
+TXN-0000004535,ACC-00000513,2025-03-22,23:14:41,-16.52,purchase,fuel,Smith-Wilson,mobile
+TXN-0000004545,ACC-00000515,2025-06-24,05:58:48,-3.89,purchase,restaurant,White-Ruiz,phone
+TXN-0000004546,ACC-00000515,2024-11-18,20:06:33,-4.67,withdrawal,,,online
+TXN-0000004547,ACC-00000515,2024-10-28,23:57:16,-1.97,withdrawal,,,mobile
+TXN-0000004548,ACC-00000515,2025-01-29,16:09:33,-33.93,withdrawal,,,atm
+TXN-0000004550,ACC-00000516,2023-04-20,18:46:28,-24.14,purchase,restaurant,"Davis, Ellis and Davis",mobile
+TXN-0000004552,ACC-00000516,2023-07-04,21:35:59,-1.12,fee,,,mobile
+TXN-0000004553,ACC-00000516,2023-02-10,02:37:58,-54.93,purchase,travel,Cooper Inc,branch
+TXN-0000004554,ACC-00000516,2021-08-10,17:43:00,-41.85,withdrawal,,,online
+TXN-0000004556,ACC-00000516,2021-06-02,19:55:32,-5.63,purchase,travel,"Torres, Weber and Powell",mobile
+TXN-0000004558,ACC-00000516,2020-08-03,01:12:31,-100.63,withdrawal,,,online
+TXN-0000004559,ACC-00000517,2026-01-02,00:55:20,58.48,deposit,,,mobile
+TXN-0000004560,ACC-00000517,2023-12-23,16:04:33,-0.78,withdrawal,,,online
+TXN-0000004561,ACC-00000517,2025-11-02,11:44:41,-34.13,purchase,utilities,Jones and Sons,mobile
+TXN-0000004562,ACC-00000517,2023-08-20,05:55:57,-26.69,purchase,utilities,"Robinson, White and Elliott",mobile
+TXN-0000004565,ACC-00000517,2025-08-11,11:09:03,-4.22,withdrawal,,,branch
+TXN-0000004567,ACC-00000517,2025-11-11,04:35:59,-2.37,purchase,entertainment,Clark-Smith,online
+TXN-0000004569,ACC-00000517,2023-12-10,13:39:46,-2.31,withdrawal,,,mobile
+TXN-0000004572,ACC-00000518,2025-09-09,12:04:38,-72.09,interest,,,online
+TXN-0000004573,ACC-00000518,2025-10-02,03:04:04,-4.55,purchase,entertainment,Coleman-Ruiz,atm
+TXN-0000004575,ACC-00000518,2025-12-14,01:54:40,-66.44,purchase,grocery,Allen Group,online
+TXN-0000004576,ACC-00000518,2025-11-01,00:36:11,-14.47,purchase,entertainment,Mccarthy-Kelly,branch
+TXN-0000004580,ACC-00000519,2025-12-08,19:59:23,-16.47,purchase,travel,Castro-Henry,mobile
+TXN-0000004584,ACC-00000519,2025-12-10,09:05:33,-33.25,purchase,restaurant,Johnson LLC,mobile
+TXN-0000004585,ACC-00000519,2025-09-27,22:24:13,-10.49,purchase,grocery,"Reed, Coleman and Jensen",phone
+TXN-0000004586,ACC-00000520,2026-01-15,06:20:58,-594.48,purchase,fuel,Brooks-Fitzpatrick,online
+TXN-0000004587,ACC-00000520,2023-12-03,23:35:04,-22.12,purchase,retail,Ramos PLC,atm
+TXN-0000004591,ACC-00000520,2023-09-11,13:44:23,503.86,transfer,,,mobile
+TXN-0000004592,ACC-00000520,2022-09-25,15:12:47,-5.89,purchase,retail,"Padilla, Hill and Brown",online
+TXN-0000004595,ACC-00000520,2023-05-30,11:38:03,-11.16,purchase,grocery,"Pennington, Osborn and Chen",mobile
+TXN-0000004597,ACC-00000520,2025-04-09,15:31:26,14.25,deposit,,,phone
+TXN-0000004599,ACC-00000520,2025-06-26,05:18:54,-264.36,purchase,fuel,Johnson Inc,online
+TXN-0000004601,ACC-00000521,2025-12-25,01:55:48,-410.61,purchase,fuel,Barnes Inc,online
+TXN-0000004602,ACC-00000521,2024-08-12,05:16:56,85.43,transfer,,,phone
+TXN-0000004604,ACC-00000521,2024-08-29,10:42:00,-25.08,purchase,restaurant,Rios Ltd,atm
+TXN-0000004605,ACC-00000521,2026-01-08,03:50:30,-2.41,purchase,grocery,Hood-Charles,online
+TXN-0000004606,ACC-00000521,2025-01-01,08:33:17,-36.62,purchase,grocery,"Jackson, Andersen and Bowen",branch
+TXN-0000004607,ACC-00000521,2025-05-19,17:04:36,-59.04,withdrawal,,,online
+TXN-0000004613,ACC-00000523,2025-06-23,03:31:00,15.38,payment,,,online
+TXN-0000004614,ACC-00000523,2021-05-26,03:25:04,-15.18,purchase,retail,"Ortiz, Reid and Wilkinson",online
+TXN-0000004615,ACC-00000523,2025-06-21,00:52:02,-119.19,interest,,,online
+TXN-0000004619,ACC-00000523,2020-10-16,20:20:02,-33.41,purchase,travel,Lopez PLC,atm
+TXN-0000004634,ACC-00000525,2023-10-09,19:06:32,15.42,payment,,,mobile
+TXN-0000004635,ACC-00000525,2022-02-04,23:08:18,-3.38,purchase,fuel,Moore-Carroll,atm
+TXN-0000004636,ACC-00000525,2024-03-05,10:23:43,-70.83,purchase,utilities,Reed-Cochran,online
+TXN-0000004682,ACC-00000531,2022-10-15,09:14:48,-6.12,interest,,,online
+TXN-0000004683,ACC-00000531,2023-12-25,13:38:57,-10.3,purchase,grocery,Hughes LLC,phone
+TXN-0000004684,ACC-00000531,2025-02-16,20:09:28,-1.49,purchase,grocery,Ross LLC,mobile
+TXN-0000004685,ACC-00000531,2023-11-10,00:56:44,-15.02,purchase,grocery,"Cross, Coleman and Long",mobile
+TXN-0000004687,ACC-00000531,2025-05-17,04:35:45,-61.53,purchase,entertainment,Walker PLC,mobile
+TXN-0000004689,ACC-00000531,2024-12-10,16:40:56,80.85,payment,,,branch
+TXN-0000004690,ACC-00000531,2024-11-23,13:07:44,-284.11,purchase,healthcare,Bishop Group,atm
+TXN-0000004691,ACC-00000531,2020-12-29,16:59:05,-13.7,purchase,fuel,"Hall, Porter and Williams",branch
+TXN-0000004693,ACC-00000531,2024-10-05,02:41:42,48.64,payment,,,mobile
+TXN-0000004694,ACC-00000531,2025-10-26,23:59:34,-41.34,purchase,retail,Mitchell Group,online
+TXN-0000004696,ACC-00000532,2025-08-28,18:26:31,-10.11,purchase,grocery,Martin Ltd,atm
+TXN-0000004702,ACC-00000532,2025-05-21,01:05:30,-112.52,purchase,travel,Andrews Group,mobile
+TXN-0000004704,ACC-00000532,2025-05-10,23:09:37,-1.14,purchase,restaurant,Henderson-Brown,branch
+TXN-0000004705,ACC-00000532,2025-07-01,04:52:05,-0.43,purchase,retail,Harmon-Wilson,atm
+TXN-0000004706,ACC-00000532,2025-11-13,10:32:52,-1.24,purchase,restaurant,Shaw-Norman,atm
+TXN-0000004707,ACC-00000532,2025-06-24,01:10:03,4.64,payment,,,online
+TXN-0000004763,ACC-00000538,2025-04-27,11:02:48,23.69,deposit,,,phone
+TXN-0000004765,ACC-00000538,2025-05-19,02:52:45,-32.58,purchase,utilities,"Roberts, Hancock and Wang",atm
+TXN-0000004769,ACC-00000538,2025-10-27,08:19:45,-8.62,withdrawal,,,atm
+TXN-0000004770,ACC-00000538,2025-04-14,15:05:10,-23.58,purchase,restaurant,"Stewart, Nichols and Myers",mobile
+TXN-0000004771,ACC-00000538,2025-09-28,06:54:12,-64.67,purchase,retail,Sherman-Mitchell,atm
+TXN-0000004838,ACC-00000548,2025-01-25,13:35:49,-11.02,purchase,entertainment,"Berg, Black and Woods",mobile
+TXN-0000004841,ACC-00000548,2025-01-15,12:31:52,-10.95,purchase,restaurant,Grimes-Washington,mobile
+TXN-0000004842,ACC-00000548,2023-05-18,17:49:17,-2.7,purchase,fuel,"Olson, Webb and James",atm
+TXN-0000004844,ACC-00000549,2026-01-24,06:07:22,-11.97,fee,,,online
+TXN-0000004845,ACC-00000549,2024-05-06,12:25:43,-26.9,purchase,retail,Ramirez Ltd,online
+TXN-0000004846,ACC-00000549,2023-03-16,11:03:28,-21.36,fee,,,mobile
+TXN-0000004847,ACC-00000549,2021-09-03,18:06:49,589.92,deposit,,,online
+TXN-0000004864,ACC-00000552,2024-12-03,12:36:49,-13.29,interest,,,atm
+TXN-0000004865,ACC-00000552,2024-05-07,12:28:46,2.79,payment,,,mobile
+TXN-0000004867,ACC-00000552,2026-01-12,13:48:38,-0.28,purchase,travel,Mendoza Group,online
+TXN-0000004868,ACC-00000553,2024-05-28,16:52:57,-17.94,purchase,utilities,Gonzalez-Daniels,atm
+TXN-0000004870,ACC-00000553,2025-08-20,15:13:48,-38.85,purchase,travel,Evans-Smith,online
+TXN-0000004873,ACC-00000554,2023-11-15,07:21:07,2205.65,deposit,,,atm
+TXN-0000004875,ACC-00000554,2025-09-09,16:43:22,9.74,deposit,,,online
+TXN-0000004905,ACC-00000557,2025-12-07,20:05:11,26.47,deposit,,,online
+TXN-0000004907,ACC-00000557,2024-01-19,13:04:06,46.43,deposit,,,atm
+TXN-0000004912,ACC-00000557,2023-12-30,10:57:57,80.65,deposit,,,online
+TXN-0000004930,ACC-00000560,2026-01-07,16:46:21,-11.59,withdrawal,,,atm
+TXN-0000004944,ACC-00000562,2025-04-21,19:39:21,-13.56,withdrawal,,,online
+TXN-0000004947,ACC-00000562,2023-03-28,08:51:43,61.09,deposit,,,online
+TXN-0000004949,ACC-00000562,2023-12-04,10:49:55,-404.96,purchase,grocery,"Vasquez, Andrews and Walters",online
+TXN-0000004954,ACC-00000563,2022-04-28,10:19:07,-305.12,purchase,restaurant,Wang Group,online
+TXN-0000004958,ACC-00000563,2023-10-27,08:14:28,-2.62,purchase,grocery,"Johnston, Gibson and Norman",phone
+TXN-0000004959,ACC-00000563,2022-12-03,18:45:18,-30.87,purchase,fuel,Preston-Morales,online
+TXN-0000004963,ACC-00000564,2023-01-29,23:03:18,-117.98,withdrawal,,,atm
+TXN-0000004965,ACC-00000564,2024-10-07,17:46:36,124.88,deposit,,,online
+TXN-0000004968,ACC-00000564,2022-07-10,15:50:20,-32.69,withdrawal,,,mobile
+TXN-0000004970,ACC-00000564,2022-09-24,17:51:32,25.78,transfer,,,online
+TXN-0000005005,ACC-00000568,2023-01-19,18:03:53,-10.07,purchase,utilities,"Miller, Schneider and Price",online
+TXN-0000005010,ACC-00000568,2022-10-06,04:08:02,81.96,deposit,,,online
+TXN-0000005011,ACC-00000568,2022-10-22,16:09:46,-12.63,purchase,retail,"Moore, Neal and Farmer",online
+TXN-0000005014,ACC-00000568,2025-06-17,18:05:36,72.81,deposit,,,atm
+TXN-0000005017,ACC-00000569,2024-08-26,19:41:39,-33.29,purchase,restaurant,Koch-Rodriguez,mobile
+TXN-0000005020,ACC-00000569,2025-08-06,07:20:50,-24.61,purchase,restaurant,Stout-Baker,mobile
+TXN-0000005023,ACC-00000569,2025-03-12,07:16:01,-13.49,purchase,healthcare,Moss and Sons,mobile
+TXN-0000005024,ACC-00000569,2025-08-10,09:35:18,-10.68,purchase,healthcare,Ryan PLC,mobile
+TXN-0000005026,ACC-00000569,2024-12-03,23:31:28,-0.72,purchase,grocery,Barnes Inc,online
+TXN-0000005028,ACC-00000570,2024-12-25,02:56:53,-106.83,purchase,grocery,Taylor-Morrison,online
+TXN-0000005031,ACC-00000570,2024-08-31,09:26:56,-15.55,purchase,grocery,Harrison-Leach,online
+TXN-0000005032,ACC-00000570,2024-01-11,03:18:28,2400.95,deposit,,,online
+TXN-0000005049,ACC-00000572,2025-06-11,22:06:46,-16.86,purchase,travel,Welch-Bauer,mobile
+TXN-0000005051,ACC-00000572,2025-07-01,02:47:06,-54.97,purchase,entertainment,Martin LLC,mobile
+TXN-0000005052,ACC-00000572,2024-12-16,09:12:34,-4.15,purchase,retail,"Castillo, Mathews and Lopez",online
+TXN-0000005058,ACC-00000572,2025-11-12,13:05:06,-5.99,interest,,,branch
+TXN-0000005059,ACC-00000572,2026-01-01,13:53:21,-9.66,purchase,utilities,Hines-Baker,mobile
+TXN-0000005090,ACC-00000577,2024-03-02,10:07:08,-255.55,purchase,utilities,Vargas-Wright,branch
+TXN-0000005092,ACC-00000577,2024-06-18,20:36:29,-95.89,withdrawal,,,mobile
+TXN-0000005097,ACC-00000577,2025-09-15,07:08:07,57.14,transfer,,,online
+TXN-0000005099,ACC-00000577,2021-07-03,01:54:46,-28.1,withdrawal,,,mobile
+TXN-0000005100,ACC-00000577,2022-10-09,11:39:44,-170.52,purchase,utilities,Ingram PLC,mobile
+TXN-0000005104,ACC-00000578,2024-06-01,23:25:27,-0.5,purchase,travel,Jones Ltd,mobile
+TXN-0000005105,ACC-00000578,2024-09-23,03:38:00,24.19,payment,,,online
+TXN-0000005107,ACC-00000578,2020-09-04,18:11:13,-80.04,purchase,entertainment,"Owens, Richards and Walter",mobile
+TXN-0000005108,ACC-00000578,2025-10-18,07:49:19,-14.42,purchase,healthcare,Blake-Walker,branch
+TXN-0000005110,ACC-00000578,2023-05-02,05:07:50,-6.03,interest,,,mobile
+TXN-0000005169,ACC-00000585,2022-05-09,16:21:05,-17.95,purchase,utilities,"Jones, Davis and Dawson",online
+TXN-0000005170,ACC-00000585,2025-03-18,07:25:32,-12.57,withdrawal,,,atm
+TXN-0000005188,ACC-00000587,2025-12-18,06:22:06,-4.16,purchase,travel,"Oneal, Werner and Francis",mobile
+TXN-0000005189,ACC-00000587,2025-10-21,12:07:07,42.07,deposit,,,online
+TXN-0000005191,ACC-00000587,2026-01-21,01:23:01,-8.04,withdrawal,,,atm
+TXN-0000005226,ACC-00000590,2024-04-21,01:08:19,-8.15,purchase,grocery,Matthews-Hampton,online
+TXN-0000005227,ACC-00000590,2025-03-20,08:03:46,82.56,deposit,,,online
+TXN-0000005228,ACC-00000590,2024-09-24,12:01:06,-9.06,withdrawal,,,online
+TXN-0000005230,ACC-00000590,2024-12-21,20:29:09,134.09,transfer,,,mobile
+TXN-0000005231,ACC-00000590,2025-09-28,06:25:36,-25.26,purchase,healthcare,"Martin, Lee and Petty",branch
+TXN-0000005233,ACC-00000590,2024-09-23,16:07:04,-80.35,withdrawal,,,online
+TXN-0000005234,ACC-00000590,2025-03-28,22:03:32,-2.85,purchase,utilities,"Wilson, Davis and Shah",branch
+TXN-0000005237,ACC-00000590,2025-04-28,16:41:14,-1.17,purchase,fuel,Boone and Sons,phone
+TXN-0000005253,ACC-00000593,2026-01-11,08:56:45,28.56,transfer,,,online
+TXN-0000005269,ACC-00000596,2024-08-30,02:36:20,10.85,deposit,,,mobile
+TXN-0000005274,ACC-00000596,2024-09-24,10:08:20,-36.7,purchase,entertainment,"Pena, Buck and Hart",online
+TXN-0000005283,ACC-00000598,2025-03-23,08:22:01,-76.77,withdrawal,,,branch
+TXN-0000005284,ACC-00000598,2025-08-23,12:56:23,-79.48,fee,,,mobile
+TXN-0000005285,ACC-00000598,2026-01-08,17:55:56,-44.62,fee,,,online
+TXN-0000005286,ACC-00000598,2025-07-19,13:58:26,-25.06,purchase,grocery,Powell-Bennett,mobile
+TXN-0000005287,ACC-00000598,2025-05-23,09:37:28,-13.85,withdrawal,,,mobile
+TXN-0000005288,ACC-00000598,2025-08-24,19:43:12,39.96,deposit,,,atm
+TXN-0000005290,ACC-00000598,2025-05-02,21:23:58,-13.59,withdrawal,,,mobile
+TXN-0000005291,ACC-00000598,2025-05-27,03:00:56,-8.17,fee,,,mobile
+TXN-0000005292,ACC-00000598,2025-05-17,06:40:28,-5.19,withdrawal,,,mobile
+TXN-0000005294,ACC-00000598,2025-03-09,20:46:55,-6.37,fee,,,mobile
+TXN-0000005296,ACC-00000599,2025-09-11,18:25:03,-1.03,purchase,grocery,"Hale, Rose and Williams",online
+TXN-0000005299,ACC-00000599,2024-07-15,08:23:48,332.04,deposit,,,online
+TXN-0000005303,ACC-00000600,2025-10-30,06:58:36,10.57,deposit,,,mobile
+TXN-0000005304,ACC-00000600,2023-10-09,14:33:27,-81.1,purchase,entertainment,Lozano Inc,online
+TXN-0000005331,ACC-00000603,2023-10-17,17:32:01,-0.97,purchase,fuel,Rodriguez-Wilson,mobile
+TXN-0000005333,ACC-00000603,2024-10-10,01:05:08,-297.9,withdrawal,,,mobile
+TXN-0000005334,ACC-00000603,2024-10-15,05:00:28,-47.69,purchase,travel,"Mathis, Gonzalez and Holmes",online
+TXN-0000005348,ACC-00000605,2025-08-18,07:47:04,-28.92,purchase,restaurant,Perez Ltd,online
+TXN-0000005351,ACC-00000605,2025-12-27,11:17:17,48.53,transfer,,,online
+TXN-0000005353,ACC-00000605,2025-05-11,16:31:44,-12.29,purchase,utilities,"Brown, Holmes and Smith",branch
+TXN-0000005355,ACC-00000606,2025-06-13,18:41:47,-5.6,purchase,grocery,"Cantu, Wood and Thomas",mobile
+TXN-0000005356,ACC-00000606,2025-07-17,18:45:25,37.31,deposit,,,mobile
+TXN-0000005361,ACC-00000606,2025-06-30,00:41:08,20.27,transfer,,,atm
+TXN-0000005363,ACC-00000606,2025-08-04,17:17:10,56.11,deposit,,,online
+TXN-0000005364,ACC-00000606,2025-10-17,10:14:49,470.35,deposit,,,online
+TXN-0000005367,ACC-00000606,2025-05-21,18:46:03,-2.31,withdrawal,,,mobile
+TXN-0000005398,ACC-00000611,2023-02-13,17:25:34,-63.44,purchase,restaurant,Morgan and Sons,atm
+TXN-0000005399,ACC-00000611,2023-06-01,14:12:47,-15.26,withdrawal,,,mobile
+TXN-0000005400,ACC-00000611,2025-06-12,13:17:06,-34.25,withdrawal,,,branch
+TXN-0000005415,ACC-00000613,2025-01-17,00:18:09,-205.75,purchase,entertainment,Rubio LLC,mobile
+TXN-0000005417,ACC-00000613,2024-10-12,12:10:40,-44.01,fee,,,mobile
+TXN-0000005419,ACC-00000613,2025-07-06,18:48:09,-4.93,purchase,utilities,Padilla-Roberts,online
+TXN-0000005420,ACC-00000613,2025-07-12,20:29:24,-4.86,purchase,healthcare,"Moore, Gilmore and Martin",atm
+TXN-0000005421,ACC-00000613,2025-09-18,12:24:26,183.12,deposit,,,mobile
+TXN-0000005428,ACC-00000614,2024-08-14,19:59:35,-68.07,withdrawal,,,online
+TXN-0000005431,ACC-00000614,2023-04-24,12:00:31,-44.79,withdrawal,,,online
+TXN-0000005453,ACC-00000617,2025-07-31,10:51:11,-23.34,purchase,retail,Dominguez LLC,mobile
+TXN-0000005457,ACC-00000618,2024-10-22,19:39:52,-120.33,purchase,retail,Russell-Peterson,mobile
+TXN-0000005466,ACC-00000618,2024-05-10,20:28:51,-12.44,purchase,grocery,"Gentry, Hensley and Huang",phone
+TXN-0000005467,ACC-00000618,2023-01-05,19:54:02,-12.98,purchase,fuel,Drake Inc,online
+TXN-0000005470,ACC-00000619,2025-07-02,17:36:32,-33.62,purchase,travel,Maxwell Inc,mobile
+TXN-0000005473,ACC-00000619,2025-09-09,18:57:00,-6.68,purchase,restaurant,"Marks, Hartman and Rodriguez",mobile
+TXN-0000005475,ACC-00000619,2025-04-19,03:12:12,5.08,payment,,,online
+TXN-0000005494,ACC-00000622,2025-05-01,21:54:32,-18.99,withdrawal,,,phone
+TXN-0000005496,ACC-00000622,2022-09-02,05:49:33,-82.71,purchase,utilities,"Zamora, Sutton and Campbell",mobile
+TXN-0000005499,ACC-00000622,2022-07-12,04:59:32,-53.01,purchase,healthcare,Harvey Group,online
+TXN-0000005500,ACC-00000622,2025-12-25,05:33:13,-10.78,withdrawal,,,atm
+TXN-0000005502,ACC-00000622,2023-04-05,06:21:12,25.38,transfer,,,atm
+TXN-0000005605,ACC-00000634,2025-01-29,21:09:13,-51.87,withdrawal,,,mobile
+TXN-0000005607,ACC-00000634,2023-04-13,08:10:01,46.98,transfer,,,online
+TXN-0000005608,ACC-00000634,2025-05-23,11:33:56,167.29,deposit,,,online
+TXN-0000005613,ACC-00000634,2023-02-21,00:43:07,-45.79,withdrawal,,,online
+TXN-0000005614,ACC-00000634,2024-09-05,07:48:37,-102.61,withdrawal,,,phone
+TXN-0000005628,ACC-00000636,2025-05-20,22:59:26,75.3,transfer,,,online
+TXN-0000005629,ACC-00000636,2025-06-26,16:41:42,46.23,transfer,,,online
+TXN-0000005633,ACC-00000636,2025-08-25,22:22:37,-6.6,purchase,fuel,Gonzalez-Hurst,mobile
+TXN-0000005634,ACC-00000636,2025-12-28,06:17:37,-5.59,purchase,retail,Santos Group,mobile
+TXN-0000005637,ACC-00000637,2025-05-04,13:43:52,-11.28,purchase,travel,Newton and Sons,atm
+TXN-0000005638,ACC-00000637,2021-07-07,22:03:52,-4.71,fee,,,branch
+TXN-0000005640,ACC-00000637,2021-03-19,23:39:11,-9.04,fee,,,online
+TXN-0000005641,ACC-00000637,2023-10-20,13:43:58,-182.08,withdrawal,,,online
+TXN-0000005642,ACC-00000637,2023-07-16,23:40:26,41.87,deposit,,,mobile
+TXN-0000005650,ACC-00000638,2025-03-21,10:39:42,-42.72,fee,,,branch
+TXN-0000005652,ACC-00000638,2025-04-19,06:11:46,1.98,deposit,,,mobile
+TXN-0000005654,ACC-00000638,2025-12-09,21:51:55,-32.37,purchase,restaurant,Castillo-Carlson,atm
+TXN-0000005657,ACC-00000638,2024-07-23,01:21:07,-392.38,purchase,restaurant,Harvey Inc,mobile
+TXN-0000005661,ACC-00000640,2025-03-23,17:32:50,90.73,deposit,,,mobile
+TXN-0000005663,ACC-00000640,2025-02-11,21:47:16,-11.57,purchase,retail,Harmon-Watson,mobile
+TXN-0000005665,ACC-00000640,2023-07-16,12:26:03,-44.24,withdrawal,,,online
+TXN-0000005666,ACC-00000640,2023-01-06,11:54:47,-18.74,withdrawal,,,online
+TXN-0000005682,ACC-00000642,2024-10-02,02:26:28,-2.77,purchase,travel,Mckinney-Higgins,atm
+TXN-0000005696,ACC-00000644,2023-09-20,05:50:29,-23.06,purchase,fuel,Lowe-Russell,mobile
+TXN-0000005710,ACC-00000646,2024-02-26,15:22:36,-18.69,purchase,utilities,"Garcia, Smith and Michael",mobile
+TXN-0000005714,ACC-00000646,2025-09-28,07:49:01,42.28,payment,,,online
+TXN-0000005716,ACC-00000646,2021-03-12,15:12:24,-3.94,purchase,entertainment,"Walton, Rodriguez and Bowman",online
+TXN-0000005743,ACC-00000649,2024-02-01,19:03:20,75.2,payment,,,atm
+TXN-0000005745,ACC-00000649,2024-12-09,11:57:53,2.65,payment,,,online
+TXN-0000005746,ACC-00000649,2024-12-26,12:14:44,-95.56,purchase,entertainment,"Riggs, Johnson and Collins",phone
+TXN-0000005747,ACC-00000649,2024-04-10,00:16:06,12.9,payment,,,atm
+TXN-0000005748,ACC-00000649,2024-09-22,14:40:53,-6.92,fee,,,mobile
+TXN-0000005751,ACC-00000649,2025-12-02,11:31:19,-7.34,purchase,retail,Walls Group,online
+TXN-0000005755,ACC-00000650,2025-06-10,08:13:48,-53.37,fee,,,online
+TXN-0000005759,ACC-00000650,2025-02-25,18:31:44,-43.51,purchase,utilities,Wolfe Group,online
+TXN-0000005762,ACC-00000650,2025-03-24,01:52:56,41.33,deposit,,,mobile
+TXN-0000005788,ACC-00000653,2023-05-08,11:48:44,-7.05,purchase,healthcare,"French, Rodriguez and Wade",mobile
+TXN-0000005789,ACC-00000653,2026-01-11,14:28:53,-233.29,purchase,retail,"Smith, Beard and Taylor",atm
+TXN-0000005793,ACC-00000653,2025-11-30,16:45:48,-5.66,purchase,fuel,Garcia Group,mobile
+TXN-0000005806,ACC-00000655,2024-02-25,20:47:36,-5.76,purchase,grocery,"Solomon, Mendoza and Avery",mobile
+TXN-0000005809,ACC-00000655,2024-06-02,10:57:19,-10.69,purchase,utilities,Reynolds Inc,online
+TXN-0000005810,ACC-00000655,2025-10-02,17:45:26,-22.22,withdrawal,,,mobile
+TXN-0000005812,ACC-00000655,2025-05-23,22:14:16,118.06,transfer,,,mobile
+TXN-0000005813,ACC-00000656,2025-05-19,11:56:31,174.76,transfer,,,phone
+TXN-0000005814,ACC-00000656,2025-09-10,09:44:07,-42.68,purchase,restaurant,Long-Marshall,atm
+TXN-0000005815,ACC-00000656,2026-01-24,14:19:29,880.35,deposit,,,mobile
+TXN-0000005816,ACC-00000656,2025-01-16,10:56:37,1036.91,transfer,,,online
+TXN-0000005817,ACC-00000656,2026-01-06,17:21:31,-193.65,purchase,restaurant,"Jacobs, Calhoun and Wyatt",phone
+TXN-0000005818,ACC-00000656,2025-12-06,21:49:10,-25.06,fee,,,atm
+TXN-0000005819,ACC-00000656,2025-02-23,00:35:00,-20.57,withdrawal,,,mobile
+TXN-0000005821,ACC-00000657,2025-11-25,13:32:17,-26.91,purchase,fuel,"Castro, Fleming and Greene",branch
+TXN-0000005824,ACC-00000657,2025-10-03,05:07:04,-12.08,withdrawal,,,online
+TXN-0000005826,ACC-00000657,2023-04-21,07:15:35,-3.86,purchase,entertainment,Holt LLC,mobile
+TXN-0000005830,ACC-00000657,2023-05-21,23:38:39,-31.06,purchase,utilities,King LLC,branch
+TXN-0000005857,ACC-00000660,2026-01-19,00:56:45,-48.56,purchase,entertainment,"Nicholson, Dixon and Fisher",branch
+TXN-0000005858,ACC-00000660,2026-01-20,01:40:19,-0.89,purchase,travel,Jarvis Ltd,mobile
+TXN-0000005860,ACC-00000660,2025-11-24,07:44:22,44.42,deposit,,,online
+TXN-0000005861,ACC-00000660,2026-01-09,22:37:12,-498.86,purchase,grocery,Kim-Edwards,atm
+TXN-0000005862,ACC-00000660,2026-01-20,22:05:56,-77.42,purchase,fuel,Martinez Inc,atm
+TXN-0000005907,ACC-00000665,2023-01-30,11:34:35,184.07,deposit,,,mobile
+TXN-0000005910,ACC-00000666,2024-06-22,16:07:03,-21.84,purchase,grocery,Wright PLC,online
+TXN-0000005911,ACC-00000666,2024-12-19,21:10:33,14.59,transfer,,,online
+TXN-0000005937,ACC-00000669,2024-12-30,23:41:41,-29.47,withdrawal,,,online
+TXN-0000005939,ACC-00000669,2024-07-14,09:53:51,-38.51,withdrawal,,,online
+TXN-0000005940,ACC-00000669,2025-11-08,16:36:15,-35.38,withdrawal,,,atm
+TXN-0000005941,ACC-00000669,2025-09-14,16:04:08,-59.9,withdrawal,,,mobile
+TXN-0000005942,ACC-00000669,2025-11-15,11:29:43,-61.07,withdrawal,,,branch
+TXN-0000005945,ACC-00000671,2023-03-10,22:26:51,25.59,deposit,,,atm
+TXN-0000005946,ACC-00000671,2024-12-03,04:59:28,-0.65,purchase,grocery,"Webster, Pierce and Barber",online
+TXN-0000005947,ACC-00000671,2025-01-03,21:47:48,390.68,deposit,,,online
+TXN-0000005949,ACC-00000671,2025-12-31,05:03:37,-28.94,purchase,healthcare,"Sullivan, King and Giles",online
+TXN-0000005950,ACC-00000671,2022-07-17,22:11:10,-105.39,fee,,,mobile
+TXN-0000005954,ACC-00000672,2025-02-15,21:15:20,-27.04,interest,,,atm
+TXN-0000005955,ACC-00000672,2022-04-16,23:00:05,-60.95,purchase,fuel,Evans-Johnson,online
+TXN-0000005956,ACC-00000672,2019-12-18,08:15:38,-53.18,purchase,fuel,Christensen and Sons,branch
+TXN-0000005965,ACC-00000674,2025-12-11,01:52:55,-28.83,withdrawal,,,phone
+TXN-0000005967,ACC-00000674,2025-11-09,03:27:09,-11.91,withdrawal,,,online
+TXN-0000005992,ACC-00000677,2022-03-20,06:49:08,-16.76,purchase,travel,Rivera-Klein,branch
+TXN-0000005993,ACC-00000677,2022-09-15,21:59:57,3.98,transfer,,,online
+TXN-0000005995,ACC-00000677,2023-11-27,22:50:50,-168.15,fee,,,online
+TXN-0000005998,ACC-00000677,2023-05-28,23:01:45,-0.68,purchase,utilities,Hill-Robinson,online
+TXN-0000006001,ACC-00000677,2023-01-10,02:41:54,-10.09,purchase,retail,"Carroll, Mooney and Clark",online
+TXN-0000006002,ACC-00000677,2022-08-06,14:19:34,-7.73,purchase,fuel,Trevino LLC,mobile
+TXN-0000006003,ACC-00000677,2024-04-19,02:35:28,-18.54,purchase,travel,Buchanan-Robinson,mobile
+TXN-0000006006,ACC-00000678,2023-05-02,11:49:36,79.29,transfer,,,atm
+TXN-0000006007,ACC-00000678,2023-08-14,07:08:17,-15.9,withdrawal,,,online
+TXN-0000006011,ACC-00000678,2021-01-09,21:05:09,-6.56,purchase,retail,"Fleming, Drake and Osborne",mobile
+TXN-0000006013,ACC-00000679,2026-01-15,07:15:38,-444.41,purchase,travel,Hamilton LLC,mobile
+TXN-0000006014,ACC-00000679,2026-01-16,17:37:38,-54.36,purchase,grocery,"Turner, Kaufman and Esparza",mobile
+TXN-0000006015,ACC-00000679,2026-01-15,14:31:50,25.1,payment,,,atm
+TXN-0000006017,ACC-00000679,2025-11-10,05:38:04,-12.68,purchase,grocery,Rodriguez-Hernandez,mobile
+TXN-0000006022,ACC-00000680,2021-07-19,15:16:30,-5.93,purchase,healthcare,Miller-Martin,atm
+TXN-0000006027,ACC-00000681,2024-02-13,17:22:17,-47.27,purchase,fuel,Chapman-Sullivan,mobile
+TXN-0000006030,ACC-00000681,2023-03-04,22:52:38,134.43,payment,,,atm
+TXN-0000006031,ACC-00000681,2021-08-14,00:24:04,-1.33,purchase,retail,Miller Ltd,branch
+TXN-0000006034,ACC-00000681,2021-11-26,14:27:53,-113.73,purchase,entertainment,"Wong, Braun and Smith",online
+TXN-0000006039,ACC-00000681,2022-08-10,07:26:49,11.22,payment,,,atm
+TXN-0000006040,ACC-00000681,2021-11-03,17:10:37,-7.2,purchase,restaurant,Garcia-Davies,online
+TXN-0000006047,ACC-00000683,2021-11-01,01:12:12,57.63,transfer,,,mobile
+TXN-0000006048,ACC-00000683,2020-09-06,09:04:24,-283.04,purchase,travel,"Parsons, Robertson and Crawford",online
+TXN-0000006049,ACC-00000683,2022-11-23,13:52:14,-28.1,purchase,restaurant,"Campbell, Long and Morgan",mobile
+TXN-0000006051,ACC-00000683,2025-10-27,04:17:11,-1.54,purchase,retail,Patrick-Howard,mobile
+TXN-0000006056,ACC-00000685,2025-03-26,08:12:09,40.77,payment,,,online
+TXN-0000006057,ACC-00000685,2023-07-19,23:47:14,-59.36,purchase,utilities,"Nguyen, Allen and Hernandez",online
+TXN-0000006068,ACC-00000687,2025-08-31,19:33:19,-9.15,withdrawal,,,online
+TXN-0000006069,ACC-00000687,2025-08-29,17:15:20,94.39,deposit,,,mobile
+TXN-0000006072,ACC-00000687,2026-01-08,00:23:58,10.48,transfer,,,atm
+TXN-0000006104,ACC-00000690,2024-10-19,19:45:35,-46.69,purchase,fuel,Hickman-Sloan,mobile
+TXN-0000006105,ACC-00000690,2024-05-20,14:14:20,-149.25,withdrawal,,,online
+TXN-0000006106,ACC-00000690,2025-05-10,04:11:50,-22.64,withdrawal,,,online
+TXN-0000006109,ACC-00000690,2026-01-07,13:55:44,-47.83,withdrawal,,,online
+TXN-0000006111,ACC-00000690,2024-06-22,03:13:39,633.96,deposit,,,branch
+TXN-0000006123,ACC-00000692,2025-12-23,05:49:12,-7.71,fee,,,mobile
+TXN-0000006124,ACC-00000692,2025-08-07,17:49:35,-48.24,purchase,entertainment,"Douglas, Smith and Jordan",mobile
+TXN-0000006125,ACC-00000692,2024-04-30,16:37:31,-22.46,purchase,retail,"Sanchez, Castillo and Garcia",mobile
+TXN-0000006126,ACC-00000692,2025-03-03,12:22:33,-2.08,withdrawal,,,mobile
+TXN-0000006127,ACC-00000692,2024-05-10,01:38:34,-52.69,purchase,travel,Jackson-Carter,atm
+TXN-0000006130,ACC-00000692,2025-07-26,22:30:54,-24.19,withdrawal,,,online
+TXN-0000006134,ACC-00000692,2025-03-06,18:06:48,-13.75,withdrawal,,,online
+TXN-0000006135,ACC-00000692,2025-07-01,12:45:59,219.97,deposit,,,online
+TXN-0000006136,ACC-00000693,2025-05-01,23:50:03,-14.67,fee,,,mobile
+TXN-0000006138,ACC-00000693,2021-09-02,14:26:37,151.32,deposit,,,online
+TXN-0000006139,ACC-00000693,2023-09-18,16:17:42,120.99,transfer,,,mobile
+TXN-0000006141,ACC-00000693,2025-08-09,08:02:48,-131.07,purchase,grocery,Osborne LLC,online
+TXN-0000006142,ACC-00000693,2022-06-03,09:12:39,-2.63,purchase,travel,Hubbard LLC,mobile
+TXN-0000006143,ACC-00000693,2024-11-13,01:50:56,-1.36,withdrawal,,,branch
+TXN-0000006145,ACC-00000693,2022-03-06,04:45:12,-33.08,purchase,utilities,"Marshall, Martinez and Contreras",branch
+TXN-0000006148,ACC-00000693,2021-01-27,19:50:13,-144.89,withdrawal,,,mobile
+TXN-0000006149,ACC-00000693,2021-08-09,04:46:37,-59.41,withdrawal,,,online
+TXN-0000006153,ACC-00000694,2025-08-21,04:48:25,-7.47,purchase,healthcare,Gay and Sons,online
+TXN-0000006157,ACC-00000694,2026-01-24,08:26:52,493.07,deposit,,,atm
+TXN-0000006158,ACC-00000694,2026-01-11,08:33:00,-189.87,withdrawal,,,mobile
+TXN-0000006159,ACC-00000694,2025-05-02,18:07:58,-393.68,withdrawal,,,mobile
+TXN-0000006161,ACC-00000694,2025-08-13,09:53:39,-2.98,withdrawal,,,mobile
+TXN-0000006172,ACC-00000696,2022-04-12,22:39:37,-17.58,purchase,utilities,"Kelly, Huerta and Peck",online
+TXN-0000006174,ACC-00000696,2024-06-07,14:19:50,-16.12,purchase,travel,Brady-Smith,mobile
+TXN-0000006176,ACC-00000696,2025-03-22,00:31:21,-78.02,purchase,grocery,"Hoffman, Wilson and Taylor",mobile
+TXN-0000006177,ACC-00000696,2025-01-04,10:21:04,15.82,deposit,,,branch
+TXN-0000006178,ACC-00000696,2024-05-03,07:07:55,-52.33,purchase,travel,"Swanson, Peterson and Weber",online
+TXN-0000006179,ACC-00000697,2024-10-07,18:31:48,-254.44,purchase,utilities,"Stewart, Collins and Short",atm
+TXN-0000006180,ACC-00000697,2025-11-14,19:53:24,-16.16,withdrawal,,,phone
+TXN-0000006181,ACC-00000697,2025-02-17,22:00:55,8.82,deposit,,,mobile
+TXN-0000006185,ACC-00000697,2023-07-20,03:41:05,-28.49,withdrawal,,,mobile
+TXN-0000006186,ACC-00000697,2025-05-09,19:56:11,-30.68,purchase,utilities,"Cox, Jimenez and Rodgers",online
+TXN-0000006187,ACC-00000697,2026-01-08,00:18:30,-5.51,withdrawal,,,mobile
+TXN-0000006191,ACC-00000697,2024-11-08,19:27:51,5.36,deposit,,,online
+TXN-0000006192,ACC-00000697,2025-10-17,07:41:01,120.97,deposit,,,atm
+TXN-0000006197,ACC-00000698,2024-07-06,16:05:52,-21.26,purchase,healthcare,"Mcbride, Hall and Hill",online
+TXN-0000006198,ACC-00000698,2024-02-23,02:02:26,-36.26,purchase,entertainment,"Fischer, Durham and Miller",branch
+TXN-0000006199,ACC-00000698,2023-01-05,21:22:37,121.08,deposit,,,online
+TXN-0000006200,ACC-00000698,2025-08-06,09:46:28,6789.02,transfer,,,online
+TXN-0000006201,ACC-00000698,2023-11-14,00:41:15,-9.21,withdrawal,,,mobile
+TXN-0000006202,ACC-00000698,2025-04-29,18:28:22,-15.49,purchase,utilities,"Phillips, Tran and Evans",online
+TXN-0000006203,ACC-00000698,2024-01-22,17:15:34,-33.16,purchase,utilities,Collins Group,mobile
+TXN-0000006211,ACC-00000700,2022-07-11,15:20:50,15.39,deposit,,,online
+TXN-0000006212,ACC-00000700,2021-12-09,12:41:56,837.33,transfer,,,mobile
+TXN-0000006216,ACC-00000700,2020-08-20,19:08:13,-6.8,fee,,,atm
+TXN-0000006255,ACC-00000705,2025-12-16,05:36:43,54.74,deposit,,,online
+TXN-0000006257,ACC-00000705,2025-10-11,02:13:47,-15.83,withdrawal,,,mobile
+TXN-0000006259,ACC-00000705,2025-12-02,20:27:04,17.5,deposit,,,branch
+TXN-0000006264,ACC-00000705,2026-01-17,11:35:04,-12.14,purchase,utilities,Bailey-Newman,mobile
+TXN-0000006266,ACC-00000706,2022-05-07,22:13:23,-12.25,purchase,healthcare,"Shields, Franco and Stuart",online
+TXN-0000006269,ACC-00000706,2023-04-29,14:31:32,-126.65,purchase,entertainment,Robinson-Fry,online
+TXN-0000006270,ACC-00000706,2022-03-09,01:58:17,-5.55,purchase,entertainment,"Villa, Rodriguez and Griffith",mobile
+TXN-0000006272,ACC-00000706,2023-12-05,17:38:58,-10.79,purchase,grocery,"Lloyd, Francis and Smith",phone
+TXN-0000006275,ACC-00000706,2022-10-05,01:51:54,-224.17,purchase,grocery,"Andrews, Middleton and Weeks",online
+TXN-0000006291,ACC-00000708,2024-09-01,21:08:58,-13.14,purchase,grocery,"Jones, Cunningham and Taylor",online
+TXN-0000006293,ACC-00000708,2025-05-23,09:13:49,64.35,payment,,,atm
+TXN-0000006325,ACC-00000712,2025-04-04,00:58:30,-59.46,withdrawal,,,mobile
+TXN-0000006326,ACC-00000712,2025-05-26,11:39:44,-41.54,purchase,healthcare,Oconnor and Sons,phone
+TXN-0000006327,ACC-00000712,2025-08-07,11:38:20,26.02,transfer,,,mobile
+TXN-0000006330,ACC-00000712,2024-12-03,11:03:48,104.44,transfer,,,phone
+TXN-0000006362,ACC-00000718,2021-03-05,22:05:37,-214.55,purchase,restaurant,Green-Dunn,atm
+TXN-0000006363,ACC-00000718,2024-12-26,02:05:41,953.99,payment,,,atm
+TXN-0000006366,ACC-00000718,2023-06-24,21:49:26,-10.8,purchase,healthcare,Weber Inc,online
+TXN-0000006367,ACC-00000718,2021-11-01,13:26:00,267.25,payment,,,branch
+TXN-0000006371,ACC-00000718,2024-07-19,16:09:43,-2.21,purchase,restaurant,Rowe Ltd,mobile
+TXN-0000006372,ACC-00000719,2025-07-30,06:09:10,-3.82,purchase,restaurant,"Johnson, Morris and Todd",mobile
+TXN-0000006374,ACC-00000720,2021-11-20,15:52:21,-138.68,purchase,retail,"Miller, Watts and Castillo",branch
+TXN-0000006375,ACC-00000720,2022-08-16,06:43:46,22.22,payment,,,mobile
+TXN-0000006376,ACC-00000720,2023-10-18,21:12:17,44.79,payment,,,atm
+TXN-0000006378,ACC-00000720,2026-01-03,18:43:54,-78.89,purchase,fuel,Ball LLC,online
+TXN-0000006379,ACC-00000720,2024-10-06,11:41:45,-12.74,purchase,retail,Chambers-Norton,online
+TXN-0000006380,ACC-00000720,2022-01-05,07:36:23,-4.31,purchase,restaurant,"Roberts, Carter and Moore",mobile
+TXN-0000006383,ACC-00000720,2025-06-25,17:56:59,-54.54,purchase,utilities,Hernandez LLC,mobile
+TXN-0000006388,ACC-00000720,2022-09-29,03:12:08,-4.9,purchase,restaurant,Ward PLC,mobile
+TXN-0000006404,ACC-00000723,2025-10-24,04:11:35,-93.48,purchase,healthcare,"Rodgers, Green and Quinn",mobile
+TXN-0000006407,ACC-00000723,2025-06-15,21:10:21,-111.33,purchase,grocery,Jimenez-Galvan,phone
+TXN-0000006429,ACC-00000726,2025-06-22,03:49:43,15.82,payment,,,branch
+TXN-0000006431,ACC-00000726,2024-04-04,05:16:50,107.36,payment,,,mobile
+TXN-0000006433,ACC-00000726,2024-08-09,12:35:01,-20.76,purchase,healthcare,Allen-Terry,online
+TXN-0000006435,ACC-00000726,2025-03-19,08:07:23,-142.41,purchase,grocery,"Compton, Owens and Decker",mobile
+TXN-0000006470,ACC-00000731,2025-12-12,11:35:16,1392.59,deposit,,,branch
+TXN-0000006471,ACC-00000731,2026-01-18,18:08:58,-120.15,purchase,grocery,"Lewis, Richardson and Conner",mobile
+TXN-0000006476,ACC-00000731,2026-01-05,08:26:29,12.33,deposit,,,mobile
+TXN-0000006477,ACC-00000731,2026-01-17,15:12:58,23.42,deposit,,,branch
+TXN-0000006478,ACC-00000731,2025-12-29,14:49:28,-18.81,fee,,,online
+TXN-0000006479,ACC-00000731,2026-01-25,18:02:00,-2.39,fee,,,atm
+TXN-0000006480,ACC-00000731,2026-01-11,12:30:32,-2.51,purchase,utilities,Hall PLC,mobile
+TXN-0000006507,ACC-00000734,2025-05-03,08:05:55,-4.42,withdrawal,,,online
+TXN-0000006510,ACC-00000734,2025-06-22,22:03:43,173.49,deposit,,,atm
+TXN-0000006512,ACC-00000734,2025-07-28,10:20:45,-25.97,withdrawal,,,online
+TXN-0000006516,ACC-00000735,2026-01-24,18:32:53,-33.56,withdrawal,,,mobile
+TXN-0000006517,ACC-00000735,2026-01-26,11:42:18,-99.12,purchase,travel,Woods Ltd,phone
+TXN-0000006520,ACC-00000735,2026-01-25,14:36:06,-9.49,fee,,,online
+TXN-0000006522,ACC-00000735,2026-01-24,08:11:57,-10.65,purchase,grocery,Lewis Ltd,online
+TXN-0000006530,ACC-00000737,2023-11-29,00:37:19,-26.62,purchase,retail,Avila-Mccarthy,atm
+TXN-0000006532,ACC-00000737,2023-05-16,19:16:19,-14.6,purchase,utilities,"Phillips, Tran and Jacobs",atm
+TXN-0000006534,ACC-00000737,2025-11-14,05:41:34,-14.76,fee,,,online
+TXN-0000006536,ACC-00000737,2023-12-27,15:50:24,-3.16,purchase,fuel,"Juarez, Dickerson and Davis",branch
+TXN-0000006539,ACC-00000737,2024-01-10,14:35:48,-6.31,purchase,grocery,Cunningham-Phillips,phone
+TXN-0000006542,ACC-00000738,2023-10-09,03:19:20,-263.66,purchase,grocery,Rodriguez and Sons,online
+TXN-0000006543,ACC-00000738,2024-11-30,03:09:28,-5.27,interest,,,atm
+TXN-0000006545,ACC-00000738,2023-08-06,06:21:37,40.38,payment,,,branch
+TXN-0000006577,ACC-00000742,2025-04-05,08:14:07,-99.62,withdrawal,,,mobile
+TXN-0000006581,ACC-00000742,2025-11-15,18:43:20,-4.04,purchase,entertainment,Murillo Inc,mobile
+TXN-0000006582,ACC-00000742,2023-04-09,01:27:26,-40.62,purchase,travel,Gordon-Jones,mobile
+TXN-0000006583,ACC-00000742,2021-12-28,16:59:46,-3.81,purchase,retail,Olsen LLC,branch
+TXN-0000006585,ACC-00000743,2025-06-18,07:19:49,-25.62,purchase,travel,"Brown, Wong and Miller",online
+TXN-0000006587,ACC-00000743,2025-08-28,05:15:05,-2.26,purchase,travel,Hodge LLC,mobile
+TXN-0000006590,ACC-00000743,2025-12-02,11:20:13,-56.77,purchase,entertainment,"Thomas, Blair and Walker",branch
+TXN-0000006592,ACC-00000743,2025-08-05,13:53:44,-95.0,purchase,retail,"Campbell, Martin and Klein",atm
+TXN-0000006593,ACC-00000743,2025-07-05,13:46:40,-9.94,purchase,grocery,Barber Group,online
+TXN-0000006604,ACC-00000745,2025-07-04,16:06:50,0.8,transfer,,,mobile
+TXN-0000006606,ACC-00000745,2024-06-17,11:50:03,-51.35,purchase,fuel,Stephens-Miller,mobile
+TXN-0000006610,ACC-00000745,2025-10-29,16:57:54,-3.09,purchase,grocery,"Petty, Stewart and Mcdonald",online
+TXN-0000006611,ACC-00000745,2024-08-19,19:41:13,-89.24,fee,,,mobile
+TXN-0000006612,ACC-00000745,2025-03-22,03:46:23,-161.31,withdrawal,,,branch
+TXN-0000006615,ACC-00000745,2025-06-03,11:54:02,-1.56,purchase,healthcare,"Gardner, Parker and Watkins",mobile
+TXN-0000006629,ACC-00000747,2025-08-07,11:21:12,-15.51,withdrawal,,,phone
+TXN-0000006631,ACC-00000747,2025-08-25,03:57:23,-332.63,purchase,restaurant,"Mcdaniel, Kim and Chang",mobile
+TXN-0000006632,ACC-00000747,2026-01-02,10:41:00,-2.42,fee,,,branch
+TXN-0000006635,ACC-00000747,2025-09-16,02:13:14,-8.26,withdrawal,,,online
+TXN-0000006636,ACC-00000747,2025-08-26,09:14:11,-99.59,purchase,travel,Moyer-Johnson,mobile
+TXN-0000006648,ACC-00000749,2025-09-13,18:28:47,-4.14,purchase,fuel,"Marks, Diaz and Waters",online
+TXN-0000006655,ACC-00000749,2024-11-29,06:20:52,-26.4,interest,,,mobile
+TXN-0000006656,ACC-00000749,2025-03-08,05:29:54,-17.05,purchase,travel,"Parrish, Benton and Martinez",atm
+TXN-0000006657,ACC-00000749,2025-05-29,14:45:31,-106.62,purchase,restaurant,Yates-Bean,online
+TXN-0000006661,ACC-00000749,2024-10-19,01:55:39,-126.19,purchase,fuel,Khan-Morgan,online
+TXN-0000006666,ACC-00000750,2023-03-23,06:53:35,37.57,deposit,,,atm
+TXN-0000006685,ACC-00000752,2021-12-20,07:04:45,-0.92,purchase,healthcare,"Kline, Ward and Vang",atm
+TXN-0000006688,ACC-00000752,2022-04-29,16:21:57,529.07,payment,,,mobile
+TXN-0000006689,ACC-00000752,2025-08-22,10:55:01,-134.72,purchase,utilities,Phelps-Adams,online
+TXN-0000006691,ACC-00000752,2024-01-25,13:35:56,99.07,payment,,,atm
+TXN-0000006692,ACC-00000752,2025-09-27,03:59:31,-14.47,purchase,healthcare,"Phillips, Little and Walters",mobile
+TXN-0000006693,ACC-00000752,2025-03-03,02:53:41,99.16,payment,,,mobile
+TXN-0000006695,ACC-00000752,2023-06-25,15:06:17,-236.65,purchase,healthcare,Payne PLC,atm
+TXN-0000006697,ACC-00000753,2023-03-22,15:39:08,-390.68,fee,,,mobile
+TXN-0000006703,ACC-00000753,2024-11-26,07:39:22,-1.31,purchase,healthcare,"Jackson, Shah and Walker",atm
+TXN-0000006704,ACC-00000753,2022-07-13,13:28:34,90.34,transfer,,,mobile
+TXN-0000006705,ACC-00000753,2021-06-01,09:22:07,75.37,transfer,,,branch
+TXN-0000006706,ACC-00000754,2022-11-15,22:47:09,-419.6,purchase,fuel,"Franklin, Parks and Garcia",mobile
+TXN-0000006709,ACC-00000754,2025-07-07,20:55:46,-4.89,purchase,travel,"Myers, Diaz and Lynn",mobile
+TXN-0000006710,ACC-00000754,2025-09-05,04:46:45,-3.6,withdrawal,,,mobile
+TXN-0000006713,ACC-00000754,2024-11-19,01:33:24,-17.43,purchase,utilities,"Mitchell, Green and Smith",branch
+TXN-0000006716,ACC-00000754,2023-09-16,01:38:33,-0.18,purchase,grocery,"Washington, Williams and Boyd",online
+TXN-0000006717,ACC-00000755,2024-10-24,19:17:14,-4.89,purchase,grocery,Perkins-Adams,mobile
+TXN-0000006743,ACC-00000760,2026-01-01,19:16:37,-61.82,purchase,retail,Weaver-Morgan,atm
+TXN-0000006744,ACC-00000760,2022-10-30,05:05:42,-321.02,purchase,utilities,Oconnell-Hogan,phone
+TXN-0000006745,ACC-00000760,2026-01-02,10:12:18,-0.92,purchase,travel,"Skinner, Roberts and Shaw",mobile
+TXN-0000006746,ACC-00000760,2025-11-17,15:56:12,-133.12,purchase,retail,"Lozano, Ponce and Burnett",online
+TXN-0000006749,ACC-00000760,2023-11-20,08:19:15,-8.77,purchase,retail,Cantu Inc,branch
+TXN-0000006753,ACC-00000760,2022-07-09,00:14:34,-33.12,purchase,retail,Anderson Inc,mobile
+TXN-0000006754,ACC-00000760,2022-04-23,05:51:53,46.41,payment,,,mobile
+TXN-0000006766,ACC-00000762,2023-11-11,07:16:20,-6.32,fee,,,online
+TXN-0000006768,ACC-00000762,2024-02-28,14:52:22,-79.43,withdrawal,,,mobile
+TXN-0000006769,ACC-00000762,2025-01-01,06:56:34,-168.75,withdrawal,,,online
+TXN-0000006770,ACC-00000762,2025-04-26,04:47:06,105.64,deposit,,,atm
+TXN-0000006783,ACC-00000764,2025-01-16,13:49:51,255.87,payment,,,mobile
+TXN-0000006785,ACC-00000764,2025-07-11,04:35:32,1.95,payment,,,online
+TXN-0000006786,ACC-00000764,2022-07-22,14:58:59,-40.92,purchase,healthcare,Stone-Miller,phone
+TXN-0000006790,ACC-00000764,2025-07-25,18:42:46,-25.09,purchase,travel,Nguyen PLC,online
+TXN-0000006793,ACC-00000764,2023-11-12,23:56:20,-53.22,interest,,,mobile
+TXN-0000006795,ACC-00000765,2023-07-19,07:03:26,-2.68,purchase,retail,Horne-Brewer,online
+TXN-0000006796,ACC-00000765,2023-05-29,07:11:55,-87.49,purchase,restaurant,Bryant and Sons,phone
+TXN-0000006799,ACC-00000765,2025-05-06,10:11:04,-76.5,fee,,,online
+TXN-0000006801,ACC-00000765,2023-07-02,03:58:31,16.27,deposit,,,mobile
+TXN-0000006802,ACC-00000765,2022-10-17,10:43:35,-21.19,withdrawal,,,online
+TXN-0000006806,ACC-00000766,2022-01-28,23:49:24,-1.83,purchase,healthcare,Nguyen LLC,branch
+TXN-0000006808,ACC-00000766,2025-02-23,10:37:32,4.31,transfer,,,online
+TXN-0000006812,ACC-00000766,2022-03-21,16:56:59,-108.11,withdrawal,,,online
+TXN-0000006813,ACC-00000766,2022-12-08,15:43:40,-12.72,purchase,retail,"Case, Adams and Martinez",mobile
+TXN-0000006815,ACC-00000766,2023-03-10,08:50:47,-40.94,purchase,healthcare,Roberts-Mcmahon,online
+TXN-0000006816,ACC-00000766,2021-10-28,15:14:25,-68.39,purchase,utilities,Green-King,branch
+TXN-0000006819,ACC-00000766,2024-10-02,08:00:47,-6.64,withdrawal,,,mobile
+TXN-0000006822,ACC-00000767,2025-05-16,10:16:49,-61.01,purchase,entertainment,Brown and Sons,mobile
+TXN-0000006823,ACC-00000767,2022-11-01,01:40:51,39.15,payment,,,mobile
+TXN-0000006825,ACC-00000767,2025-03-06,01:53:30,-30.39,purchase,travel,Lewis Ltd,mobile
+TXN-0000006829,ACC-00000767,2023-06-23,10:34:58,-24.74,interest,,,branch
+TXN-0000006831,ACC-00000767,2024-06-28,08:37:30,-62.84,purchase,retail,Juarez-Burns,mobile
+TXN-0000006832,ACC-00000768,2024-11-28,23:36:50,70.51,payment,,,online
+TXN-0000006836,ACC-00000768,2025-12-02,16:46:51,790.51,payment,,,atm
+TXN-0000006837,ACC-00000768,2025-04-09,14:13:49,-2.46,purchase,fuel,Contreras-Howard,online
+TXN-0000006839,ACC-00000768,2025-01-20,19:46:34,-38.87,purchase,utilities,Harris LLC,mobile
+TXN-0000006868,ACC-00000772,2020-10-26,22:58:30,-6.47,purchase,grocery,Curtis-Ortega,online
+TXN-0000006871,ACC-00000772,2021-07-11,09:39:03,95.81,payment,,,branch
+TXN-0000006872,ACC-00000772,2021-07-31,05:37:14,-21.99,purchase,grocery,"Warren, Weeks and Heath",branch
+TXN-0000006873,ACC-00000772,2024-07-25,00:22:22,-44.01,purchase,grocery,"Nguyen, Taylor and Carlson",online
+TXN-0000006874,ACC-00000772,2024-08-11,12:37:00,-2.45,fee,,,online
+TXN-0000006876,ACC-00000773,2023-05-03,16:42:33,-8.51,withdrawal,,,mobile
+TXN-0000006880,ACC-00000774,2024-01-15,19:19:44,15.99,deposit,,,mobile
+TXN-0000006890,ACC-00000776,2025-01-11,07:04:51,-75.38,fee,,,mobile
+TXN-0000006893,ACC-00000776,2025-06-13,23:42:02,-16.49,purchase,retail,"Martin, Hall and Simpson",online
+TXN-0000006896,ACC-00000776,2025-10-12,17:54:54,-59.25,purchase,healthcare,Gutierrez and Sons,branch
+TXN-0000006903,ACC-00000778,2022-12-27,10:08:55,-495.93,purchase,utilities,"Hayes, Henderson and Buchanan",online
+TXN-0000006905,ACC-00000778,2025-12-27,01:49:12,-7.78,purchase,restaurant,Watson-Coleman,online
+TXN-0000006908,ACC-00000778,2025-12-15,03:42:47,-3.84,purchase,utilities,"Brown, Wilson and Bowers",mobile
+TXN-0000006909,ACC-00000778,2025-03-07,15:34:50,80.5,payment,,,mobile
+TXN-0000006910,ACC-00000778,2026-01-07,10:30:53,-5.89,purchase,fuel,Johnson Ltd,phone
+TXN-0000006912,ACC-00000778,2022-07-29,20:25:47,90.3,payment,,,branch
+TXN-0000006913,ACC-00000778,2024-07-10,23:25:34,228.72,payment,,,online
+TXN-0000006914,ACC-00000778,2025-02-16,12:13:37,-46.16,purchase,entertainment,Cole LLC,mobile
+TXN-0000006918,ACC-00000779,2023-11-07,13:01:16,121.18,payment,,,mobile
+TXN-0000006922,ACC-00000779,2022-01-01,12:34:04,344.67,payment,,,online
+TXN-0000006923,ACC-00000780,2021-09-21,10:49:51,-76.09,purchase,travel,Miller-Williams,online
+TXN-0000006924,ACC-00000780,2022-03-30,13:11:40,-36.25,purchase,entertainment,Booker-Finley,mobile
+TXN-0000006933,ACC-00000782,2024-08-21,17:12:36,-92.72,purchase,fuel,Martinez Inc,online
+TXN-0000006936,ACC-00000782,2024-04-01,22:16:17,-3.96,withdrawal,,,atm
+TXN-0000006952,ACC-00000784,2025-09-27,20:34:16,-4.65,fee,,,online
+TXN-0000006953,ACC-00000784,2024-03-13,22:35:59,-270.28,purchase,utilities,"Smith, Wright and Bright",branch
+TXN-0000006955,ACC-00000784,2025-10-05,17:07:43,-29.22,purchase,restaurant,"Shaw, Morton and Evans",online
+TXN-0000006958,ACC-00000784,2024-11-07,18:48:09,573.49,transfer,,,mobile
+TXN-0000006959,ACC-00000784,2026-01-17,16:04:38,-24.84,withdrawal,,,phone
+TXN-0000006960,ACC-00000784,2024-04-03,12:47:20,-3.77,purchase,fuel,"Rice, Vasquez and Walker",atm
+TXN-0000006985,ACC-00000787,2025-10-05,16:42:03,-29.43,purchase,fuel,"Hopkins, Mccoy and Guerrero",mobile
+TXN-0000006986,ACC-00000787,2025-08-01,04:15:57,-13.37,withdrawal,,,branch
+TXN-0000006993,ACC-00000787,2025-08-31,16:46:36,123.55,deposit,,,online
+TXN-0000006996,ACC-00000788,2024-04-07,06:25:52,-52.8,purchase,travel,"Johnson, Hoover and Jones",phone
+TXN-0000006999,ACC-00000788,2024-08-27,01:05:35,-12.46,purchase,grocery,Hayes LLC,mobile
+TXN-0000007003,ACC-00000788,2024-10-13,16:18:48,35.32,transfer,,,phone
+TXN-0000007004,ACC-00000788,2025-03-28,18:36:18,-23.72,purchase,retail,"Thompson, Cain and Green",mobile
+TXN-0000007008,ACC-00000788,2025-01-02,16:45:12,-50.09,purchase,utilities,Estrada-Poole,mobile
+TXN-0000007010,ACC-00000789,2024-05-30,03:54:11,13.55,transfer,,,atm
+TXN-0000007011,ACC-00000789,2024-05-06,22:25:07,-39.34,purchase,grocery,"Miller, Larson and Davis",online
+TXN-0000007014,ACC-00000790,2024-06-29,21:50:49,-47.44,fee,,,mobile
+TXN-0000007020,ACC-00000790,2023-10-27,02:42:47,-9.49,fee,,,atm
+TXN-0000007047,ACC-00000793,2024-04-02,04:13:08,-91.89,purchase,travel,Guzman-Jones,atm
+TXN-0000007049,ACC-00000793,2023-09-09,05:28:34,-34.61,purchase,healthcare,Davis Inc,online
+TXN-0000007052,ACC-00000793,2022-04-25,19:31:33,-89.61,purchase,utilities,"Campos, Greene and Briggs",online
+TXN-0000007053,ACC-00000793,2023-12-30,15:23:44,-56.17,withdrawal,,,mobile
+TXN-0000007054,ACC-00000793,2021-11-08,19:53:56,-8.7,withdrawal,,,mobile
+TXN-0000007096,ACC-00000797,2025-06-01,19:53:54,-151.1,purchase,entertainment,Johnson Ltd,phone
+TXN-0000007097,ACC-00000797,2024-10-23,00:32:52,-4.84,purchase,utilities,"Turner, Taylor and Moreno",branch
+TXN-0000007099,ACC-00000797,2024-05-30,17:17:08,-12.83,purchase,fuel,Fleming-Hill,online
+TXN-0000007102,ACC-00000798,2025-07-21,12:52:21,-14.03,fee,,,mobile
+TXN-0000007103,ACC-00000798,2026-01-05,02:15:31,-13.11,fee,,,branch
+TXN-0000007104,ACC-00000798,2025-05-27,05:05:47,-112.58,purchase,grocery,Grimes-Burns,mobile
+TXN-0000007106,ACC-00000798,2025-08-04,01:56:55,10.85,deposit,,,online
+TXN-0000007111,ACC-00000799,2025-09-01,12:11:15,-0.98,purchase,restaurant,Lindsey-Liu,branch
+TXN-0000007112,ACC-00000799,2025-04-24,00:14:09,-3.3,purchase,fuel,Dickerson and Sons,online
+TXN-0000007117,ACC-00000799,2025-06-06,08:37:53,-25.2,purchase,grocery,Foley Inc,online
+TXN-0000007118,ACC-00000799,2026-01-09,20:29:07,-101.6,fee,,,online
+TXN-0000007120,ACC-00000799,2025-10-07,12:30:04,-0.37,purchase,healthcare,Richmond Group,online
+TXN-0000007124,ACC-00000800,2024-07-12,02:13:36,-0.98,purchase,fuel,"Lucero, Davis and Bartlett",online
+TXN-0000007126,ACC-00000800,2024-05-12,04:12:29,-14.3,purchase,entertainment,Smith PLC,online
+TXN-0000007127,ACC-00000800,2024-08-31,15:29:36,-7.65,purchase,healthcare,Wells PLC,mobile
+TXN-0000007128,ACC-00000800,2025-02-22,18:46:55,-5.45,purchase,entertainment,Dawson-Frey,online
+TXN-0000007134,ACC-00000800,2025-12-20,01:01:47,-9.59,purchase,grocery,Harris LLC,mobile
+TXN-0000007135,ACC-00000801,2025-12-29,21:33:10,-20.04,purchase,retail,"Wolf, Mendoza and Perez",branch
+TXN-0000007136,ACC-00000802,2024-05-19,09:00:07,-3.82,purchase,fuel,"Chapman, Cruz and Goodwin",mobile
+TXN-0000007137,ACC-00000802,2025-12-12,07:03:58,83.7,transfer,,,online
+TXN-0000007140,ACC-00000802,2024-07-17,15:27:33,79.03,deposit,,,mobile
+TXN-0000007141,ACC-00000802,2025-04-29,07:52:36,42.18,transfer,,,online
+TXN-0000007142,ACC-00000802,2024-12-18,15:11:28,-3.83,withdrawal,,,online
+TXN-0000007167,ACC-00000805,2021-10-29,12:03:18,-192.41,purchase,fuel,Scott Ltd,atm
+TXN-0000007169,ACC-00000805,2020-11-28,21:52:46,-107.16,purchase,utilities,Hughes and Sons,mobile
+TXN-0000007170,ACC-00000805,2023-11-01,11:31:17,-18.31,withdrawal,,,mobile
+TXN-0000007183,ACC-00000807,2022-11-22,09:06:52,37.9,payment,,,online
+TXN-0000007185,ACC-00000807,2022-10-13,08:10:40,119.66,payment,,,online
+TXN-0000007188,ACC-00000807,2024-04-05,14:29:32,-459.43,purchase,fuel,"Bryant, Shaw and Guerrero",mobile
+TXN-0000007228,ACC-00000811,2022-03-02,17:55:13,-31.5,purchase,retail,"Young, Tran and Mcfarland",mobile
+TXN-0000007249,ACC-00000813,2025-02-23,03:47:15,-20.45,purchase,fuel,"Harrison, Mills and Smith",online
+TXN-0000007250,ACC-00000813,2025-12-30,09:47:18,-77.13,purchase,retail,"Wolf, Jordan and Kelley",mobile
+TXN-0000007251,ACC-00000813,2026-01-15,18:39:45,266.38,deposit,,,online
+TXN-0000007252,ACC-00000813,2025-01-23,11:52:43,-6.74,purchase,retail,Gray Ltd,online
+TXN-0000007253,ACC-00000813,2025-03-23,06:02:38,-5.2,withdrawal,,,mobile
+TXN-0000007254,ACC-00000813,2025-01-14,16:05:26,30.67,deposit,,,online
+TXN-0000007263,ACC-00000815,2025-11-06,22:19:23,28.49,payment,,,online
+TXN-0000007272,ACC-00000815,2022-06-15,13:05:28,28.46,payment,,,mobile
+TXN-0000007370,ACC-00000828,2021-11-12,06:54:42,-1.91,purchase,grocery,Schultz Group,online
+TXN-0000007371,ACC-00000829,2025-01-12,14:29:40,110.1,payment,,,online
+TXN-0000007373,ACC-00000829,2025-10-20,07:48:38,17.57,payment,,,online
+TXN-0000007390,ACC-00000831,2022-02-16,21:26:26,1.52,deposit,,,phone
+TXN-0000007391,ACC-00000831,2020-10-25,13:04:28,-5.26,purchase,fuel,"Johnson, Hall and Potter",mobile
+TXN-0000007404,ACC-00000833,2024-06-14,11:08:26,-35.74,purchase,fuel,Sims-Browning,mobile
+TXN-0000007405,ACC-00000833,2021-06-02,19:07:56,-22.4,withdrawal,,,online
+TXN-0000007406,ACC-00000833,2024-10-26,11:25:46,-129.67,withdrawal,,,online
+TXN-0000007407,ACC-00000833,2022-03-18,04:39:53,-26.64,withdrawal,,,mobile
+TXN-0000007408,ACC-00000833,2024-03-12,00:53:45,-9.85,purchase,healthcare,"Mcclain, Moyer and Howard",online
+TXN-0000007419,ACC-00000835,2023-09-06,03:10:44,13.13,transfer,,,mobile
+TXN-0000007421,ACC-00000835,2023-05-13,13:07:12,-1.16,purchase,utilities,"Adams, Frazier and Moran",online
+TXN-0000007422,ACC-00000835,2023-04-01,09:03:28,-6.42,withdrawal,,,phone
+TXN-0000007423,ACC-00000835,2025-03-07,01:17:39,-123.48,withdrawal,,,online
+TXN-0000007424,ACC-00000835,2023-02-23,06:53:02,-33.71,fee,,,mobile
+TXN-0000007427,ACC-00000835,2023-11-25,11:44:50,-152.35,withdrawal,,,atm
+TXN-0000007428,ACC-00000835,2023-06-09,22:43:16,-83.62,purchase,healthcare,Blake-Bradford,mobile
+TXN-0000007429,ACC-00000835,2021-08-16,01:36:31,-162.75,purchase,utilities,Smith-Martin,online
+TXN-0000007430,ACC-00000836,2022-10-25,18:05:02,-4.52,withdrawal,,,atm
+TXN-0000007431,ACC-00000836,2023-11-13,05:34:25,-15.91,purchase,healthcare,Snyder Group,mobile
+TXN-0000007440,ACC-00000837,2022-04-09,23:20:23,-8.92,purchase,grocery,"Williams, Sanchez and Walsh",online
+TXN-0000007441,ACC-00000837,2022-09-17,17:28:03,-1.69,purchase,healthcare,"Mcintyre, Dixon and Sanchez",mobile
+TXN-0000007442,ACC-00000837,2022-10-30,07:23:49,95.64,payment,,,mobile
+TXN-0000007443,ACC-00000838,2024-02-14,17:44:00,-6.85,purchase,healthcare,Cruz Group,mobile
+TXN-0000007446,ACC-00000838,2021-08-09,09:09:55,77.05,transfer,,,online
+TXN-0000007450,ACC-00000838,2021-05-06,07:51:03,-25.96,purchase,entertainment,Rosario-Mclean,mobile
+TXN-0000007451,ACC-00000838,2023-06-24,16:16:01,11.35,transfer,,,phone
+TXN-0000007453,ACC-00000839,2024-03-16,19:45:06,-26.16,withdrawal,,,online
+TXN-0000007454,ACC-00000839,2025-12-07,21:45:25,-2.84,purchase,entertainment,"Tyler, Daniels and Morris",online
+TXN-0000007456,ACC-00000839,2025-09-11,22:13:06,2572.48,deposit,,,online
+TXN-0000007457,ACC-00000839,2024-08-26,04:09:28,-12.41,purchase,retail,Collins-Foster,online
+TXN-0000007460,ACC-00000839,2024-04-11,16:50:37,22.89,transfer,,,online
+TXN-0000007464,ACC-00000839,2025-08-09,00:42:49,-19.11,purchase,travel,Murray-Ford,online
+TXN-0000007492,ACC-00000843,2023-06-06,22:47:21,-19.07,withdrawal,,,online
+TXN-0000007493,ACC-00000843,2024-03-29,23:15:41,-25.85,withdrawal,,,branch
+TXN-0000007494,ACC-00000843,2025-09-29,14:55:42,-0.86,withdrawal,,,mobile
+TXN-0000007497,ACC-00000843,2022-10-02,15:21:09,-42.48,purchase,travel,Archer-Pena,atm
+TXN-0000007576,ACC-00000851,2025-05-17,21:49:35,-234.57,withdrawal,,,mobile
+TXN-0000007577,ACC-00000851,2025-12-17,18:19:06,-124.48,purchase,grocery,"Stark, Torres and Miller",mobile
+TXN-0000007581,ACC-00000851,2025-11-17,22:27:52,-4.39,purchase,fuel,"Thomas, Buchanan and Watson",online
+TXN-0000007584,ACC-00000851,2025-11-20,16:38:44,117.17,deposit,,,online
+TXN-0000007598,ACC-00000854,2025-01-23,03:26:24,-145.97,purchase,entertainment,"Gutierrez, Barrett and Ellis",online
+TXN-0000007610,ACC-00000856,2024-08-25,12:49:19,45.75,transfer,,,mobile
+TXN-0000007613,ACC-00000856,2025-10-24,15:12:39,-70.45,purchase,retail,Small-Wagner,online
+TXN-0000007617,ACC-00000856,2025-07-02,17:32:28,-5.97,purchase,travel,Day and Sons,online
+TXN-0000007618,ACC-00000856,2025-08-17,19:27:37,-235.13,purchase,grocery,"Johnson, Rice and Hogan",mobile
+TXN-0000007630,ACC-00000858,2025-09-08,09:20:14,-6.77,purchase,healthcare,"Thompson, Anderson and Parker",mobile
+TXN-0000007632,ACC-00000858,2025-12-30,20:28:36,-11.25,purchase,travel,"Bradford, Lee and Coleman",online
+TXN-0000007633,ACC-00000858,2025-08-29,11:24:49,38.35,transfer,,,atm
+TXN-0000007634,ACC-00000858,2025-09-24,07:36:56,-9.93,purchase,fuel,Ponce Ltd,online
+TXN-0000007636,ACC-00000858,2025-09-06,12:49:06,-7.07,purchase,fuel,Rice-Burton,online
+TXN-0000007637,ACC-00000858,2025-09-24,19:26:44,53.39,transfer,,,mobile
+TXN-0000007644,ACC-00000860,2020-04-18,18:49:46,-6.58,purchase,grocery,Johnston Ltd,mobile
+TXN-0000007647,ACC-00000860,2023-12-05,02:39:14,-140.07,purchase,travel,Anderson-Brooks,atm
+TXN-0000007648,ACC-00000860,2020-10-25,04:38:44,5.4,deposit,,,online
+TXN-0000007649,ACC-00000860,2024-07-12,08:11:18,6.62,deposit,,,mobile
+TXN-0000007653,ACC-00000860,2024-09-03,08:00:15,29.15,deposit,,,mobile
+TXN-0000007682,ACC-00000863,2026-01-07,00:37:42,24.07,deposit,,,mobile
+TXN-0000007683,ACC-00000863,2024-10-31,07:31:22,-21.4,purchase,utilities,Farley Ltd,mobile
+TXN-0000007690,ACC-00000863,2024-12-24,09:07:16,-1.12,purchase,travel,Sullivan-Bennett,online
+TXN-0000007704,ACC-00000866,2025-03-11,23:19:31,-16.62,withdrawal,,,phone
+TXN-0000007708,ACC-00000866,2024-10-07,14:46:33,44.51,deposit,,,online
+TXN-0000007709,ACC-00000866,2025-08-18,02:46:21,-1.5,withdrawal,,,mobile
+TXN-0000007710,ACC-00000866,2025-07-23,13:01:45,-24.82,purchase,restaurant,Williams-Flores,mobile
+TXN-0000007711,ACC-00000866,2024-07-22,12:02:55,48.8,deposit,,,atm
+TXN-0000007712,ACC-00000866,2025-03-05,13:42:40,-463.4,purchase,travel,Zuniga Ltd,branch
+TXN-0000007714,ACC-00000867,2023-04-13,02:07:50,64.7,transfer,,,mobile
+TXN-0000007715,ACC-00000867,2021-02-05,02:28:25,840.99,transfer,,,atm
+TXN-0000007716,ACC-00000867,2021-01-03,15:13:22,-17.06,withdrawal,,,mobile
+TXN-0000007717,ACC-00000867,2024-03-04,23:54:16,-10.91,purchase,utilities,"Peterson, Patterson and Smith",online
+TXN-0000007720,ACC-00000867,2024-05-06,04:02:10,-32.92,purchase,entertainment,"Bennett, Mercer and Garza",mobile
+TXN-0000007721,ACC-00000867,2021-11-13,07:32:43,-13.04,purchase,entertainment,"Crawford, Ballard and Brown",mobile
+TXN-0000007722,ACC-00000867,2020-08-22,02:55:34,-126.19,withdrawal,,,mobile
+TXN-0000007745,ACC-00000870,2025-06-06,18:11:21,-42.68,purchase,grocery,Soto Group,online
+TXN-0000007748,ACC-00000870,2025-06-29,07:50:07,-1.09,interest,,,online
+TXN-0000007750,ACC-00000870,2023-08-26,07:58:40,-3.71,purchase,restaurant,Martinez Inc,mobile
+TXN-0000007753,ACC-00000870,2024-12-24,07:09:02,-11.82,purchase,fuel,Kaiser-Hart,mobile
+TXN-0000007754,ACC-00000870,2025-08-27,14:13:36,-75.8,purchase,utilities,Castillo-Dawson,atm
+TXN-0000007757,ACC-00000870,2025-09-04,09:46:11,17.67,payment,,,online
+TXN-0000007758,ACC-00000870,2023-01-30,05:29:39,-9.05,purchase,healthcare,Morales-Armstrong,online
+TXN-0000007761,ACC-00000870,2025-02-07,18:00:55,-0.81,purchase,utilities,Vazquez-Johnson,mobile
+TXN-0000007767,ACC-00000872,2021-06-15,02:06:08,-31.95,withdrawal,,,branch
+TXN-0000007768,ACC-00000872,2021-09-20,12:41:37,-5.4,withdrawal,,,atm
+TXN-0000007769,ACC-00000872,2019-12-22,07:15:11,-4.64,withdrawal,,,mobile
+TXN-0000007771,ACC-00000872,2021-09-20,11:58:25,105.67,deposit,,,mobile
+TXN-0000007773,ACC-00000872,2020-06-26,18:07:55,7.96,deposit,,,branch
+TXN-0000007774,ACC-00000872,2024-12-21,05:40:48,-11.5,purchase,entertainment,"Santos, Taylor and Dominguez",mobile
+TXN-0000007776,ACC-00000872,2024-04-24,02:59:26,-11.76,purchase,fuel,Williams LLC,mobile
+TXN-0000007777,ACC-00000873,2025-12-29,10:41:44,-28.97,purchase,grocery,Ball-White,mobile
+TXN-0000007778,ACC-00000873,2024-11-12,02:18:34,159.67,transfer,,,online
+TXN-0000007779,ACC-00000873,2025-03-08,05:32:56,-16.56,purchase,restaurant,Rice Group,atm
+TXN-0000007781,ACC-00000873,2025-11-08,17:25:38,-45.46,purchase,travel,Simmons and Sons,mobile
+TXN-0000007784,ACC-00000873,2024-09-02,17:06:00,-2.31,purchase,healthcare,Hendricks-Oliver,mobile
+TXN-0000007785,ACC-00000873,2024-02-21,12:24:08,-5.95,purchase,utilities,"Hines, Carr and Bailey",mobile
+TXN-0000007789,ACC-00000873,2025-06-13,07:32:09,304.45,transfer,,,online
+TXN-0000007801,ACC-00000876,2025-12-17,14:38:08,-18.74,fee,,,atm
+TXN-0000007802,ACC-00000876,2025-09-11,01:45:03,-141.13,purchase,fuel,Thomas Inc,phone
+TXN-0000007803,ACC-00000876,2025-07-27,00:29:37,-35.28,purchase,retail,Mason-Anderson,online
+TXN-0000007805,ACC-00000876,2025-07-11,06:43:47,-129.39,withdrawal,,,online
+TXN-0000007806,ACC-00000876,2026-01-23,03:52:08,-65.36,purchase,travel,"Day, Khan and Aguilar",mobile
+TXN-0000007807,ACC-00000876,2025-11-23,05:55:32,-234.66,purchase,utilities,Wright Inc,online
+TXN-0000007810,ACC-00000876,2025-07-27,14:20:22,-79.51,purchase,utilities,Lee-Mccoy,online
+TXN-0000007811,ACC-00000876,2025-11-18,07:03:33,-14.7,purchase,grocery,Wood-Kennedy,mobile
+TXN-0000007813,ACC-00000877,2023-04-20,03:34:41,-24.18,purchase,restaurant,Smith LLC,mobile
+TXN-0000007814,ACC-00000877,2024-06-03,01:07:47,-18.56,purchase,grocery,"Reynolds, Torres and Hickman",mobile
+TXN-0000007816,ACC-00000877,2024-06-25,10:41:43,-7.17,purchase,entertainment,"Baxter, Rodriguez and Maxwell",online
+TXN-0000007818,ACC-00000877,2023-08-27,16:05:48,-10.05,purchase,fuel,"Mann, Myers and Rivera",online
+TXN-0000007820,ACC-00000877,2022-02-07,07:49:01,15.84,payment,,,online
+TXN-0000007822,ACC-00000877,2022-03-22,15:27:08,24.73,payment,,,online
+TXN-0000007823,ACC-00000877,2023-09-08,09:54:10,-125.18,purchase,travel,Mccarthy-Tran,atm
+TXN-0000007826,ACC-00000877,2024-12-31,14:05:16,-39.58,purchase,retail,Williams-Harris,atm
+TXN-0000007838,ACC-00000879,2025-11-22,14:28:13,-54.91,purchase,healthcare,Mullins-Chung,atm
+TXN-0000007840,ACC-00000879,2025-12-11,17:18:33,-13.31,purchase,retail,"Davis, Bates and Freeman",online
+TXN-0000007841,ACC-00000880,2024-05-27,01:24:25,-250.1,purchase,travel,Owens and Sons,online
+TXN-0000007846,ACC-00000880,2023-05-03,05:01:43,8.48,transfer,,,branch
+TXN-0000007847,ACC-00000880,2022-11-27,02:31:07,-15.09,purchase,utilities,"Lynch, Ramirez and Myers",online
+TXN-0000007848,ACC-00000881,2025-01-30,10:14:00,-5.66,withdrawal,,,online
+TXN-0000007852,ACC-00000881,2025-12-22,16:28:03,-16.01,purchase,retail,Smith LLC,mobile
+TXN-0000007853,ACC-00000881,2025-09-13,18:24:31,-13.56,purchase,fuel,"Frey, Lewis and Rich",online
+TXN-0000007855,ACC-00000881,2024-12-11,16:44:36,-140.21,withdrawal,,,mobile
+TXN-0000007857,ACC-00000881,2025-12-04,05:46:13,-43.25,purchase,fuel,Ortiz-Alexander,atm
+TXN-0000007858,ACC-00000881,2025-11-05,02:20:46,-0.38,purchase,fuel,"Martinez, Santana and Logan",mobile
+TXN-0000007859,ACC-00000881,2024-05-25,06:59:23,-137.43,purchase,grocery,Kim Group,mobile
+TXN-0000007860,ACC-00000881,2025-08-07,20:55:34,-11.87,purchase,entertainment,Lynch-Reed,mobile
+TXN-0000007868,ACC-00000883,2025-11-11,08:10:06,-20.7,purchase,retail,"Hardin, Sparks and Williams",online
+TXN-0000007869,ACC-00000883,2025-06-10,05:55:40,26.74,deposit,,,online
+TXN-0000007872,ACC-00000883,2025-09-10,16:07:05,-38.36,purchase,travel,"Robles, Lowery and Smith",atm
+TXN-0000007874,ACC-00000883,2025-09-13,05:59:42,-12.07,purchase,fuel,Rosario Ltd,mobile
+TXN-0000007875,ACC-00000883,2025-11-05,21:19:11,-23.83,withdrawal,,,mobile
+TXN-0000007877,ACC-00000884,2025-12-31,10:47:43,-53.7,purchase,healthcare,"Gutierrez, Guerra and Guerrero",phone
+TXN-0000007878,ACC-00000884,2025-05-11,05:43:15,56.26,transfer,,,mobile
+TXN-0000007879,ACC-00000884,2025-05-14,11:34:27,2.89,deposit,,,mobile
+TXN-0000007880,ACC-00000884,2025-12-28,06:07:23,-12.94,fee,,,atm
+TXN-0000007885,ACC-00000884,2025-08-17,11:54:15,-75.0,withdrawal,,,mobile
+TXN-0000007886,ACC-00000884,2025-06-06,01:40:44,64.41,deposit,,,online
+TXN-0000007887,ACC-00000884,2025-06-28,07:34:03,-0.98,purchase,fuel,Summers-Gutierrez,mobile
+TXN-0000007888,ACC-00000884,2025-09-25,12:48:42,-1.45,withdrawal,,,phone
+TXN-0000007900,ACC-00000886,2026-01-23,03:51:56,9.39,transfer,,,mobile
+TXN-0000007906,ACC-00000886,2025-09-06,06:44:56,-96.33,purchase,healthcare,Young LLC,online
+TXN-0000007908,ACC-00000886,2026-01-19,16:08:46,-9.44,purchase,fuel,Aguirre-Newton,mobile
+TXN-0000007964,ACC-00000892,2021-04-22,09:31:00,-38.99,purchase,fuel,"Wolf, Williams and Nelson",online
+TXN-0000007966,ACC-00000892,2022-04-19,08:20:21,-7.99,purchase,entertainment,"Miller, Jefferson and Davis",mobile
+TXN-0000007967,ACC-00000892,2020-03-24,23:11:43,-20.81,purchase,retail,Watson LLC,mobile
+TXN-0000007972,ACC-00000894,2024-05-13,01:22:47,-1.82,purchase,grocery,Gallagher Inc,phone
+TXN-0000007974,ACC-00000894,2025-12-20,14:54:48,54.73,transfer,,,atm
+TXN-0000007976,ACC-00000894,2025-09-08,18:45:15,8.2,deposit,,,atm
+TXN-0000007977,ACC-00000894,2024-12-12,02:41:00,-93.26,purchase,healthcare,"Smith, Norton and Thompson",mobile
+TXN-0000007978,ACC-00000894,2024-04-26,13:58:51,75.96,deposit,,,online
+TXN-0000008017,ACC-00000898,2025-05-29,04:21:50,-103.84,interest,,,mobile
+TXN-0000008020,ACC-00000898,2025-03-11,21:38:29,-22.98,purchase,travel,Thompson-Gibson,mobile
+TXN-0000008022,ACC-00000898,2025-06-21,18:17:21,19.96,payment,,,online
+TXN-0000008029,ACC-00000898,2025-03-07,17:19:55,173.79,payment,,,mobile
+TXN-0000008030,ACC-00000898,2025-03-12,05:36:53,-100.45,purchase,entertainment,Hurst-Murray,branch
+TXN-0000008055,ACC-00000901,2025-07-23,06:41:15,9.11,transfer,,,online
+TXN-0000008056,ACC-00000901,2024-01-16,09:25:37,555.72,transfer,,,mobile
+TXN-0000008069,ACC-00000903,2026-01-26,08:46:08,1910.0,deposit,,,online
+TXN-0000008070,ACC-00000903,2026-01-26,16:11:19,-9.1,purchase,restaurant,"Frazier, Scott and Bell",mobile
+TXN-0000008078,ACC-00000903,2026-01-25,08:21:40,-47.95,withdrawal,,,mobile
+TXN-0000008105,ACC-00000906,2022-09-19,17:13:42,95.39,payment,,,atm
+TXN-0000008106,ACC-00000906,2025-03-16,22:38:01,-21.38,purchase,utilities,"Harris, Pruitt and Clements",mobile
+TXN-0000008107,ACC-00000906,2021-06-10,10:25:28,-8.1,purchase,entertainment,Davis-Green,online
+TXN-0000008108,ACC-00000906,2024-10-01,19:56:11,-39.89,purchase,fuel,Petersen PLC,atm
+TXN-0000008110,ACC-00000906,2020-05-22,23:36:00,182.86,payment,,,atm
+TXN-0000008111,ACC-00000906,2020-02-19,19:05:14,245.16,payment,,,mobile
+TXN-0000008114,ACC-00000906,2025-10-17,13:31:52,-1.73,purchase,healthcare,"Lara, Johnson and Welch",online
+TXN-0000008117,ACC-00000907,2025-10-26,02:37:57,-6.29,purchase,restaurant,Ellison-Turner,branch
+TXN-0000008140,ACC-00000910,2025-12-15,02:26:57,-3.5,purchase,entertainment,Rivas-Montes,mobile
+TXN-0000008144,ACC-00000910,2025-01-16,18:01:32,-6.5,withdrawal,,,mobile
+TXN-0000008146,ACC-00000910,2025-08-29,09:23:40,-0.65,purchase,retail,"Lopez, Davis and Melton",branch
+TXN-0000008150,ACC-00000911,2024-08-08,06:48:23,-13.14,purchase,retail,"Booker, Simpson and Coleman",online
+TXN-0000008151,ACC-00000911,2025-07-22,15:02:44,-38.13,purchase,healthcare,"Day, Dennis and Williamson",mobile
+TXN-0000008156,ACC-00000911,2024-04-21,17:17:11,-32.64,withdrawal,,,mobile
+TXN-0000008157,ACC-00000911,2024-02-13,09:20:01,-4.29,purchase,entertainment,Marquez LLC,online
+TXN-0000008159,ACC-00000912,2025-11-30,15:35:04,-2.65,withdrawal,,,atm
+TXN-0000008160,ACC-00000912,2026-01-14,08:39:18,-22.02,purchase,retail,"Murphy, Richardson and Miller",mobile
+TXN-0000008162,ACC-00000912,2026-01-18,01:28:36,-22.16,purchase,healthcare,Hendricks-Rice,mobile
+TXN-0000008163,ACC-00000912,2026-01-15,06:11:26,-8.42,withdrawal,,,phone
+TXN-0000008165,ACC-00000912,2025-12-29,03:39:45,-20.93,withdrawal,,,mobile
+TXN-0000008166,ACC-00000912,2025-11-29,01:51:36,-72.92,purchase,entertainment,"Davis, West and Parker",online
+TXN-0000008167,ACC-00000912,2025-12-22,11:28:19,-10.43,purchase,healthcare,Duran Ltd,mobile
+TXN-0000008170,ACC-00000914,2026-01-04,01:29:06,-4.66,withdrawal,,,branch
+TXN-0000008175,ACC-00000914,2025-10-15,16:01:11,-36.4,purchase,healthcare,Cook Group,atm
+TXN-0000008178,ACC-00000914,2025-10-13,20:34:48,59.33,deposit,,,online
+TXN-0000008179,ACC-00000914,2026-01-17,20:07:21,-6.87,purchase,utilities,Petersen PLC,online
+TXN-0000008181,ACC-00000914,2026-01-05,03:03:47,63.01,deposit,,,online
+TXN-0000008183,ACC-00000914,2025-11-08,04:50:51,68.39,transfer,,,atm
+TXN-0000008184,ACC-00000914,2026-01-16,00:54:09,-46.67,purchase,grocery,Burnett PLC,phone
+TXN-0000008185,ACC-00000914,2026-01-10,13:49:26,-19.25,fee,,,online
+TXN-0000008189,ACC-00000915,2024-05-23,22:47:24,-18.03,purchase,retail,"Brown, White and Wallace",branch
+TXN-0000008194,ACC-00000915,2024-10-16,09:42:22,-20.48,purchase,restaurant,"Williams, Hunt and Boyer",mobile
+TXN-0000008196,ACC-00000915,2024-12-16,15:06:42,45.64,transfer,,,atm
+TXN-0000008197,ACC-00000915,2025-06-05,03:58:45,217.13,deposit,,,mobile
+TXN-0000008218,ACC-00000919,2025-11-04,06:12:27,-43.61,purchase,travel,"Pace, Frank and Evans",mobile
+TXN-0000008222,ACC-00000919,2023-07-28,04:00:26,18.33,payment,,,atm
+TXN-0000008224,ACC-00000919,2024-04-16,17:35:09,103.01,payment,,,mobile
+TXN-0000008225,ACC-00000919,2024-01-15,01:49:35,-23.33,purchase,utilities,"Rodriguez, Vargas and White",mobile
+TXN-0000008226,ACC-00000919,2024-05-28,06:33:20,-15.33,purchase,retail,Mcgee-Ford,mobile
+TXN-0000008227,ACC-00000920,2023-04-01,19:34:22,-63.2,withdrawal,,,mobile
+TXN-0000008229,ACC-00000920,2023-11-21,12:47:21,264.81,transfer,,,mobile
+TXN-0000008231,ACC-00000920,2026-01-24,20:56:16,99.09,deposit,,,mobile
+TXN-0000008232,ACC-00000920,2024-12-13,13:57:09,-207.94,purchase,travel,Murray LLC,mobile
+TXN-0000008233,ACC-00000920,2025-08-14,21:05:22,1942.52,deposit,,,online
+TXN-0000008244,ACC-00000922,2025-12-21,07:37:54,910.38,transfer,,,online
+TXN-0000008250,ACC-00000923,2024-07-02,16:04:20,-2.38,purchase,healthcare,Davis-Calderon,mobile
+TXN-0000008259,ACC-00000923,2021-03-20,11:35:18,-13.54,purchase,entertainment,"Brown, Schmidt and Mckenzie",atm
+TXN-0000008260,ACC-00000923,2023-02-10,23:13:15,-20.82,interest,,,mobile
+TXN-0000008263,ACC-00000923,2024-12-07,16:34:21,-88.43,purchase,retail,Bullock Ltd,mobile
+TXN-0000008279,ACC-00000925,2025-09-28,11:46:54,-11.13,purchase,retail,Sloan-Phillips,mobile
+TXN-0000008280,ACC-00000925,2024-12-25,11:19:16,-9.48,purchase,restaurant,Gray LLC,mobile
+TXN-0000008281,ACC-00000925,2025-04-01,05:59:15,-11.47,fee,,,mobile
+TXN-0000008283,ACC-00000925,2025-06-06,23:30:33,-4.75,purchase,fuel,"Vega, Jones and Barry",branch
+TXN-0000008308,ACC-00000927,2021-05-20,04:05:02,9.04,transfer,,,mobile
+TXN-0000008311,ACC-00000927,2025-07-15,03:44:29,64.07,transfer,,,mobile
+TXN-0000008312,ACC-00000928,2024-11-11,19:11:56,-55.14,purchase,utilities,"Gallagher, Ramirez and Austin",branch
+TXN-0000008313,ACC-00000928,2024-04-02,08:01:42,-44.27,purchase,travel,Pitts-Webster,online
+TXN-0000008314,ACC-00000928,2022-10-24,22:29:43,1.03,deposit,,,online
+TXN-0000008315,ACC-00000928,2026-01-21,23:11:55,-235.34,purchase,grocery,"Young, Decker and Murphy",online
+TXN-0000008317,ACC-00000929,2026-01-04,22:46:25,-147.61,withdrawal,,,branch
+TXN-0000008319,ACC-00000929,2026-01-21,17:49:51,-1.32,purchase,utilities,Chavez and Sons,mobile
+TXN-0000008321,ACC-00000929,2026-01-19,21:56:56,117.52,transfer,,,branch
+TXN-0000008322,ACC-00000929,2026-01-15,05:31:21,-28.26,purchase,healthcare,"Moyer, Galloway and Mccormick",mobile
+TXN-0000008324,ACC-00000929,2026-01-01,02:58:05,98.77,deposit,,,online
+TXN-0000008325,ACC-00000929,2026-01-22,18:47:14,-226.77,purchase,entertainment,Rowe-Cannon,online
+TXN-0000008357,ACC-00000933,2024-01-16,22:22:33,-4.25,purchase,travel,"Moss, Wells and Garner",atm
+TXN-0000008361,ACC-00000933,2022-04-27,08:39:01,-111.75,fee,,,branch
+TXN-0000008365,ACC-00000933,2024-01-06,21:02:04,-5.88,purchase,travel,"Poole, Williams and Lee",mobile
+TXN-0000008366,ACC-00000934,2024-08-18,11:36:09,-8.23,purchase,grocery,"Reynolds, Watts and Lewis",atm
+TXN-0000008367,ACC-00000934,2025-07-29,06:38:01,-12.55,purchase,entertainment,Hernandez Group,online
+TXN-0000008375,ACC-00000934,2025-11-02,19:25:05,264.61,transfer,,,atm
+TXN-0000008388,ACC-00000937,2025-03-23,02:12:09,-7.69,purchase,grocery,"Hayes, Martin and Rodriguez",atm
+TXN-0000008392,ACC-00000937,2025-10-23,02:44:45,-40.72,purchase,entertainment,"Price, Thomas and Wilson",mobile
+TXN-0000008407,ACC-00000940,2025-09-28,21:08:58,-144.84,purchase,healthcare,Craig Group,mobile
+TXN-0000008409,ACC-00000940,2024-09-02,23:31:49,-27.4,purchase,travel,Miller-Owens,mobile
+TXN-0000008410,ACC-00000940,2023-07-10,02:07:53,-459.28,purchase,restaurant,Cortez-Johnson,mobile
+TXN-0000008414,ACC-00000940,2021-04-12,16:27:42,-41.83,purchase,travel,Rodriguez PLC,online
+TXN-0000008415,ACC-00000940,2021-04-29,19:46:19,-37.16,purchase,grocery,Flores PLC,mobile
+TXN-0000008419,ACC-00000941,2025-05-18,02:38:15,-41.18,fee,,,online
+TXN-0000008423,ACC-00000941,2025-07-08,09:20:44,816.34,deposit,,,mobile
+TXN-0000008425,ACC-00000941,2025-07-01,10:30:53,-68.81,purchase,grocery,"Hall, Nicholson and Grant",online
+TXN-0000008426,ACC-00000941,2026-01-08,02:14:51,-17.62,withdrawal,,,mobile
+TXN-0000008427,ACC-00000941,2025-10-22,12:26:48,-24.57,fee,,,online
+TXN-0000008428,ACC-00000941,2025-09-20,19:31:53,-73.18,purchase,entertainment,"Johnson, Carter and Mathis",mobile
+TXN-0000008429,ACC-00000941,2025-08-25,10:16:16,-2.31,withdrawal,,,mobile
+TXN-0000008490,ACC-00000948,2025-10-18,20:08:34,-34.39,purchase,retail,"Nguyen, Taylor and Perez",atm
+TXN-0000008491,ACC-00000948,2025-12-10,00:47:06,16.72,payment,,,mobile
+TXN-0000008492,ACC-00000948,2025-10-04,10:13:30,92.56,payment,,,online
+TXN-0000008528,ACC-00000951,2023-01-11,06:31:53,-25.0,purchase,restaurant,"Shelton, Mckenzie and Barnett",mobile
+TXN-0000008529,ACC-00000951,2025-02-24,21:58:13,40.39,transfer,,,branch
+TXN-0000008530,ACC-00000951,2025-11-20,00:58:35,-3.8,purchase,fuel,Hatfield-Hicks,mobile
+TXN-0000008533,ACC-00000951,2023-10-27,14:45:31,-11.41,purchase,healthcare,Chase LLC,online
+TXN-0000008534,ACC-00000951,2022-10-05,00:13:43,-45.29,withdrawal,,,atm
+TXN-0000008535,ACC-00000951,2023-06-09,09:01:26,-47.24,purchase,retail,Henson-Ortiz,atm
+TXN-0000008545,ACC-00000953,2025-11-26,13:11:07,-3.17,purchase,retail,"Molina, Kelley and Meza",online
+TXN-0000008546,ACC-00000953,2025-12-24,10:19:35,-1.29,fee,,,atm
+TXN-0000008548,ACC-00000953,2025-11-18,10:41:23,39.36,transfer,,,mobile
+TXN-0000008581,ACC-00000958,2026-01-25,07:05:42,-69.84,purchase,travel,"Clayton, Dean and Gaines",online
+TXN-0000008586,ACC-00000958,2026-01-25,04:06:31,104.54,deposit,,,mobile
+TXN-0000008587,ACC-00000958,2026-01-24,05:00:09,38.89,deposit,,,online
+TXN-0000008600,ACC-00000960,2024-01-22,08:26:59,61.97,payment,,,mobile
+TXN-0000008601,ACC-00000960,2023-06-24,19:02:41,198.42,payment,,,mobile
+TXN-0000008610,ACC-00000961,2024-01-10,08:27:28,-5.35,purchase,fuel,"Hodges, Espinoza and Mcdonald",mobile
+TXN-0000008612,ACC-00000961,2025-01-30,11:22:38,11.46,deposit,,,mobile
+TXN-0000008615,ACC-00000961,2024-10-05,01:29:06,-35.98,fee,,,atm
+TXN-0000008616,ACC-00000961,2025-01-14,16:28:07,-16.77,purchase,grocery,Daugherty-Moore,mobile
+TXN-0000008621,ACC-00000961,2023-06-10,02:42:20,-146.9,purchase,entertainment,Nichols Group,branch
+TXN-0000008627,ACC-00000962,2024-09-04,19:25:30,41.13,transfer,,,mobile
+TXN-0000008628,ACC-00000962,2021-04-04,03:54:20,-27.83,withdrawal,,,branch
+TXN-0000008629,ACC-00000962,2024-07-06,00:39:14,-44.73,purchase,healthcare,"Dunn, Mueller and Owens",online
+TXN-0000008630,ACC-00000962,2023-01-20,02:44:30,-16.95,purchase,retail,Smith Ltd,online
+TXN-0000008632,ACC-00000962,2025-03-30,06:49:01,-132.09,purchase,retail,Lee-Tate,branch
+TXN-0000008639,ACC-00000964,2023-02-12,23:59:28,130.28,transfer,,,online
+TXN-0000008640,ACC-00000964,2025-11-03,16:52:28,-37.47,purchase,grocery,"Fleming, Jones and Harvey",online
+TXN-0000008646,ACC-00000964,2023-10-03,09:43:35,-38.93,purchase,travel,Davis Inc,branch
+TXN-0000008649,ACC-00000964,2023-09-08,18:10:34,-1.55,withdrawal,,,online
+TXN-0000008650,ACC-00000965,2024-03-01,02:52:43,3.54,transfer,,,atm
+TXN-0000008652,ACC-00000965,2025-04-12,10:10:43,-23.83,purchase,grocery,Williams-Everett,online
+TXN-0000008653,ACC-00000965,2025-03-22,20:53:30,-6.69,purchase,restaurant,"Mills, Scott and Casey",mobile
+TXN-0000008654,ACC-00000965,2025-02-10,08:34:49,-6.31,purchase,grocery,Warner Ltd,branch
+TXN-0000008679,ACC-00000968,2023-07-20,07:50:21,-2.81,purchase,fuel,Rivera-Garcia,online
+TXN-0000008680,ACC-00000968,2023-02-28,16:50:40,-31.33,purchase,travel,"Watson, Hart and Hunter",mobile
+TXN-0000008681,ACC-00000968,2025-10-09,12:47:21,598.88,deposit,,,mobile
+TXN-0000008684,ACC-00000968,2023-10-11,05:33:29,-66.57,fee,,,mobile
+TXN-0000008685,ACC-00000968,2025-12-09,21:29:48,60.09,deposit,,,mobile
+TXN-0000008686,ACC-00000969,2022-03-14,11:15:28,-132.94,purchase,entertainment,"Murray, Perez and Reyes",branch
+TXN-0000008687,ACC-00000969,2022-09-18,01:37:22,2.72,transfer,,,mobile
+TXN-0000008718,ACC-00000972,2022-07-30,20:05:17,-292.22,purchase,retail,"Clark, Mendoza and Jones",online
+TXN-0000008720,ACC-00000973,2021-11-09,10:20:33,-7.44,fee,,,mobile
+TXN-0000008721,ACC-00000973,2022-09-01,23:28:10,-8.13,fee,,,phone
+TXN-0000008724,ACC-00000973,2023-12-21,17:02:13,66.84,payment,,,atm
+TXN-0000008726,ACC-00000973,2025-06-01,12:24:36,-187.06,purchase,healthcare,Russell Ltd,mobile
+TXN-0000008732,ACC-00000974,2024-06-23,09:28:28,-10.41,purchase,travel,"Acevedo, Munoz and Thomas",mobile
+TXN-0000008733,ACC-00000974,2025-05-31,03:55:55,-4.81,purchase,grocery,"Barnes, Miller and Conway",online
+TXN-0000008735,ACC-00000974,2024-02-25,10:49:25,-33.43,withdrawal,,,branch
+TXN-0000008736,ACC-00000974,2025-01-08,12:22:52,-1.66,purchase,retail,Frank-Edwards,online
+TXN-0000008738,ACC-00000974,2025-02-17,16:13:46,-217.35,purchase,fuel,"Larson, Ford and Page",atm
+TXN-0000008740,ACC-00000974,2026-01-26,10:06:41,-8.45,purchase,restaurant,Graham Inc,mobile
+TXN-0000008741,ACC-00000974,2025-04-01,04:22:03,-12.71,purchase,retail,"Huffman, Allen and Harrington",online
+TXN-0000008742,ACC-00000974,2023-02-28,17:53:46,-13.57,withdrawal,,,branch
+TXN-0000008743,ACC-00000974,2025-08-01,21:23:28,-16.95,purchase,travel,Woods Group,atm
+TXN-0000008746,ACC-00000975,2025-09-14,02:06:07,43.48,deposit,,,mobile
+TXN-0000008747,ACC-00000975,2024-02-21,18:53:44,-73.93,purchase,travel,Acevedo and Sons,atm
+TXN-0000008748,ACC-00000975,2022-01-01,05:21:51,7.87,deposit,,,mobile
+TXN-0000008749,ACC-00000975,2024-04-21,00:07:20,-13.93,withdrawal,,,atm
+TXN-0000008751,ACC-00000976,2024-05-01,09:57:27,276.46,deposit,,,atm
+TXN-0000008753,ACC-00000976,2025-09-30,01:11:04,106.9,deposit,,,online
+TXN-0000008754,ACC-00000976,2023-07-26,21:03:13,-5.07,withdrawal,,,online
+TXN-0000008755,ACC-00000976,2022-06-30,09:30:09,-2.72,fee,,,online
+TXN-0000008756,ACC-00000976,2022-11-07,18:07:19,-73.28,purchase,entertainment,Lawson-Novak,mobile
+TXN-0000008784,ACC-00000979,2024-11-26,13:50:37,-1.7,purchase,entertainment,Roy Group,mobile
+TXN-0000008787,ACC-00000979,2025-05-30,04:55:32,-8.21,purchase,entertainment,"Sanders, Spears and Green",mobile
+TXN-0000008795,ACC-00000981,2025-08-26,19:03:57,-0.86,fee,,,mobile
+TXN-0000008800,ACC-00000981,2025-10-24,00:25:52,-2.85,purchase,restaurant,Rowland-Chapman,online
+TXN-0000008801,ACC-00000981,2024-03-24,09:41:42,42.62,transfer,,,online
+TXN-0000008802,ACC-00000981,2024-04-22,04:20:27,-18.46,purchase,travel,"Sims, Brooks and Chavez",phone
+TXN-0000008804,ACC-00000981,2025-11-11,04:57:08,-4.18,withdrawal,,,branch
+TXN-0000008805,ACC-00000981,2024-11-09,08:47:30,-41.43,purchase,grocery,Chaney-Molina,online
+TXN-0000008806,ACC-00000981,2025-03-29,07:58:43,-48.18,purchase,entertainment,Williams Inc,online
+TXN-0000008808,ACC-00000982,2025-09-17,08:22:07,-155.24,purchase,fuel,Cunningham and Sons,online
+TXN-0000008809,ACC-00000982,2025-04-05,16:57:33,24.17,payment,,,mobile
+TXN-0000008810,ACC-00000982,2025-11-18,06:54:03,-7.99,purchase,restaurant,Lopez Inc,atm
+TXN-0000008821,ACC-00000984,2025-08-02,08:20:38,-3.55,purchase,utilities,Pacheco Ltd,mobile
+TXN-0000008823,ACC-00000984,2024-02-08,05:45:23,-44.59,fee,,,branch
+TXN-0000008825,ACC-00000984,2025-09-13,06:39:41,-50.8,withdrawal,,,mobile
+TXN-0000008828,ACC-00000984,2025-09-16,06:52:25,-113.15,purchase,grocery,Wyatt PLC,branch
+TXN-0000008832,ACC-00000984,2025-05-08,22:39:48,-66.63,purchase,fuel,"Mitchell, Logan and Hanson",online
+TXN-0000008833,ACC-00000984,2024-05-30,21:53:26,-6.77,purchase,utilities,Lee and Sons,online
+TXN-0000008834,ACC-00000984,2025-02-18,13:34:28,23.19,deposit,,,mobile
+TXN-0000008835,ACC-00000984,2024-06-23,18:18:09,267.89,transfer,,,online
+TXN-0000008836,ACC-00000984,2025-07-14,15:22:46,7.66,deposit,,,atm
+TXN-0000008837,ACC-00000985,2025-10-20,05:57:48,-39.73,purchase,healthcare,"Simmons, Smith and Medina",mobile
+TXN-0000008838,ACC-00000985,2023-01-24,11:35:01,-57.29,purchase,restaurant,"Francis, Ryan and Brewer",mobile
+TXN-0000008841,ACC-00000985,2024-01-23,23:17:56,139.74,payment,,,online
+TXN-0000008842,ACC-00000985,2025-09-30,21:46:30,11.37,payment,,,online
+TXN-0000008843,ACC-00000985,2024-05-05,21:18:24,-31.48,fee,,,mobile
+TXN-0000008844,ACC-00000985,2023-07-26,04:54:49,4.33,payment,,,online
+TXN-0000008891,ACC-00000990,2025-05-29,21:28:54,-43.06,purchase,fuel,"Bender, Martin and Mcdonald",online
+TXN-0000008892,ACC-00000990,2025-03-24,20:05:48,-233.54,purchase,healthcare,"Roberts, Hamilton and Brown",online
+TXN-0000008895,ACC-00000990,2025-11-21,10:16:40,-2.69,purchase,retail,Lyons-Page,atm
+TXN-0000008896,ACC-00000990,2025-05-11,20:07:45,45.75,payment,,,online
+TXN-0000008898,ACC-00000990,2025-02-19,04:06:44,23.35,payment,,,online
+TXN-0000008959,ACC-00000996,2025-01-12,12:17:05,-4.12,purchase,fuel,Henderson Ltd,mobile
+TXN-0000008960,ACC-00000996,2024-12-09,12:41:06,-15.98,fee,,,atm
+TXN-0000008961,ACC-00000996,2026-01-17,13:16:24,-36.91,purchase,healthcare,Munoz-White,mobile
+TXN-0000008965,ACC-00000996,2025-12-23,17:35:32,-206.94,purchase,grocery,Smith-Miller,mobile
+TXN-0000008966,ACC-00000996,2025-09-05,07:53:07,-29.98,purchase,healthcare,"Gilbert, Lopez and Evans",mobile
+TXN-0000008968,ACC-00000996,2025-04-11,01:31:30,-14.39,withdrawal,,,atm
+TXN-0000008970,ACC-00000996,2025-02-08,17:50:18,-12.09,withdrawal,,,online
+TXN-0000008972,ACC-00000996,2025-06-17,21:04:52,-10.0,purchase,restaurant,Miller-Crawford,online
+TXN-0000008979,ACC-00000999,2025-12-29,22:40:48,-2.98,purchase,utilities,West-Hodges,mobile
+TXN-0000008986,ACC-00000999,2025-04-29,20:34:23,209.05,payment,,,mobile

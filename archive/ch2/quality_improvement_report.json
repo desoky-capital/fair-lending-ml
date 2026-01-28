@@ -1,0 +1,40 @@
+{
+  "pipeline_run": "2026-01-27 14:26:01.328751",
+  "summary": {
+    "accounts": {
+      "before": {
+        "rows": 1000,
+        "issues": "Missing IDs, duplicates, typos"
+      },
+      "after": {
+        "rows": 457,
+        "issues": "All resolved"
+      },
+      "dropped": 543
+    },
+    "transactions": {
+      "before": {
+        "rows": 9116,
+        "issues": "Missing dates, orphaned records, outliers"
+      },
+      "after": {
+        "rows": 1886,
+        "issues": "All resolved"
+      },
+      "dropped": 7230
+    },
+    "balances": {
+      "before": {
+        "rows": 42289,
+        "issues": "Mixed formats, orphaned records, business rule violations"
+      },
+      "after": {
+        "rows": 9333,
+        "issues": "All resolved"
+      },
+      "dropped": 32956
+    }
+  },
+  "total_issues_resolved": 26,
+  "total_rows_affected": 73265
+}

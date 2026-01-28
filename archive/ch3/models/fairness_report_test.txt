@@ -1,0 +1,72 @@
+
+======================================================================
+FAIRNESS ASSESSMENT REPORT
+Dataset: Test Set
+Threshold: 0.25
+======================================================================
+
+TIER 1: LEGAL COMPLIANCE (Must Pass)
+======================================================================
+
+1. DISPARATE IMPACT RATIO (4/5ths Rule)
+   Requirement: DIR >= 0.80 for all protected groups
+   
+   Black vs White: 0.955 ✓ PASS
+   Hispanic vs White: 0.943 ✓ PASS
+   Asian vs White: 0.985 ✓ PASS
+   Female vs Male: 0.979 ✓ PASS
+
+2. ANTI-CLASSIFICATION
+   Requirement: No protected characteristics used as features
+   Status: ✓ PASS (race, gender, age not in feature set)
+
+3. EXPLAINABILITY
+   Requirement: Can generate adverse action notices
+   Status: ✓ PASS (SHAP explanations available from Section 2.4)
+
+TIER 2: BUSINESS & ETHICS (Should Optimize)
+======================================================================
+
+4. CALIBRATION FAIRNESS
+   Requirement: ECE difference across groups < 0.05
+   
+   White: ECE = 0.055 ⚠️
+   Black: ECE = 0.082 ⚠️
+   Hispanic: ECE = 0.058 ⚠️
+   Asian: ECE = 0.023 ✓
+
+5. EQUAL OPPORTUNITY
+   Requirement: |TPR difference| < 0.10
+   
+   Black vs White: +0.000 ✓ PASS
+   Hispanic vs White: +0.000 ✓ PASS
+   Asian vs White: +0.000 ✓ PASS
+
+TIER 3: MONITORING (Track Over Time)
+======================================================================
+
+6. STATISTICAL PARITY DIFFERENCE
+   Black vs White: -0.045
+   Hispanic vs White: -0.056
+   Asian vs White: -0.015
+
+7. AVERAGE ODDS DIFFERENCE
+   Black vs White: 0.025
+   Hispanic vs White: 0.030
+   Asian vs White: 0.008
+
+======================================================================
+SUMMARY
+======================================================================
+
+Tier 1 (Legal):    ✓ COMPLIANT
+Tier 2 (Business): ✓ ACCEPTABLE
+Tier 3 (Monitor):  See metrics above
+
+RECOMMENDATIONS:
+1. Continue monitoring fairness metrics monthly
+2. Investigate any metrics that approach thresholds
+3. Document all fairness decisions and trade-offs
+4. Consider fairness-aware retraining if violations found
+
+======================================================================

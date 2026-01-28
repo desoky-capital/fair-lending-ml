@@ -1,0 +1,41 @@
+{
+  "model_type": "XGBoost",
+  "training_date": "2026-01-19",
+  "n_features": 30,
+  "feature_selection": "Top 30 by XGBoost importance",
+  "hyperparameters": {
+    "colsample_bytree": 1.0,
+    "learning_rate": 0.1,
+    "max_depth": 7,
+    "n_estimators": 100,
+    "subsample": 0.8
+  },
+  "optimal_threshold_validation": 0.25,
+  "validation_metrics": {
+    "roc_auc": 0.6956344902386118,
+    "gini": 0.3912689804772236,
+    "precision": 0.2,
+    "recall": 0.1875,
+    "f1": 0.1935483870967742
+  },
+  "test_metrics": {
+    "roc_auc": 0.5792147806004619,
+    "gini": 0.15842956120092389,
+    "precision": 0.0,
+    "recall": 0.0,
+    "threshold_used": 0.25
+  },
+  "vs_baseline_test": {
+    "roc_auc_change": "+0.023",
+    "gini_change": "+0.046",
+    "precision_change": "-0.080",
+    "recall_change": "-0.500"
+  },
+  "warnings": {
+    "distribution_shift": "Severe - test probabilities 3.6x lower than validation",
+    "calibration": "Poor - validation threshold (0.25) fails on test",
+    "test_performance": "Model predicts all defaults incorrectly (0% precision, 0% recall)",
+    "production_ready": false,
+    "requires": "Probability recalibration before deployment"
+  }
+}

@@ -1,0 +1,381 @@
+{
+  "accounts": {
+    "table_name": "accounts",
+    "description": "Customer account master data - cleaned and validated",
+    "record_count": 457,
+    "columns": [
+      {
+        "column_name": "account_id",
+        "data_type": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 457,
+        "sample_values": [
+          "ACC-00000001",
+          "ACC-00000002",
+          "ACC-00000003"
+        ],
+        "top_values": {
+          "ACC-00000999": 1,
+          "ACC-00000001": 1,
+          "ACC-00000002": 1,
+          "ACC-00000003": 1,
+          "ACC-00000004": 1
+        }
+      },
+      {
+        "column_name": "customer_id",
+        "data_type": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 457,
+        "sample_values": [
+          "CUST-1000001",
+          "CUST-1000002",
+          "CUST-1000003"
+        ],
+        "top_values": {
+          "CUST-1000999": 1,
+          "CUST-1000001": 1,
+          "CUST-1000002": 1,
+          "CUST-1000003": 1,
+          "CUST-1000004": 1
+        }
+      },
+      {
+        "column_name": "account_type",
+        "data_type": "object",
+        "null_count": 1,
+        "null_percentage": 0.22,
+        "unique_count": 4,
+        "sample_values": [
+          "checking",
+          "loan",
+          "credit_card"
+        ],
+        "top_values": {
+          "checking": 195,
+          "savings": 122,
+          "credit_card": 84,
+          "loan": 55
+        }
+      },
+      {
+        "column_name": "open_date",
+        "data_type": "datetime64[ns]",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 423,
+        "sample_values": [
+          "2024-06-09 00:00:00",
+          "2019-12-12 00:00:00",
+          "2019-03-19 00:00:00"
+        ]
+      },
+      {
+        "column_name": "credit_limit",
+        "data_type": "int64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 140,
+        "sample_values": [
+          0,
+          15031,
+          15536
+        ],
+        "min": 0.0,
+        "max": 49847.0,
+        "mean": 7526.993435448578
+      },
+      {
+        "column_name": "status",
+        "data_type": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 4,
+        "sample_values": [
+          "active",
+          "active",
+          "closed"
+        ],
+        "top_values": {
+          "active": 359,
+          "closed": 44,
+          "suspended": 28,
+          "dormant": 26
+        }
+      },
+      {
+        "column_name": "branch_code",
+        "data_type": "object",
+        "null_count": 59,
+        "null_percentage": 12.91,
+        "unique_count": 98,
+        "sample_values": [
+          "BR-134",
+          "BR-113",
+          "BR-179"
+        ],
+        "top_values": {
+          "BR-184": 10,
+          "BR-155": 8,
+          "BR-148": 8,
+          "BR-152": 8,
+          "BR-127": 8
+        }
+      }
+    ]
+  },
+  "transactions": {
+    "table_name": "transactions",
+    "description": "Transaction history - cleaned, deduplicated, and referentially valid",
+    "record_count": 1886,
+    "columns": [
+      {
+        "column_name": "transaction_id",
+        "data_type": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 1886,
+        "sample_values": [
+          "TXN-0000000001",
+          "TXN-0000000004",
+          "TXN-0000000008"
+        ],
+        "top_values": {
+          "TXN-0000008986": 1,
+          "TXN-0000000001": 1,
+          "TXN-0000000004": 1,
+          "TXN-0000000008": 1,
+          "TXN-0000000012": 1
+        }
+      },
+      {
+        "column_name": "account_id",
+        "data_type": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 442,
+        "sample_values": [
+          "ACC-00000001",
+          "ACC-00000001",
+          "ACC-00000001"
+        ],
+        "top_values": {
+          "ACC-00000301": 12,
+          "ACC-00000080": 10,
+          "ACC-00000188": 10,
+          "ACC-00000531": 10,
+          "ACC-00000598": 10
+        }
+      },
+      {
+        "column_name": "transaction_date",
+        "data_type": "datetime64[ns]",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 1084,
+        "sample_values": [
+          "2025-02-13 00:00:00",
+          "2024-12-17 00:00:00",
+          "2025-06-03 00:00:00"
+        ]
+      },
+      {
+        "column_name": "transaction_time",
+        "data_type": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 1863,
+        "sample_values": [
+          "19:24:14",
+          "03:16:10",
+          "22:02:10"
+        ],
+        "top_values": {
+          "07:04:51": 2,
+          "04:50:51": 2,
+          "01:49:19": 2,
+          "16:50:37": 2,
+          "05:53:35": 2
+        }
+      },
+      {
+        "column_name": "amount",
+        "data_type": "float64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 1736,
+        "sample_values": [
+          -64.31,
+          72.44,
+          -14.37
+        ],
+        "min": -1164.48,
+        "max": 6789.02,
+        "mean": 4.688865323435844
+      },
+      {
+        "column_name": "transaction_type",
+        "data_type": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 7,
+        "sample_values": [
+          "purchase",
+          "transfer",
+          "purchase"
+        ],
+        "top_values": {
+          "purchase": 1024,
+          "withdrawal": 280,
+          "deposit": 193,
+          "payment": 131,
+          "transfer": 130
+        }
+      },
+      {
+        "column_name": "merchant_category",
+        "data_type": "object",
+        "null_count": 862,
+        "null_percentage": 45.71,
+        "unique_count": 8,
+        "sample_values": [
+          "utilities",
+          "healthcare",
+          "travel"
+        ],
+        "top_values": {
+          "retail": 152,
+          "travel": 140,
+          "fuel": 137,
+          "grocery": 136,
+          "utilities": 133
+        }
+      },
+      {
+        "column_name": "merchant_name",
+        "data_type": "object",
+        "null_count": 862,
+        "null_percentage": 45.71,
+        "unique_count": 996,
+        "sample_values": [
+          "Mcguire-Davis",
+          "Nelson-King",
+          "Lawrence, Wolf and Carlson"
+        ],
+        "top_values": {
+          "Martinez Inc": 3,
+          "Jones Ltd": 3,
+          "Davis Inc": 3,
+          "Smith Inc": 3,
+          "Andrews Group": 3
+        }
+      },
+      {
+        "column_name": "channel",
+        "data_type": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 5,
+        "sample_values": [
+          "online",
+          "mobile",
+          "branch"
+        ],
+        "top_values": {
+          "mobile": 704,
+          "online": 635,
+          "atm": 269,
+          "branch": 183,
+          "phone": 95
+        }
+      }
+    ]
+  },
+  "balances": {
+    "table_name": "balances",
+    "description": "Monthly balance snapshots - cleaned and business rules enforced",
+    "record_count": 9333,
+    "columns": [
+      {
+        "column_name": "account_id",
+        "data_type": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 451,
+        "sample_values": [
+          "ACC-00000001",
+          "ACC-00000001",
+          "ACC-00000001"
+        ],
+        "top_values": {
+          "ACC-00000017": 53,
+          "ACC-00000927": 48,
+          "ACC-00000188": 47,
+          "ACC-00000305": 47,
+          "ACC-00000019": 46
+        }
+      },
+      {
+        "column_name": "balance_date",
+        "data_type": "datetime64[ns]",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 283,
+        "sample_values": [
+          "2024-06-09 00:00:00",
+          "2024-07-31 00:00:00",
+          "2024-10-31 00:00:00"
+        ]
+      },
+      {
+        "column_name": "available_balance",
+        "data_type": "float64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 9208,
+        "sample_values": [
+          1211.73,
+          1608.39,
+          2855.17
+        ],
+        "min": -46212.01,
+        "max": 20306.14,
+        "mean": 489.75567020250725
+      },
+      {
+        "column_name": "ledger_balance",
+        "data_type": "float64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 9259,
+        "sample_values": [
+          1225.03,
+          1654.98,
+          2929.57
+        ],
+        "min": -46181.53,
+        "max": 20400.64,
+        "mean": 531.5638604950177
+      },
+      {
+        "column_name": "overdraft_count",
+        "data_type": "int64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 5,
+        "sample_values": [
+          0,
+          0,
+          0
+        ],
+        "min": 0.0,
+        "max": 4.0,
+        "mean": 0.12675452694739098
+      }
+    ]
+  },
+  "generated_date": "2026-01-27 14:26:01.309107",
+  "generator": "Chapter 2 Data Cleaning Pipeline"
+}

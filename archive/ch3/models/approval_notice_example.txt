@@ -1,0 +1,51 @@
+
+======================================================================
+CREDIT APPLICATION APPROVED
+======================================================================
+
+Application ID:    0
+Decision:          APPROVED
+Default Risk:      3.0%
+Decision Threshold: 25.0%
+
+Congratulations! Your credit application has been APPROVED.
+
+KEY FACTORS SUPPORTING YOUR APPROVAL:
+--------------------------------------
+
+1. Feat Num Txn 12Mo
+   Your value: 12.00
+   Impact: Decreased risk by 0.6948 points
+
+2. Feat Channel Atm
+   Your value: 2.00
+   Impact: Decreased risk by 0.5551 points
+
+3. Feat Spending Grocery
+   Your value: 0.00
+   Impact: Decreased risk by 0.4123 points
+
+4. Feat Channel Mobile
+   Your value: 1.00
+   Impact: Decreased risk by 0.4037 points
+
+MAINTAINING GOOD STANDING:
+--------------------------
+To maintain your excellent credit standing:
+- Continue paying all bills on time
+- Keep credit card balances low (below 30% of limits)
+- Avoid taking on excessive new debt
+- Monitor your credit report regularly
+
+NEXT STEPS:
+-----------
+A loan officer will contact you within 2 business days to finalize
+your loan terms and complete the application process.
+
+Questions? Contact us at [Contact Information]
+
+
+======================================================================
+Model: XGBoost
+Date: 2026-01-20
+======================================================================

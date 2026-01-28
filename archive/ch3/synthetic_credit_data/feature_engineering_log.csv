@@ -1,0 +1,43 @@
+timestamp,feature_name,calculation_logic,missing_values,total_records,missing_rate
+2026-01-14 11:47:11.846077,feat_avg_balance,"Aggregated from balance snapshots, 0 if missing",0,4739,0.0
+2026-01-14 11:47:11.846246,feat_balance_std,"Aggregated from balance snapshots, 0 if missing",70,4739,0.014771048744460856
+2026-01-14 11:47:11.846370,feat_min_balance,"Aggregated from balance snapshots, 0 if missing",0,4739,0.0
+2026-01-14 11:47:11.846517,feat_max_balance,"Aggregated from balance snapshots, 0 if missing",0,4739,0.0
+2026-01-14 11:47:11.846630,feat_avg_ledger_balance,"Aggregated from balance snapshots, 0 if missing",0,4739,0.0
+2026-01-14 11:47:11.846733,feat_total_overdrafts,"Aggregated from balance snapshots, 0 if missing",0,4739,0.0
+2026-01-14 11:47:11.846819,feat_avg_monthly_overdrafts,"Aggregated from balance snapshots, 0 if missing",0,4739,0.0
+2026-01-14 11:47:11.846925,feat_balance_trend,"Aggregated from balance snapshots, 0 if missing",211,4739,0.0445241612154463
+2026-01-14 11:47:11.869482,feat_avg_balance,"Aggregated from transactions, 0 if missing",0,4739,0.0
+2026-01-14 11:47:11.869629,feat_balance_std,"Aggregated from transactions, 0 if missing",0,4739,0.0
+2026-01-14 11:47:11.869776,feat_min_balance,"Aggregated from transactions, 0 if missing",0,4739,0.0
+2026-01-14 11:47:11.870031,feat_max_balance,"Aggregated from transactions, 0 if missing",0,4739,0.0
+2026-01-14 11:47:11.870301,feat_avg_ledger_balance,"Aggregated from transactions, 0 if missing",0,4739,0.0
+2026-01-14 11:47:11.870482,feat_total_overdrafts,"Aggregated from transactions, 0 if missing",0,4739,0.0
+2026-01-14 11:47:11.870616,feat_avg_monthly_overdrafts,"Aggregated from transactions, 0 if missing",0,4739,0.0
+2026-01-14 11:47:11.870754,feat_balance_trend,"Aggregated from transactions, 0 if missing",0,4739,0.0
+2026-01-14 11:47:11.870928,feat_num_transactions,"Aggregated from transactions, 0 if missing",41,4739,0.008651614264612787
+2026-01-14 11:47:11.871083,feat_avg_transaction_amount,"Aggregated from transactions, 0 if missing",41,4739,0.008651614264612787
+2026-01-14 11:47:11.871217,feat_transaction_amount_std,"Aggregated from transactions, 0 if missing",126,4739,0.026587887740029542
+2026-01-14 11:47:11.871344,feat_total_transaction_volume,"Aggregated from transactions, 0 if missing",41,4739,0.008651614264612787
+2026-01-14 11:47:11.871473,feat_num_debits,"Aggregated from transactions, 0 if missing",74,4739,0.015615108672715762
+2026-01-14 11:47:11.871581,feat_total_debits,"Aggregated from transactions, 0 if missing",74,4739,0.015615108672715762
+2026-01-14 11:47:11.871723,feat_num_credits,"Aggregated from transactions, 0 if missing",699,4739,0.14749947246254483
+2026-01-14 11:47:11.871844,feat_total_credits,"Aggregated from transactions, 0 if missing",699,4739,0.14749947246254483
+2026-01-14 11:47:11.872093,feat_credit_to_debit_ratio,"Aggregated from transactions, 0 if missing",0,4739,0.0
+2026-01-14 11:47:11.872224,feat_transactions_per_month,"Aggregated from transactions, 0 if missing",0,4739,0.0
+2026-01-14 11:47:11.897096,feat_channel_atm,"Purchase count by channel, 0 if missing",137,4739,0.028909052542730535
+2026-01-14 11:47:11.897263,feat_channel_branch,"Purchase count by channel, 0 if missing",137,4739,0.028909052542730535
+2026-01-14 11:47:11.897404,feat_channel_mobile,"Purchase count by channel, 0 if missing",137,4739,0.028909052542730535
+2026-01-14 11:47:11.897534,feat_channel_online,"Purchase count by channel, 0 if missing",137,4739,0.028909052542730535
+2026-01-14 11:47:11.897638,feat_channel_phone,"Purchase count by channel, 0 if missing",137,4739,0.028909052542730535
+2026-01-14 11:47:11.939357,num_inquiries_6mo,"Calculated over time window, 0 if missing",0,4739,0.0
+2026-01-14 11:47:11.939416,feat_balance_trend,"Calculated over time window, 0 if missing",0,4739,0.0
+2026-01-14 11:47:11.939456,feat_num_txn_3mo,"Calculated over time window, 0 if missing",0,4739,0.0
+2026-01-14 11:47:11.939491,feat_avg_balance_3mo,"Calculated over time window, 0 if missing",0,4739,0.0
+2026-01-14 11:47:11.939537,feat_num_txn_6mo,"Calculated over time window, 0 if missing",0,4739,0.0
+2026-01-14 11:47:11.939581,feat_avg_balance_6mo,"Calculated over time window, 0 if missing",0,4739,0.0
+2026-01-14 11:47:11.939614,feat_num_txn_12mo,"Calculated over time window, 0 if missing",0,4739,0.0
+2026-01-14 11:47:11.939646,feat_avg_balance_12mo,"Calculated over time window, 0 if missing",0,4739,0.0
+2026-01-14 11:47:11.939692,feat_txn_trend,"Calculated over time window, 0 if missing",0,4739,0.0
+2026-01-14 11:47:11.939736,feat_balance_trend_3mo_vs_12mo,"Calculated over time window, 0 if missing",0,4739,0.0
+2026-01-14 11:47:11.939775,feat_days_since_last_txn,"Calculated over time window, 0 if missing",0,4739,0.0

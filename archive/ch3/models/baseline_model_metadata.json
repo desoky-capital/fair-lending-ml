@@ -1,0 +1,10 @@
+{
+  "model_type": "LogisticRegression",
+  "training_date": "2026-01-16",
+  "training_samples": 7214,
+  "n_features": 51,
+  "imbalance_method": "SMOTE",
+  "val_roc_auc": 0.5244034707158352,
+  "val_avg_precision": 0.03594077170386122,
+  "val_ks_statistic": 0.1738069414316703
+}

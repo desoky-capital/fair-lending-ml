@@ -1,0 +1,119 @@
+
+================================================================================
+MODEL CARD: Credit Default Prediction Model
+================================================================================
+
+MODEL DETAILS
+-------------
+Model Type:       XGBoost
+Training Date:    2026-01-19
+Version:          1.0
+Developer:        [Your Name/Organization]
+Purpose:          Predict consumer credit default risk for lending decisions
+
+INTENDED USE
+------------
+Primary Use:      Risk assessment for personal loan applications
+Intended Users:   Credit analysts, risk managers, automated decisioning systems
+Out-of-Scope:     
+  - Commercial lending
+  - Mortgage underwriting
+  - Regulatory compliance as sole decision factor
+
+MODEL ARCHITECTURE
+------------------
+Algorithm:        XGBoost (Gradient Boosted Trees)
+Features:         30 selected from 51 original features
+Hyperparameters:
+  max_depth:      7
+  learning_rate:  0.1
+  n_estimators:   100
+  subsample:      0.8
+
+Training Data:    3,799 accounts (5.1% default rate)
+  - SMOTE applied (50/50 balance for training)
+  - Temporal split (no data leakage)
+  - Features: Credit bureau data + transaction patterns
+
+VALIDATION PERFORMANCE
+----------------------
+Dataset:          477 accounts (3.4% default rate)
+Optimal Threshold: 0.25
+
+Metric            Value      Interpretation
+------            -----      --------------
+ROC-AUC          0.696      Excellent discrimination
+Gini             0.391      Above 0.3 production minimum
+Precision        20.0%       1 in 5 predictions correct
+Recall           18.8%       Catches 1 in 5 defaults
+F1 Score         0.194      Balanced performance
+
+TEST PERFORMANCE (REALITY CHECK)
+--------------------------------
+Dataset:          463 accounts (6.5% default rate)
+Using Threshold:  0.25 (from validation)
+
+Metric            Value      Status
+------            -----      ------
+ROC-AUC          0.579      Slight improvement over baseline
+Gini             0.158      Below production minimum (0.3)
+Precision        0.0%       FAILURE - No defaults caught correctly
+Recall           0.0%       FAILURE - All defaults missed
+
+⚠️ CRITICAL LIMITATIONS
+------------------------
+Severe - test probabilities 3.6x lower than validation
+Poor - validation threshold (0.25) fails on test
+Model predicts all defaults incorrectly (0% precision, 0% recall)
+
+ROOT CAUSE: Distribution shift between validation and test data
+  - Test probabilities are 3.6x lower than validation
+  - SMOTE training created poorly-calibrated probabilities
+  - Temporal differences between time periods
+
+PRODUCTION READINESS: False
+REQUIRED ACTIONS: Probability recalibration before deployment
+
+FAIRNESS & BIAS
+---------------
+⚠️ Not yet evaluated - Chapter 3 will assess:
+  - Disparate impact across protected groups
+  - Calibration fairness
+  - Equalized odds
+
+EXPLAINABILITY
+--------------
+Tool Used:        SHAP (SHapley Additive exPlanations)
+Available:        
+  ✓ Global feature importance
+  ✓ Individual prediction explanations
+  ✓ Waterfall plots for adverse action notices
+  ✓ Feature dependence analysis
+
+Top 3 Most Important Features:
+  1. fico_score (mean |SHAP|: 0.7864)
+  2. feat_channel_online (mean |SHAP|: 0.5043)
+  3. feat_num_txn_12mo (mean |SHAP|: 0.4696)
+
+RECOMMENDATIONS
+---------------
+DO NOT deploy this model in production without:
+  1. Probability recalibration (Platt scaling, isotonic regression)
+  2. Continuous monitoring of probability distributions
+  3. Threshold re-optimization on recent data
+  4. Fairness evaluation across protected groups
+  5. Simpler, more interpretable alternative (e.g., logistic regression)
+
+Consider:
+  - Using validation performance as upper bound estimate
+  - Implementing human-in-the-loop for borderline cases
+  - Periodic retraining on fresh data (monthly/quarterly)
+
+CONTACT & FEEDBACK
+------------------
+Model Owner:      [Your Name]
+Feedback:         [Email/System]
+Documentation:    Section 2.4 - Model Explainability
+Last Updated:     2026-01-20
+
+================================================================================

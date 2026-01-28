@@ -1,0 +1,27 @@
+timestamp,table,column,issue_type,rows_affected,action_taken,reason
+2026-01-27 14:26:00.891676,accounts,open_date,type_conversion_failure,514,set_to_null,"Could not parse as datetime, set to NaT"
+2026-01-27 14:26:00.910916,transactions,transaction_date,type_conversion_failure,4509,set_to_null,"Could not parse as datetime, set to NaT"
+2026-01-27 14:26:00.946187,balances,balance_date,type_conversion_failure,21028,set_to_null,"Could not parse as datetime, set to NaT"
+2026-01-27 14:26:01.021474,accounts,account_id,missing_value,47,drop_record,Primary key cannot be null
+2026-01-27 14:26:01.027213,accounts,account_type,missing_value,25,impute,"Inferred from credit_limit: >0 = credit_card, else checking"
+2026-01-27 14:26:01.028131,accounts,open_date,missing_value,489,drop_record,Open date required for temporal analysis
+2026-01-27 14:26:01.028644,accounts,branch_code,missing_value,37,keep_null,NULL indicates online-only account (no physical branch)
+2026-01-27 14:26:01.034773,transactions,transaction_id/account_id,missing_value,175,drop_record,Cannot identify transaction without IDs
+2026-01-27 14:26:01.036693,transactions,transaction_date,missing_value,4423,drop_record,Transaction date required for temporal analysis
+2026-01-27 14:26:01.042425,balances,account_id/balance_date,missing_value,21028,drop_record,Cannot identify balance record without account ID and date
+2026-01-27 14:26:01.092640,accounts,account_id,duplicate,7,drop_record,Kept first occurrence of duplicate account_id
+2026-01-27 14:26:01.094473,accounts,account_type,typo,7,standardize,Fixed: chekcing → checking
+2026-01-27 14:26:01.100446,accounts,account_type,typo,6,standardize,Fixed: CHECKING → checking
+2026-01-27 14:26:01.103267,accounts,account_type,typo,5,standardize,Fixed: SAVINGS → savings
+2026-01-27 14:26:01.105921,accounts,account_type,typo,1,standardize,Fixed: CREDIT_CARD → credit_card
+2026-01-27 14:26:01.106845,accounts,account_type,typo,2,standardize,Fixed: LOAN → loan
+2026-01-27 14:26:01.110720,accounts,status,standardization,9,remap,Mapped pending → suspended per business rules
+2026-01-27 14:26:01.111417,accounts,credit_limit,sentinel_value,19,replace,Replaced -999 sentinel with 0
+2026-01-27 14:26:01.116004,accounts,branch_code,invalid_format,23,set_to_null,Branch code must match BR-XXX format
+2026-01-27 14:26:01.118879,transactions,transaction_id,duplicate,50,drop_record,Kept first occurrence of duplicate transaction_id
+2026-01-27 14:26:01.134883,balances,account_id+balance_date,duplicate,332,drop_record,One balance per account per date (composite key)
+2026-01-27 14:26:01.138194,balances,ledger_balance,business_rule_violation,6820,swap_values,Ledger must be >= available; swapped values
+2026-01-27 14:26:01.191095,transactions,account_id,orphaned_foreign_key,2463,drop_record,Transaction references non-existent account
+2026-01-27 14:26:01.201048,transactions,transaction_date,temporal_violation,3,drop_record,Transaction date before account open date
+2026-01-27 14:26:01.203395,balances,account_id,orphaned_foreign_key,11224,drop_record,Balance references non-existent account
+2026-01-27 14:26:01.211823,balances,balance_date,temporal_violation,19,drop_record,Balance date before account open date

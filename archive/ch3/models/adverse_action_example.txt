@@ -1,0 +1,46 @@
+
+======================================================================
+ADVERSE ACTION NOTICE
+======================================================================
+
+Application ID:    19
+Decision:          APPROVED
+Default Risk:      0.1%
+Decision Threshold: 25.0%
+
+PRIMARY FACTORS IN THIS DECISION:
+---------------------------------
+
+3. Feat Spending Entertainment
+   Your value: 8.32
+   Impact: Increased risk (+0.0851 risk points)
+
+25. Feat Transactions Per Month
+   Your value: 7.00
+   Impact: Increased risk (+0.0293 risk points)
+
+23. Feat Avg Balance 6Mo
+   Your value: 9247.30
+   Impact: Increased risk (+0.0247 risk points)
+
+12. Feat Balance Trend
+   Your value: 0.00
+   Impact: Increased risk (+0.0001 risk points)
+
+YOUR RIGHTS:
+------------
+- You have the right to request a free copy of your credit report
+- You may dispute inaccurate information in your credit report
+- Contact: [Credit Bureau Contact Information]
+
+NEXT STEPS:
+-----------
+To improve your chances of approval:
+
+
+This decision was made using an automated credit scoring model.
+You may request human review by contacting [Contact Information].
+
+Model: XGBoost
+Date: 2026-01-20
+======================================================================

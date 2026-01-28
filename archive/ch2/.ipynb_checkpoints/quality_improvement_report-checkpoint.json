@@ -1,0 +1,140 @@
+{
+  "accounts": {
+    "table": "accounts",
+    "original_rows": 1000,
+    "clean_rows": 491,
+    "rows_dropped": 509,
+    "drop_percentage": 50.9,
+    "original_columns": 7,
+    "clean_columns": 7,
+    "completeness_improvement": {
+      "account_id": {
+        "original": 95.9,
+        "clean": 100.0,
+        "improvement": 4.1
+      },
+      "customer_id": {
+        "original": 100.0,
+        "clean": 100.0,
+        "improvement": 0.0
+      },
+      "account_type": {
+        "original": 97.6,
+        "clean": 100.0,
+        "improvement": 2.4
+      },
+      "open_date": {
+        "original": 100.0,
+        "clean": 100.0,
+        "improvement": 0.0
+      },
+      "credit_limit": {
+        "original": 100.0,
+        "clean": 100.0,
+        "improvement": 0.0
+      },
+      "status": {
+        "original": 100.0,
+        "clean": 100.0,
+        "improvement": 0.0
+      },
+      "branch_code": {
+        "original": 90.8,
+        "clean": 86.76,
+        "improvement": -4.04
+      }
+    }
+  },
+  "transactions": {
+    "table": "transactions",
+    "original_rows": 9116,
+    "clean_rows": 2022,
+    "rows_dropped": 7094,
+    "drop_percentage": 77.82,
+    "original_columns": 9,
+    "clean_columns": 9,
+    "completeness_improvement": {
+      "transaction_id": {
+        "original": 98.15,
+        "clean": 100.0,
+        "improvement": 1.85
+      },
+      "account_id": {
+        "original": 100.0,
+        "clean": 100.0,
+        "improvement": 0.0
+      },
+      "transaction_date": {
+        "original": 100.0,
+        "clean": 100.0,
+        "improvement": 0.0
+      },
+      "transaction_time": {
+        "original": 100.0,
+        "clean": 100.0,
+        "improvement": 0.0
+      },
+      "amount": {
+        "original": 100.0,
+        "clean": 100.0,
+        "improvement": 0.0
+      },
+      "transaction_type": {
+        "original": 100.0,
+        "clean": 100.0,
+        "improvement": 0.0
+      },
+      "merchant_category": {
+        "original": 54.99,
+        "clean": 53.66,
+        "improvement": -1.33
+      },
+      "merchant_name": {
+        "original": 54.99,
+        "clean": 53.66,
+        "improvement": -1.33
+      },
+      "channel": {
+        "original": 100.0,
+        "clean": 100.0,
+        "improvement": 0.0
+      }
+    }
+  },
+  "balances": {
+    "table": "balances",
+    "original_rows": 42289,
+    "clean_rows": 10021,
+    "rows_dropped": 32268,
+    "drop_percentage": 76.3,
+    "original_columns": 5,
+    "clean_columns": 5,
+    "completeness_improvement": {
+      "account_id": {
+        "original": 100.0,
+        "clean": 100.0,
+        "improvement": 0.0
+      },
+      "balance_date": {
+        "original": 100.0,
+        "clean": 100.0,
+        "improvement": 0.0
+      },
+      "available_balance": {
+        "original": 100.0,
+        "clean": 100.0,
+        "improvement": 0.0
+      },
+      "ledger_balance": {
+        "original": 100.0,
+        "clean": 100.0,
+        "improvement": 0.0
+      },
+      "overdraft_count": {
+        "original": 100.0,
+        "clean": 100.0,
+        "improvement": 0.0
+      }
+    }
+  }
+}

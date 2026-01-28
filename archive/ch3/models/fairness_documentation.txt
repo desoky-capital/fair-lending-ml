@@ -1,0 +1,96 @@
+
+════════════════════════════════════════════════════════════════════════
+                    MODEL FAIRNESS DOCUMENTATION
+════════════════════════════════════════════════════════════════════════
+
+1. MODEL OVERVIEW
+────────────────────────────────────────────────────────────────────────
+   Model Name:    Credit Default Prediction Model
+   Version:       1.0
+   Purpose:       Predict probability of loan default for credit decisions
+   
+   Protected Characteristics Analyzed:
+   • Race/Ethnicity (White, Black, Hispanic, Asian)
+   • Gender (Male, Female)
+   • Age (where applicable under ECOA)
+
+2. FAIRNESS DEFINITION & METRICS
+────────────────────────────────────────────────────────────────────────
+   Primary Definition: Disparate Impact (4/5ths rule)
+   
+   Metrics Measured:
+   • Disparate Impact Ratio (DIR) - MUST be >= 0.80
+   • Statistical Parity Difference (SPD)
+   • Equal Opportunity Difference (EOD)
+   • Average Odds Difference (AOD)
+   • Expected Calibration Error (ECE) by group
+   
+   Justification: DIR is required by ECOA enforcement guidelines.
+   Additional metrics provide comprehensive fairness view.
+
+3. FAIRNESS TESTING RESULTS
+────────────────────────────────────────────────────────────────────────
+   Test Date:     [DATE]
+   Test Dataset:  Validation set (n=477)
+   
+   Results (vs White as reference):
+   
+   | Group    | DIR   | Status | SPD    | EOD    |
+   |----------|-------|--------|--------|--------|
+   | Black    | X.XXX | PASS   | +X.XXX | +X.XXX |
+   | Hispanic | X.XXX | PASS   | +X.XXX | +X.XXX |
+   | Asian    | X.XXX | PASS   | +X.XXX | +X.XXX |
+   | Female   | X.XXX | PASS   | +X.XXX | +X.XXX |
+   
+   Overall Compliance: [PASS/FAIL]
+
+4. MITIGATION MEASURES APPLIED
+────────────────────────────────────────────────────────────────────────
+   Measures Implemented:
+   • Sample reweighting during training
+   • Probability calibration by group
+   • [Other measures if applied]
+   
+   Measures Considered but Not Implemented:
+   • Group-specific thresholds (rejected due to explicit differential treatment)
+   • Feature removal (rejected due to significant accuracy impact)
+   
+   Trade-offs Accepted:
+   • [X]% accuracy reduction in exchange for DIR improvement of [Y]
+
+5. ADVERSE ACTION NOTICES
+────────────────────────────────────────────────────────────────────────
+   Method: SHAP-based feature contribution explanations
+   
+   Implementation:
+   • Top 4 contributing features provided for each denial
+   • Reasons translated to consumer-friendly language
+   
+   Example Reasons:
+   • "Debt-to-income ratio exceeds guidelines"
+   • "Insufficient credit history length"
+   • "Recent payment delinquencies on record"
+   • "High credit utilization percentage"
+
+6. ONGOING MONITORING PLAN
+────────────────────────────────────────────────────────────────────────
+   Frequency:
+   • Daily: Approval rates by group
+   • Weekly: DIR, SPD metrics
+   • Monthly: Full fairness audit
+   
+   Alert Thresholds:
+   • RED (immediate action): DIR < 0.80
+   • YELLOW (investigate): DIR 0.80-0.85 or |SPD| > 0.10
+   
+   Responsible Party: [Model Risk Management Team]
+   Escalation Path: [Compliance Officer → Legal → Executive]
+
+7. APPROVAL SIGNATURES
+────────────────────────────────────────────────────────────────────────
+   Model Developer:     _________________________ Date: __________
+   Model Validator:     _________________________ Date: __________
+   Compliance Officer:  _________________________ Date: __________
+   Business Owner:      _________________________ Date: __________
+
+════════════════════════════════════════════════════════════════════════

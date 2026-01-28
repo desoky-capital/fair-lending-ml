@@ -1,0 +1,25 @@
+timestamp,table,column,issue_type,rows_affected,action_taken,reason
+2026-01-07 11:35:37.121005,accounts,open_date,type_conversion_failure,478,set_to_null,"Could not parse as datetime, set to NaT"
+2026-01-07 11:35:37.144575,transactions,transaction_date,type_conversion_failure,4605,set_to_null,"Could not parse as datetime, set to NaT"
+2026-01-07 11:35:37.164090,balances,balance_date,type_conversion_failure,21142,set_to_null,"Could not parse as datetime, set to NaT"
+2026-01-07 11:41:44.529429,accounts,account_id,missing_value,41,drop_record,Primary key cannot be null - record is unidentifiable
+2026-01-07 11:41:44.530452,accounts,account_type,missing_value,23,impute,"Inferred from credit_limit: >0 = credit_card, else checking"
+2026-01-07 11:41:44.530569,accounts,branch_code,missing_value,88,keep_null,NULL is valid - indicates online-only account
+2026-01-07 11:41:44.530947,accounts,open_date,missing_value,460,drop_record,Open date required for downstream validation
+2026-01-07 11:41:44.535054,transactions,transaction_id,missing_value,169,drop_record,transaction_id is required field - cannot process transaction without it
+2026-01-07 11:41:44.537032,transactions,transaction_date,missing_value,4526,drop_record,transaction_date is required field - cannot process transaction without it
+2026-01-07 11:41:44.540938,balances,balance_date,missing_value,21142,drop_record,Cannot identify balance snapshot without account_id and date
+2026-01-07 14:19:25.060769,accounts,account_id,duplicate,8,drop_duplicate,Kept first occurrence of duplicate account_id
+2026-01-07 14:19:25.065214,accounts,account_type,typo,6,correct_typo,Standardized typo: chekcing → checking
+2026-01-07 14:19:25.067456,accounts,status,nonstandard_value,7,map_value,Pending status mapped to suspended per business rules
+2026-01-07 14:19:25.069200,accounts,credit_limit,sentinel_value,19,replace,"Sentinel -999 replaced: 0 for deposits, NULL for credit accounts"
+2026-01-07 14:24:27.900378,accounts,account_id,duplicate,8,drop_duplicate,Kept first occurrence of duplicate account_id
+2026-01-07 14:24:27.901966,accounts,account_type,typo,6,correct_typo,Standardized typo: chekcing → checking
+2026-01-07 14:24:27.903655,accounts,status,nonstandard_value,7,map_value,Pending status mapped to suspended per business rules
+2026-01-07 14:24:27.904464,accounts,credit_limit,sentinel_value,19,replace,"Sentinel -999 replaced: 0 for deposits, NULL for credit accounts"
+2026-01-07 14:24:27.906551,accounts,branch_code,invalid_format,25,set_to_null,Branch code must match BR-XXX format
+2026-01-07 14:24:27.909227,transactions,transaction_id,duplicate,37,drop_duplicate,Kept first occurrence of duplicate transaction_id
+2026-01-07 14:24:27.924053,balances,account_id+balance_date,duplicate,337,drop_duplicate,Kept first occurrence for each account-date pair
+2026-01-07 14:24:27.926652,balances,ledger_balance,business_rule_violation,6881,swap_values,Ledger balance must be >= available; values were swapped
+2026-01-07 14:28:53.069319,transactions,account_id,referential_integrity,2362,drop_record,Transaction references non-existent account
+2026-01-07 14:28:53.072064,balances,account_id,referential_integrity,10789,drop_record,Balance record references non-existent account

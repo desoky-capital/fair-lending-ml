@@ -1,0 +1,488 @@
+{
+  "dataset_info": {
+    "name": "Synthetic Banking Dataset",
+    "version": "1.0",
+    "created_date": "2026-01-04",
+    "purpose": "Educational dataset for Chapter 2: Data Foundations",
+    "book": "Code, Cash, and Conviction: Building Ethical Fintech Systems",
+    "institution": "Atlas Bank (fictional)",
+    "time_period": "2019-01-01 to present",
+    "privacy_note": "All data is synthetic. No real customer information is included."
+  },
+  
+  "tables": {
+    "accounts": {
+      "description": "Customer account master data",
+      "row_count_typical": 1000,
+      "grain": "One row per account",
+      "primary_key": "account_id",
+      "foreign_keys": [],
+      "data_quality_notes": "Intentionally contains ~5% missing account_ids, ~2% duplicates, format inconsistencies, typos, and invalid values",
+      
+      "columns": {
+        "account_id": {
+          "description": "Unique identifier for the account",
+          "data_type": "string",
+          "format": "ACC-{8 digit number}",
+          "example": "ACC-00000001",
+          "nullable": false,
+          "unique": true,
+          "known_issues": [
+            "~5% missing values (should be non-null)",
+            "~2% duplicates (should be unique)"
+          ],
+          "cleaning_guidance": "Drop records with missing account_id; deduplicate based on business logic (keep first occurrence or most complete record)"
+        },
+        
+        "customer_id": {
+          "description": "Identifier for the customer who owns the account",
+          "data_type": "string",
+          "format": "CUST-{7 digit number}",
+          "example": "CUST-1000001",
+          "nullable": false,
+          "unique": false,
+          "business_rules": [
+            "A single customer can have multiple accounts",
+            "Customer data is in a separate system (not included in this dataset)"
+          ],
+          "known_issues": [
+            "Generally clean field (few issues)"
+          ],
+          "cleaning_guidance": "Validate format; flag any that don't match expected pattern"
+        },
+        
+        "account_type": {
+          "description": "Type of account product",
+          "data_type": "categorical",
+          "valid_values": ["checking", "savings", "credit_card", "loan"],
+          "example": "checking",
+          "nullable": false,
+          "distribution": {
+            "checking": "40%",
+            "savings": "30%",
+            "credit_card": "20%",
+            "loan": "10%"
+          },
+          "known_issues": [
+            "~3% typos (e.g., 'chekcing' instead of 'checking')",
+            "~3% case inconsistencies (e.g., 'SAVINGS' vs 'savings')",
+            "~2% null values",
+            "Some invalid values like 'unknown'"
+          ],
+          "cleaning_guidance": "Standardize to lowercase; map common typos; drop or flag records with unmappable values"
+        },
+        
+        "open_date": {
+          "description": "Date the account was opened",
+          "data_type": "date",
+          "format": "YYYY-MM-DD",
+          "example": "2020-01-15",
+          "nullable": false,
+          "valid_range": "2019-01-01 to present (not future dates)",
+          "known_issues": [
+            "Mixed date formats: ~50% MM/DD/YYYY, ~49% YYYY-MM-DD",
+            "~1% completely invalid dates (e.g., '99-99-9999')"
+          ],
+          "cleaning_guidance": "Parse all date formats; standardize to YYYY-MM-DD; drop or flag records with invalid dates"
+        },
+        
+        "credit_limit": {
+          "description": "Maximum credit available for the account",
+          "data_type": "numeric",
+          "units": "USD",
+          "example": 5000,
+          "nullable": true,
+          "valid_range": "0 to 50000",
+          "business_rules": [
+            "Should be 0 for checking and savings accounts",
+            "Should be > 0 for credit_card and loan accounts",
+            "NULL is acceptable but 0 is preferred for deposit accounts"
+          ],
+          "known_issues": [
+            "~5% have sentinel value -999 instead of NULL or 0",
+            "Some credit accounts have credit_limit = 0 (data entry error)"
+          ],
+          "cleaning_guidance": "Convert -999 to 0 for deposit accounts or appropriate value for credit accounts; validate against account_type"
+        },
+        
+        "status": {
+          "description": "Current status of the account",
+          "data_type": "categorical",
+          "valid_values": ["active", "closed", "suspended", "dormant"],
+          "example": "active",
+          "nullable": false,
+          "distribution": {
+            "active": "80%",
+            "closed": "10%",
+            "suspended": "5%",
+            "dormant": "5%"
+          },
+          "value_definitions": {
+            "active": "Account is open and in good standing",
+            "closed": "Account has been permanently closed",
+            "suspended": "Account is temporarily restricted due to fraud or compliance",
+            "dormant": "No activity for 12+ months but not officially closed"
+          },
+          "known_issues": [
+            "~5% have trailing whitespace (e.g., 'active ')",
+            "~2% have unknown values like 'pending'"
+          ],
+          "cleaning_guidance": "Trim whitespace; map 'pending' to appropriate status or flag for review"
+        },
+        
+        "branch_code": {
+          "description": "Branch where account was opened (NULL for online accounts)",
+          "data_type": "string",
+          "format": "BR-{3 digit number}",
+          "example": "BR-101",
+          "nullable": true,
+          "valid_range": "BR-100 to BR-199",
+          "business_rules": [
+            "NULL indicates online-only account (valid)",
+            "~10% of accounts are online-only"
+          ],
+          "known_issues": [
+            "~5% have invalid format like 'BR-INVALID'",
+            "~10% missing (expected for online accounts)"
+          ],
+          "cleaning_guidance": "NULL is valid; validate format for non-null values; flag invalid codes"
+        }
+      }
+    },
+    
+    "transactions": {
+      "description": "Transaction history for all accounts",
+      "row_count_typical": 10000,
+      "grain": "One row per transaction",
+      "primary_key": "transaction_id",
+      "foreign_keys": [
+        {
+          "column": "account_id",
+          "references": "accounts.account_id",
+          "relationship": "many-to-one"
+        }
+      ],
+      "data_quality_notes": "Contains orphaned foreign keys, duplicates, format inconsistencies, outliers, and data entry errors",
+      
+      "columns": {
+        "transaction_id": {
+          "description": "Unique identifier for the transaction",
+          "data_type": "string",
+          "format": "TXN-{10 digit number}",
+          "example": "TXN-0000000001",
+          "nullable": false,
+          "unique": true,
+          "known_issues": [
+            "~1% true duplicates (same transaction_id appears multiple times)",
+            "~2% missing values"
+          ],
+          "cleaning_guidance": "Drop records with missing transaction_id; deduplicate (keep first occurrence)"
+        },
+        
+        "account_id": {
+          "description": "Foreign key to accounts table",
+          "data_type": "string",
+          "format": "ACC-{8 digit number}",
+          "example": "ACC-00000001",
+          "nullable": false,
+          "references": "accounts.account_id",
+          "known_issues": [
+            "~3% reference non-existent accounts (orphaned records)",
+            "Some reference accounts that were deleted from accounts table"
+          ],
+          "cleaning_guidance": "Join with accounts table; drop or flag orphaned transactions"
+        },
+        
+        "transaction_date": {
+          "description": "Date the transaction occurred",
+          "data_type": "date",
+          "format": "YYYY-MM-DD",
+          "example": "2020-01-16",
+          "nullable": false,
+          "business_rules": [
+            "Must be >= account.open_date",
+            "Must not be in the future"
+          ],
+          "known_issues": [
+            "Mixed formats: ~50% MM/DD/YYYY, ~49% YYYY-MM-DD",
+            "~1% future dates (data entry errors)"
+          ],
+          "cleaning_guidance": "Parse and standardize formats; flag or drop future dates; validate against account open_date"
+        },
+        
+        "transaction_time": {
+          "description": "Time the transaction occurred",
+          "data_type": "time",
+          "format": "HH:MM:SS",
+          "example": "09:23:45",
+          "nullable": false,
+          "known_issues": [
+            "~5% missing values",
+            "Inconsistent format: some HH:MM:SS, some HH:MM (no seconds)"
+          ],
+          "cleaning_guidance": "Standardize to HH:MM:SS; impute missing with '00:00:00' or drop record if critical"
+        },
+        
+        "amount": {
+          "description": "Transaction amount (negative for debits, positive for credits)",
+          "data_type": "numeric",
+          "units": "USD",
+          "precision": 2,
+          "example": -45.50,
+          "nullable": false,
+          "sign_convention": {
+            "negative": "Debits (money out): purchases, withdrawals, fees, interest charges",
+            "positive": "Credits (money in): deposits, payments, refunds"
+          },
+          "known_issues": [
+            "~0.5% extreme outliers (e.g., 999999.99 - clearly erroneous)",
+            "~1% null values"
+          ],
+          "cleaning_guidance": "Drop records with null amounts; investigate outliers (may be legitimate or errors); validate sign matches transaction_type"
+        },
+        
+        "transaction_type": {
+          "description": "Type of transaction",
+          "data_type": "categorical",
+          "valid_values": ["purchase", "withdrawal", "deposit", "transfer", "fee", "payment", "interest"],
+          "example": "purchase",
+          "nullable": false,
+          "value_definitions": {
+            "purchase": "Card purchase or POS transaction",
+            "withdrawal": "Cash withdrawal or ATM withdrawal",
+            "deposit": "Cash or check deposit",
+            "transfer": "Transfer between accounts",
+            "fee": "Bank fee (overdraft, monthly, etc)",
+            "payment": "Payment toward credit balance",
+            "interest": "Interest charge or earned interest"
+          },
+          "known_issues": [
+            "~2% typos (e.g., 'pruchase' instead of 'purchase')",
+            "~1% unknown codes like 'ADJ' (adjustment)"
+          ],
+          "cleaning_guidance": "Map common typos; categorize or flag unknown codes"
+        },
+        
+        "merchant_category": {
+          "description": "Category of merchant (for purchase transactions only)",
+          "data_type": "categorical",
+          "valid_values": ["grocery", "restaurant", "fuel", "retail", "entertainment", "healthcare", "travel", "utilities"],
+          "example": "grocery",
+          "nullable": true,
+          "business_rules": [
+            "Required for purchase transactions",
+            "NULL for non-purchase transactions (deposit, transfer, fee, etc)"
+          ],
+          "known_issues": [
+            "~20% missing (expected for non-purchase transactions)",
+            "~5% format inconsistencies in remaining records"
+          ],
+          "cleaning_guidance": "NULL is valid for non-purchase transactions; validate that purchases have a category"
+        },
+        
+        "merchant_name": {
+          "description": "Name of merchant (for purchase transactions only)",
+          "data_type": "string",
+          "example": "Whole Foods Market",
+          "nullable": true,
+          "business_rules": [
+            "Expected for purchase transactions",
+            "NULL for non-purchase transactions"
+          ],
+          "known_issues": [
+            "~15% missing",
+            "Inconsistent capitalization (e.g., 'starbucks' vs 'Starbucks' vs 'STARBUCKS')",
+            "No standardization (same merchant appears with different names)"
+          ],
+          "cleaning_guidance": "Standardize capitalization; NULL is valid for non-purchases; consider merchant matching/deduplication as advanced exercise"
+        },
+        
+        "channel": {
+          "description": "Channel through which transaction was initiated",
+          "data_type": "categorical",
+          "valid_values": ["online", "mobile", "atm", "branch", "phone"],
+          "example": "mobile",
+          "nullable": false,
+          "distribution": {
+            "online": "35%",
+            "mobile": "35%",
+            "atm": "15%",
+            "branch": "10%",
+            "phone": "5%"
+          },
+          "known_issues": [
+            "~3% typos (e.g., 'mobil' instead of 'mobile')",
+            "~2% null values"
+          ],
+          "cleaning_guidance": "Map typos; drop or flag records with null channel"
+        }
+      }
+    },
+    
+    "balances": {
+      "description": "Monthly balance snapshots for all accounts",
+      "row_count_typical": 5000,
+      "grain": "One row per account per month",
+      "primary_key": ["account_id", "balance_date"],
+      "foreign_keys": [
+        {
+          "column": "account_id",
+          "references": "accounts.account_id",
+          "relationship": "many-to-one"
+        }
+      ],
+      "data_quality_notes": "Contains orphaned records, format issues, business rule violations, and encoding problems",
+      
+      "columns": {
+        "account_id": {
+          "description": "Foreign key to accounts table",
+          "data_type": "string",
+          "format": "ACC-{8 digit number}",
+          "example": "ACC-00000001",
+          "nullable": false,
+          "references": "accounts.account_id",
+          "known_issues": [
+            "~2% orphaned records (account doesn't exist in accounts table)"
+          ],
+          "cleaning_guidance": "Join with accounts; drop orphaned records"
+        },
+        
+        "balance_date": {
+          "description": "Date of the balance snapshot (typically last day of month)",
+          "data_type": "date",
+          "format": "YYYY-MM-DD",
+          "example": "2020-01-31",
+          "nullable": false,
+          "business_rules": [
+            "Typically the last day of each month",
+            "Must be >= account.open_date"
+          ],
+          "known_issues": [
+            "Mixed formats: ~50% MM/DD/YYYY, ~49% YYYY-MM-DD",
+            "~1% missing values"
+          ],
+          "cleaning_guidance": "Parse and standardize formats; drop records with missing dates; validate against account open_date"
+        },
+        
+        "available_balance": {
+          "description": "Balance available for immediate use (excludes holds)",
+          "data_type": "numeric",
+          "units": "USD",
+          "precision": 2,
+          "example": 1250.50,
+          "nullable": false,
+          "sign_convention": {
+            "positive": "Asset (checking/savings with positive balance)",
+            "negative": "Liability (credit card debt, loan balance)"
+          },
+          "known_issues": [
+            "~2% have string 'NaN' instead of actual NaN or number",
+            "~1% null values"
+          ],
+          "cleaning_guidance": "Convert string 'NaN' to proper null; handle nulls appropriately; validate reasonable ranges"
+        },
+        
+        "ledger_balance": {
+          "description": "Ledger (book) balance including pending holds",
+          "data_type": "numeric",
+          "units": "USD",
+          "precision": 2,
+          "example": 1250.50,
+          "nullable": false,
+          "business_rules": [
+            "Should be >= available_balance (ledger includes pending holds)",
+            "For credit accounts, both may be negative (customer owes bank)"
+          ],
+          "known_issues": [
+            "~5% violate business rule: ledger_balance < available_balance"
+          ],
+          "cleaning_guidance": "Flag or correct records where ledger < available; may indicate data quality issue or special account circumstance"
+        },
+        
+        "overdraft_count": {
+          "description": "Number of overdrafts in the month",
+          "data_type": "integer",
+          "example": 0,
+          "nullable": false,
+          "valid_range": "0 to reasonable maximum (e.g., 10)",
+          "business_rules": [
+            "Should be 0 for most accounts",
+            "Only meaningful for checking/savings accounts"
+          ],
+          "known_issues": [
+            "~5% have negative values (e.g., -1) - clearly invalid",
+            "~3% missing values"
+          ],
+          "cleaning_guidance": "Convert negative values to 0 or null; impute missing as 0 for accounts with positive balances"
+        }
+      }
+    }
+  },
+  
+  "relationships": {
+    "accounts_to_transactions": {
+      "type": "one-to-many",
+      "parent": "accounts.account_id",
+      "child": "transactions.account_id",
+      "cardinality": "One account can have many transactions",
+      "integrity_note": "~3% of transactions are orphaned (reference non-existent accounts)"
+    },
+    
+    "accounts_to_balances": {
+      "type": "one-to-many",
+      "parent": "accounts.account_id",
+      "child": "balances.account_id",
+      "cardinality": "One account can have many monthly balance snapshots",
+      "integrity_note": "~2% of balances are orphaned (reference non-existent accounts)"
+    }
+  },
+  
+  "data_quality_summary": {
+    "overall_assessment": "This dataset intentionally contains multiple categories of data quality issues for educational purposes",
+    "issue_categories": [
+      "Completeness: Missing values in required fields",
+      "Uniqueness: Duplicate records in fields that should be unique",
+      "Validity: Values that violate business rules or format specifications",
+      "Consistency: Format variations (dates, text case, etc)",
+      "Integrity: Orphaned foreign keys and referential constraint violations",
+      "Accuracy: Data entry errors, outliers, impossible values"
+    ],
+    "severity_distribution": {
+      "critical": "~10% of records have issues that must be addressed",
+      "moderate": "~20% have issues that should be addressed",
+      "minor": "~15% have cosmetic issues (formatting, etc)"
+    }
+  },
+  
+  "usage_guidance": {
+    "for_students": [
+      "Start by loading and exploring each table",
+      "Create a systematic data quality assessment",
+      "Design and document your cleaning strategy",
+      "Implement a reproducible pipeline",
+      "Validate your results against business rules"
+    ],
+    "for_instructors": [
+      "Clean reference data is available separately",
+      "Multiple valid approaches exist for some issues",
+      "Emphasize documentation and reproducibility",
+      "Connect to regulatory requirements (BCBS 239, SR 11-7)",
+      "Dataset reusable in Chapters 3-6"
+    ]
+  },
+  
+  "extensions_for_later_chapters": {
+    "chapter_3_credit_risk": {
+      "add_fields": ["credit_score", "income", "employment_status", "default_flag"],
+      "description": "Add features for credit risk modeling"
+    },
+    "chapter_4_fraud": {
+      "add_fields": ["fraud_flag", "device_id", "ip_address", "location"],
+      "description": "Add fraud labels and behavioral features"
+    },
+    "chapter_5_fairness": {
+      "add_fields": ["age", "zip_code", "customer_demographics"],
+      "description": "Add demographic data for fairness analysis"
+    }
+  }
+}

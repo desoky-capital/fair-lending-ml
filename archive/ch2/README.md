@@ -1,0 +1,369 @@
+# Chapter 2: Data Foundations for Fintech Systems
+
+## 📚 Overview
+
+This chapter teaches the fundamentals of data quality, cleaning, and governance through building a production-grade data pipeline for synthetic banking data. You'll learn to systematically identify, document, and resolve data quality issues while maintaining complete audit trails—essential skills for any fintech professional.
+
+**What You'll Build:**
+- A four-layer data cleaning pipeline
+- Complete data lineage tracking system
+- Auditable data mart with full documentation
+- Skills to handle real-world messy banking data
+
+**Time Required:** 3-4 hours for hands-on work
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+```bash
+# Install required packages
+pip install pandas numpy faker matplotlib
+```
+
+### Three Steps to Get Started
+
+**1. Generate Synthetic Data (5 minutes)**
+```python
+# In a Jupyter notebook or Python console
+from generate_banking_data import BankingDataGenerator
+
+generator = BankingDataGenerator(n_accounts=1000, seed=42)
+data = generator.generate_all()
+```
+
+This creates `synthetic_banking_data/` folder with messy banking data.
+
+**2. Follow the Code Walkthrough (2-3 hours)**
+
+Open `chapter2_section2_code_walkthrough.md` and build the cleaning pipeline step-by-step.
+
+**3. Review Your Work (30 minutes)**
+
+Compare your results to `cleaning_pipeline_complete.py` and review the teaching notes.
+
+---
+
+## 📁 What's in This Folder
+
+### 📖 Chapter Content (Read in Order)
+
+| File | Description | Length | Purpose |
+|------|-------------|--------|---------|
+| `chapter2_section1_problem_framing.md` | Why data quality matters in fintech | 7 pages | Context & motivation |
+| `chapter2_section2_code_walkthrough.md` | Build the cleaning pipeline | 15 pages | Hands-on tutorial |
+| `chapter2_section3_teaching_notes.md` | Exercises, rubrics, case studies | 7 pages | For instructors |
+| `chapter2_section4_wrap.md` | Summary and bridges to next chapters | 1 page | Wrap-up |
+| `chapter2_COMPLETE_assembly.md` | Master overview of full chapter | - | Reference |
+
+### 💻 Code Files
+
+| File | Description | When to Use |
+|------|-------------|-------------|
+| `generate_banking_data.py` | Creates synthetic banking data | **Run this first** |
+| `cleaning_pipeline_complete.py` | Complete working solution | Reference after attempting yourself |
+| `cleaning_pipeline_starter.py` | Template with TODOs | Follow along with Section 2 |
+
+### 📚 Documentation
+
+| File | Description |
+|------|-------------|
+| `README_DATA_GENERATOR.md` | Detailed data generator documentation |
+| `README_DATASET.md` | Business context and data dictionary |
+| `data_dictionary.json` | Machine-readable schema |
+
+---
+
+## 🎓 Learning Paths
+
+### For Students (Self-Study)
+
+```
+1. Read Section 1: Problem Framing (20 min)
+   └─ Understand why data quality matters
+   
+2. Generate Data (5 min)
+   └─ Run generate_banking_data.py
+   
+3. Code Walkthrough (2-3 hours)
+   └─ Follow Section 2, build pipeline
+   └─ Type the code yourself (don't copy-paste!)
+   
+4. Review Complete Solution (30 min)
+   └─ Compare your work to cleaning_pipeline_complete.py
+   
+5. Read Wrap-up (10 min)
+   └─ Section 4, reflect on what you learned
+```
+
+### For Instructors
+
+```
+1. Review all sections (1 hour)
+   └─ Understand full chapter scope
+   
+2. Review Section 3: Teaching Notes (30 min)
+   └─ Rubrics, exercises, case studies
+   
+3. Run the code yourself (2 hours)
+   └─ Understand common student issues
+   
+4. Plan your session
+   └─ 3-hour class? 2-week homework? Adapt accordingly
+```
+
+### For Practitioners (Quick Reference)
+
+```
+1. Skim Section 1 for context (10 min)
+
+2. Study cleaning_pipeline_complete.py (30 min)
+   └─ See patterns you can apply at work
+   
+3. Adapt to your data (ongoing)
+   └─ Use DataQualityLogger pattern
+   └─ Implement four-layer cleaning
+   └─ Maintain lineage tracking
+```
+
+---
+
+## 🛠️ How to Use the Code
+
+### Approach 1: Follow Along (Recommended)
+
+**Build the pipeline yourself by following Section 2:**
+
+1. Open a new Jupyter notebook
+2. Read Section 2 explanations
+3. Type the code yourself (builds muscle memory!)
+4. Run and test each piece
+5. Compare to `cleaning_pipeline_complete.py` when stuck
+
+### Approach 2: Use the Starter Template
+
+**Fill in the TODOs:**
+
+1. Open `cleaning_pipeline_starter.py`
+2. Read the TODO comments
+3. Implement each function
+4. Test your work
+5. Check against complete solution
+
+### Approach 3: Study the Complete Solution
+
+**Understand the working code:**
+
+1. Run `cleaning_pipeline_complete.py`
+2. Read through it carefully
+3. Modify and experiment
+4. Use patterns in your own projects
+
+---
+
+## 📊 What the Code Produces
+
+When you run the complete pipeline, you'll create:
+
+```
+ch2/
+├── synthetic_banking_data/         # Generated by generate_banking_data.py
+│   ├── raw/                        # Messy data (use this!)
+│   │   ├── accounts.csv
+│   │   ├── transactions.csv
+│   │   └── balances.csv
+│   └── clean/                      # Reference data (for validation)
+│
+└── data_mart_clean/                # Generated by cleaning pipeline
+    ├── data/                       # Cleaned datasets
+    │   ├── accounts_clean.csv
+    │   ├── transactions_clean.csv
+    │   └── balances_clean.csv
+    ├── documentation/              # Auto-generated docs
+    │   ├── data_dictionary_clean.json
+    │   ├── quality_report.json
+    │   └── quality_dashboard.png
+    └── logs/                       # Audit trail
+        └── data_lineage_report.csv
+```
+
+**Note:** These folders are in `.gitignore` - they're outputs, not inputs. Each student generates their own!
+
+---
+
+## 🔧 Troubleshooting
+
+### "ModuleNotFoundError: No module named 'faker'"
+
+**Solution:**
+```bash
+pip install faker
+```
+
+### "ModuleNotFoundError: No module named 'generate_banking_data'"
+
+**Solution:** Use `%run` instead of `import` in Jupyter if in a sub folder:
+```python
+from generate_banking_data import BankingDataGenerator
+```
+
+### "FileNotFoundError: 'accounts.csv'"
+
+**Solution:** You need to generate the data first:
+```python
+from generate_banking_data import BankingDataGenerator
+generator = BankingDataGenerator()
+data = generator.generate_all()
+```
+
+### "TypeError: validate_and_coerce_schema() missing 1 required positional argument: 'logger'"
+
+**Solution:** Create the logger first:
+```python
+logger = DataQualityLogger()
+accounts = validate_and_coerce_schema(accounts, ACCOUNT_SCHEMA, 'accounts', logger)
+```
+
+### "Current working directory is wrong"
+
+**Solution:** Check and change to ch2:
+```python
+import os
+print(os.getcwd())  # Should end with 'ch2'
+
+# If not, navigate to ch2:
+os.chdir('path/to/ch2')
+```
+
+### "Data doesn't match expected output"
+
+**Solution:** Use the same random seed:
+```python
+generator = BankingDataGenerator(seed=42)  # ← Use seed=42 for consistency
+```
+
+---
+
+## 💡 Key Concepts You'll Learn
+
+### The Four-Layer Pipeline
+
+1. **Layer 1: Schema Validation**
+   - Enforce correct data types
+   - Handle type coercion gracefully
+   - Log conversion failures
+
+2. **Layer 2: Missing Data**
+   - Column-specific strategies (drop/impute/keep)
+   - Business logic for decisions
+   - Document every choice
+
+3. **Layer 3: Deduplication & Consistency**
+   - Remove duplicates
+   - Standardize formats
+   - Fix typos and sentinel values
+   - Enforce business rules
+
+4. **Layer 4: Cross-Table Validation**
+   - Referential integrity
+   - Temporal constraints
+   - Clean up orphaned records
+
+### The Four Pillars of Data Quality
+
+- **Quality:** Accuracy, completeness, consistency, timeliness, validity
+- **Lineage:** Track every transformation with `DataQualityLogger`
+- **Documentation:** Data dictionaries, assumption logs
+- **Privacy:** PII handling, GDPR/CCPA compliance
+
+---
+
+## 🎯 Expected Results
+
+After completing this chapter, you should have:
+
+**Technical Skills:**
+- ✅ Built a complete data cleaning pipeline
+- ✅ Implemented comprehensive logging
+- ✅ Created auditable documentation
+- ✅ Handled complex data quality issues
+
+**Conceptual Understanding:**
+- ✅ Why data quality matters in fintech
+- ✅ When to drop vs. impute vs. keep null
+- ✅ How to make defensible cleaning decisions
+- ✅ What regulators expect from data systems
+
+**Artifacts:**
+- ✅ Working Python code (300+ lines)
+- ✅ Complete lineage report
+- ✅ Data quality dashboard
+- ✅ Documentation suite
+
+---
+
+## 📈 Data Statistics (With Default Settings)
+
+**Generated Data (Raw):**
+- Accounts: 1,000 records
+- Transactions: ~9,000 records
+- Balances: ~42,000 records
+
+**After Cleaning:**
+- Accounts: ~500 records (50% had critical missing data)
+- Transactions: ~2,000 records (removed orphaned, invalid, duplicates)
+- Balances: ~10,000 records (removed orphaned, duplicates, violations)
+
+**Issues Found & Resolved:**
+- ~26,000 mixed date format issues
+- ~15,000 orphaned foreign keys
+- ~800 duplicate records
+- ~200 business rule violations
+- And more!
+
+---
+
+## 🔗 Connections to Other Chapters
+
+**This chapter enables:**
+- **Chapter 3:** Credit risk models need clean data
+- **Chapter 4:** Fraud detection requires quality features
+- **Chapter 5:** Fairness analysis depends on unbiased data
+- **Chapter 6:** Model governance requires audit trails
+- **Chapter 7-8:** Production systems need robust pipelines
+
+**Data quality is the foundation for everything else in this book!**
+
+---
+
+## 🤝 Contributing / Feedback
+
+Find an issue? Have a suggestion? 
+
+- **For students:** Ask your instructor or check the book's website
+- **For instructors:** Submit feedback via the book's GitHub repository
+- **For practitioners:** Adapt freely for your organization's needs
+
+---
+
+## 📄 License
+
+Part of "Code, Cash, and Conviction: Building Ethical Fintech Systems for Industry and the Classroom"
+
+Materials provided for educational purposes.
+
+---
+
+## 🚀 Ready to Begin?
+
+1. **First time?** Start with Section 1 (Problem Framing)
+2. **Want to code?** Generate data, then follow Section 2
+3. **Teaching this?** Review Section 3 (Teaching Notes)
+4. **In a hurry?** Run `cleaning_pipeline_complete.py` to see results
+
+**Let's build something production-ready!** 💪
+
+---
+
+*Last Updated: January 2026*
