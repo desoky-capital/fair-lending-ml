@@ -147,37 +147,68 @@ The problem: Credit bureau data quality varied by population. Immigrants had thi
 
 ## 3.2 Data Preparation
 
-### 3.2.1 Generating Credit Data
+### 3.2.1 Loading Clean Data from Chapter 2
 
-A production credit risk model pulls data from multiple sources:
-- **Internal banking history** (transactions, balances)
-- **Credit bureau reports** (FICO scores, trade lines, inquiries)
-- **Application data** (income, employment)
-- **Outcome labels** (did they default?)
+In Chapter 2, we cleaned and validated our banking data. Now we load those clean files as our starting point:
 
 ```python
-from generate_credit_data import CreditDataGenerator
+import pandas as pd
+import numpy as np
 
-generator = CreditDataGenerator(
-    n_accounts=1000,
-    seed=42,
-    start_date='2019-01-01',
-    prediction_date='2024-01-01',
-    default_rate=0.05
-)
+# Load the clean data produced in Chapter 2
+accounts = pd.read_csv('data_mart_clean/data/accounts_clean.csv')
+transactions = pd.read_csv('data_mart_clean/data/transactions_clean.csv')
+balances = pd.read_csv('data_mart_clean/data/balances_clean.csv')
 
-data = generator.generate_all(output_dir='synthetic_credit_data')
+# Parse dates
+accounts['open_date'] = pd.to_datetime(accounts['open_date'])
+transactions['transaction_date'] = pd.to_datetime(transactions['transaction_date'])
+balances['balance_date'] = pd.to_datetime(balances['balance_date'])
+
+print(f"Loaded {len(accounts):,} accounts")
+print(f"Loaded {len(transactions):,} transactions")
+print(f"Loaded {len(balances):,} balance records")
 ```
 
-The generator creates:
-- **25+ credit features** (FICO, delinquencies, inquiries, income, DTI)
-- **Demographic proxies** (age, region) for fairness testing
-- **Built-in fairness challenge** (Region C: 2.3x default rate)
-- **Realistic data quality issues** (missing values, duplicates)
+The clean accounts file includes:
+- **Credit features:** FICO score, delinquencies, inquiries, income, DTI
+- **Demographic attributes:** age, region (for fairness testing)
+- **Target variable:** `defaulted` (0 or 1)
+- **Built-in fairness challenge:** Region C has ~2.3x the default rate of Region A
 
 ### 3.2.2 Feature Engineering
 
-From raw transaction and balance data, we engineer behavioral features:
+From raw transaction and balance data, we engineer behavioral features. This aggregation happens **before** the train/test split to ensure all datasets have the same columns.
+
+```python
+# Engineer balance features per account
+balance_features = balances.groupby('account_id').agg(
+    avg_balance_3mo=('available_balance', lambda x: x.tail(3).mean()),
+    avg_balance_6mo=('available_balance', lambda x: x.tail(6).mean()),
+    avg_balance_12mo=('available_balance', 'mean'),
+    balance_volatility=('available_balance', 'std'),
+    min_balance=('available_balance', 'min'),
+    max_balance=('available_balance', 'max')
+).reset_index()
+
+# Engineer transaction features per account
+txn_features = transactions.groupby('account_id').agg(
+    txn_count=('transaction_id', 'count'),
+    avg_txn_amount=('amount', 'mean'),
+    total_spent=('amount', lambda x: x[x > 0].sum()),
+    total_received=('amount', lambda x: abs(x[x < 0].sum())),
+    txn_volatility=('amount', 'std')
+).reset_index()
+
+# Merge everything into one modeling-ready dataset
+data = accounts.merge(balance_features, on='account_id', how='left')
+data = data.merge(txn_features, on='account_id', how='left')
+
+# Fill NaN for accounts with no transactions/balances
+data = data.fillna(0)
+
+print(f"Final dataset: {data.shape[1]} features, {len(data):,} accounts")
+```
 
 **Balance Features:**
 - Average balance (3mo, 6mo, 12mo)
@@ -248,6 +279,16 @@ X_train_smote, y_train_smote = smote.fit_resample(X_train, y_train)
 
 ### 3.3.3 Training the Baseline
 
+Before we train our first model, let's define the key metrics we'll use throughout the book:
+
+**Key Metrics:**
+- **Accuracy:** Of all predictions, what percentage were correct? Formula: (TP + TN) / total. *Caution:* In imbalanced data, accuracy is misleading—a model predicting "no default" for everyone achieves 95% accuracy but catches zero defaults.
+- **Recall (True Positive Rate):** Of all actual defaults, what percentage did the model catch? Formula: TP / (TP + FN). Higher is better for risk detection.
+- **Precision:** Of all accounts the model predicted would default, what percentage actually did? Formula: TP / (TP + FP). Higher means fewer false alarms.
+- **ROC-AUC:** Measures the model's ability to distinguish between defaulters and non-defaulters across all possible thresholds. Ranges from 0.5 (random guessing) to 1.0 (perfect separation).
+
+Now let's train our baseline logistic regression on the SMOTE-balanced data:
+
 ```python
 from sklearn.linear_model import LogisticRegression
 
@@ -255,10 +296,12 @@ model_smote = LogisticRegression(max_iter=1000, random_state=42)
 model_smote.fit(X_train_smote, y_train_smote)
 ```
 
-**Baseline performance (Validation):**
+**Baseline performance (evaluated on validation data—NOT the SMOTE training data):**
 - Recall: 31% (catches 1/3 of defaults)
 - Precision: 3% (97 false alarms per correct detection)
 - ROC-AUC: 0.524 (barely better than random)
+
+> 💡 **Why evaluate on validation, not training?** SMOTE balanced the training data to 50/50, but the real world (and our validation set) still has ~5% defaults. Evaluating on validation shows how the model performs on realistic data.
 
 ### 3.3.4 Initial Fairness Assessment
 
@@ -278,7 +321,23 @@ fairness_stats = val.groupby('region').agg({
 
 ### 3.4.1 Better Algorithms
 
-Random Forests and XGBoost can capture non-linear patterns that logistic regression misses.
+Our baseline logistic regression with SMOTE achieved only 0.524 ROC-AUC—barely better than guessing. Logistic regression fits a linear decision boundary, but credit risk is rarely that simple. Let's try more powerful algorithms.
+
+**Random Forest** builds hundreds of decision trees, each trained on a random subset of data and features, then averages their predictions:
+
+```python
+from sklearn.ensemble import RandomForestClassifier
+
+rf_model = RandomForestClassifier(
+    n_estimators=200,
+    max_depth=10,
+    class_weight='balanced',  # Handle imbalance by penalizing minority class errors more
+    random_state=42
+)
+rf_model.fit(X_train, y_train)
+```
+
+**XGBoost (Extreme Gradient Boosting)** builds trees sequentially, where each new tree specifically focuses on correcting the errors of previous trees:
 
 ```python
 from xgboost import XGBClassifier
@@ -287,18 +346,29 @@ xgb_model = XGBClassifier(
     n_estimators=100,
     max_depth=5,
     learning_rate=0.1,
-    scale_pos_weight=19,  # Handle imbalance
+    scale_pos_weight=19,  # Handle imbalance: ratio of non-defaults to defaults
     random_state=42
 )
 xgb_model.fit(X_train, y_train)
 ```
 
+> 💡 **Different Imbalance Strategies:** Notice we use three different approaches across our models:
+> - **Logistic Regression:** SMOTE (creates synthetic default examples *before* training)
+> - **Random Forest:** `class_weight='balanced'` (penalizes errors on defaults more *during* training)
+> - **XGBoost:** `scale_pos_weight=19` (same idea as class_weight, different syntax)
+>
+> Class weights and scale_pos_weight avoid SMOTE's calibration issues because they don't change the data—they just make each default error hurt 19x more.
+
+XGBoost delivered the best validation performance, so we selected it as our final model.
+
 ### 3.4.2 Feature Selection
 
-Not all 68 features help. We select top 30 by importance:
+Not all 68 features help. We select top 30 by importance. Here, `feature_cols` refers to the list of all feature column names used during training:
 
 ```python
 # Get feature importance from XGBoost
+feature_cols = [col for col in data.columns if col not in ['account_id', 'defaulted', 'region']]
+
 importance = pd.DataFrame({
     'feature': feature_cols,
     'importance': xgb_model.feature_importances_
@@ -308,6 +378,13 @@ top_features = importance.head(30)['feature'].tolist()
 ```
 
 ### 3.4.3 Hyperparameter Tuning
+
+**Hyperparameter tuning** finds the best model settings. Unlike model parameters (learned during training), hyperparameters are choices we make *before* training:
+- `max_depth`: How deep each tree can grow (deeper = more complex patterns, higher overfit risk)
+- `learning_rate`: How fast the model learns from errors (slower = more stable, needs more trees)
+- `n_estimators`: How many trees to build (more = better fit, slower training)
+
+GridSearchCV tries every combination and picks the one with the best ROC-AUC:
 
 ```python
 from sklearn.model_selection import GridSearchCV
@@ -319,7 +396,10 @@ param_grid = {
 }
 
 grid_search = GridSearchCV(xgb_model, param_grid, cv=3, scoring='roc_auc')
-grid_search.fit(X_train_smote, y_train_smote)
+grid_search.fit(X_train, y_train)  # Note: using original data, not SMOTE
+
+# Best model
+best_model = grid_search.best_estimator_
 ```
 
 ### 3.4.4 Validation Performance
@@ -329,6 +409,8 @@ grid_search.fit(X_train_smote, y_train_smote)
 - Recall: 19% (vs 31% baseline) - **Different trade-off**
 - ROC-AUC: 0.696 (vs 0.524 baseline) - **33% improvement**
 - Gini: 0.391 (crosses 0.3 production threshold!)
+
+> 💡 **What is Gini?** The Gini coefficient (calculated as 2 × ROC-AUC − 1) scales ROC-AUC to a 0-to-1 range where 0 means random and 1 means perfect discrimination. Credit industry typically requires Gini ≥ 0.30 for production models. Our 0.391 clears this threshold—on validation data.
 
 ### 3.4.5 The Test Set Reality Check
 
@@ -345,7 +427,9 @@ Root Cause: Distribution shift
   Test probabilities: median 0.02 (7x lower!)
 ```
 
-> 💡 **Key Insight:** The validation-optimized threshold (0.25) was too high because test probabilities were much lower. SMOTE created synthetic data that doesn't match real test distribution.
+**What is distribution shift?** The test data comes from a later time period with different borrower characteristics—the *feature distributions* (income levels, credit patterns, economic conditions) shifted between validation and test periods. This caused the model's predicted probabilities to drop dramatically. The 0.25 threshold that worked on validation no longer separates defaulters from non-defaulters on test data.
+
+> 💡 **Key Insight:** This isn't a coding error—it's a fundamental challenge in ML. Models learn patterns from training data; when the real world changes, those patterns may not hold. This is why monitoring (Chapter 4) and temporal splits are essential.
 
 ### 3.4.6 Key Lessons from Model Improvement
 
@@ -374,12 +458,21 @@ Root Cause: Distribution shift
 ```python
 import shap
 
+# best_model is the tuned XGBoost from Section 3.4.3
+best_model = grid_search.best_estimator_
+
+# Note: We explain this model despite its test set failure. 
+# SHAP isn't just for celebrating good models—it's often MORE valuable
+# for understanding WHY a model failed.
+
 explainer = shap.TreeExplainer(best_model)
 shap_values = explainer.shap_values(X_test)
 
 # Summary plot shows feature importance
 shap.summary_plot(shap_values, X_test)
 ```
+
+> 💡 **Why X_test, not X_validate?** We generate SHAP explanations on the test set because it represents truly unseen data—the closest approximation to production. The validation set was used during hyperparameter tuning, so the model has been indirectly optimized for it. SHAP on X_test gives us the most honest view of how the model explains itself on new data.
 
 **Top features by SHAP importance:**
 1. FICO score

@@ -229,6 +229,8 @@ Credit and insurance AI is explicitly classified as HIGH RISK, requiring:
 
 ### Conformity Assessment
 
+Before deployment, high-risk AI systems must undergo conformity assessment culminating in **CE (Conformité Européenne) Marking**—the EU's certification mark indicating the system meets all regulatory requirements.
+
 ```
 Development → Internal Assessment → Documentation → CE Marking → Deployment
                                           ↓

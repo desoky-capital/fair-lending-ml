@@ -67,11 +67,11 @@ The title of this book captures the three dimensions of building responsible AI 
 
 **Code:** The technical implementation must be sound. Measuring fairness, implementing mitigations, building monitoring systems, and generating explanations all require technical rigor. This book provides complete, working implementations.
 
-**Capital:** Financial services isn't just any domain. It has unique regulatory requirements (ECOA, FCRA, SR 11-7), business constraints (profitability, risk management), and real consequences (people get loans or they don't). Context matters.
+**Capital:** Algorithms in financial services decide who gets access to money—mortgages, credit cards, small business loans, the resources people need to build their lives. That domain has unique regulatory requirements (ECOA, FCRA, SR 11-7), business constraints (profitability, risk management), and human consequences that most ML tutorials ignore. This book doesn't ignore them.
 
 **Conscience:** Technical compliance isn't enough. Building systems that truly treat people fairly requires ethical commitment—not just passing audits, but caring about outcomes. This book aims to build that ethical awareness alongside technical understanding.
 
-All three matter. Code without conscience is dangerous. Conscience without code is ineffective. And both without understanding capital—the business and regulatory context—will fail in the real world.
+All three matter. Code without conscience is dangerous. Conscience without code is ineffective. And both without recognizing capital—the financial context and human stakes—will fail in the real world.
 
 > 💡 **Key Insight:** The most common fairness failures aren't from malicious intent—they're from well-meaning teams who optimized for the wrong things or didn't know what to look for.
 

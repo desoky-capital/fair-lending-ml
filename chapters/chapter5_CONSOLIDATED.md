@@ -60,11 +60,15 @@ Result: Model assigned 3x lower probabilities to actual defaults on test data.
 
 **What happened:** Our model performed well on validation but failed catastrophically on test. The threshold optimized on validation (0.25) produced 0% precision and 0% recall on test.
 
-**Why it happened:**
+**Why it happened:** The test data came from a later time period with different borrower characteristics—the *feature distributions* (income levels, credit patterns, economic conditions) shifted, causing predicted probabilities to drop:
+
 ```
-Validation: Model predicts ~0.45 for actual defaulters → Above threshold → Caught!
-Test:       Model predicts ~0.15 for actual defaulters → Below threshold → Missed!
+Validation: Median predicted probability for defaulters = 0.14 → Some above 0.25 → Caught!
+Test:       Median predicted probability for defaulters = 0.02 → All below 0.25 → Missed!
+            (7x lower!)
 ```
+
+The 0.25 threshold that worked on validation no longer separates defaulters from non-defaulters when probabilities shift this dramatically.
 
 **Warning signs:**
 - Large gap between validation and test performance
@@ -84,12 +88,17 @@ Test:       Model predicts ~0.15 for actual defaulters → Below threshold → M
 
 **Table 5.1: Mitigation Results Comparison**
 
+*All results evaluated on validation data. "Original" refers to the tuned XGBoost model before any fairness mitigation. Each approach was applied independently to isolate its effect.*
+
 | Approach | Accuracy | ROC-AUC | DIR |
 |----------|----------|---------|-----|
-| Original | 94.8% | 0.696 | 1.03 |
-| Reweighted | 95.2% | 0.551 | 1.00 |
-| Group Thresholds | 31.4% | 0.696 | 0.88 |
-| **Calibrated** | **96.9%** | **0.848** | **1.01** |
+| Original (XGBoost, no mitigation) | 94.8% | 0.696 | 1.03 |
+| Reweighted (pre-processing) | 95.2% | 0.551 | 1.00 |
+| Fairness-Constrained (in-processing) | ~93% | ~0.65 | ~0.95 |
+| Group Thresholds (post-processing) | 31.4% | 0.696 | 0.88 |
+| **Calibrated (post-processing)** | **96.9%** | **0.848** | **1.01** |
+
+> ⚠️ **Important Limitation:** These results are evaluated on validation data only. As Lesson 2 demonstrated, validation performance may not transfer to test data due to distribution shift. Always evaluate mitigation techniques on held-out test data before deployment.
 
 **The lesson:** Calibration improved BOTH accuracy and fairness. It fixes probability estimates without changing the model's ranking. Before trying complex mitigation techniques, try calibration.
 
@@ -528,10 +537,10 @@ Every domain has its own fairness challenges, but the framework is the same: **m
 We titled this book with three words in mind: **Code, Capital, and Conscience**.
 
 - **Code:** The technical implementation must be sound
-- **Capital:** The business context must be understood
+- **Capital:** The financial context—regulations, business constraints, and human impact—must guide every decision
 - **Conscience:** The ethical commitment must be genuine
 
-You now have the code. You understand the capital. The conscience is up to you.
+You now have the code. You recognize the capital—the stakes are real. The conscience is up to you.
 
 **Build systems you'd be proud to have applied to yourself or your family. That's the standard. That's the goal. That's what fairness-first means.**
 

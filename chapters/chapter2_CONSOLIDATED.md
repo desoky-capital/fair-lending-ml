@@ -458,6 +458,24 @@ def validate_and_coerce_schema(df, schema, table_name, logger):
                                 failed_conversions, 'set_to_null',
                                 'Could not parse as datetime, set to NaT')
                 print(f"  {col}: {failed_conversions} invalid dates → NaT")
+        
+        # Handle numeric conversion (int, float)
+        elif expected_dtype in ['int64', 'float64']:
+            original_nulls = df_clean[col].isnull().sum()
+            df_clean[col] = pd.to_numeric(df_clean[col], errors='coerce')
+            new_nulls = df_clean[col].isnull().sum()
+            failed_conversions = new_nulls - original_nulls
+            
+            if failed_conversions > 0:
+                logger.log_issue(table_name, col, 'type_conversion_failure',
+                                failed_conversions, 'set_to_null',
+                                'Could not parse as numeric, set to NaN')
+                print(f"  {col}: {failed_conversions} invalid numbers → NaN")
+        
+        # Handle string/object columns
+        elif expected_dtype in ['string', 'object']:
+            df_clean[col] = df_clean[col].astype(str)
+            df_clean[col] = df_clean[col].replace('nan', np.nan)  # Restore true nulls
     
     return df_clean
 
@@ -567,6 +585,10 @@ def deduplicate_and_standardize_accounts(df, logger):
     df_clean = df.copy()
     
     # Remove duplicate account_ids (keep first occurrence)
+    # NOTE: By default, duplicated() marks the FIRST occurrence as False 
+    # and subsequent duplicates as True. This means we keep the first
+    # and remove the rest. Use duplicated(keep=False) if you need to 
+    # identify ALL occurrences for investigation before deciding which to keep.
     duplicates = df_clean['account_id'].duplicated()
     if duplicates.any():
         count = duplicates.sum()
@@ -616,15 +638,44 @@ def validate_referential_integrity(accounts, transactions, balances, logger):
     print(f"\n[Layer 4: Cross-Table Validation] Enforcing referential integrity...")
     
     valid_account_ids = set(accounts['account_id'].unique())
+    trans_start_count = len(transactions)
+    bal_start_count = len(balances)
     
-    # Remove orphaned transactions (account doesn't exist)
+    # Rule 1: Remove orphaned transactions (account doesn't exist)
     orphaned_trans = ~transactions['account_id'].isin(valid_account_ids)
     if orphaned_trans.any():
         count = orphaned_trans.sum()
         transactions = transactions[~orphaned_trans]
         logger.log_issue('transactions', 'account_id', 'orphaned_foreign_key', count,
                         'drop_record', 'Transaction references non-existent account')
-        print(f"  Removed {count} orphaned transactions")
+        print(f"  Found {count:,} orphaned transactions (account doesn't exist)")
+    
+    # Rule 2: Remove orphaned balances (account doesn't exist)
+    orphaned_bal = ~balances['account_id'].isin(valid_account_ids)
+    if orphaned_bal.any():
+        count = orphaned_bal.sum()
+        balances = balances[~orphaned_bal]
+        logger.log_issue('balances', 'account_id', 'orphaned_foreign_key', count,
+                        'drop_record', 'Balance references non-existent account')
+        print(f"  Found {count:,} orphaned balance records")
+    
+    # Rule 3: Remove transactions dated before account opened
+    # Merge to get open_date for each transaction
+    trans_with_dates = transactions.merge(
+        accounts[['account_id', 'open_date']], on='account_id', how='left'
+    )
+    invalid_dates = trans_with_dates['transaction_date'] < trans_with_dates['open_date']
+    if invalid_dates.any():
+        count = invalid_dates.sum()
+        valid_indices = trans_with_dates[~invalid_dates].index
+        transactions = transactions.loc[valid_indices]
+        logger.log_issue('transactions', 'transaction_date', 'date_before_account_open', count,
+                        'drop_record', 'Transaction dated before account opening')
+        print(f"  Removed {count:,} transactions dated before account opening")
+    
+    # Summary
+    print(f"  ✓ Transactions: {trans_start_count:,} → {len(transactions):,} rows")
+    print(f"  ✓ Balances: {bal_start_count:,} → {len(balances):,} rows")
     
     return accounts, transactions, balances
 ```
@@ -633,9 +684,9 @@ def validate_referential_integrity(accounts, transactions, balances, logger):
 ```
 [Layer 4: Cross-Table Validation] Enforcing referential integrity...
   Found 2,362 orphaned transactions (account doesn't exist)
+  Found 10,789 orphaned balance records
   Removed 47 transactions dated before account opening
   ✓ Transactions: 4,421 → 2,022 rows
-  Found 10,789 orphaned balance records
   ✓ Balances: 21,147 → 10,021 rows
 ```
 
@@ -686,13 +737,16 @@ print("✓ Data mart complete!")
 ```
 DATA MART COMPLETE!
 
-Clean data:
-  • 499 accounts (from 1,000 - dropped 50%)
-  • 2,022 transactions (from 9,116 - dropped 78%)
-  • 10,021 balances (from 42,289 - dropped 76%)
+Clean data saved to data_mart_clean/data/:
+  • accounts_clean.csv:      499 records (from 1,000 — dropped 50%)
+  • transactions_clean.csv:  2,022 records (from 9,116 — dropped 78%)
+  • balances_clean.csv:      10,021 records (from 42,289 — dropped 76%)
 
-Complete audit trail with:
-  • Data lineage report
+Documentation saved to data_mart_clean/documentation/
+Logs saved to data_mart_clean/logs/
+
+Complete audit trail includes:
+  • Data lineage report (data_lineage_report.csv)
   • Data dictionary
   • Quality improvement metrics
 ```

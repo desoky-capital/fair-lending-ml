@@ -175,7 +175,22 @@ When base rates differ between groups (e.g., Group A has 5% default rate, Group 
 
 ### 4.2.1 Fairness Metrics Implementation
 
-Let's implement the key fairness metrics:
+Before calculating fairness metrics, we need to convert the model's probability predictions into binary decisions (0 or 1) by applying a threshold:
+
+```python
+# Model outputs probabilities
+y_prob = best_model.predict_proba(X_val)[:, 1]  # Probability of default
+
+# Apply threshold to get binary predictions
+threshold = 0.25  # Optimized on validation data
+y_pred = (y_prob >= threshold).astype(int)
+
+# y_pred is now an array of 0s and 1s:
+# 0 = predicted no default (approve)
+# 1 = predicted default (deny/flag)
+```
+
+Now let's implement the key fairness metrics. Each metric takes `y_pred` (the binary predictions) and compares outcomes across protected groups:
 
 ```python
 def disparate_impact_ratio(y_pred, protected_attr, unprivileged_value, privileged_value):
@@ -246,6 +261,14 @@ def expected_calibration_error(y_true, y_prob, n_bins=10):
 
 ### 4.2.2 Analyzing Our Model
 
+We implemented five fairness metrics in Section 4.2.1 (DIR, SPD, EOD, AOD, ECE), but we'll focus on three for our analysis:
+
+- **DIR (Disparate Impact Ratio):** Legal compliance — the 4/5ths rule
+- **EOD (Equal Opportunity Difference):** Equal treatment of actual defaulters
+- **ECE (Calibration):** Probability honesty across groups
+
+SPD and AOD are logged for monitoring but often correlate with DIR and EOD, so we omit them here to avoid redundancy. In your own work, choose metrics that align with your prioritization framework (Section 4.1.3).
+
 ```python
 # Calculate metrics for validation set
 print("FAIRNESS METRICS (Black vs White)")
@@ -312,6 +335,23 @@ print(f"  Difference: {abs(ece_white - ece_black):.3f}")
 
 **Idea:** Give different weights to samples so protected groups have equal influence during training.
 
+First, let's clarify what `prot_train` is:
+
+```python
+# prot_train is the protected attribute column (e.g., race or region)
+# split alongside X_train and y_train. It is NOT used as a model feature —
+# the model never sees it during training or prediction. We keep it 
+# separate solely for fairness calculations: computing reweighting,
+# measuring metrics by group, and auditing outcomes.
+
+# Example split (from Chapter 3):
+X_train = data[feature_cols]       # Features the model trains on
+y_train = data['defaulted']        # Target variable
+prot_train = data['region']        # Protected attribute (kept separate)
+```
+
+Now we can calculate reweighting:
+
 ```python
 def calculate_reweighting_weights(y_true, protected_attr, privileged_value):
     """
@@ -326,7 +366,10 @@ def calculate_reweighting_weights(y_true, protected_attr, privileged_value):
     # ... implementation
     return weights
 
-# Train with weights
+# Calculate weights using the protected attribute
+weights = calculate_reweighting_weights(y_train, prot_train, privileged_value='A')
+
+# Train with weights — model still only sees X_train, not prot_train
 model_reweighted.fit(X_train, y_train, sample_weight=weights)
 ```
 
@@ -341,26 +384,84 @@ model_reweighted.fit(X_train, y_train, sample_weight=weights)
 
 ---
 
-### 4.3.2 Post-Processing: Threshold Adjustment
+### 4.3.2 In-Processing: Fairness-Constrained Training
+
+**Idea:** Modify the model's training to penalize both prediction errors AND fairness violations during learning—not before or after, but as the model learns.
+
+```python
+from sklearn.linear_model import LogisticRegression
+
+def train_with_fairness_constraint(X_train, y_train, prot_train, dir_threshold=0.80):
+    """
+    Train multiple models with different hyperparameters and
+    select the one with best accuracy that meets fairness constraints.
+    """
+    best_model = None
+    best_score = 0
+    
+    # C is the regularization strength parameter:
+    # - Small C (0.01): Heavy regularization → simpler model, may underfit
+    # - Large C (10.0): Light regularization → complex model, may overfit
+    for C_val in [0.01, 0.1, 1.0, 10.0]:
+        for class_wt in [None, 'balanced']:
+            model = LogisticRegression(C=C_val, class_weight=class_wt,
+                                       max_iter=1000, random_state=42)
+            model.fit(X_train, y_train)
+            preds = model.predict(X_train)
+            
+            # Check fairness constraint
+            dir_score = disparate_impact_ratio(preds, prot_train,
+                                               unprivileged_value='C',
+                                               privileged_value='A')
+            
+            if dir_score >= dir_threshold:
+                accuracy = (preds == y_train).mean()
+                if accuracy > best_score:
+                    best_score = accuracy
+                    best_model = model
+    
+    return best_model
+
+model_constrained = train_with_fairness_constraint(X_train, y_train, prot_train)
+```
+
+> 💡 **Note:** We use Logistic Regression here to demonstrate the in-processing concept because its `C` parameter provides a simple way to explore the accuracy-fairness trade-off. In practice, you would apply similar constrained optimization to your best-performing model (XGBoost) using libraries like Fairlearn's `ExponentiatedGradient` or `GridSearch` with fairness constraints.
+
+---
+
+### 4.3.3 Post-Processing: Threshold Adjustment
 
 **Idea:** Use different decision thresholds for different groups to equalize approval rates.
 
 ```python
-def find_threshold_for_parity(y_prob, protected_attr, target_approval_rate):
+def find_threshold_for_parity(y_prob, protected_attr, target_approval_rate, group):
     """
-    Find threshold that achieves target approval rate for a group.
+    Find threshold that achieves target approval rate for a SPECIFIC group.
     """
+    # Filter to just this group
+    group_mask = (protected_attr == group)
+    group_probs = y_prob[group_mask]
+    
     thresholds = np.linspace(0, 1, 100)
     for thresh in thresholds:
-        approval_rate = (y_prob < thresh).mean()  # approve if below threshold
+        approval_rate = (group_probs < thresh).mean()  # approve if below threshold
         if approval_rate >= target_approval_rate:
             return thresh
     return 0.5
+
+# Example: Find thresholds to achieve 85% approval rate for each group
+target_rate = 0.85
+thresh_A = find_threshold_for_parity(y_prob_val, prot_val, target_rate, group='A')
+thresh_C = find_threshold_for_parity(y_prob_val, prot_val, target_rate, group='C')
+
+print(f"Group A threshold: {thresh_A:.2f}")
+print(f"Group C threshold: {thresh_C:.2f}")
+# Different thresholds achieve same approval rate → demographic parity
 ```
 
 **⚠️ Warning:** Group-specific thresholds are controversial:
 - Legally risky (explicit differential treatment)
-- Can severely hurt accuracy
+- Can severely hurt accuracy (as we saw in Table 4.2: 31.4% accuracy)
 - May not address root cause
 
 ---
@@ -372,16 +473,23 @@ def find_threshold_for_parity(y_prob, protected_attr, target_approval_rate):
 ```python
 from sklearn.calibration import CalibratedClassifierCV
 
-# Calibrate the model
+# base_model is our tuned XGBoost from Chapter 3
+base_model = grid_search.best_estimator_  # Already trained on X_train
+
+# Step 1: Wrap the trained model (no calibration yet)
 calibrated_model = CalibratedClassifierCV(
     base_model, 
-    method='isotonic',  # or 'sigmoid'
-    cv='prefit'
+    method='isotonic',  # or 'sigmoid' for less flexible calibration
+    cv='prefit'         # 'prefit' means base_model is already trained
 )
+
+# Step 2: Learn the calibration mapping on validation data
+# This learns: "When base_model predicts 0.30, what's the actual default rate?"
 calibrated_model.fit(X_val, y_val)
 
-# Get calibrated probabilities
+# Step 3: Apply the learned mapping to test data
 y_prob_calibrated = calibrated_model.predict_proba(X_test)[:, 1]
+# Now probabilities are "honest" — if it says 30%, roughly 30% actually default
 ```
 
 **Why calibration often works best:**
@@ -395,12 +503,17 @@ y_prob_calibrated = calibrated_model.predict_proba(X_test)[:, 1]
 
 **Table 4.2: Mitigation Approach Comparison**
 
+*All results evaluated on validation data. "Original" refers to the tuned XGBoost model before any fairness mitigation. Each approach was applied independently to isolate its effect.*
+
 | Approach | DIR | Accuracy | Recommendation |
 |----------|-----|----------|----------------|
 | Original | 1.03 | 94.8% | Baseline |
-| Reweighting | ~1.03 | ~95% | Minimal effect (data balanced) |
-| Group Thresholds | 1.00 | 31.4% | ❌ Destroyed accuracy |
-| Calibration | ~1.00 | 96.9% | ✓ Best balance |
+| Reweighting (pre-processing) | ~1.03 | ~95% | Minimal effect (data balanced) |
+| Fairness-Constrained (in-processing) | ~0.95 | ~93% | Modest improvement, some accuracy cost |
+| Group Thresholds (post-processing) | 1.00 | 31.4% | ❌ Destroyed accuracy |
+| Calibration (post-processing) | ~1.00 | 96.9% | ✓ Best balance |
+
+> ⚠️ **Important Limitation:** These results are evaluated on validation data only. As Chapter 3 demonstrated, validation performance may not transfer to test data due to distribution shift. In production, you should evaluate all mitigation techniques on held-out test data before deployment.
 
 > 💡 **Key Finding:** Calibration improved both accuracy (94.8% → 96.9%) AND fairness. Group thresholds achieved perfect parity but destroyed accuracy (94.8% → 31.4%).
 
