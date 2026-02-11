@@ -177,7 +177,7 @@ Consider a `last_payment_date` field for loan accounts:
 
 Without documentation, an analyst will guess. And they'll probably guess wrong.
 
-> 🏢 **Practitioner Tip**: Document *why* you made decisions, not just *what* you did. Future you (or your successor) needs to understand the trade-offs. "We imputed missing credit scores as 650 (median) because scores were only missing for 2% of accounts and the distribution was symmetric." This beats "Missing scores set to 650."
+> 🏢 **Practitioner Tip**: Document *why* you made decisions, not just *what* you did. Future you (or your successor) needs to grasp the trade-offs. "We imputed missing credit scores as 650 (median) because scores were only missing for 2% of accounts and the distribution was symmetric." This beats "Missing scores set to 650."
 
 #### Pillar 4: Privacy
 
@@ -191,7 +191,7 @@ Financial data is inherently sensitive. Data quality processes must respect priv
 
 ### 2.1.3 The Data Lifecycle in Financial Systems
 
-Understanding where data quality issues arise requires understanding the full data lifecycle:
+Recognizing where data quality issues arise requires knowing the full data lifecycle:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
@@ -275,7 +275,7 @@ As we move into the technical walkthrough, keep these principles in mind:
 
 1. **Transparency over cleverness**: Simple, documented cleaning beats complex, undocumented magic
 2. **Validation is not optional**: Every cleaning step should have a validation check
-3. **Document why, not just what**: Future readers need to understand your reasoning
+3. **Document why, not just what**: Future readers need to follow your reasoning
 4. **Automate everything**: Manual steps can't be audited or reproduced
 5. **Preserve lineage**: Every transformation should be logged
 6. **Business rules first**: Data quality rules should come from business experts
@@ -294,7 +294,7 @@ In this section, we'll build a complete data cleaning pipeline for Atlas Bank's 
 
 By the end, you'll have a reproducible pipeline that transforms raw, problematic data into clean, regulator-ready data.
 
-> 🎓 **For Path B (Conceptual) Readers:** You don't need to run this code. Follow the explanations before and after each code block to understand *what* we're doing and *why*. The results are shown and interpreted for you.
+> 🎓 **For Path B (Conceptual) Readers:** You don't need to run this code. Follow the explanations before and after each code block to grasp *what* we're doing and *why*. The results are shown and interpreted for you.
 
 ---
 
@@ -366,7 +366,7 @@ balances_quality = assess_data_quality(balances, 'balances')
 - **Transactions**: 1.85% missing transaction_ids, ~45% missing merchant data
 - **Balances**: Date columns stored as 'object' type instead of datetime
 
-> 💡 **Understanding "Duplicates":** When we say "60 duplicate account_ids," we mean there are 60 rows that share an account_id with another row. This is a problem because account_id should be a unique identifier (primary key). Seeing "duplicates" in columns like `account_type` or `status` is normal—many accounts can have the same type!
+> 💡 **About "Duplicates":** When we say "60 duplicate account_ids," we mean there are 60 rows that share an account_id with another row. This is a problem because account_id should be a unique identifier (primary key). Seeing "duplicates" in columns like `account_type` or `status` is normal—many accounts can have the same type!
 
 ---
 
@@ -497,7 +497,7 @@ balances_typed = validate_and_coerce_schema(balances, BALANCE_SCHEMA, 'balances'
   balance_date: 21,142 invalid dates → NaT
 ```
 
-> 💡 **Understanding Date Conversion Failures:** The ~50% "invalid dates" aren't garbage—they're valid dates in the wrong format! The data has mixed formats (MM/DD/YYYY and YYYY-MM-DD). When pandas tries to parse mixed formats, it fails on one format, setting those to NaT (null for dates). This simulates real-world systems where data from different sources uses different date conventions.
+> 💡 **About Date Conversion Failures:** The ~50% "invalid dates" aren't garbage—they're valid dates in the wrong format! The data has mixed formats (MM/DD/YYYY and YYYY-MM-DD). When pandas tries to parse mixed formats, it fails on one format, setting those to NaT (null for dates). This simulates real-world systems where data from different sources uses different date conventions.
 
 > 🎓 **Teaching Note:** "Coerce" means "try to convert, but if you can't, don't crash—just set to null." The `errors='coerce'` parameter is crucial for handling messy real-world data gracefully.
 
@@ -613,7 +613,7 @@ def deduplicate_and_standardize_accounts(df, logger):
     return df_clean
 ```
 
-> 💡 **Understanding Available vs Ledger Balance:** 
+> 💡 **About Available vs Ledger Balance:** 
 > - **Ledger Balance** = Official account balance (what the bank's books show)
 > - **Available Balance** = What you can actually spend (ledger minus holds/pending)
 > 
@@ -787,7 +787,7 @@ These aren't independent—they reinforce each other.
 | Use Case | Standard |
 |----------|----------|
 | Exploratory analysis | Lower bar, but document what's missing |
-| Model training | High bar, must understand biases |
+| Model training | High bar, must recognize biases |
 | Regulatory reporting | Very high bar, complete audit trail |
 | Production decisioning | Highest bar, lives at stake |
 
@@ -797,7 +797,7 @@ You pay the cost upfront (time spent documenting) to avoid catastrophic cost lat
 
 ### 4. Transparency Beats Cleverness
 
-A simple, well-documented pipeline that everyone can understand beats an elegant, opaque one.
+A simple, well-documented pipeline that everyone can follow beats an elegant, opaque one.
 
 ### 5. Automate Everything Possible
 
@@ -830,7 +830,7 @@ The data quality choices you made here have fairness implications:
 
 The documentation and lineage infrastructure you built here scales to model governance:
 - Model cards need data cards
-- Explainability starts with understanding the input data
+- Explainability starts with knowing the input data
 
 **The lesson**: You can't govern what you can't trace.
 
@@ -893,7 +893,7 @@ If you were setting data quality standards for your organization, what would you
 
 **Exercise 4: Peer Review**
 
-Trade pipelines with a peer and review each other's code. Can you understand their decisions? Would their data pass an audit?
+Trade pipelines with a peer and review each other's code. Can you follow their decisions? Would their data pass an audit?
 
 ### Assessment Rubric (100 points)
 

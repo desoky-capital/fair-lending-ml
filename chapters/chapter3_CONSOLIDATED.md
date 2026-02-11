@@ -8,7 +8,7 @@
 - The unique challenges of credit modeling: legal constraints, explainability requirements, adversarial environments
 - Real-world case studies: Apple Card, ZestFinance, UK Mortgage Bias
 - Building a complete credit risk model: data generation, feature engineering, baseline model, improvements
-- Understanding class imbalance and why naive models fail
+- Recognizing class imbalance and why naive models fail
 - SHAP-based explainability and adverse action notices
 - The critical lesson: validation performance ≠ test performance (distribution shift)
 
@@ -445,7 +445,7 @@ Root Cause: Distribution shift
 
 ### 3.5.1 Why Explainability Matters
 
-1. **Debugging** - Understand why the model failed
+1. **Debugging** - Diagnose why the model failed
 2. **Trust** - Stakeholders can see which features drive decisions
 3. **Compliance** - Adverse action notices required by law
 4. **Fairness** - Foundation for detecting bias
@@ -463,7 +463,7 @@ best_model = grid_search.best_estimator_
 
 # Note: We explain this model despite its test set failure. 
 # SHAP isn't just for celebrating good models—it's often MORE valuable
-# for understanding WHY a model failed.
+# for diagnosing WHY a model failed.
 
 explainer = shap.TreeExplainer(best_model)
 shap_values = explainer.shap_values(X_test)
@@ -481,7 +481,7 @@ shap.summary_plot(shap_values, X_test)
 4. Average balance (3mo)
 5. Credit utilization
 
-### 3.5.3 Understanding the Failure
+### 3.5.3 Diagnosing the Failure
 
 ```python
 # Compare probability distributions
@@ -624,7 +624,7 @@ This chapter built models but revealed critical problems:
 
 By the end of this chapter, learners should be able to:
 
-**LO1: Understand Credit Context**
+**LO1: Recognize Credit Context**
 - Explain why credit modeling differs from typical ML
 - Identify regulatory requirements (ECOA, FCRA, SR 11-7)
 - Articulate the fairness-accuracy trade-off
@@ -632,7 +632,7 @@ By the end of this chapter, learners should be able to:
 **LO2: Handle Class Imbalance**
 - Implement SMOTE, class weights, and threshold adjustment
 - Evaluate trade-offs between approaches
-- Understand why accuracy is misleading
+- Recognize why accuracy is misleading
 
 **LO3: Build and Evaluate Models**
 - Engineer features from banking data
@@ -646,7 +646,7 @@ By the end of this chapter, learners should be able to:
 
 **LO5: Recognize Limitations**
 - Identify distribution shift and its consequences
-- Understand why validation performance doesn't guarantee test performance
+- Recognize why validation performance doesn't guarantee test performance
 - Document model limitations honestly
 
 ### Discussion Questions
@@ -677,7 +677,7 @@ Apply Platt scaling or isotonic regression to calibrate probabilities. Does it f
 
 **Exercise 4: Adverse Action Notices (Applied)**
 
-Generate adverse action notices for 10 denied applicants. Are the explanations reasonable? Would a customer understand them?
+Generate adverse action notices for 10 denied applicants. Are the explanations reasonable? Would a customer follow them?
 
 ### Key Terms Introduced
 

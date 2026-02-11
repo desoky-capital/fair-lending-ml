@@ -15,7 +15,7 @@
 **Key takeaways:**
 - Algorithmic discrimination is a real and growing risk with severe consequences
 - This book is accessible to both technical practitioners AND non-technical readers
-- You don't need to write code to understand fairness—but you can if you want to
+- You don't need to write code to grasp fairness—but you can if you want to
 - We'll build a complete credit model that is accurate, fair, and explainable
 
 **Time estimate:**
@@ -45,7 +45,7 @@ Stories like this are no longer rare. They're becoming routine:
 
 There's no shortage of resources on machine learning. There's growing literature on AI ethics. There are regulatory guidelines and academic papers on fairness metrics.
 
-But there's a gap: **practical, accessible guidance for anyone who needs to understand, build, or oversee fair ML systems in financial services.**
+But there's a gap: **practical, accessible guidance for anyone who needs to evaluate, build, or oversee fair ML systems in financial services.**
 
 Most fairness resources fall into one of two camps:
 
@@ -59,7 +59,7 @@ Most fairness resources fall into one of two camps:
 - Checklists without substance
 - Principles without practical guidance
 
-**This book is different.** We build a complete credit model together—from raw data to production deployment—addressing fairness at every step. Whether you write the code yourself or simply follow the narrative, you'll understand *what* fairness means, *how* to achieve it, and *why* it matters.
+**This book is different.** We build a complete credit model together—from raw data to production deployment—addressing fairness at every step. Whether you write the code yourself or simply follow the narrative, you'll recognize *what* fairness means, *how* to achieve it, and *why* it matters.
 
 ### Code, Capital, and Conscience
 
@@ -69,7 +69,7 @@ The title of this book captures the three dimensions of building responsible AI 
 
 **Capital:** Algorithms in financial services decide who gets access to money—mortgages, credit cards, small business loans, the resources people need to build their lives. That domain has unique regulatory requirements (ECOA, FCRA, SR 11-7), business constraints (profitability, risk management), and human consequences that most ML tutorials ignore. This book doesn't ignore them.
 
-**Conscience:** Technical compliance isn't enough. Building systems that truly treat people fairly requires ethical commitment—not just passing audits, but caring about outcomes. This book aims to build that ethical awareness alongside technical understanding.
+**Conscience:** Technical compliance isn't enough. Building systems that truly treat people fairly requires ethical commitment—not just passing audits, but caring about outcomes. This book aims to build that ethical awareness alongside technical comprehension.
 
 All three matter. Code without conscience is dangerous. Conscience without code is ineffective. And both without recognizing capital—the financial context and human stakes—will fail in the real world.
 
@@ -90,12 +90,12 @@ All three matter. Code without conscience is dangerous. Conscience without code 
 │                                                                     │
 │  PATH A: HANDS-ON                    PATH B: CONCEPTUAL             │
 │  ─────────────────                   ──────────────────             │
-│  "I want to build it"                "I want to understand it"      │
+│  "I want to build it"                "I want to grasp the concepts"      │
 │                                                                     │
 │  • Run every code block              • Read explanations & results  │
 │  • Experiment with variations        • Skip the code blocks         │
 │  • Build the complete model          • Focus on insights & examples │
-│  • Create your own portfolio         • Understand what & why        │
+│  • Create your own portfolio         • Grasp the what & why        │
 │                                                                     │
 │  For:                                For:                           │
 │  • Data Scientists                   • Managers & Executives        │
@@ -110,15 +110,15 @@ All three matter. Code without conscience is dangerous. Conscience without code 
 └─────────────────────────────────────────────────────────────────────┘
 ```
 
-**Both paths lead to genuine understanding.** Every technical concept is explained in plain language. Every code block is preceded by explanation and followed by interpretation. Every result is analyzed for meaning, not just presented as output.
+**Both paths lead to genuine comprehension.** Every technical concept is explained in plain language. Every code block is preceded by explanation and followed by interpretation. Every result is analyzed for meaning, not just presented as output.
 
-You don't need to run a single line of code to understand fairness in credit modeling.
+You don't need to run a single line of code to grasp fairness in credit modeling.
 
 ### Path A: Hands-On Readers
 
 **Data Scientists & ML Engineers**
 
-You're building models that affect people's lives—credit decisions, fraud detection, insurance pricing. You know ML fundamentals, but you need to understand:
+You're building models that affect people's lives—credit decisions, fraud detection, insurance pricing. You know ML fundamentals, but you need to know:
 - How to measure fairness (there's more than one way)
 - How to fix unfairness when you find it
 - How to document and monitor for compliance
@@ -130,7 +130,7 @@ This book gives you the complete toolkit with working code.
 
 You're preparing for a career in fintech, data science, or AI ethics. You need:
 - Hands-on experience with real techniques
-- Understanding of industry context
+- Knowledge of industry context
 - Portfolio projects that demonstrate competence
 - Knowledge that's actually used in practice
 
@@ -145,7 +145,7 @@ This book bridges classroom learning and industry reality.
 
 **Managers & Executives**
 
-You're making decisions about AI strategy, staffing, and risk. You need to understand:
+You're making decisions about AI strategy, staffing, and risk. You need to know:
 - What fairness actually means (and why there's no single definition)
 - What's technically feasible and what's not
 - What questions to ask your technical teams
@@ -155,7 +155,7 @@ This book gives you informed perspective without requiring you to write code.
 
 **Risk & Compliance Professionals**
 
-You're responsible for ensuring models meet regulatory requirements. You need to understand:
+You're responsible for ensuring models meet regulatory requirements. You need to know:
 - What fairness metrics actually measure
 - What good documentation looks like
 - What monitoring should be in place
@@ -165,7 +165,7 @@ This book demystifies the technical side so you can do your job better.
 
 **Legal & Policy Teams**
 
-You're advising on regulatory compliance and potential liability. You need to understand:
+You're advising on regulatory compliance and potential liability. You need to know:
 - How algorithms can discriminate without explicit intent
 - What "disparate impact" means technically
 - What mitigations are available
@@ -191,9 +191,9 @@ Every chapter is written with both audiences in mind:
 | **Key insight callouts** | Critical points highlighted for skimmers |
 | **Real-world examples** | Concrete scenarios that make concepts tangible |
 
-**Non-coders:** When you see a code block, feel free to skip it entirely. Read the explanation above it (what we're about to do) and below it (what the results mean). You'll understand the concept fully.
+**Non-coders:** When you see a code block, feel free to skip it entirely. Read the explanation above it (what we're about to do) and below it (what the results mean). You'll grasp the concept fully.
 
-**Coders:** The explanations aren't just for non-coders—they'll deepen your understanding too. Don't skip them.
+**Coders:** The explanations aren't just for non-coders—they'll deepen your knowledge too. Don't skip them.
 
 ---
 
@@ -218,7 +218,7 @@ CHAPTER 2: BUILDING THE CREDIT MODEL
          ▼
 CHAPTER 3: FAIRNESS & COMPLIANCE
 "How do we make sure the model is fair?"
-    • Understanding fairness definitions
+    • Recognizing fairness definitions
     • Measuring bias in our model
     • Mitigation techniques
     • Production monitoring
@@ -329,21 +329,21 @@ Throughout this book, we build a complete credit risk model:
 
 ### The Lessons You'll Learn
 
-Beyond the technical artifacts, you'll gain understanding:
+Beyond the technical artifacts, you'll gain knowledge:
 
-**Technical Understanding:**
+**Technical Knowledge:**
 - Why SMOTE can backfire (and what to do instead)
 - Why models fail on new data (distribution shift)
 - Why fairness definitions conflict (impossibility theorems)
 - Why calibration often beats complex mitigations
 
-**Process Understanding:**
+**Process Knowledge:**
 - How to structure ML projects for fairness
 - How to document decisions for regulators
 - How to monitor production systems
 - How to respond when things go wrong
 
-**Strategic Understanding:**
+**Strategic Knowledge:**
 - Where regulations are heading
 - How to build organizational capability
 - How to make fairness a competitive advantage
@@ -374,7 +374,7 @@ The stakes are high. Algorithms are making decisions that affect people's access
 
 You're holding a guide to building them right.
 
-Whether you're a data scientist who will implement these techniques, a compliance officer who will validate them, a manager who will oversee them, or simply someone who wants to understand how AI fairness works—this book is for you.
+Whether you're a data scientist who will implement these techniques, a compliance officer who will validate them, a manager who will oversee them, or simply someone who wants to learn how AI fairness works—this book is for you.
 
 **The tools are here. The techniques are proven. The need is urgent.**
 
@@ -392,14 +392,14 @@ Let's build something fair.
 
 2. **Fairness vs. Accuracy:** Before reading further, what do you think happens when you try to make a model both accurate AND fair? Do you think there are trade-offs?
 
-3. **Two Paths:** This book offers a "conceptual" path for non-coders. Do you think it's possible to truly understand algorithmic fairness without understanding the code? Why or why not?
+3. **Two Paths:** This book offers a "conceptual" path for non-coders. Do you think it's possible to truly grasp algorithmic fairness without knowing the code? Why or why not?
 
 4. **Code, Capital, Conscience:** Which of these three dimensions do you think is most often neglected in practice? Why?
 
 ### Suggested Activities
 
 **For Individual Readers:**
-- Before continuing, write down your current definition of "algorithmic fairness" in 2-3 sentences. Return to this at the end of Chapter 3 and see how your understanding has evolved.
+- Before continuing, write down your current definition of "algorithmic fairness" in 2-3 sentences. Return to this at the end of Chapter 3 and see how your perspective has evolved.
 
 **For Study Groups:**
 - Discuss: Find a recent news story about algorithmic discrimination. What went wrong? Which of the three dimensions (Code, Capital, Conscience) failed?

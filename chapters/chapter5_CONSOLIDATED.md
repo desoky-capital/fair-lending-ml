@@ -557,7 +557,7 @@ By the end of this chapter, learners should be able to:
 - Articulate when each mitigation technique is appropriate
 - Apply the principle "calibration first"
 
-**LO2: Understand Process Discipline**
+**LO2: Apply Process Discipline**
 - Explain the distinct purposes of train/validate/test
 - Describe what regulators want to see in documentation
 - Design a fairness monitoring system

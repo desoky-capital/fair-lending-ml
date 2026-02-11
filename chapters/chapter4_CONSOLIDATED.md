@@ -33,7 +33,7 @@
 
 ---
 
-## 4.1 Understanding Algorithmic Fairness
+## 4.1 Defining Algorithmic Fairness
 
 Chapter 3 built a credit model that achieved strong validation performance but failed on the test set. But even if we'd achieved perfect accuracy, a critical question would remain: **Is the model fair?**
 
@@ -96,7 +96,7 @@ disparate_impact_ratio = black_approval_rate / white_approval_rate
 
 **Principle:** Equal true positive rates AND equal false positive rates across groups.
 
-**Understanding errors in credit scoring:**
+**About errors in credit scoring:**
 
 **Table 4.1: Error Types in Credit Scoring**
 
@@ -678,7 +678,7 @@ def create_fairness_snapshot(y_true, y_pred, y_prob, protected_attr,
 
 By the end of this chapter, learners should be able to:
 
-**LO1: Understand Fairness Definitions**
+**LO1: Recognize Fairness Definitions**
 - Explain demographic parity, equalized odds, and calibration
 - Articulate why these definitions conflict
 - Apply the impossibility result to real scenarios

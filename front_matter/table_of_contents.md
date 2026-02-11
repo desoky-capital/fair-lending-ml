@@ -34,7 +34,7 @@
 | Section | Page |
 |---------|------|
 | Executive Summary | ___ |
-| 2.1 Understanding Data Quality | ___ |
+| 2.1 Recognizing Data Quality | ___ |
 | 2.2 Building the Data Pipeline | ___ |
 | 2.3 Documentation and Auditability | ___ |
 | 2.4 Connecting to Business Context | ___ |
@@ -99,7 +99,7 @@
 | Section | Page |
 |---------|------|
 | Executive Summary | ___ |
-| 4.1 Understanding Algorithmic Fairness | ___ |
+| 4.1 Defining Algorithmic Fairness | ___ |
 | 4.2 Measuring Bias in Your Model | ___ |
 | 4.3 Bias Mitigation Techniques | ___ |
 | 4.4 Production Monitoring for Fairness | ___ |
@@ -224,7 +224,7 @@ Chapter 1 → Chapter 2 → Chapter 3 → Chapter 4 → Chapter 5
 ```
 Chapter 1 → Chapter 3 (Key Takeaways) → Chapter 4 (4.1, 4.3) → Chapter 5
 ```
-*Focus on concepts, skim code, understand trade-offs*
+*Focus on concepts, skim code, grasp trade-offs*
 
 ### Path C: Compliance/Risk Professional
 **Time:** 2-3 hours
@@ -246,7 +246,7 @@ Appendix A (Metrics) + Appendix B (Regulations) + Appendix C (Code)
 
 | I need to... | Go to... |
 |--------------|----------|
-| Understand why fairness matters | Chapter 1 |
+| Recognize why fairness matters | Chapter 1 |
 | Build a data pipeline | Chapter 2 |
 | Train a credit model | Chapter 3, Sections 3.1-3.2 |
 | Fix a failing model | Chapter 3, Sections 3.3-3.4 |

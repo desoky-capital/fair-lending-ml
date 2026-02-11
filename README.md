@@ -152,7 +152,7 @@ Run all code, complete exercises, build the full pipeline.
 Chapter 1 → Chapter 3 (Key Takeaways) → Chapter 4 → Chapter 5
 ```
 
-Focus on concepts, skim code, understand trade-offs.
+Focus on concepts, skim code, grasp trade-offs.
 
 ### Path C: Compliance/Risk Professional
 **Time:** 3-4 hours
