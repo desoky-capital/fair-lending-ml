@@ -1,46 +1,51 @@
 
 ======================================================================
-ADVERSE ACTION NOTICE
+CREDIT APPLICATION APPROVED
 ======================================================================
 
-Application ID:    19
+Application ID:    9
 Decision:          APPROVED
-Default Risk:      0.1%
-Decision Threshold: 25.0%
+Default Risk:      0.7%
+Decision Threshold: 20.0%
 
-PRIMARY FACTORS IN THIS DECISION:
----------------------------------
+Congratulations! Your credit application has been APPROVED.
 
-3. Feat Spending Entertainment
-   Your value: 8.32
-   Impact: Increased risk (+0.0851 risk points)
+KEY FACTORS SUPPORTING YOUR APPROVAL:
+--------------------------------------
 
-25. Feat Transactions Per Month
-   Your value: 7.00
-   Impact: Increased risk (+0.0293 risk points)
+1. FICO Score
+   Your value: 798.00
+   Impact: Significantly decreased your estimated risk
 
-23. Feat Avg Balance 6Mo
-   Your value: 9247.30
-   Impact: Increased risk (+0.0247 risk points)
+2. Branch Transactions (count)
+   Your value: 2.00
+   Impact: Significantly decreased your estimated risk
 
-12. Feat Balance Trend
+3. Healthcare Spending ($)
    Your value: 0.00
-   Impact: Increased risk (+0.0001 risk points)
+   Impact: Significantly decreased your estimated risk
 
-YOUR RIGHTS:
-------------
-- You have the right to request a free copy of your credit report
-- You may dispute inaccurate information in your credit report
-- Contact: [Credit Bureau Contact Information]
+4. Online Transactions (count)
+   Your value: 3.00
+   Impact: Significantly decreased your estimated risk
+
+MAINTAINING GOOD STANDING:
+--------------------------
+To maintain your excellent credit standing:
+- Continue paying all bills on time
+- Keep credit card balances low (below 30% of limits)
+- Avoid taking on excessive new debt
+- Monitor your credit report regularly
 
 NEXT STEPS:
 -----------
-To improve your chances of approval:
+A loan officer will contact you within 2 business days to finalize
+your loan terms and complete the application process.
+
+Questions? Contact us at [Contact Information]
 
 
-This decision was made using an automated credit scoring model.
-You may request human review by contacting [Contact Information].
-
+======================================================================
 Model: XGBoost
-Date: 2026-01-20
+Date: 2026-02-20
 ======================================================================

@@ -178,6 +178,273 @@ def validate_and_coerce_schema(df, schema, table_name, logger=None):
     return df_clean
 ```
 
+### Missing Data Handlers
+
+```python
+def handle_missing_accounts(df, logger):
+    """
+    Handle missing values in accounts table with column-specific strategies.
+    
+    Strategy by column:
+        - account_id: DROP (primary key, cannot be null)
+        - customer_id: DROP (required for identification)
+        - account_type: IMPUTE from credit_limit
+        - open_date: DROP (required for temporal analysis)
+        - credit_limit: KEEP NULL (NULL = not applicable)
+        - status: IMPUTE as 'active' (most common)
+        - branch_code: KEEP NULL (NULL = online-only account)
+    """
+    print(f"\n[Layer 2: Missing Data] Processing accounts...")
+    df_clean = df.copy()
+    initial_count = len(df_clean)
+    
+    # DROP: Missing account_id (primary key)
+    missing_id = df_clean['account_id'].isnull()
+    if missing_id.any():
+        count = missing_id.sum()
+        df_clean = df_clean[~missing_id]
+        logger.log_issue('accounts', 'account_id', 'missing_value', count, 
+                        'drop_record', 'Primary key cannot be null')
+        print(f"  Dropped {count} records with missing account_id")
+    
+    # DROP: Missing customer_id (required for identification)
+    missing_cust = df_clean['customer_id'].isnull()
+    if missing_cust.any():
+        count = missing_cust.sum()
+        df_clean = df_clean[~missing_cust]
+        logger.log_issue('accounts', 'customer_id', 'missing_value', count,
+                        'drop_record', 'Required for identification')
+        print(f"  Dropped {count} records with missing customer_id")
+    
+    # IMPUTE: account_type from credit_limit
+    missing_type = df_clean['account_type'].isnull()
+    if missing_type.any():
+        count = missing_type.sum()
+        # If credit_limit exists and > 0, likely credit_card; else checking
+        df_clean.loc[missing_type & (df_clean['credit_limit'] > 0), 'account_type'] = 'credit_card'
+        df_clean.loc[missing_type & (df_clean['credit_limit'].isnull() | (df_clean['credit_limit'] == 0)), 'account_type'] = 'checking'
+        logger.log_issue('accounts', 'account_type', 'missing_value', count,
+                        'impute', 'Inferred from credit_limit')
+        print(f"  Imputed {count} missing account_type values")
+    
+    # DROP: Missing open_date (required for temporal analysis)
+    missing_date = df_clean['open_date'].isnull()
+    if missing_date.any():
+        count = missing_date.sum()
+        df_clean = df_clean[~missing_date]
+        logger.log_issue('accounts', 'open_date', 'missing_value', count,
+                        'drop_record', 'Required for temporal analysis')
+        print(f"  Dropped {count} records with missing open_date")
+    
+    # IMPUTE: status as 'active' (most common value)
+    missing_status = df_clean['status'].isnull()
+    if missing_status.any():
+        count = missing_status.sum()
+        df_clean.loc[missing_status, 'status'] = 'active'
+        logger.log_issue('accounts', 'status', 'missing_value', count,
+                        'impute', 'Default to most common value: active')
+    
+    # KEEP NULL: credit_limit (NULL = not applicable for checking/savings)
+    # KEEP NULL: branch_code (NULL = online-only account)
+    
+    final_count = len(df_clean)
+    print(f"  ✓ Accounts: {initial_count} → {final_count} rows")
+    
+    return df_clean
+
+
+def handle_missing_transactions(df, logger):
+    """
+    Handle missing values in transactions table.
+    
+    Strategy by column:
+        - transaction_id: DROP (primary key)
+        - account_id: DROP (required for linking)
+        - transaction_date: DROP (required for temporal analysis)
+        - amount: DROP (core field)
+        - transaction_type: IMPUTE as 'other'
+        - merchant: KEEP NULL (ATM/transfer = no merchant)
+        - channel: IMPUTE as 'unknown'
+    """
+    print(f"\n[Layer 2: Missing Data] Processing transactions...")
+    df_clean = df.copy()
+    initial_count = len(df_clean)
+    
+    # DROP: Missing IDs (transaction_id or account_id)
+    missing_ids = df_clean['transaction_id'].isnull() | df_clean['account_id'].isnull()
+    if missing_ids.any():
+        count = missing_ids.sum()
+        df_clean = df_clean[~missing_ids]
+        logger.log_issue('transactions', 'id_fields', 'missing_value', count,
+                        'drop_record', 'Primary/foreign key cannot be null')
+        print(f"  Dropped {count} records with missing IDs")
+    
+    # DROP: Missing transaction_date
+    missing_date = df_clean['transaction_date'].isnull()
+    if missing_date.any():
+        count = missing_date.sum()
+        df_clean = df_clean[~missing_date]
+        logger.log_issue('transactions', 'transaction_date', 'missing_value', count,
+                        'drop_record', 'Required for temporal analysis')
+        print(f"  Dropped {count} records with missing transaction_date")
+    
+    # IMPUTE: transaction_type
+    missing_type = df_clean['transaction_type'].isnull()
+    if missing_type.any():
+        count = missing_type.sum()
+        df_clean.loc[missing_type, 'transaction_type'] = 'other'
+        logger.log_issue('transactions', 'transaction_type', 'missing_value', count,
+                        'impute', 'Default to other')
+    
+    # KEEP NULL: merchant (legitimate for ATM withdrawals, transfers)
+    
+    final_count = len(df_clean)
+    print(f"  ✓ Transactions: {initial_count} → {final_count} rows")
+    
+    return df_clean
+
+
+def handle_missing_balances(df, logger):
+    """
+    Handle missing values in balances table.
+    
+    Strategy by column:
+        - account_id: DROP (required for linking)
+        - balance_date: DROP (required for temporal analysis)
+        - available_balance: DROP (core field)
+        - ledger_balance: DROP (core field)
+        - overdraft_count: IMPUTE as 0
+    """
+    print(f"\n[Layer 2: Missing Data] Processing balances...")
+    df_clean = df.copy()
+    initial_count = len(df_clean)
+    
+    # DROP: Missing account_id or balance_date
+    missing_critical = (df_clean['account_id'].isnull() | 
+                       df_clean['balance_date'].isnull() |
+                       df_clean['available_balance'].isnull() |
+                       df_clean['ledger_balance'].isnull())
+    if missing_critical.any():
+        count = missing_critical.sum()
+        df_clean = df_clean[~missing_critical]
+        logger.log_issue('balances', 'critical_fields', 'missing_value', count,
+                        'drop_record', 'Missing ID, date, or balance fields')
+        print(f"  Dropped {count} records with missing IDs or dates")
+    
+    # IMPUTE: overdraft_count as 0
+    missing_od = df_clean['overdraft_count'].isnull()
+    if missing_od.any():
+        count = missing_od.sum()
+        df_clean.loc[missing_od, 'overdraft_count'] = 0
+        logger.log_issue('balances', 'overdraft_count', 'missing_value', count,
+                        'impute', 'Default to 0')
+    
+    final_count = len(df_clean)
+    print(f"  ✓ Balances: {initial_count} → {final_count} rows")
+    
+    return df_clean
+```
+
+### Deduplication & Consistency
+
+```python
+def deduplicate_and_standardize_accounts(df, logger):
+    """Remove duplicates and standardize text in accounts table."""
+    print(f"\n[Layer 3: Deduplication & Consistency] Processing accounts...")
+    df_clean = df.copy()
+    
+    # Remove duplicate account_ids (keep first occurrence)
+    duplicates = df_clean['account_id'].duplicated()
+    if duplicates.any():
+        count = duplicates.sum()
+        df_clean = df_clean[~duplicates]
+        logger.log_issue('accounts', 'account_id', 'duplicate', count,
+                        'drop_record', 'Kept first occurrence of duplicate')
+        print(f"  Removed {count} duplicate account_ids")
+    
+    # Standardize account_type (fix typos and casing)
+    type_mapping = {
+        'chekcing': 'checking',
+        'CHECKING': 'checking',
+        'SAVINGS': 'savings',
+        'Checking': 'checking',
+        'Savings': 'savings'
+    }
+    for bad_val, good_val in type_mapping.items():
+        mask = df_clean['account_type'] == bad_val
+        if mask.any():
+            df_clean.loc[mask, 'account_type'] = good_val
+            logger.log_issue('accounts', 'account_type', 'typo', mask.sum(),
+                            'standardize', f'Fixed: {bad_val} → {good_val}')
+    
+    # Standardize status
+    status_mapping = {'ACTIVE': 'active', 'CLOSED': 'closed', 'Active': 'active'}
+    for bad_val, good_val in status_mapping.items():
+        mask = df_clean['status'] == bad_val
+        if mask.any():
+            df_clean.loc[mask, 'status'] = good_val
+            logger.log_issue('accounts', 'status', 'inconsistent_case', mask.sum(),
+                            'standardize', f'Fixed: {bad_val} → {good_val}')
+    
+    return df_clean
+
+
+def deduplicate_and_standardize_transactions(df, logger):
+    """Remove duplicates and standardize text in transactions table."""
+    print(f"\n[Layer 3: Deduplication & Consistency] Processing transactions...")
+    df_clean = df.copy()
+    
+    # Remove duplicate transaction_ids
+    duplicates = df_clean['transaction_id'].duplicated()
+    if duplicates.any():
+        count = duplicates.sum()
+        df_clean = df_clean[~duplicates]
+        logger.log_issue('transactions', 'transaction_id', 'duplicate', count,
+                        'drop_record', 'Kept first occurrence of duplicate')
+        print(f"  Removed {count} duplicate transaction_ids")
+    
+    # Standardize transaction_type
+    type_mapping = {
+        'DEBIT': 'debit', 'CREDIT': 'credit',
+        'Debit': 'debit', 'Credit': 'credit'
+    }
+    for bad_val, good_val in type_mapping.items():
+        mask = df_clean['transaction_type'] == bad_val
+        if mask.any():
+            df_clean.loc[mask, 'transaction_type'] = good_val
+            logger.log_issue('transactions', 'transaction_type', 'inconsistent_case', 
+                            mask.sum(), 'standardize', f'Fixed: {bad_val} → {good_val}')
+    
+    return df_clean
+
+
+def deduplicate_and_standardize_balances(df, logger):
+    """Remove duplicates and enforce business rules in balances table."""
+    print(f"\n[Layer 3: Deduplication & Consistency] Processing balances...")
+    df_clean = df.copy()
+    
+    # Remove exact duplicate rows
+    duplicates = df_clean.duplicated(subset=['account_id', 'balance_date'])
+    if duplicates.any():
+        count = duplicates.sum()
+        df_clean = df_clean[~duplicates]
+        logger.log_issue('balances', 'account_id+balance_date', 'duplicate', count,
+                        'drop_record', 'Removed duplicate balance snapshots')
+        print(f"  Removed {count} duplicate balance snapshots")
+    
+    # Business rule: available_balance cannot exceed ledger_balance
+    violation = df_clean['available_balance'] > df_clean['ledger_balance']
+    if violation.any():
+        count = violation.sum()
+        # Fix by capping available_balance at ledger_balance
+        df_clean.loc[violation, 'available_balance'] = df_clean.loc[violation, 'ledger_balance']
+        logger.log_issue('balances', 'available_balance', 'business_rule_violation', count,
+                        'correct', 'Capped available_balance at ledger_balance')
+        print(f"  Fixed {count} records where available_balance > ledger_balance")
+    
+    return df_clean
+```
+
 ---
 
 ## C.3 Fairness Metrics Functions (Chapter 4)

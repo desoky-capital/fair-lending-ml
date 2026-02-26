@@ -6,7 +6,7 @@ MODEL CARD: Credit Default Prediction Model
 MODEL DETAILS
 -------------
 Model Type:       XGBoost
-Training Date:    2026-01-19
+Training Date:    2026-02-19
 Version:          1.0
 Developer:        [Your Name/Organization]
 Purpose:          Predict consumer credit default risk for lending decisions
@@ -26,9 +26,9 @@ Algorithm:        XGBoost (Gradient Boosted Trees)
 Features:         30 selected from 51 original features
 Hyperparameters:
   max_depth:      7
-  learning_rate:  0.1
+  learning_rate:  0.05
   n_estimators:   100
-  subsample:      0.8
+  subsample:      1.0
 
 Training Data:    3,799 accounts (5.1% default rate)
   - SMOTE applied (50/50 balance for training)
@@ -38,36 +38,36 @@ Training Data:    3,799 accounts (5.1% default rate)
 VALIDATION PERFORMANCE
 ----------------------
 Dataset:          477 accounts (3.4% default rate)
-Optimal Threshold: 0.25
+Optimal Threshold: 0.20
 
 Metric            Value      Interpretation
 ------            -----      --------------
-ROC-AUC          0.696      Excellent discrimination
-Gini             0.391      Above 0.3 production minimum
-Precision        20.0%       1 in 5 predictions correct
-Recall           18.8%       Catches 1 in 5 defaults
-F1 Score         0.194      Balanced performance
+ROC-AUC          0.658      Excellent discrimination
+Gini             0.315      Above 0.3 production minimum
+Precision        9.5%       1 in 10 predictions correct
+Recall           25.0%       Catches 1 in 4 defaults
+F1 Score         0.138      Balanced performance
 
 TEST PERFORMANCE (REALITY CHECK)
 --------------------------------
 Dataset:          463 accounts (6.5% default rate)
-Using Threshold:  0.25 (from validation)
+Using Threshold:  0.20 (from validation)
 
 Metric            Value      Status
 ------            -----      ------
-ROC-AUC          0.579      Slight improvement over baseline
-Gini             0.158      Below production minimum (0.3)
-Precision        0.0%       FAILURE - No defaults caught correctly
-Recall           0.0%       FAILURE - All defaults missed
+ROC-AUC          0.683      Improved over baseline (0.559)
+Gini             0.365      Above 0.3 production minimum ✓
+Precision        14.3%       Low — 1 in 7 flagged accounts actually default
+Recall           10.0%       Low — catches 3 of 30 defaults
 
 ⚠️ CRITICAL LIMITATIONS
 ------------------------
-Severe - test probabilities 3.6x lower than validation
-Poor - validation threshold (0.25) fails on test
-Model predicts all defaults incorrectly (0% precision, 0% recall)
+Test probabilities 2.1x lower than validation
+Poor - validation threshold (0.20) underperforms on test
+14.3% precision, 10.0% recall at threshold 0.20
 
 ROOT CAUSE: Distribution shift between validation and test data
-  - Test probabilities are 3.6x lower than validation
+  - Test probabilities are 1.2x lower than validation
   - SMOTE training created poorly-calibrated probabilities
   - Temporal differences between time periods
 
@@ -76,7 +76,7 @@ REQUIRED ACTIONS: Probability recalibration before deployment
 
 FAIRNESS & BIAS
 ---------------
-⚠️ Not yet evaluated - Chapter 3 will assess:
+⚠️ Not yet evaluated - Chapter 4 will assess:
   - Disparate impact across protected groups
   - Calibration fairness
   - Equalized odds
@@ -91,9 +91,9 @@ Available:
   ✓ Feature dependence analysis
 
 Top 3 Most Important Features:
-  1. fico_score (mean |SHAP|: 0.7864)
-  2. feat_channel_online (mean |SHAP|: 0.5043)
-  3. feat_num_txn_12mo (mean |SHAP|: 0.4696)
+  1. fico_score (mean |SHAP|: 0.6535)
+  2. num_delinquencies_24mo (mean |SHAP|: 0.3671)
+  3. feat_spending_fuel (mean |SHAP|: 0.3314)
 
 RECOMMENDATIONS
 ---------------
@@ -113,7 +113,7 @@ CONTACT & FEEDBACK
 ------------------
 Model Owner:      [Your Name]
 Feedback:         [Email/System]
-Documentation:    Section 2.4 - Model Explainability
-Last Updated:     2026-01-20
+Documentation:    Section 3.5 - Model Explainability
+Last Updated:     2026-02-19
 
 ================================================================================

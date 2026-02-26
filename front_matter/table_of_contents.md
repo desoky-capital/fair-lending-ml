@@ -59,31 +59,32 @@
 | Section | Page |
 |---------|------|
 | Executive Summary | ___ |
-| 3.1 The Credit Modeling Challenge | ___ |
-| 3.2 Building the Baseline Model | ___ |
-| 3.3 The Honest Failure: When Models Break | ___ |
-| 3.4 Model Improvement and Tuning | ___ |
-| 3.5 Model Explainability with SHAP | ___ |
+| 3.1 Problem Framing: Credit Risk in Context | ___ |
+| 3.2 Data Preparation | ___ |
+| 3.3 Baseline Model | ___ |
+| 3.4 Model Improvement | ___ |
+| 3.5 Explainability | ___ |
 | Key Takeaways | ___ |
 | Teaching Notes | ___ |
 
 **Figures:**
-- Figure 3.1: Confusion Matrix - SMOTE Model
+- Figure 3.1: Confusion Matrix — SMOTE Logistic Regression (Validation Set)
 - Figure 3.2: Top 10 Most Important Features (Logistic Regression)
-- Figure 3.3: ROC Curve - Credit Default Model
-- Figure 3.4: Precision-Recall Curve - Credit Default Model
-- Figure 3.5: Top 10 Features - Random Forest
-- Figure 3.6: Top 10 Features - XGBoost
-- Figure 3.7: Model Comparison (Precision, Recall, ROC-AUC)
-- Figure 3.8: Precision-Recall Trade-off by Decision Threshold
-- Figure 3.9: Probability Distributions by Dataset
-- Figure 3.10: Calibration Curves by Dataset
-- Figure 3.11: SHAP Summary Plot
-- Figure 3.12: SHAP Dependence Plots
-- Figure 3.13: SHAP Waterfall - Highest Probability Prediction
-- Figure 3.14: SHAP Waterfall - Correct Non-Default
-- Figure 3.15: SHAP Waterfall - Missed Default (False Negative)
-- Figure 3.16: SHAP Waterfall Examples - Combined View
+- Figure 3.3: ROC Curve — SMOTE Logistic Regression (Validation Set)
+- Figure 3.4: Precision-Recall Curve — SMOTE Logistic Regression (Validation Set)
+- Figure 3.5: Top 10 Most Important Features (Random Forest)
+- Figure 3.6: Model Comparison (Validation Set)
+- Figure 3.7: Top 15 Most Important Features (Tuned XGBoost)
+- Figure 3.8: Threshold Optimization — Tuned XGBoost
+- Figure 3.9: SHAP Summary Plot — Feature Importance (Test Set)
+- Figure 3.10: SHAP Dependence Plots — Top 5 Features
+- Figure 3.11: Probability Distributions by Dataset
+- Figure 3.12: Calibration Curves by Dataset
+- Figure 3.13: SHAP Waterfall — Missed Default (False Negative)
+- Figure 3.14: SHAP Waterfall — Correct Non-Default (True Negative)
+- Figure 3.15: SHAP Waterfall — Highest Probability Prediction (False Positive)
+- Figure 3.16: SHAP Waterfall — Correct Default (True Positive)
+- Figure 3.17: Calibration Comparison (Original vs. Platt vs. Isotonic)
 
 **Tables:**
 - Table 3.1: What Makes Credit Models Different
@@ -100,22 +101,22 @@
 |---------|------|
 | Executive Summary | ___ |
 | 4.1 Defining Algorithmic Fairness | ___ |
-| 4.2 Measuring Bias in Your Model | ___ |
+| 4.2 Measuring Bias in Our Model | ___ |
 | 4.3 Bias Mitigation Techniques | ___ |
-| 4.4 Production Monitoring for Fairness | ___ |
+| 4.4 Production Monitoring | ___ |
 | 4.5 Regulatory Documentation | ___ |
+| 4.6 Lessons Learned | ___ |
 | Key Takeaways | ___ |
 | Common Pitfalls | ___ |
 | Teaching Notes | ___ |
 
 **Figures:**
 - Figure 4.1: Fairness Dashboard (6-Panel)
-- Figure 4.2: Calibration Comparison (Original vs. Platt vs. Isotonic)
-- Figure 4.3: Accuracy vs. Fairness Trade-off
+- Figure 4.2: ROC-AUC vs. Fairness Trade-off (Validation and Test)
 
 **Tables:**
 - Table 4.1: Error Types in Credit Scoring
-- Table 4.2: Mitigation Approach Comparison
+- Table 4.2: Mitigation Approach Comparison (Test Set)
 - Table 4.3: Monitoring Alert Thresholds
 - Table 4.4: Common Fairness Pitfalls
 - Table 4.5: Key Terms: Fairness & Compliance
@@ -203,7 +204,7 @@
 | **Chapters** | 5 |
 | **Appendices** | 4 |
 | **Figures** | 20 |
-| **Tables** | 48 |
+| **Tables** | 62 |
 
 ---
 
@@ -250,6 +251,7 @@ Appendix A (Metrics) + Appendix B (Regulations) + Appendix C (Code)
 | Build a data pipeline | Chapter 2 |
 | Train a credit model | Chapter 3, Sections 3.1-3.2 |
 | Fix a failing model | Chapter 3, Sections 3.3-3.4 |
+| Calibrate model probabilities | Chapter 3, Section 3.5 |
 | Explain model predictions | Chapter 3, Section 3.5 |
 | Define fairness metrics | Chapter 4, Section 4.1 |
 | Measure bias | Chapter 4, Section 4.2 |

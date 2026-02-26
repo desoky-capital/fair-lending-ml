@@ -40,7 +40,7 @@
 | Table | Title | Page |
 |-------|-------|------|
 | **4.1** | Error Types in Credit Scoring | ___ |
-| **4.2** | Mitigation Approach Comparison | ___ |
+| **4.2** | Mitigation Approach Comparison (Test Set) | ___ |
 | **4.3** | Monitoring Alert Thresholds | ___ |
 | **4.4** | Common Fairness Pitfalls | ___ |
 | **4.5** | Key Terms: Fairness & Compliance | ___ |

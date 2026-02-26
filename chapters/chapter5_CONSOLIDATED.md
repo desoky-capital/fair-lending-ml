@@ -127,19 +127,20 @@ We achieved "fairness" by destroying the model.
 #### Lesson 6: Know When Each Mitigation Technique Acts
 
 ```
-          TRAINING              PREDICTION           DECISION
-             │                      │                    │
-Data ──► [Reweighting] ──► Model ──► [Calibration] ──► Probs ──► [Thresholds] ──► Decision
-         (adjust loss)              (adjust probs)              (adjust cutoff)
+                            TRAINING                      PREDICTION            DECISION
+                               │                              │                    │
+Data ──► [Reweighting] ──► [Model + Fairness Constraints] ──► [Calibration] ──► Probs ──► [Thresholds] ──► Decision
+          (adjust data)     (adjust loss function)             (adjust probs)              (adjust cutoff)
 ```
 
 **Table 5.2: Mitigation Techniques - When They Act**
 
 | Technique | When It Acts | Requires Retraining? |
 |-----------|--------------|---------------------|
-| **Reweighting** | Before/during training | Yes |
-| **Calibration** | After training | No |
-| **Group Thresholds** | After training | No |
+| **Reweighting** | Before training (adjusts sample weights) | Yes |
+| **Fairness Constraints** | During training (penalizes unfair outcomes) | Yes |
+| **Calibration** | After training (remaps probabilities) | No |
+| **Group Thresholds** | After training (different cutoffs per group) | No |
 
 ---
 

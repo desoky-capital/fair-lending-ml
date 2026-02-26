@@ -3,31 +3,31 @@
 CREDIT APPLICATION APPROVED
 ======================================================================
 
-Application ID:    0
+Application ID:    1
 Decision:          APPROVED
-Default Risk:      3.0%
-Decision Threshold: 25.0%
+Default Risk:      5.3%
+Decision Threshold: 20.0%
 
 Congratulations! Your credit application has been APPROVED.
 
 KEY FACTORS SUPPORTING YOUR APPROVAL:
 --------------------------------------
 
-1. Feat Num Txn 12Mo
-   Your value: 12.00
-   Impact: Decreased risk by 0.6948 points
-
-2. Feat Channel Atm
-   Your value: 2.00
-   Impact: Decreased risk by 0.5551 points
-
-3. Feat Spending Grocery
+1. Fuel Spending ($)
    Your value: 0.00
-   Impact: Decreased risk by 0.4123 points
+   Impact: Significantly decreased your estimated risk
 
-4. Feat Channel Mobile
-   Your value: 1.00
-   Impact: Decreased risk by 0.4037 points
+2. Grocery Spending ($)
+   Your value: 0.00
+   Impact: Significantly decreased your estimated risk
+
+3. Delinquencies (Last 24 Months)
+   Your value: 0.00
+   Impact: Significantly decreased your estimated risk
+
+4. Travel Spending ($)
+   Your value: 0.00
+   Impact: Moderately decreased your estimated risk
 
 MAINTAINING GOOD STANDING:
 --------------------------
@@ -47,5 +47,5 @@ Questions? Contact us at [Contact Information]
 
 ======================================================================
 Model: XGBoost
-Date: 2026-01-20
+Date: 2026-02-20
 ======================================================================

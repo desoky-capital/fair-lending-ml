@@ -2,7 +2,7 @@
 ======================================================================
 FAIRNESS ASSESSMENT REPORT
 Dataset: Test Set
-Threshold: 0.25
+Threshold: 0.20
 ======================================================================
 
 TIER 1: LEGAL COMPLIANCE (Must Pass)
@@ -11,10 +11,10 @@ TIER 1: LEGAL COMPLIANCE (Must Pass)
 1. DISPARATE IMPACT RATIO (4/5ths Rule)
    Requirement: DIR >= 0.80 for all protected groups
    
-   Black vs White: 0.955 ✓ PASS
-   Hispanic vs White: 0.943 ✓ PASS
-   Asian vs White: 0.985 ✓ PASS
-   Female vs Male: 0.979 ✓ PASS
+   Black vs White: 0.995 ✓ PASS
+   Hispanic vs White: 1.004 ✓ PASS
+   Asian vs White: 0.987 ✓ PASS
+   Female vs Male: 0.961 ✓ PASS
 
 2. ANTI-CLASSIFICATION
    Requirement: No protected characteristics used as features
@@ -30,30 +30,32 @@ TIER 2: BUSINESS & ETHICS (Should Optimize)
 4. CALIBRATION FAIRNESS
    Requirement: ECE difference across groups < 0.05
    
-   White: ECE = 0.055 ⚠️
-   Black: ECE = 0.082 ⚠️
-   Hispanic: ECE = 0.058 ⚠️
-   Asian: ECE = 0.023 ✓
+   White: ECE = 0.019 ✓
+   Black: ECE = 0.064 ⚠️
+   Hispanic: ECE = 0.047 ✓
+   Asian: ECE = 0.030 ✓
 
 5. EQUAL OPPORTUNITY
    Requirement: |TPR difference| < 0.10
    
-   Black vs White: +0.000 ✓ PASS
-   Hispanic vs White: +0.000 ✓ PASS
-   Asian vs White: +0.000 ✓ PASS
+   Black vs White: -0.176 ✗ FAIL
+   Hispanic vs White: -0.176 ✗ FAIL
+   Asian vs White: -0.176 ✗ FAIL
 
 TIER 3: MONITORING (Track Over Time)
 ======================================================================
 
 6. STATISTICAL PARITY DIFFERENCE
-   Black vs White: -0.045
-   Hispanic vs White: -0.056
-   Asian vs White: -0.015
+   SPD = 0: Perfect | |SPD| > 0.1: Substantial disparity
+   Black vs White: -0.005 ✓
+   Hispanic vs White: +0.003 ✓
+   Asian vs White: -0.012 ✓
 
 7. AVERAGE ODDS DIFFERENCE
-   Black vs White: 0.025
-   Hispanic vs White: 0.030
-   Asian vs White: 0.008
+   AOD < 0.05: Good | AOD > 0.10: Significant disparity
+   Black vs White: 0.098 ✓
+   Hispanic vs White: 0.092 ✓
+   Asian vs White: 0.100 ✓
 
 ======================================================================
 SUMMARY

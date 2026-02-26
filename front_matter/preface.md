@@ -20,7 +20,7 @@ This book exists to fill that gap.
 
 **First, it's honest about failure.**
 
-Most ML tutorials show you how to build a model that works. This book shows you how models fail—and why that matters more. In Chapter 3, we build a credit model that achieves 95% accuracy on validation data, then watch it collapse completely on test data. We don't hide this failure; we learn from it. Because in the real world, knowing why models fail is more valuable than celebrating when they succeed.
+Most ML tutorials show you how to build a model that works. This book shows you what happens when models meet reality—and why that matters more. In Chapter 3, we build a credit model with genuine ranking ability, then discover its probabilities are completely wrong—distorted by the very technique (SMOTE) we used to handle class imbalance. We watch calibration fix the probability scale, then watch group-specific calibration overfit on small samples. We don't hide these complications; we learn from them. Because in the real world, understanding why models behave unexpectedly is more valuable than celebrating when they succeed.
 
 **Second, it's accessible to non-coders.**
 
@@ -32,7 +32,7 @@ Credit models aren't just technical artifacts—they're regulated instruments wi
 
 **Fourth, it bridges theory and practice.**
 
-We don't just explain fairness metrics; we implement them. We don't just discuss bias mitigation; we compare approaches and show you which ones work (and which ones destroy your model). We don't just mention monitoring; we build a complete system. By the end, you'll have both conceptual knowledge and practical tools.
+We don't just explain fairness metrics; we implement them. We don't just discuss bias mitigation; we compare three approaches and show you the honest trade-offs—including approaches that achieve "fairness" only by approving everyone. We don't just mention monitoring; we build a complete system. By the end, you'll have both conceptual knowledge and practical tools.
 
 ---
 

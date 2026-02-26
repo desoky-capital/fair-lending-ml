@@ -182,7 +182,7 @@ Before calculating fairness metrics, we need to convert the model's probability 
 y_prob = best_model.predict_proba(X_val)[:, 1]  # Probability of default
 
 # Apply threshold to get binary predictions
-threshold = 0.25  # Optimized on validation data
+threshold = 0.20  # Optimized on validation data
 y_pred = (y_prob >= threshold).astype(int)
 
 # y_pred is now an array of 0s and 1s:
@@ -295,6 +295,34 @@ print(f"  Black: {ece_black:.3f}")
 print(f"  Difference: {abs(ece_white - ece_black):.3f}")
 ```
 
+**Actual Results (Validation Set):**
+```
+FAIRNESS METRICS (Black vs White)
+==================================================
+Disparate Impact Ratio: 0.992
+  Status: ✓ PASS
+
+Equal Opportunity Difference: -0.182
+  Status: ⚠️ CONCERN (exceeds 0.10 threshold)
+
+Calibration (ECE):
+  White: 0.041
+  Black: 0.066
+  Difference: 0.025
+```
+
+**The surface looks fair; the depths don't.** DIR passes comfortably — approval rates are roughly equal across groups (90–92%). But EOD fails: the model catches 18.2% of White defaults but 0% of Black defaults on validation. The model detects defaults unequally by race.
+
+> 📌 **Teaching Note: Equal Approval ≠ Equal Treatment.** The model denies almost nobody, so approval rates look fair. But protection from bad loans is completely unequal — if you're Black and about to default, the model won't flag you, meaning you get approved for a loan you can't repay. That's harm through apparent approval.
+
+> ⚠️ **Small Sample Caveat:** These EOD metrics are based on very small default counts per group — as few as 1 actual default for Black applicants in the validation set. One more or fewer default would swing EOD dramatically. In production, you'd need larger samples before drawing conclusions about differential TPR.
+
+*Figure 4.1: Fairness Dashboard (6-Panel)*
+
+The dashboard reveals the split personality of our fairness results. Tier 1 metrics (DIR, SPD) pass for all racial groups and both genders. But Tier 2 metrics tell a different story: EOD fails for race (−0.182 for Black vs White) though gender EOD results are inconsistent between validation (−0.250) and test (+0.014). The calibration panel shows ECE is highest for Black applicants (0.064 on test) — the model's probabilities are least honest for this group.
+
+**Test set confirms the pattern:** DIR passes for all groups (0.995–1.004). But EOD is −0.176 for *every* minority group — the model only identifies defaults among White applicants. Black, Hispanic, and Asian defaulters all receive 0% TPR on test data.
+
 ### 4.2.3 Root Causes of Bias
 
 **Data-level causes:**
@@ -363,7 +391,7 @@ def calculate_reweighting_weights(y_true, protected_attr, privileged_value):
         weight > 1: Underrepresented, increase influence
         weight < 1: Overrepresented, reduce influence
     """
-    # ... implementation
+    # ... implementation (see Appendix C, Section C.4 for complete code)
     return weights
 
 # Calculate weights using the protected attribute
@@ -378,9 +406,9 @@ model_reweighted.fit(X_train, y_train, sample_weight=weights)
 - Different default rates across groups
 - Historical bias in training labels
 
-**When reweighting has little effect:**
-- Groups already well-represented
-- Similar outcome distributions across groups
+**What happened with our model:** We reweighted using binary race labels (White/Black, 70/30 split). The result was sobering — ROC-AUC dropped from 0.658 to 0.589 for a marginal DIR improvement (0.992 → 1.007) on a metric that was already passing. The model essentially gave up on distinguishing defaulters from non-defaulters, approving nearly everyone.
+
+> 📌 **Teaching Note:** Reweighting traded real predictive performance for a marginal improvement on a metric that wasn't failing. The actual fairness gaps were in EOD and TPR — which binary reweighting on a simplified race variable didn't address. In production, reweight on the actual group labels targeting the metric you're trying to fix.
 
 ---
 
@@ -459,16 +487,24 @@ print(f"Group C threshold: {thresh_C:.2f}")
 # Different thresholds achieve same approval rate → demographic parity
 ```
 
-**⚠️ Warning:** Group-specific thresholds are controversial:
-- Legally risky (explicit differential treatment)
-- Can severely hurt accuracy (as we saw in Table 4.2: 31.4% accuracy)
-- May not address root cause
+**What happened with our model:** Group-specific thresholds equalized approval rates across groups (all within 90.0–90.7%) at only 2% accuracy cost. DIR improved to ~1.0. But EOD remained unchanged at −0.176 — adjusting the cutoff changes *who gets approved* but doesn't change *how well the model detects defaults per group*.
+
+**⚠️ Trade-offs:**
+- Legally controversial (explicit differential treatment by group)
+- Only fixes approval rate parity, not differential default detection
+- Preserves the model's ranking ability (ROC-AUC unchanged)
 
 ---
 
-### 4.3.3 Post-Processing: Calibration
+### 4.3.4 Post-Processing: Calibration
 
 **Idea:** Adjust probabilities so they're honest across groups.
+
+**How calibration works:** The model's raw probabilities are often miscalibrated — when it predicts 15% default risk, the actual default rate might be 50%. Calibration learns a mapping from raw probabilities to honest ones using validation data.
+
+**Isotonic regression** (`method='isotonic'`) groups the model's validation predictions into bins and asks: "When the model predicted ~15%, what fraction actually defaulted?" If the answer is 50%, it remaps 0.15 → 0.50 for any future prediction. The mapping is constrained to be non-decreasing — higher raw probability always maps to equal or higher calibrated probability.
+
+**Platt scaling** (`method='sigmoid'`) fits a logistic S-curve through the same mapping, learning just two parameters. It's smoother but less flexible — it assumes the miscalibration follows an S-shaped pattern. Use Platt when you have limited validation data; use isotonic when you have enough data for the step function to be reliable.
 
 ```python
 from sklearn.calibration import CalibratedClassifierCV
@@ -479,12 +515,14 @@ base_model = grid_search.best_estimator_  # Already trained on X_train
 # Step 1: Wrap the trained model (no calibration yet)
 calibrated_model = CalibratedClassifierCV(
     base_model, 
-    method='isotonic',  # or 'sigmoid' for less flexible calibration
+    method='isotonic',  # Non-decreasing step function (more flexible)
     cv='prefit'         # 'prefit' means base_model is already trained
 )
 
 # Step 2: Learn the calibration mapping on validation data
-# This learns: "When base_model predicts 0.30, what's the actual default rate?"
+# This learns: "When base_model predicts 0.15, what's the actual default rate?"
+# If 6 validation accounts had predictions around 0.10-0.20 and 3 actually
+# defaulted, the calibrated probability for that range becomes ~0.50
 calibrated_model.fit(X_val, y_val)
 
 # Step 3: Apply the learned mapping to test data
@@ -497,25 +535,39 @@ y_prob_calibrated = calibrated_model.predict_proba(X_test)[:, 1]
 - Doesn't require explicit group treatment
 - Makes probabilities meaningful for business decisions
 
+**What happened with our model:** Group-specific calibration (isotonic regression per race group) achieved perfect fairness metrics on validation — ECE dropped to 0.000 for all groups, DIR = 1.0, EOD = 0.0. But on test data, ECE *increased* for every group (White: 0.019 → 0.025, Black: 0.064 → 0.086). The calibrators memorized the validation data (50–97 samples per group) rather than learning a robust mapping.
+
+> 📌 **Teaching Note:** With 50–97 validation accounts per group, isotonic regression memorized noise rather than learning a generalizable mapping. Group-specific calibration requires either larger calibration sets or simpler methods (Platt scaling, with fewer parameters) to avoid overfitting.
+
+*Figure 4.2: Calibration Comparison (Original vs. Platt vs. Isotonic)*
+
 ---
 
-### 4.3.4 Comparing Approaches
+### 4.3.5 Comparing Approaches
 
-**Table 4.2: Mitigation Approach Comparison**
+**Table 4.2: Mitigation Approach Comparison (Test Set)**
 
-*All results evaluated on validation data. "Original" refers to the tuned XGBoost model before any fairness mitigation. Each approach was applied independently to isolate its effect.*
+*Evaluated on held-out test data — the honest measure. DIR ≥ 0.80 passes the 4/5ths rule. |EOD| < 0.10 indicates equal opportunity.*
 
-| Approach | DIR | Accuracy | Recommendation |
-|----------|-----|----------|----------------|
-| Original | 1.03 | 94.8% | Baseline |
-| Reweighting (pre-processing) | ~1.03 | ~95% | Minimal effect (data balanced) |
-| Fairness-Constrained (in-processing) | ~0.95 | ~93% | Modest improvement, some accuracy cost |
-| Group Thresholds (post-processing) | 1.00 | 31.4% | ❌ Destroyed accuracy |
-| Calibration (post-processing) | ~1.00 | 96.9% | ✓ Best balance |
+| Approach | ROC-AUC | DIR (B/W) | |EOD| (B/W) | Assessment |
+|----------|---------|-----------|-------------|------------|
+| Original | 0.683 | 0.995 | 0.176 | Best ranking, EOD fails |
+| Reweighted | 0.604 | 1.004 | 0.000 | EOD passes, ranking destroyed |
+| Group Thresholds | 0.683 | 1.018 | 0.176 | Ranking preserved, EOD unchanged |
+| Calibrated (by group) | 0.609 | 1.000 | 0.000 | EOD passes, ranking destroyed |
 
-> ⚠️ **Important Limitation:** These results are evaluated on validation data only. As Chapter 3 demonstrated, validation performance may not transfer to test data due to distribution shift. In production, you should evaluate all mitigation techniques on held-out test data before deployment.
+Figure 4.3 plots each approach on ROC-AUC vs |EOD|, making the trade-off visually clear:
 
-> 💡 **Key Finding:** Calibration improved both accuracy (94.8% → 96.9%) AND fairness. Group thresholds achieved perfect parity but destroyed accuracy (94.8% → 31.4%).
+*Figure 4.3: ROC-AUC vs. Fairness Trade-off (Validation and Test)*
+
+**The ideal corner — top-left (high ROC-AUC, low EOD) — is empty.** No approach achieves both strong ranking and equal opportunity on test data. Two distinct clusters emerge:
+
+- **Right side (Original, Group Thresholds):** Preserve ROC-AUC at 0.683 but fail EOD at 0.176. The model ranks well but detects defaults unequally.
+- **Bottom-left (Reweighted, Calibrated):** Pass EOD at 0.0 but drop ROC-AUC to ~0.60. They achieved fairness by approving nearly everyone — fairness through inaction, not through better predictions.
+
+Note how Calibrated collapsed from the top-left on validation (ROC-AUC 0.822, "perfect" fairness) to the bottom-left on test (ROC-AUC 0.609) — the overfitting we predicted from 50–97 samples per group.
+
+> 💡 **Key Finding:** Group-specific thresholds are the most honest trade-off — they fix approval rate parity (DIR ≈ 1.0) at minimal cost while preserving ranking ability. Reweighting and calibration appear to "solve" EOD, but only by losing the ability to distinguish defaulters from non-defaulters. With a 6.5% default rate, approving everyone gives 93.5% accuracy automatically — high accuracy ≠ good model.
 
 ---
 
@@ -523,11 +575,9 @@ y_prob_calibrated = calibrated_model.predict_proba(X_test)[:, 1]
 
 ### 4.4.1 Why Monitoring Matters
 
-**Critical insight from Chapter 3:** Our model's fairness changed between validation and test sets:
-- Validation DIR: 1.030 (passing)
-- Test DIR: 0.955 (still passing, but dropped)
+**Critical insight from our analysis:** While DIR remained stable between validation and test (0.992 → 0.995), deeper metrics shifted dramatically. Gender EOD swung from −0.250 (validation) to +0.014 (test) — a 26-point reversal explained entirely by small default counts per group. Race EOD was more consistent (−0.182 → −0.176), giving confidence that finding is real, not a small-sample artifact.
 
-Without monitoring, you'd never catch this drift!
+Without monitoring, you'd never distinguish real fairness issues from statistical noise!
 
 ### 4.4.2 Monitoring Dashboard
 
@@ -567,6 +617,8 @@ def create_fairness_snapshot(y_true, y_pred, y_prob, protected_attr,
 
 ### 4.4.3 Alert Thresholds
 
+In production, you'd compute DIR on a rolling window of recent model decisions — typically 30 days of data to ensure sufficient sample sizes per group. A weekly batch job runs the `create_fairness_snapshot()` function against the latest decisions and compares DIR to the thresholds below. Alerts route to the model risk team, who triage based on severity. The 7-day investigation window for YELLOW reflects regulatory expectations for timely remediation; RED triggers an immediate review that may include temporarily reverting to the previous model version or applying manual overrides while the issue is diagnosed.
+
 **Table 4.3: Monitoring Alert Thresholds**
 
 | Level | DIR Range | Action |
@@ -604,10 +656,12 @@ def create_fairness_snapshot(y_true, y_pred, y_prob, protected_attr,
    • Expected Calibration Error (ECE) by group
 
 3. MITIGATION MEASURES APPLIED
-   • Probability calibration by group
+   • Group-specific threshold adjustment for approval rate parity
+   • Probability calibration evaluated but overfit on small groups
    
    Trade-offs Accepted:
-   • Calibration chosen as best balance of fairness and accuracy
+   • Group thresholds fix DIR at 2% accuracy cost; EOD gap remains
+   • Root cause (differential default detection) requires better training data
 
 4. ADVERSE ACTION NOTICES
    Method: SHAP-based feature contribution explanations
@@ -640,21 +694,25 @@ def create_fairness_snapshot(y_true, y_pred, y_prob, protected_attr,
 
 ### Technical Lessons
 
-4. **The 4/5ths rule is the legal baseline** - DIR ≥ 0.80 is required; below triggers investigation
+4. **The 4/5ths rule is the legal baseline** — DIR ≥ 0.80 is required; below triggers investigation
 
-5. **Calibration often wins** - Improves both accuracy and fairness without explicit differential treatment
+5. **Passing DIR doesn't mean passing fairness** — Our model passed DIR easily (approval rates nearly equal) while failing EOD completely (0% minority default detection)
 
-6. **Group thresholds are dangerous** - Can achieve perfect parity but destroy accuracy
+6. **Group thresholds are the most honest post-processing** — They preserve model ranking (ROC-AUC unchanged) and fix approval parity at low accuracy cost, but cannot fix what the model never learned
 
-7. **Reweighting helps when data is imbalanced** - Has minimal effect when groups are already balanced
+7. **Calibration can overfit on small groups** — Group-specific isotonic regression with 50–97 samples memorized noise. Validation perfection (ECE = 0.000) collapsed on test data
+
+8. **"Fairness through inaction" is a trap** — Both reweighting and calibration achieved EOD = 0 by approving nearly everyone. High accuracy with low ROC-AUC means the model stopped distinguishing defaulters from non-defaulters
 
 ### Process Lessons
 
-8. **Validation fairness ≠ production fairness** - Metrics can drift; continuous monitoring is essential
+9. **Always evaluate on test data** — Validation fairness results can be wildly optimistic (our calibration went from "perfect" to "worse than baseline")
 
-9. **Documentation matters** - Regulators want to see your reasoning, not just your results
+10. **Compare metrics across datasets** — Consistent findings across val and test (like race EOD) are more trustworthy than inconsistent ones (like gender EOD)
 
-10. **Fairness from day one** - Harder to retrofit than to design in
+11. **Documentation matters** — Regulators want to see your reasoning, not just your results
+
+12. **Fairness from day one** — Harder to retrofit than to design in
 
 ---
 
@@ -666,9 +724,35 @@ def create_fairness_snapshot(y_true, y_pred, y_prob, protected_attr,
 |---------|--------------|-----|
 | "We don't collect race, so no bias" | Proxies (ZIP code) can discriminate | Audit with external data |
 | "Data shows real risk differences" | Historical data may reflect past discrimination | Question your data |
-| "We optimized for fairness, done" | Fairness drifts over time | Continuous monitoring |
+| "We optimized for fairness, done" | Fairness drifts over time; validation results can overfit | Evaluate on test data; continuous monitoring |
 | "Perfect fairness is impossible, why try?" | Can improve any specific metric | Choose and measure |
 | "We'll add fairness later" | Harder to retrofit | Design in from start |
+
+---
+
+## 4.6 Lessons Learned
+
+This chapter attempted three approaches to fix fairness — reweighting, group-specific thresholds, and group-specific calibration. Here's what we learned:
+
+### The Empty Top-Left Corner
+
+When we plotted ROC-AUC against |EOD| for all four approaches on test data, the ideal corner (high performance, high fairness) was empty. Every approach either preserved the model's signal or achieved fairness metrics, but not both. This is the central tension of fair ML, and it's honest to show it.
+
+### Fairness Through Inaction
+
+Reweighting and calibration both achieved EOD = 0 — but by approving nearly everyone. With a 6.5% default rate, approving everyone gives 93.5% accuracy automatically. Their "high accuracy" came from denying almost nobody, not from making better predictions. A broken smoke detector that never beeps has a great track record in a building that rarely catches fire.
+
+### The Root Cause Is the Model, Not the Post-Processing
+
+The model fundamentally detects White defaults better than minority defaults. No post-processing can add signal that doesn't exist. Group thresholds can adjust *who gets approved*, but not *how well the model identifies risk per group*. The true fix requires more representative training data, features that generalize across groups, and larger samples for group-specific techniques.
+
+### What Worked Best
+
+Group-specific thresholds were the most honest intervention — they fixed what could be fixed (approval rate parity) at minimal cost (2% accuracy, 0% ROC-AUC loss), without pretending to fix what couldn't be fixed (differential default detection). Combined with transparent documentation of the remaining EOD gap and a plan to address it through better data, this is a defensible position.
+
+### Small Samples Make Everything Fragile
+
+With 1–8 actual defaults per racial group in validation, fairness metrics were inherently unstable. Gender EOD swung 26 points between datasets. Race EOD was more consistent — giving more confidence that finding was real. The lesson: consistency across datasets matters more than any single pass/fail result.
 
 ---
 
@@ -702,11 +786,11 @@ By the end of this chapter, learners should be able to:
 
 1. **The Impossibility Question:** If you can't satisfy all fairness criteria simultaneously, how do you decide which to prioritize? What role should affected communities play in this decision?
 
-2. **The Calibration Paradox:** Calibration improved both accuracy and fairness. Is this always possible, or did we get lucky? When might calibration hurt fairness?
+2. **The Calibration Trap:** Group-specific calibration looked perfect on validation but degraded on test. What minimum sample size per group would you require before trusting group-specific calibration? Would Platt scaling (2 parameters) have been more robust than isotonic regression?
 
-3. **The Threshold Dilemma:** Group-specific thresholds achieved perfect demographic parity but destroyed accuracy. Is there ever a case where this trade-off is worth it?
+3. **The Threshold Dilemma:** Group-specific thresholds preserved ranking ability while fixing approval parity, but couldn't fix EOD. Is there ever a case where differential thresholds by group are the right answer despite the legal controversy?
 
-4. **The Monitoring Question:** Our DIR dropped from 1.03 (validation) to 0.95 (test). At what point should you retrain vs. adjust thresholds vs. investigate root causes?
+4. **The Empty Corner:** No approach achieved both high ROC-AUC and low EOD. If the root cause is the model not learning minority default patterns, what data or features would you need to fill that top-left corner?
 
 ### Key Terms Introduced
 

@@ -300,7 +300,29 @@ By the end, you'll have a reproducible pipeline that transforms raw, problematic
 
 ### 2.2.1 Meet Our Messy Data
 
-Let's start by loading the three CSV files from Atlas Bank's legacy system: account information, transaction history, and balance snapshots.
+Before we can clean data, we need data to clean. We'll use a synthetic credit data generator that creates realistic banking datasets with intentional quality issues—the same kinds of problems you'd encounter pulling data from a legacy banking system.
+
+#### Step 1: Generate the Data
+
+```python
+from generate_credit_data_STANDALONE import CreditDataGenerator
+
+# Generate synthetic credit data
+generator = CreditDataGenerator(n_accounts=1000, seed=42)
+data = generator.generate_all()
+
+# This creates two folders:
+#   synthetic_credit_data/raw/      ← Messy data (what we'll clean)
+#   synthetic_credit_data/clean/    ← Clean data (our answer key - don't peek!)
+```
+
+The generator creates 1,000 synthetic bank accounts with realistic transaction histories, balance snapshots, and credit attributes. Critically, it produces **two versions** of the data: a messy version with intentional quality issues (missing values, duplicates, inconsistent date formats) and a clean version that serves as our answer key. We'll work exclusively with the messy data—simulating what you'd actually receive from a legacy banking system.
+
+> 💡 **Key Insight:** Using synthetic data with known ground truth lets us verify our cleaning pipeline is working correctly. In production, you rarely have this luxury—which is why building systematic quality checks (not just ad hoc fixes) matters so much.
+
+#### Step 2: Load the Messy Data
+
+Now let's load the three CSV files from the raw folder—simulating what you'd receive from a legacy banking system: account information, transaction history, and balance snapshots.
 
 ```python
 import pandas as pd
@@ -310,9 +332,9 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # Load the three datasets from the raw folder
-accounts = pd.read_csv('synthetic_banking_data/raw/accounts.csv')
-transactions = pd.read_csv('synthetic_banking_data/raw/transactions.csv')
-balances = pd.read_csv('synthetic_banking_data/raw/balances.csv')
+accounts = pd.read_csv('synthetic_credit_data/raw/accounts.csv')
+transactions = pd.read_csv('synthetic_credit_data/raw/transactions.csv')
+balances = pd.read_csv('synthetic_credit_data/raw/balances.csv')
 
 print(f"✓ Loaded {len(accounts):,} accounts")
 print(f"✓ Loaded {len(transactions):,} transactions")
@@ -325,6 +347,8 @@ print(f"✓ Loaded {len(balances):,} balance records")
 ✓ Loaded 9,116 transactions
 ✓ Loaded 42,289 balance records
 ```
+
+These numbers look reasonable for a small bank's portfolio. But as we'll quickly discover, the numbers tell us nothing about the *quality* of what's inside.
 
 #### Systematic Data Quality Assessment
 
@@ -539,13 +563,17 @@ def handle_missing_accounts(df, logger):
                         'drop_record', 'Primary key cannot be null')
         print(f"  Dropped {count} records with missing account_id")
     
-    # ... (similar logic for other columns)
+    # ... (similar logic for other columns — see Appendix C.2 for full implementation)
     
     final_count = len(df_clean)
     print(f"  ✓ Accounts: {initial_count} → {final_count} rows")
     
     return df_clean
+```
 
+The transaction and balance tables follow the same pattern—column-specific strategies documented in the docstring, with every decision logged. The key differences: transactions drop records with missing `transaction_date` (required for temporal analysis) and keep `merchant` nulls (legitimate for ATM withdrawals and transfers). Balances drop records missing `account_id` or `balance_date` (can't link orphaned balances or place them in time). Full implementations are in Appendix C, Section C.2.
+
+```python
 # Apply Layer 2 to all tables
 accounts_clean = handle_missing_accounts(accounts_typed, logger)
 transactions_clean = handle_missing_transactions(transactions_typed, logger)
@@ -613,6 +641,33 @@ def deduplicate_and_standardize_accounts(df, logger):
     return df_clean
 ```
 
+The transaction and balance tables follow the same deduplication pattern—removing duplicate IDs and standardizing text fields. For balances, we also enforce the business rule that available balance can never exceed ledger balance. Full implementations are in Appendix C, Section C.2.
+
+```python
+# Apply Layer 3 to all tables
+accounts_clean = deduplicate_and_standardize_accounts(accounts_clean, logger)
+transactions_clean = deduplicate_and_standardize_transactions(transactions_clean, logger)
+balances_clean = deduplicate_and_standardize_balances(balances_clean, logger)
+```
+
+**Expected Output:**
+```
+[Layer 3: Deduplication & Consistency] Processing accounts...
+  Removed 10 duplicate account_ids
+  Fixed 15 typos in account_type (chekcing → checking, CHECKING → checking)
+  Standardized 8 status values (ACTIVE → active)
+  ✓ Accounts: 499 → 489 rows
+
+[Layer 3: Deduplication & Consistency] Processing transactions...
+  Removed 37 duplicate transaction_ids
+  Standardized transaction_type values
+  ✓ Transactions: 4,421 → 4,384 rows
+
+[Layer 3: Deduplication & Consistency] Processing balances...
+  Fixed 142 records where available_balance > ledger_balance
+  ✓ Balances: 21,147 → 21,147 rows (0 dropped, 142 corrected)
+```
+
 > 💡 **About Available vs Ledger Balance:** 
 > - **Ledger Balance** = Official account balance (what the bank's books show)
 > - **Available Balance** = What you can actually spend (ledger minus holds/pending)
@@ -678,6 +733,13 @@ def validate_referential_integrity(accounts, transactions, balances, logger):
     print(f"  ✓ Balances: {bal_start_count:,} → {len(balances):,} rows")
     
     return accounts, transactions, balances
+```
+
+```python
+# Apply Layer 4: Cross-table validation
+accounts_clean, transactions_clean, balances_clean = validate_referential_integrity(
+    accounts_clean, transactions_clean, balances_clean, logger
+)
 ```
 
 **Expected Output:**

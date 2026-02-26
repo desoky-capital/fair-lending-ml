@@ -1,43 +1,43 @@
 {
-  "timestamp": "2026-01-23 11:46",
+  "timestamp": "2026-02-23 15:24",
   "total_predictions": 463,
-  "overall_approval_rate": 0.980561555075594,
+  "overall_approval_rate": 0.9546436285097192,
   "by_group": {
     "White": {
       "n": 276,
-      "approval_rate": 0.9963768115942029,
-      "mean_prob": 0.03677215427160263
+      "approval_rate": 0.9565217391304348,
+      "mean_prob": 0.07101345807313919
     },
     "Black": {
       "n": 83,
       "approval_rate": 0.9518072289156626,
-      "mean_prob": 0.04765043407678604
+      "mean_prob": 0.06753503531217575
     },
     "Hispanic": {
       "n": 50,
-      "approval_rate": 0.94,
-      "mean_prob": 0.04154960811138153
+      "approval_rate": 0.96,
+      "mean_prob": 0.06923265010118484
     },
     "Asian": {
       "n": 54,
-      "approval_rate": 0.9814814814814815,
-      "mean_prob": 0.029358448460698128
+      "approval_rate": 0.9444444444444444,
+      "mean_prob": 0.053830336779356
     }
   },
   "fairness_metrics": {
     "Black_vs_White": {
-      "DIR": 0.9552683461117196,
-      "SPD": -0.044569582678540276,
+      "DIR": 0.9950711938663745,
+      "SPD": -0.004714510214772205,
       "DIR_status": "GREEN"
     },
     "Hispanic_vs_White": {
-      "DIR": 0.9434181818181818,
-      "SPD": -0.056376811594202936,
+      "DIR": 1.0036363636363637,
+      "SPD": 0.003478260869565153,
       "DIR_status": "GREEN"
     },
     "Asian_vs_White": {
-      "DIR": 0.9850505050505051,
-      "SPD": -0.014895330112721372,
+      "DIR": 0.9873737373737373,
+      "SPD": -0.012077294685990392,
       "DIR_status": "GREEN"
     }
   }

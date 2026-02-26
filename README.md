@@ -54,11 +54,17 @@ building-fair-ml/
 │
 ├── figures/
 │   ├── chapter2/                   # 1 figure
-│   ├── chapter3/                   # 16 figures
-│   └── chapter4/                   # 3 figures
+│   ├── chapter3/                   # 17 figures
+│   └── chapter4/                   # 2 figures
 │
-├── scripts/
-│   └── generate_credit_data_STANDALONE.py  # Data generator
+├── notebooks/
+│   ├── generate_credit_data.py             # Data generator
+│   ├── engineer_credit_features.py         # Feature engineering
+│   ├── notebook_audit_report.md            # Notebook QA documentation
+│   ├── notebook_code_notes.md              # Code review notes
+│   ├── ch2_data_pipeline.ipynb     # 25 cells — data quality & features
+│   ├── ch3_modeling.ipynb          # 90 cells — modeling & explainability
+│   └── ch4_fairness.ipynb          # 64 cells — fairness & monitoring
 │
 └── archive/                        # Historical drafts (not needed to run)
 ```
@@ -88,15 +94,23 @@ pip install -r requirements.txt
 ### 3. Generate the Data
 
 ```bash
-cd scripts
-python generate_credit_data_STANDALONE.py
+cd notebooks
+python generate_credit_data.py
 ```
 
 This creates:
 - `synthetic_credit_data/raw/` — Messy data for Chapter 2 exercises
 - `synthetic_credit_data/clean/` — Clean data for Chapter 3+ modeling
 
-### 4. Start Reading!
+### 4. Run the Notebooks
+
+```bash
+jupyter notebook
+```
+
+Open in order: `ch2_data_pipeline.ipynb` → `ch3_modeling.ipynb` → `ch4_fairness.ipynb`
+
+### 5. Start Reading!
 
 - **Hands-on path:** Run the code as you read (15-20 hours)
 - **Conceptual path:** Read explanations, skip code (6-8 hours)
@@ -127,7 +141,7 @@ imbalanced-learn>=0.10.0
 | Appendices | 4 |
 | Figures | 20 |
 | Tables | 62 |
-| Code examples | 50+ |
+| Code examples | 80+ |
 
 ---
 
@@ -140,7 +154,7 @@ imbalanced-learn>=0.10.0
 Chapter 1 → Chapter 2 → Chapter 3 → Chapter 4 → Chapter 5
    ↓           ↓           ↓           ↓           ↓
  Setup      Build       Model      Fairness     Apply
-           Pipeline    + Debug     Testing
+           Pipeline   + Calibrate   Testing
 ```
 
 Run all code, complete exercises, build the full pipeline.
@@ -171,8 +185,8 @@ Focus on regulatory requirements, documentation, governance.
 |---------|-------|-------|
 | 1 | Introduction | Why fairness matters, book structure |
 | 2 | Data Foundations | Data quality, cleaning, documentation |
-| 3 | Building the Credit Model | Model development, SHAP explainability |
-| 4 | Fairness & Compliance | Measuring and mitigating bias |
+| 3 | Building the Credit Model | Model development, calibration, SHAP explainability |
+| 4 | Fairness & Compliance | Measuring and mitigating bias, monitoring |
 | 5 | Conclusion | Key lessons, emerging regulations, culture |
 
 ---
@@ -181,7 +195,7 @@ Focus on regulatory requirements, documentation, governance.
 
 ### Data Generation
 ```python
-from scripts.generate_credit_data_STANDALONE import CreditDataGenerator
+from generate_credit_data import CreditDataGenerator
 
 generator = CreditDataGenerator(n_accounts=1000, seed=42)
 data = generator.generate_all()
